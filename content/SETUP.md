@@ -8,7 +8,7 @@ Complete this step before setting up Python so that the instructor can share the
 2. Follow the signup prompts using an email you can access, and choose a username. Complete any account verification prompts.
 3. Open GitHub’s verification email and verify your email address. Check your spam folder if it does not arrive.
 4. Sign in and open your profile. Your profile address is `https://github.com/USERNAME`; record that exact username.
-5. Send your name and GitHub username to the instructor through the announced private contact route. Never send your password, verification codes or access tokens.
+5. Send your name and GitHub username to the instructor at [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Never send your password, verification codes or access tokens.
 6. After the instructor invites you, open GitHub’s invitation email or the invitation link provided by the instructor. Sign in with the account whose username you shared, then accept the invitation.
 7. Open the course repository link supplied by the instructor and confirm that you can read its `README.md`. You can then use **Code → Download ZIP** to obtain the course files.
 
@@ -192,6 +192,6 @@ Week 8 includes an actual local HTTP exercise. It exchanges requests inside the 
 | Colab files disappeared | Re-upload the course ZIP and restore your own saved notebook/files. Runtime storage is temporary. |
 | Windows says `python3` is unknown | Use `py -3` or the exact `.venv\Scripts\python.exe` path. |
 
-Ask during class or open a course GitHub Issue during or after class. Include the week, operating system, local/Colab route, the smallest relevant code, expected result, actual result and error text. Remove personal paths, tokens and unrelated data before sharing. Use the private instructor contact route for grades, attendance or other personal matters.
+Ask during class or open a course GitHub Issue during or after class. Include the week, operating system, local/Colab route, the smallest relevant code, expected result, actual result and error text. Remove personal paths, tokens and unrelated data before sharing. Use [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) for grades, attendance or other personal matters.
 
 Before finishing each session, save, close and reopen your notebook to check that your edits are present. Keep the supplied starting files separate from your own work. Return to the [course home](README.md) for the current week, slides and reflection link.

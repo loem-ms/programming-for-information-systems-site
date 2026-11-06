@@ -1,6 +1,6 @@
 # Ask a class question
 
-Once you have access to the course repository, use GitHub Issues for questions that could help a classmate, during or after class. If access or connectivity is unavailable, keep a local question note with the smallest example and ask during class or through the separately announced private contact route. Questions about coordination rules, units, notebook access and errors are welcome.
+Once you have access to the course repository, use GitHub Issues for questions that could help a classmate, during or after class. If access or connectivity is unavailable, keep a local question note with the smallest example and ask during class or through [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Questions about coordination rules, units, notebook access and errors are welcome.
 
 1. Search existing questions by week or error phrase.
 2. If an answer helps, try it; if your input differs, explain the difference.
@@ -13,7 +13,7 @@ Once you have access to the course repository, use GitHub Issues for questions t
 
 **Example closing reply:** Yes: 4 × 5 = 20, so the reviewed request has the team label. An unreviewed request with the same quantity would be held. This label organizes volunteer work; it does not establish suitability, reservation, collection or delivery.
 
-Everyone with repository access can read an Issue; in a public repository, that includes anyone. Use invented data and short snippets in shared questions. Keep donor contacts, partner/recipient information, account details, grades and complete assessed work in the private course route. A student can ask in class or privately; the instructor may record an anonymized example.
+Everyone with repository access can read an Issue; in a public repository, that includes anyone. Use invented data and short snippets in shared questions. Keep donor contacts, partner/recipient information, account details, grades and complete assessed work in private email to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). A student can ask in class or privately; the instructor may record an anonymized example.
 
 ## Your first practice question
 

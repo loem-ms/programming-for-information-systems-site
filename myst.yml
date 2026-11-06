@@ -40,10 +40,24 @@
           {
             "file": "content/learning_materials/Week_01.ipynb",
             "title": "Values, types and execution"
-          },
+          }
+        ]
+      },
+      {
+        "title": "Week 2",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_02.ipynb",
+            "title": "Comparisons, branches and dispatch"
+          }
+        ]
+      },
+      {
+        "title": "Tasks and downloads",
+        "children": [
           {
             "file": "content/assignments/README.md",
-            "title": "Week 1 tasks"
+            "title": "Weekly tasks"
           },
           {
             "file": "content/resources.md",
@@ -76,7 +90,7 @@
           },
           {
             "file": "content/COURSE_LINKS.md",
-            "title": "Class access"
+            "title": "Course links and reflection"
           },
           {
             "file": "content/learning_materials/CLASS_QA.md",

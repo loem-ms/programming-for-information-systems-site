@@ -1,6 +1,6 @@
 # Proposed assessment and final project
 
-The course assesses what you can **build, test, explain and hand over**. Both team work and individual understanding matter. The weighting below is the **proposed assessment plan**; the instructor will confirm it with the university before assessment begins. Calendar deadlines, the approved private submission route and the exact file-naming rule will be announced before the work is due.
+The course assesses what you can **build, test, explain and hand over**. Both team work and individual understanding matter. The weighting below is the **proposed assessment plan**; the instructor will confirm it with the university before assessment begins. Send private submissions and personal course questions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Calendar deadlines and the exact file-naming rule will be announced before the work is due.
 
 ## Proposed assessment structure
 
@@ -12,7 +12,7 @@ The course assesses what you can **build, test, explain and hand over**. Both te
 | Final project | 30% | Scoped improvement, verification, peer evidence, handoff and individual understanding |
 | **Total** | **100%** | |
 
-The exact attendance calculation, assessment dates, permitted resources, final-project rubric split and approved private submission route still require confirmation. They will be announced before they apply.
+The exact attendance calculation, assessment dates, permitted resources, and final-project rubric split still require confirmation. They will be announced before they apply.
 
 ## Six research assignments: 30%
 
@@ -58,7 +58,7 @@ Return exactly the fields `total_containers`, `planned_portions` and `coordinati
 3. Run cases A–D below. For every case, compare all three returned fields with the expected values. Fix the first difference you find.
 4. Save the function in `midterm.py`, the four checks in `test_midterm.py`, and the run instructions/disclosure in `README.md`.
 5. Put the three files in one ZIP. Extract it into a fresh folder and follow only your README to verify it works.
-6. Keep the ZIP and backup, use the announced private route, and prepare to explain one case in your individual slot.
+6. Keep the ZIP and backup, email [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com), and prepare to explain one case in your individual slot.
 
 ### Common minimum tests
 
@@ -105,7 +105,7 @@ AI use or non-use does not itself change the mark. Every student must run and ex
 
 Full standard marks do not require AI or optional refactoring. A small capped bonus may later be offered for identifying and improving a visible, working-but-improvable design while preserving the tests. The bonus value and fairness rule are **not decided**.
 
-Week 4 protects its final **135 minutes** for the Midterm: the last 45 minutes of Session 2 and all of Session 3. Budget **90 minutes implementation + 30 minutes tests/README/ZIP + 15 minutes review and hand-in**. The first 135 minutes are for functions and guided practice. Detailed main/import work and the 16-boundary exercise are optional rehearsal. The five-minute individual explanation is scheduled according to cohort size and examiner capacity; the final 15 minutes do not guarantee an oral slot for every student. Calendar dates and the private submission route remain to be announced. Outside class, Week 4 requires only the 15–20-minute Research 3 preparation after the Midterm and keeping a backup.
+Week 4 protects its final **135 minutes** for the Midterm: the last 45 minutes of Session 2 and all of Session 3. Budget **90 minutes implementation + 30 minutes tests/README/ZIP + 15 minutes review and hand-in**. The first 135 minutes are for functions and guided practice. Detailed main/import work and the 16-boundary exercise are optional rehearsal. The five-minute individual explanation is scheduled according to cohort size and examiner capacity; the final 15 minutes do not guarantee an oral slot for every student. Calendar dates remain to be announced. Send submissions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Outside class, Week 4 requires only the 15–20-minute Research 3 preparation after the Midterm and keeping a backup.
 
 ## Final project: 30%
 
@@ -146,8 +146,8 @@ Every member should understand the team's result and be ready to explain their o
 
 ## Submission and questions
 
-Keep a notebook/program copy, required fictional inputs, run instructions, tests and review evidence, plus a separate backup. The instructor will announce the private submission route and file-naming rule before work is due. Use that route for your completed work. The class repository's Issues are for questions and small reproducible examples, not complete assessment solutions or individual grades.
+Keep a notebook/program copy, required fictional inputs, run instructions, tests and review evidence, plus a separate backup. Send submissions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). The file-naming rule will be announced before work is due. Use that email for your completed work. The class repository's Issues are for questions and small reproducible examples, not complete assessment solutions or individual grades.
 
 Research Assignment 6 is discussed at the start of Week 8 before the project-proposal work. There is no new research assignment in Week 8 and no research obligation in Weeks 9 or 10, so those weeks can focus on project scope, implementation, peer verification and handoff.
 
-If you use a code suggestion from another person or a tool, inspect it, test it and be able to explain it. Optional AI use is not required for assessment. Ask about an unclear rule early through [GitHub Issues](CONTRIBUTING.md) or the private course contact route when the question concerns your own assessed work.
+If you use a code suggestion from another person or a tool, inspect it, test it and be able to explain it. Optional AI use is not required for assessment. Ask about an unclear rule early through [GitHub Issues](CONTRIBUTING.md) or [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) when the question concerns your own assessed work.

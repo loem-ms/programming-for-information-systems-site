@@ -31,6 +31,7 @@ Use Colab’s upload route: open the downloaded notebook and upload its matching
 | Week | Notebook | Slides | Run in Colab | Download |
 |---|---|---|---|---|
 | 1 · A clear pickup plan | [Notebook](learning_materials/Week_01.ipynb) | [Lesson](/slides/Week_01_Slides.pdf) · [Tasks](/assignments/Week_01_Assignments.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/) | [Week 1 ZIP](/downloads/Week_01.zip) |
+| 2 · Review and dispatch | [Notebook](learning_materials/Week_02.ipynb) | [Lesson](/slides/Week_02_Slides.pdf) · [Tasks](/assignments/Week_02_Assignments.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/) | [Week 2 ZIP](/downloads/Week_02.zip) |
 <!-- WEEK_TABLE:END -->
 
 Each ZIP contains its weekly notebook, lesson/task PDFs, Python Basics and the shared support files. Opening a notebook in Colab does not copy those support files: run the setup cell and upload the matching weekly ZIP. Keep `assets/`, `programs/` and `final-data/` inside `learning_materials/`, beside the notebook. For local Jupyter, open the extracted notebook directly.
@@ -40,6 +41,8 @@ Each ZIP contains its weekly notebook, lesson/task PDFs, Python Basics and the s
 | Session | Where you work | What you do |
 |---|---|---|
 | 1 · Learn Python | Weekly notebook | Read the explanation, trace the examples and check the syntax |
+| 2 · Practise | Same notebook | Predict, run, change and repair examples; explain the Python rule |
+| 3 · Project studio | Same notebook | Apply the skills, test the component and keep evidence |
 
 The course has **10 weeks × three 90-minute sessions = 45 contact hours**. **Week 4:** the first 135 minutes finish the introductory core; the final 135 minutes are the Midterm. **Week 10:** Session 2 is the operator demonstration and Session 3 is individual verification. Exact calendar arrangements are announced separately.
 
@@ -57,12 +60,12 @@ Use the [learning path](LEARNING_PATH.md) for outside-class time: generally 30�
 
 ## Class participation and your work
 
-Ask questions in class or keep a small written example: input, expected result, observed result and a specific question. Once the course repository is announced, use its Issues for shared technical questions. Use the weekly reflection form linked from [Course Links](COURSE_LINKS.md), selecting the correct week.
+Ask questions in class or keep a small written example: input, expected result, observed result and a specific question. Once the course repository is announced, use its Issues for shared technical questions. [Open the weekly reflection and feedback form](https://forms.gle/Z3JhR3GHmHDWKxuN7) after class, selecting the correct teaching week. Submit a new response each week. See [Course links and reflection](COURSE_LINKS.md) for privacy and attendance guidance.
 
-Live-class access, private submissions, exact file names and deadlines are announced separately. Keep complete assessed work, grades, attendance explanations and personal information out of shared Issues. Save your own working copy and a backup.
+Use [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) for private submissions and personal course matters. Live-class access, exact file names and deadlines are announced separately. Keep complete assessed work, grades, attendance explanations and personal information out of shared Issues. Save your own working copy and a backup.
 
 All course organizations, messages and quantities are fictional. Human coordinators approve suitability and arrangements. Planned portions are estimates; reservations, collection and delivery are distinct records.
 
 ## Public website edition
 
-Week 2–10 notebooks and weekly PDFs will be added after review. The course overview describes the full route. Shared support programs and Python Basics are reference infrastructure and can introduce later concepts.
+Weeks 1–2 materials are available above. Weeks 3–10 notebooks and weekly PDFs will be added after review. The course overview describes the full route. Shared support programs and Python Basics are reference infrastructure and can introduce later concepts.

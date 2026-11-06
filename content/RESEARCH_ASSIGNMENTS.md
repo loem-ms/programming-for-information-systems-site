@@ -69,4 +69,4 @@ Use a short note, slides or another clear way to explain your findings. There is
 
 AI is optional. If you use it, ask follow-up questions or challenge an answer, check important claims against sources, and keep useful discussion evidence (a link, screenshots or excerpts). Explain your own understanding. Full marks are possible without AI or a paid tool. Do not share personal data, credentials or private class records with a service.
 
-Save your response and a backup. The private submission route, exact file name and deadline will be announced. The discussion week is not a newly specified submission deadline. Any voluntary-sharing bonus requires a separately announced cap and fair opportunity plan.
+Save your response and a backup. Send submissions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). The exact file name and deadline will be announced. The discussion week is not a newly specified submission deadline. Any voluntary-sharing bonus requires a separately announced cap and fair opportunity plan.

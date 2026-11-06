@@ -11,7 +11,14 @@
 - [Read the notebook](learning_materials/Week_01.ipynb)
 - [Lesson PDF](/slides/Week_01_Slides.pdf)
 - [Task briefing PDF](/assignments/Week_01_Assignments.pdf)
-- [Week 1 ZIP](/downloads/Week_01.zip) — notebook, PDFs and support files
+- [Week 1 ZIP](/downloads/Week_01.zip), with notebook, PDFs and support files
+
+## Week 2
+
+- [Read the notebook](learning_materials/Week_02.ipynb)
+- [Lesson PDF](/slides/Week_02_Slides.pdf)
+- [Task briefing PDF](/assignments/Week_02_Assignments.pdf)
+- [Week 2 ZIP](/downloads/Week_02.zip), with notebook, PDFs and support files
 
 ## Optional reference
 

@@ -80,4 +80,4 @@ A useful learning cycle is **ask → predict → run or change → check → exp
 - [Assessment](ASSESSMENT.md) and [research guide](RESEARCH_ASSIGNMENTS.md): proposed weights, the Midterm, six short research assignments and the final project.
 - [Question guide](CONTRIBUTING.md) and [course links](COURSE_LINKS.md): shared technical questions and the separately announced class routes.
 
-The course home lists the weeks included in your package or website edition. Use the private course route for completed assessed submissions, personal matters and attendance questions. Instructor notes and completed weekly model answers stay separate from the student package.
+The course home lists the weeks included in your package or website edition. Use [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) for completed assessed submissions, personal matters and attendance questions. Instructor notes and completed weekly model answers stay separate from the student package.

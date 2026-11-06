@@ -32,4 +32,4 @@ The weekly slide PDF is a teaching and review aid. The notebook’s labelled req
 
 ## Saving now and submitting later
 
-Keep your edited notebook, any program/data files you created and the evidence named above. Make a separate backup before replacing course files or ending a Colab runtime. The instructor will announce the private submission route and file-naming rule before work is due. Do not post complete assessed work in GitHub Issues.
+Keep your edited notebook, any program/data files you created and the evidence named above. Make a separate backup before replacing course files or ending a Colab runtime. Send submissions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). The file-naming rule will be announced before work is due. Do not post complete assessed work in GitHub Issues.

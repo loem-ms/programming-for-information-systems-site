@@ -1,6 +1,6 @@
 # Orientation
 
-Welcome to Programming for Information Systems. We will learn Python while developing a fictional campus food-rescue coordination system.
+Welcome to Programming for Information Systems. The course teaches Python through a fictional campus food-rescue coordination system.
 
 1. Read the [course overview](COURSE_OVERVIEW.md) and meet [the instructor](INSTRUCTOR.md).
 2. Open the [Orientation PDF](/slides/Orientation.pdf) for the course workflow, learning expectations and proposed assessment.
@@ -9,4 +9,6 @@ Welcome to Programming for Information Systems. We will learn Python while devel
 
 [Course overview PDF](/slides/Course_Overview.pdf) · [Setup PDF](/slides/Setup.pdf)
 
-The website can be read without signing in. Class access, submissions and feedback use the separately announced private routes.
+The website can be read without signing in. For course questions, personal matters and assessed submissions, email [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Keep complete assessed work and personal information out of shared GitHub Issues. Exact deadlines and file-naming instructions are announced separately.
+
+For weekly feedback, open the [reflection form](COURSE_LINKS.md#weekly-reflection-and-feedback).

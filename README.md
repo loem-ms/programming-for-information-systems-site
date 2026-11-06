@@ -1,6 +1,6 @@
 # Programming for Information Systems — public website
 
-Public reading edition: orientation, preparation and Week 1, with Python Basics as an optional reference.
+Public reading edition: orientation, preparation and Weeks 1–2, with Python Basics as an optional reference.
 
 This site uses the standard MyST book theme, the engine behind Jupyter Book 2. Use Node.js 24, then run `npx --yes mystmd@1.12.0 start` to preview or `npx --yes mystmd@1.12.0 build --html` to build. GitHub Pages deploys `_build/html`. Notebook execution is disabled.
 
