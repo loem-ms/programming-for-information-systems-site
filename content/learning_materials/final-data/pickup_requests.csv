@@ -1,0 +1,11 @@
+request_id,reviewed,batch_id,containers
+P01,yes,B01,5
+P01,yes,B02,2
+P02,no,B03,2
+P03,yes,B03,3
+P04,yes,B01,4
+P04,yes,B03,7
+P05,yes,B02,2
+P05,yes,B03,1
+P06,yes,B01,6
+P06,yes,B03,2

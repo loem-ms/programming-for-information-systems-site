@@ -1,0 +1,6 @@
+request_id,event_type
+P01,collected
+P03,collected
+P05,collected
+P01,delivered
+P03,delivered

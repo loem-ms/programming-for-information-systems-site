@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "project": {
+    "title": "Programming for Information Systems",
+    "authors": [
+      {
+        "name": "Mengsay Loem"
+      }
+    ],
+    "github": "https://github.com/loem-ms/programming-for-information-systems-site",
+    "toc": [
+      {
+        "file": "content/README.md",
+        "title": "Course home"
+      },
+      {
+        "title": "Before Week 1",
+        "children": [
+          {
+            "file": "content/COURSE_OVERVIEW.md",
+            "title": "Course overview"
+          },
+          {
+            "file": "content/orientation.md",
+            "title": "Orientation"
+          },
+          {
+            "file": "content/INSTRUCTOR.md",
+            "title": "Meet the instructor"
+          },
+          {
+            "file": "content/SETUP.md",
+            "title": "GitHub and Python setup"
+          }
+        ]
+      },
+      {
+        "title": "Week 1",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_01.ipynb",
+            "title": "Values, types and execution"
+          },
+          {
+            "file": "content/assignments/README.md",
+            "title": "Week 1 tasks"
+          },
+          {
+            "file": "content/resources.md",
+            "title": "PDFs and downloads"
+          }
+        ]
+      },
+      {
+        "title": "Reference and course guidance",
+        "children": [
+          {
+            "file": "content/learning_materials/Python_Basics.ipynb",
+            "title": "Python Basics (optional)"
+          },
+          {
+            "file": "content/LEARNING_PATH.md",
+            "title": "Learning path"
+          },
+          {
+            "file": "content/ASSESSMENT.md",
+            "title": "Assessment"
+          },
+          {
+            "file": "content/RESEARCH_ASSIGNMENTS.md",
+            "title": "Research assignments"
+          },
+          {
+            "file": "content/CONTRIBUTING.md",
+            "title": "Questions and help"
+          },
+          {
+            "file": "content/COURSE_LINKS.md",
+            "title": "Class access"
+          },
+          {
+            "file": "content/learning_materials/CLASS_QA.md",
+            "title": "Common questions"
+          },
+          {
+            "file": "content/learning_materials/LOCAL_REVIEW.md",
+            "title": "Question and change review"
+          },
+          {
+            "file": "content/learning_materials/README.md",
+            "title": "Notebook files"
+          },
+          {
+            "file": "content/learning_materials/programs/README.md",
+            "title": "Program guide"
+          },
+          {
+            "file": "content/learning_materials/programs/project_starter/README.md",
+            "title": "Supplied project reference"
+          }
+        ]
+      }
+    ],
+    "static_files": [
+      "content/slides",
+      "content/assignments",
+      "content/downloads",
+      "content/assets",
+      "content/learning_materials"
+    ],
+    "exclude": [
+      "README.md",
+      "scripts/**",
+      "_build/**",
+      "node_modules/**"
+    ]
+  },
+  "site": {
+    "template": "book-theme",
+    "title": "Programming for Information Systems",
+    "options": {
+      "logo_text": "Programming for IS",
+      "folders": true
+    }
+  }
+}

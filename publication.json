@@ -1,0 +1,337 @@
+{
+  "title": "Programming for Information Systems",
+  "weeks": [
+    1
+  ],
+  "public_repository": "loem-ms/programming-for-information-systems-site",
+  "notebook_execution": "disabled",
+  "source_files": [
+    {
+      "path": "README.md",
+      "source_sha256": "73c83e3e7f8e741a9c6e6642897f560cc74e80d71d667f6093627c6019c2760d"
+    },
+    {
+      "path": "COURSE_OVERVIEW.md",
+      "source_sha256": "a00325edc3db6472a77dcf1a16b470f45eb51db2d2b50db5bb7a30c9be2c9f83"
+    },
+    {
+      "path": "INSTRUCTOR.md",
+      "source_sha256": "a2be181b644ac7675439e355f5d65ec6a2fcc381c854a58f33155da2c04461e3"
+    },
+    {
+      "path": "SETUP.md",
+      "source_sha256": "d222542418d31b52b6c69aaae6e3b53e70f854d52f8c1d21586d29680c813ddf"
+    },
+    {
+      "path": "LEARNING_PATH.md",
+      "source_sha256": "5c7bc8050c2c191e4061b23923993c4a7393e890655cc9f9bf267025305ad5d4"
+    },
+    {
+      "path": "ASSESSMENT.md",
+      "source_sha256": "bed09fbd70d2e6204b1935598bd7db0a0b4c0f386c56639393906cd96ae7c7b2"
+    },
+    {
+      "path": "RESEARCH_ASSIGNMENTS.md",
+      "source_sha256": "d2c4dd7eb1aacc09e49f7ff6cd685d8eea498917271aa86bf0b77d11e9a7419c"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "source_sha256": "36ea09e335256a71fa703985345ffbc8ea81b1f71160f77d2a502b48365c961f"
+    },
+    {
+      "path": "slides/Orientation.pdf",
+      "source_sha256": "8cdbea6bef56401ff0f151306e7a979d5783344be0016803061b87fefdd8ad0f"
+    },
+    {
+      "path": "slides/Course_Overview.pdf",
+      "source_sha256": "5a40e26e5f5eafbb42cbd60cffcf2d7059214e36e885b49136757feb5517c4eb"
+    },
+    {
+      "path": "slides/Setup.pdf",
+      "source_sha256": "8d20eeb8937fc16b70395fc24da9bb17a11c924e11123105b161d74bec50d5f1"
+    },
+    {
+      "path": "slides/Week_01_Slides.pdf",
+      "source_sha256": "46f2ef218009c42cca9c0f5e4ea9ded307aa577b5f30615b133195f153718fb1"
+    },
+    {
+      "path": "assignments/Week_01_Assignments.pdf",
+      "source_sha256": "9668c88a5c375dff0686dbc1a9736fdc97b7b2f8c6d2ea6534a9c26feed0f9d3"
+    },
+    {
+      "path": "assets/diagrams/course_overview.svg",
+      "source_sha256": "8d1c475a492ea243c708e2df631f60400f04963e4fd976c8215c764327aa14bb"
+    },
+    {
+      "path": "assets/illustrations/campus_food_rescue_story.png",
+      "source_sha256": "c6d1a71bd4e248cf3d362dba36caa80962ba8d8ffb66209b29390d306a4aab60"
+    },
+    {
+      "path": "learning_materials/CLASS_QA.md",
+      "source_sha256": "dbd281627be319118944e61e8b530122f7c2d69144bc6b62ad3832f53f56dfda"
+    },
+    {
+      "path": "learning_materials/LOCAL_REVIEW.md",
+      "source_sha256": "2a6270f80eeecdc2c1fb454beb72b2f5619987d6615b2abf97e02eb7413256aa"
+    },
+    {
+      "path": "learning_materials/assets/diagrams/python_execution_modes.svg",
+      "source_sha256": "33ed71c5c471bd3d71ba4e3d965bcec59fc97db16fe4ce72ab130b59c2c48116"
+    },
+    {
+      "path": "learning_materials/assets/diagrams/w01_planning.svg",
+      "source_sha256": "ca46110217e641a0e6a921b7de16d0966671432cca2f7a97baf24fb69d4f9005"
+    },
+    {
+      "path": "learning_materials/colab_setup.py",
+      "source_sha256": "9cae9fd2dd819d219566708dc59933f91486e8b52cefe62c1b2eac9f4e21861e"
+    },
+    {
+      "path": "learning_materials/final-data/offer_batches.csv",
+      "source_sha256": "82dd417a02133a07789f6bc16dfd986bb2c227a8b8fbcf7213cbcf147043704a"
+    },
+    {
+      "path": "learning_materials/final-data/pickup_requests.csv",
+      "source_sha256": "10181371853834f2f52af646cd53861e53631ebbc74ccdec4efb001e2d81d5e2"
+    },
+    {
+      "path": "learning_materials/final-data/rescue_events.csv",
+      "source_sha256": "aefd9958fe6b8cc854be04ca82459fca1678afb5c7115fdc3cd4cbf713828909"
+    },
+    {
+      "path": "learning_materials/programs/README.md",
+      "source_sha256": "6b3385478dc87333c8a74e4d3ca74c65610004f006d88540a3ef776a55e1e75b"
+    },
+    {
+      "path": "learning_materials/programs/first_pickup.py",
+      "source_sha256": "a2cfc23deec029f9b2369adc42b271bb9222b273addc18a1cd1b31b77e3fe47a"
+    },
+    {
+      "path": "learning_materials/programs/pickup_app.py",
+      "source_sha256": "0ad73c173e6df28766cb9e06b6ddf450b0c06bc9964a89d2f3d2ed565765a08a"
+    },
+    {
+      "path": "learning_materials/programs/rescue_cli.py",
+      "source_sha256": "4c4653ce9532e9ccdd722dbbfb0cd242446088f758f90715c6a49c16f696be89"
+    },
+    {
+      "path": "learning_materials/programs/rescue_models.py",
+      "source_sha256": "b4175919adc66c9322292d0013591f13263166b1bcc9c679ab53b646e570f453"
+    },
+    {
+      "path": "learning_materials/programs/test_pickup_app.py",
+      "source_sha256": "45485aa14f7ac502d027ba2cd703419b28dc7819bbd33c54463de19405e0e88c"
+    },
+    {
+      "path": "learning_materials/programs/test_rescue_models.py",
+      "source_sha256": "a3aaa12dc24cb9c5d132d8e8cbe67bed79aae7437192f9cef4e931b51dc448fc"
+    },
+    {
+      "path": "learning_materials/programs/project_starter/README.md",
+      "source_sha256": "6067e9a4a6a9284b2c3d733ae178fcc3e7edda901919a89dae3b58da3e1ac00c"
+    },
+    {
+      "path": "learning_materials/programs/project_starter/app.py",
+      "source_sha256": "053cfc87275d3257a987496fb986bc75af045bb7e59f96d60a4cb1aa88c3fe1e"
+    },
+    {
+      "path": "learning_materials/programs/project_starter/policy.py",
+      "source_sha256": "6366b6b9e41ae35c25297a27d82feb004359e6a269d94e6e6fe766049de45248"
+    },
+    {
+      "path": "learning_materials/programs/project_starter/test_policy.py",
+      "source_sha256": "978a4a5a244d38852a827026b9e58e18b114ddf5f1fd7eb226719b27bbc2a8ca"
+    },
+    {
+      "path": "learning_materials/Week_01.ipynb",
+      "source_sha256": "2cb037bd6535961bc4201b73f625ba527c1e272a1fcf816430510b038ca52027"
+    },
+    {
+      "path": "learning_materials/Python_Basics.ipynb",
+      "source_sha256": "d8b7e72595e20c2f60b2ff1217245ea45df9aac4e7b3f777f132351f93772524"
+    }
+  ],
+  "scope": "Orientation, preparation and Week 1; Python Basics and shared support infrastructure are optional references.",
+  "files": [
+    {
+      "path": "ASSESSMENT.md",
+      "sha256": "bed09fbd70d2e6204b1935598bd7db0a0b4c0f386c56639393906cd96ae7c7b2"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "36ea09e335256a71fa703985345ffbc8ea81b1f71160f77d2a502b48365c961f"
+    },
+    {
+      "path": "COURSE_LINKS.md",
+      "sha256": "ca9b8d6800e03675d0ac26ce945f7fb1048c23e83bf434cc712314961988e8c6"
+    },
+    {
+      "path": "COURSE_OVERVIEW.md",
+      "sha256": "8c0ae8ede3d1bf968b9a12c84445ab5ba7a4918cbec13b048f6d36028039f896"
+    },
+    {
+      "path": "INSTRUCTOR.md",
+      "sha256": "a2be181b644ac7675439e355f5d65ec6a2fcc381c854a58f33155da2c04461e3"
+    },
+    {
+      "path": "LEARNING_PATH.md",
+      "sha256": "5c7bc8050c2c191e4061b23923993c4a7393e890655cc9f9bf267025305ad5d4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "afe21213089e71c3a9c7344aac8f46dcb967a7f25eebc63ecb51bfe0ac4b35c4"
+    },
+    {
+      "path": "RESEARCH_ASSIGNMENTS.md",
+      "sha256": "d2c4dd7eb1aacc09e49f7ff6cd685d8eea498917271aa86bf0b77d11e9a7419c"
+    },
+    {
+      "path": "SETUP.md",
+      "sha256": "d222542418d31b52b6c69aaae6e3b53e70f854d52f8c1d21586d29680c813ddf"
+    },
+    {
+      "path": "assets/diagrams/course_overview.svg",
+      "sha256": "8d1c475a492ea243c708e2df631f60400f04963e4fd976c8215c764327aa14bb"
+    },
+    {
+      "path": "assets/illustrations/campus_food_rescue_story.png",
+      "sha256": "c6d1a71bd4e248cf3d362dba36caa80962ba8d8ffb66209b29390d306a4aab60"
+    },
+    {
+      "path": "assignments/README.md",
+      "sha256": "d2501a48c1ec495a295805f67b78e9c05abbc63bf9ce5d57cc31097b377e8c4e"
+    },
+    {
+      "path": "assignments/Week_01_Assignments.pdf",
+      "sha256": "9668c88a5c375dff0686dbc1a9736fdc97b7b2f8c6d2ea6534a9c26feed0f9d3"
+    },
+    {
+      "path": "downloads/Python_Basics.ipynb",
+      "sha256": "d7e320bdde551c88a49a284567a5918149bac6cc98d6637ae87fdb63f7678dc3"
+    },
+    {
+      "path": "downloads/Python_Basics.zip",
+      "sha256": "342e659068a323e50ffa69a9f8ac8faca95642ff421d455fb17ff6f9fa87aa09"
+    },
+    {
+      "path": "downloads/Week_01.ipynb",
+      "sha256": "2b5a4413e434379cf34ae409ad117f91deedb87c0b13e38afd7e0c694452a90a"
+    },
+    {
+      "path": "downloads/Week_01.zip",
+      "sha256": "5ed0f4a67a5ff371f71efd5f5ab5e2da8d46a3e70c44804e20e78ba04a5d167e"
+    },
+    {
+      "path": "learning_materials/CLASS_QA.md",
+      "sha256": "dbd281627be319118944e61e8b530122f7c2d69144bc6b62ad3832f53f56dfda"
+    },
+    {
+      "path": "learning_materials/LOCAL_REVIEW.md",
+      "sha256": "2a6270f80eeecdc2c1fb454beb72b2f5619987d6615b2abf97e02eb7413256aa"
+    },
+    {
+      "path": "learning_materials/Python_Basics.ipynb",
+      "sha256": "88529a123b08dece043f87e7bbfabb0c4c081e379d8199f8bd44373103046819"
+    },
+    {
+      "path": "learning_materials/README.md",
+      "sha256": "38e49f184a195b2ecaafde07c068b5bcf683960cb326e12db99af1fed9e25214"
+    },
+    {
+      "path": "learning_materials/Week_01.ipynb",
+      "sha256": "460c2e163db37078ee7d779465b93ea12e2c9e8054595f6888862727f5910ab2"
+    },
+    {
+      "path": "learning_materials/assets/diagrams/python_execution_modes.svg",
+      "sha256": "33ed71c5c471bd3d71ba4e3d965bcec59fc97db16fe4ce72ab130b59c2c48116"
+    },
+    {
+      "path": "learning_materials/assets/diagrams/w01_planning.svg",
+      "sha256": "ca46110217e641a0e6a921b7de16d0966671432cca2f7a97baf24fb69d4f9005"
+    },
+    {
+      "path": "learning_materials/colab_setup.py",
+      "sha256": "9cae9fd2dd819d219566708dc59933f91486e8b52cefe62c1b2eac9f4e21861e"
+    },
+    {
+      "path": "learning_materials/final-data/offer_batches.csv",
+      "sha256": "82dd417a02133a07789f6bc16dfd986bb2c227a8b8fbcf7213cbcf147043704a"
+    },
+    {
+      "path": "learning_materials/final-data/pickup_requests.csv",
+      "sha256": "10181371853834f2f52af646cd53861e53631ebbc74ccdec4efb001e2d81d5e2"
+    },
+    {
+      "path": "learning_materials/final-data/rescue_events.csv",
+      "sha256": "aefd9958fe6b8cc854be04ca82459fca1678afb5c7115fdc3cd4cbf713828909"
+    },
+    {
+      "path": "learning_materials/programs/README.md",
+      "sha256": "4656edb42ed316e28927ae86df1bae1443c149e8a3670e44631be52b2a8f9200"
+    },
+    {
+      "path": "learning_materials/programs/first_pickup.py",
+      "sha256": "a2cfc23deec029f9b2369adc42b271bb9222b273addc18a1cd1b31b77e3fe47a"
+    },
+    {
+      "path": "learning_materials/programs/pickup_app.py",
+      "sha256": "0ad73c173e6df28766cb9e06b6ddf450b0c06bc9964a89d2f3d2ed565765a08a"
+    },
+    {
+      "path": "learning_materials/programs/project_starter/README.md",
+      "sha256": "d49a23f4e06dbbcd7a21e08c6b921b4accf58060ad5e5ec8d973f53b23d270ee"
+    },
+    {
+      "path": "learning_materials/programs/project_starter/app.py",
+      "sha256": "053cfc87275d3257a987496fb986bc75af045bb7e59f96d60a4cb1aa88c3fe1e"
+    },
+    {
+      "path": "learning_materials/programs/project_starter/policy.py",
+      "sha256": "6366b6b9e41ae35c25297a27d82feb004359e6a269d94e6e6fe766049de45248"
+    },
+    {
+      "path": "learning_materials/programs/project_starter/test_policy.py",
+      "sha256": "978a4a5a244d38852a827026b9e58e18b114ddf5f1fd7eb226719b27bbc2a8ca"
+    },
+    {
+      "path": "learning_materials/programs/rescue_cli.py",
+      "sha256": "4c4653ce9532e9ccdd722dbbfb0cd242446088f758f90715c6a49c16f696be89"
+    },
+    {
+      "path": "learning_materials/programs/rescue_models.py",
+      "sha256": "b4175919adc66c9322292d0013591f13263166b1bcc9c679ab53b646e570f453"
+    },
+    {
+      "path": "learning_materials/programs/test_pickup_app.py",
+      "sha256": "45485aa14f7ac502d027ba2cd703419b28dc7819bbd33c54463de19405e0e88c"
+    },
+    {
+      "path": "learning_materials/programs/test_rescue_models.py",
+      "sha256": "a3aaa12dc24cb9c5d132d8e8cbe67bed79aae7437192f9cef4e931b51dc448fc"
+    },
+    {
+      "path": "orientation.md",
+      "sha256": "e64f032cbfd637acf505a04b016019369fb80826e6619b0e410725725acecc22"
+    },
+    {
+      "path": "resources.md",
+      "sha256": "40930a6758a6bb8440994b521040a0cd578a7327d3e20c52a3738cb663b92060"
+    },
+    {
+      "path": "slides/Course_Overview.pdf",
+      "sha256": "5a40e26e5f5eafbb42cbd60cffcf2d7059214e36e885b49136757feb5517c4eb"
+    },
+    {
+      "path": "slides/Orientation.pdf",
+      "sha256": "8cdbea6bef56401ff0f151306e7a979d5783344be0016803061b87fefdd8ad0f"
+    },
+    {
+      "path": "slides/Setup.pdf",
+      "sha256": "8d20eeb8937fc16b70395fc24da9bb17a11c924e11123105b161d74bec50d5f1"
+    },
+    {
+      "path": "slides/Week_01_Slides.pdf",
+      "sha256": "46f2ef218009c42cca9c0f5e4ea9ded307aa577b5f30615b133195f153718fb1"
+    }
+  ]
+}
