@@ -167,7 +167,7 @@
     },
     {
       "path": "COURSE_OVERVIEW.md",
-      "sha256": "8c0ae8ede3d1bf968b9a12c84445ab5ba7a4918cbec13b048f6d36028039f896"
+      "sha256": "5df524de6bcdeb36983f5ebfd39445d16eefd610148ada024e34189d994ee556"
     },
     {
       "path": "INSTRUCTOR.md",
@@ -231,7 +231,7 @@
     },
     {
       "path": "learning_materials/Python_Basics.ipynb",
-      "sha256": "88529a123b08dece043f87e7bbfabb0c4c081e379d8199f8bd44373103046819"
+      "sha256": "f48587da8538c1042719609900827ae79de47533d53071938c8ea78e27b43fb0"
     },
     {
       "path": "learning_materials/README.md",
@@ -239,7 +239,7 @@
     },
     {
       "path": "learning_materials/Week_01.ipynb",
-      "sha256": "460c2e163db37078ee7d779465b93ea12e2c9e8054595f6888862727f5910ab2"
+      "sha256": "e91ce17eee448fca6853367db1d2e263dcfad62c20f3e472d0386997eda3a801"
     },
     {
       "path": "learning_materials/assets/diagrams/python_execution_modes.svg",

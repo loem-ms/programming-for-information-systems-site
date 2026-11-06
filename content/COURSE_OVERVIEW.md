@@ -4,7 +4,7 @@
 
 [Open the illustrated PDF overview](/slides/Course_Overview.pdf)
 
-![Three scenes at a fictional Cambodian university: a donor asks how many portions each box contains; volunteers ask whether another team reserved a pickup; a community partner checks what was offered, collected and delivered.](/assets/illustrations/campus_food_rescue_story.png)
+![Three scenes at a fictional Cambodian university: a donor asks how many portions each box contains; volunteers ask whether another team reserved a pickup; a community partner checks what was offered, collected and delivered.](assets/illustrations/campus_food_rescue_story.png)
 
 *One coordination project, three questions: what is being offered, who is collecting it, and what actually happened?*
 
@@ -18,7 +18,7 @@ All organizations, messages, quantities and approvals are invented for learning.
 
 The pictured ready-to-collect arrangement assumes that human review has already happened. The course also examines offers that are incomplete, unreviewed, cancelled or never collected.
 
-![The course progresses from planning a pickup, through reliable records and reservations, to stage reports, an improvement and handoff. Each week repeats ask, predict, code, check and revise.](/assets/diagrams/course_overview.svg)
+![The course progresses from planning a pickup, through reliable records and reservations, to stage reports, an improvement and handoff. Each week repeats ask, predict, code, check and revise.](assets/diagrams/course_overview.svg)
 
 ## The system we are designing and developing
 

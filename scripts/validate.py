@@ -15,11 +15,13 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def check_name(name):
+def check_name(name, rendered=False):
     rel = PurePosixPath(name)
     require(not rel.is_absolute() and '..' not in rel.parts, 'Unsafe public path: '+name)
     require(not re.search(r'Week_(?!01)[0-9]{2}', name), 'Future weekly file: '+name)
-    require(not any(p in rel.parts for p in ('.git', 'instructor', 'examples', 'notes', '__pycache__')),
+    # The public INSTRUCTOR.md page legitimately renders to this route.
+    allowed_profile = rendered and rel.parts == ('content', 'instructor', 'index.html')
+    require(allowed_profile or not any(p in rel.parts for p in ('.git', 'instructor', 'examples', 'notes', '__pycache__')),
             'Private/runtime path: '+name)
     require('_Completed' not in name, 'Completed weekly solution: '+name)
     require(Path(name).name not in ('Midterm_Assignment.pdf', 'Final_Assignment.pdf', 'Assignment_Guide.pdf'),
@@ -62,7 +64,7 @@ def check_links(root):
                 require(resolved.exists(), f'Missing link: {path.relative_to(root)} -> {target}')
 
 
-def validate(folder, html=None):
+def validate(folder, html=None, log=None):
     folder = folder.resolve()
     content = folder/'content'
     publication = json.loads((folder/'publication.json').read_text())
@@ -115,11 +117,15 @@ def validate(folder, html=None):
         require((html/'index.html').is_file(), 'MyST HTML entry point is missing')
         for path in html.rglob('*'):
             if path.is_file():
-                check_name(path.relative_to(html).as_posix())
+                check_name(path.relative_to(html).as_posix(), rendered=True)
         for name in ('slides/Setup.pdf', 'slides/Orientation.pdf', 'slides/Course_Overview.pdf',
                      'slides/Week_01_Slides.pdf', 'assignments/Week_01_Assignments.pdf',
                      'downloads/Week_01.zip', 'downloads/Week_01.ipynb'):
             require((html/name).is_file(), 'Static download missing from MyST output: '+name)
+    if log:
+        issues = [line for line in log.read_text().splitlines() if any(marker in line for marker in (
+            '⛔', 'Duplicate identifier', 'No target for internal reference', 'Cross reference target was not found'))]
+        require(not issues, 'MyST reported broken content:\n'+'\n'.join(issues))
     print(f'PASS {len(toc)} book pages, {len(expected)} content files, Week 1-only PDFs/notebooks, links and rebuilt ZIPs.')
     print('PASS static reading edition: no notebook execution, class form or private repository subresources.')
 
@@ -128,5 +134,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('folder', type=Path)
     parser.add_argument('--html', type=Path)
+    parser.add_argument('--log', type=Path)
     args = parser.parse_args()
-    validate(args.folder, args.html)
+    validate(args.folder, args.html, args.log)

@@ -29,9 +29,11 @@ jobs:
       - name: Check publication scope, links and download packages
         run: python scripts/validate.py .
       - name: Build with the Jupyter Book 2 MyST engine
-        run: npx --yes mystmd@1.12.0 build --html
+        run: |
+          set -o pipefail
+          npx --yes mystmd@1.12.0 build --html 2>&1 | tee myst-build.log
       - name: Check the generated site
-        run: python scripts/validate.py . --html _build/html
+        run: python scripts/validate.py . --html _build/html --log myst-build.log
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _build/html
