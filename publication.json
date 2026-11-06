@@ -231,7 +231,7 @@
     },
     {
       "path": "learning_materials/Python_Basics.ipynb",
-      "sha256": "f48587da8538c1042719609900827ae79de47533d53071938c8ea78e27b43fb0"
+      "sha256": "c4bb361b2bda4eba3490098d905b134ae3140c7a788ed51c8e2b11efa2815d1d"
     },
     {
       "path": "learning_materials/README.md",
@@ -239,7 +239,7 @@
     },
     {
       "path": "learning_materials/Week_01.ipynb",
-      "sha256": "e91ce17eee448fca6853367db1d2e263dcfad62c20f3e472d0386997eda3a801"
+      "sha256": "e5990199b17dd8a5d20e26c902046ac9dcada5800d20273fe192dba671f2b9be"
     },
     {
       "path": "learning_materials/assets/diagrams/python_execution_modes.svg",
