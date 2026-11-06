@@ -24,6 +24,19 @@ AI is encouraged as an optional research aid. When AI is used, the student inves
 
 Volunteers may later receive a small capped bonus for sharing useful research, but the exact bonus has not been decided. It will only be announced with an equitable opportunity plan.
 
+### Common criteria for each Research task
+
+The following proposed criteria apply to all six tasks. They do not prescribe a response template or page count.
+
+| Criterion | Points |
+|---|---:|
+| Relevant topic and sources | 1 |
+| Accurate explanation in your own words | 1 |
+| Concrete example | 1 |
+| Reasoning and a limitation or remaining question | 1 |
+| Clear sources and evidence, including AI discussion evidence if used | 1 |
+| Total | 5 |
+
 ## Individual midterm: 30%
 
 Status: **detailed proposal, not yet a final calendar announcement**. The midterm focuses on basic Python from Weeks 1–4.
@@ -37,6 +50,15 @@ Each input line has this shape:
 ```
 
 Return exactly the fields `total_containers`, `planned_portions` and `coordination_label`. For the single reviewed example above, the expected result is `2`, `6`, `standard`. Inputs are supplied valid; parsing, databases and a web interface are outside this task.
+
+### Do this in order
+
+1. Open `Week_04.ipynb` and read **Midterm begins** in Session 2.
+2. Fill in `summarize_request(lines, reviewed)` in the marked code cell. Use a loop to calculate both totals, then choose the label using the review-first rule.
+3. Run cases A–D below. For every case, compare all three returned fields with the expected values. Fix the first difference you find.
+4. Save the function in `midterm.py`, the four checks in `test_midterm.py`, and the run instructions/disclosure in `README.md`.
+5. Put the three files in one ZIP. Extract it into a fresh folder and follow only your README to verify it works.
+6. Keep the ZIP and backup, use the announced private route, and prepare to explain one case in your individual slot.
 
 ### Common minimum tests
 
@@ -86,6 +108,12 @@ Full standard marks do not require AI or optional refactoring. A small capped bo
 Week 4 protects its final **135 minutes** for the Midterm: the last 45 minutes of Session 2 and all of Session 3. Budget **90 minutes implementation + 30 minutes tests/README/ZIP + 15 minutes review and hand-in**. The first 135 minutes are for functions and guided practice. Detailed main/import work and the 16-boundary exercise are optional rehearsal. The five-minute individual explanation is scheduled according to cohort size and examiner capacity; the final 15 minutes do not guarantee an oral slot for every student. Calendar dates and the private submission route remain to be announced. Outside class, Week 4 requires only the 15–20-minute Research 3 preparation after the Midterm and keeping a backup.
 
 ## Final project: 30%
+
+### Where to start
+
+- **Week 8:** use **Project preparation for Week 9** in your weekly notebook. Write the user problem, your proposed change and two inputs with expected results.
+- **Week 9:** use the `project-task` area in `Week_09.ipynb`. Run the supplied setup, write your function or query, and check the expected cases.
+- **Week 10:** use the **Volunteer-led demonstration** in `Week_10.ipynb` in Session 2, then complete individual verification in Session 3. Keep the working files, run guide and peer finding/retest.
 
 ### One useful improvement
 

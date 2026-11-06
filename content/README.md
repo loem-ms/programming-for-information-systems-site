@@ -2,9 +2,13 @@
 
 **Campus Food Rescue · Mengsay Loem · English-language course**
 
-Learn to turn people’s needs into systems they can trust. Across ten weeks, build and verify small Python components for a fictional university food-pickup coordination system.
+Learn to turn people’s needs into systems they can trust. **No programming background is needed to begin.** Start with a small calculation, then learn to check and save information for a fictional university food-pickup team.
 
-> **Updated 2026-11-07:** Each weekly notebook now contains the full lesson, practice and project tasks. Week 4 reserves its second half for the Midterm. Download a fresh ZIP for your week and keep your own work backed up.
+![A food business offers food, university volunteers plan the pickup, and a community partner receives it.](assets/diagrams/course_story.svg)
+
+[See the illustrated course story and ten-week route](COURSE_OVERVIEW.md). In the final project, you improve one small feature of a supplied application and let a classmate use it.
+
+> **Updated 2026-11-07:** The illustrated course overview now starts with the people, one small program and one pickup. Weekly project introductions explain whose problem you are solving. Download a fresh weekly ZIP and keep your own work backed up.
 
 ## Start here
 
@@ -13,7 +17,7 @@ Learn to turn people’s needs into systems they can trust. Across ten weeks, bu
 3. **Open `Week_XX.ipynb`:** follow **Start Here → Sessions 1–3 → Finish**. Write your predictions, code and checks in that notebook.
 4. **Save and back up:** use the notebook's Finish checklist. The [weekly learning path](LEARNING_PATH.md) defines required work and when to stop.
 
-Slides support the class explanation. The weekly assignment PDF clarifies the task and evidence. [Python Basics](learning_materials/Python_Basics.ipynb) is an optional syntax lookup and is already included in every weekly ZIP.
+Slides support the class explanation. The [assignment guide](assignments/README.md) separates **Programming tasks** (understand the Python topic through short experiments, then apply it) from **Research tasks** (investigate questions and explain with sources). The weekly PDF gives the steps, an example and a done checklist. [Python Basics](learning_materials/Python_Basics.ipynb) is an optional syntax lookup and is already included in every weekly ZIP.
 
 ## Weekly materials
 

@@ -6,7 +6,7 @@ The weekly slides and notebooks share three sessions: Python foundations, hands-
 
 1. Open the current week’s notebook and run its setup cell.
 2. Use the supplied starter, programs, data, diagrams and examples. You are not expected to rebuild that infrastructure.
-3. Complete the core Python practice in the same notebook, then the **project or assessment evidence** below. Be ready to explain the result.
+3. Complete the short core Python experiments in the same notebook: predict, run, change and repair, then explain the concept. Continue to the separate **project or assessment evidence** below. Be ready to explain the result.
 4. Save your notebook and any files you created, plus a backup. Then stop. Optional extensions can wait.
 
 Typical time is a planning guide, not a speed target or timed test. It describes work outside the three weekly class sessions and includes a short research brief only when one is assigned (Weeks 1–2 and 4–7). Use the supplied reading card and plan about 15–20 minutes for that brief. Research Assignment 2 is shared in Week 3. Week 4 has no research submission or presentation; Research Assignment 3 is released after the midterm. The Midterm takes the final 135 minutes of the 270-minute teaching week: 90 implementation, 30 tests/package, 15 review/hand-in. It is not another 90-minute homework task. Week 8 closes Research Assignment 6 at the start of the week without adding a new one, then shifts to the project proposal. Weeks 9–10 protect time for the final project and contain no research obligation. If setup, access or an unclear instruction makes the task take much longer, record the exact point where you are blocked and ask for help.

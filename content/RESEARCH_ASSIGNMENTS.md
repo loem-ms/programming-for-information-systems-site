@@ -1,111 +1,72 @@
-# Six individual research assignments
+# Research assignments
 
-These six proposed assignments connect independent investigation with the programming work in class. Each assignment is worth **5%**, for a proposed total of **30%**. The instructor and university will confirm the assessment plan before grading begins.
+Research the topic below and briefly explain what you found. The directions suggest things to look at; the examples show how a short summary could read. You may choose another relevant example. There is no required response template. Use your own words and name your sources. Plan about 15–20 minutes per task.
 
-The questions below define the six tasks. The [assignment collection](assignments/README.md) links to weekly PDFs with examples and evidence checklists.
+## Research 1 · a real information system
 
-Normal full marks come from the submitted evidence and your own reasoning. You do not need to present to receive the normal full 5%.
+**Research a real information system.** Choose a real system, such as a library loan system. Find out who uses it, what information it keeps and what it helps them do.
 
-## Schedule
+**Possible directions:** Connect it to one skill you want to learn. Consider what an engineer still needs to check when AI helps write code.
 
-| No. | Assigned | Discussed | Topic |
-|---|---|---|---|
-| 1 | Week 1 | Week 2 Session 1 | Your learning goals, examples of real information systems, and the engineer's role in the generative AI era |
-| 2 | Week 2 | Week 3 Session 1 | Functions and testing |
-| 3 | Week 4, after the midterm | Week 5 Session 1 | Input validation |
-| 4 | Week 5 | Week 6 Session 1 | Persistence and databases |
-| 5 | Week 6 | Week 7 Session 1 | Transactions and failure handling |
-| 6 | Week 7 | Week 8 Session 1 | Verification of output, including AI-generated output |
+**Summary example:** “A library records loans and due dates. I want to learn how to check dates. Even if AI writes the rule, an engineer must test it.”
 
-Research Assignment 2 is shared in Week 3. **Week 4 has no research submission or presentation**, so students can focus on the individual midterm. Research Assignment 3 is released only after the midterm. Research Assignment 6 closes at the start of Week 8 before the project-proposal work. There is no new research assignment in Week 8 and no research obligation in Weeks 9–10; those weeks protect time for the final project.
+## Research 2 · functions and testing
 
-## Topic-specific questions
+**Research functions and testing.** Find out what a function does and why we test it.
 
-### Research 1: goals, systems and the AI-era engineer
+**Possible directions:** Look at one small function: its inputs, returned value and a test that could catch a believable mistake.
 
-- State one learning goal and why it matters.
-- Analyze one real information system through its users, information, action and one failure risk.
-- Explain one responsibility an engineer still holds when AI helps.
-- Connect the goal, system and responsibility in your own reasoning.
+**Summary example:** “A minutes-to-seconds function should return 120 for 2. Adding 60 would give 62, so this test catches that mistake.”
 
-### Research 2: functions and testing
+## Research 3 · input validation
 
-- Name a small function's inputs, returned output and purpose.
-- Describe one plausible wrong rule.
-- Give a test input and expected output that expose that wrong rule.
-- Explain why the test is stronger than one normal example.
+**Research input validation.** Find out why programs check input before using or saving it.
 
-### Research 3: input validation
+**Possible directions:** Choose one field and an invalid value. Consider the allowed values, the message to show and what should remain unchanged.
 
-- State one field contract, including type and valid range or form.
-- Give one invalid value.
-- Choose a clear response: reject, skip or request correction.
-- State the expected message and program state after the invalid case.
+**Summary example:** “A container count must be a positive integer. If the input is “many”, ask for a whole count and leave saved stock unchanged.”
 
-### Research 4: persistence and databases
+## Research 4 · how programs keep data
 
-- Name one fact that must survive after the program closes.
-- Propose an identifier and at least two fields with clear units.
-- State one retrieval question the stored record must answer.
-- Explain one risk caused by missing or overwritten history.
+**Research how programs keep data.** Find out how files or databases let a program retrieve information after it closes.
 
-### Research 5: transactions and failure handling
+**Possible directions:** Look at record IDs, saved fields and retrieval. Consider a fact whose original value should be kept even after a later correction.
 
-- Describe two writes that belong to one operation.
-- Place a failure between the writes.
-- State what must remain unchanged after rollback.
-- Name the query or state comparison that proves the result.
+**Summary example:** “Plan EX-8 saved 2 containers at 4 portions each. If the current unit becomes 5, keeping the original value still explains the old total of 8.”
 
-### Research 6: output verification, including AI
+## Research 5 · database transactions
 
-- Choose an original message, record or documented fact.
-- Compare it with one automated or AI-generated output. A supplied authored output is acceptable, so a live or paid model is not required.
-- Check fields, units, omissions and unsupported claims.
-- Accept, correct or hold the output and explain the decision.
+**Research database transactions.** Find out what a transaction is and why related updates should succeed or fail together.
 
-## What to submit
+**Possible directions:** Use an action with two updates. Consider a failure between them and how to check the records before and after.
 
-Use slides, a short report or another clear format. Include:
+**Summary example:** “A reservation reduces stock and saves a request. If saving fails, undo the stock change. Compare both records before and after.”
 
-1. the question you investigated;
-2. the sources you used;
-3. the main finding in your own words;
-4. one concrete example connected to programming or an information system;
-5. your reasoning, including a limitation or question that remains.
+## Research 6 · how to check automated or AI output
 
-The task should normally fit within about **15–20 minutes** of focused preparation. A longer format does not automatically earn more marks.
+**Research how to check automated or AI output.** Find out how to verify an automated answer against its original source. You may use the supplied example instead of a live AI tool.
 
-## AI use
+**Possible directions:** Compare fields, units, missing information and unsupported claims. Explain what you would accept, correct or ask about.
 
-AI is encouraged as an optional research aid. It may help you locate terms, compare explanations, ask follow-up questions or improve wording. It must not replace investigation or your own reasoning.
+**Summary example:** “The source says “12 boxes offered”; the output says “12 portions collected”. The unit and collection claim are unsupported, so ask for clarification.”
 
-If you use AI:
+## When to prepare and discuss
 
-- investigate the topic using sources;
-- discuss the topic with the AI by asking follow-up questions, challenging a claim or testing an example;
-- explain what you understand in your own words;
-- submit an accessible conversation link, screenshots or relevant excerpts that show the useful discussion;
-- cite the sources used to verify important claims.
+| Research | Prepare after | Discuss |
+|---|---|---|
+| 1 | Week 1 | Week 2 Session 1 |
+| 2 | Week 2 | Week 3 Session 1 |
+| 3 | Week 4 Midterm | Week 5 Session 1 |
+| 4 | Week 5 | Week 6 Session 1 |
+| 5 | Week 6 | Week 7 Session 1 |
+| 6 | Week 7 | Week 8 Session 1 |
 
-If you do not use AI, cite your sources and provide the same reasoning and concrete example. You can earn full marks without AI. No paid account or tool is required.
+No research submission or presentation is due during the Week 4 Midterm. Weeks 3 and 8 only discuss the previous task; Weeks 9–10 have no Research task.
 
-Do not submit unverifiable AI claims as facts. Do not paste personal data, credentials, private class records or sensitive information into an AI service.
+## Common course arrangements
 
-## Proposed rubric for each 5% assignment
+Use a short note, slides or another clear way to explain your findings. There is no fixed section order, word count or page count. Normal full marks do not require a presentation. Each task carries a proposed 5%; see [Assessment](ASSESSMENT.md) for the common criteria. The assessment plan remains subject to instructor/university confirmation.
 
-| Criterion | Points |
-|---|---:|
-| Relevant question and sources | 1 |
-| Accurate finding in your own words | 1 |
-| Concrete example or application | 1 |
-| Reasoning, limitation or remaining question | 1 |
-| Clear evidence and citation, including AI discussion evidence when AI is used | 1 |
-| **Total** | **5** |
+AI is optional. If you use it, ask follow-up questions or challenge an answer, check important claims against sources, and keep useful discussion evidence (a link, screenshots or excerpts). Explain your own understanding. Full marks are possible without AI or a paid tool. Do not share personal data, credentials or private class records with a service.
 
-## Optional volunteer sharing
-
-Giving a presentation is not required for normal full marks. The instructor may offer a small capped bonus to volunteers who share useful work, but the exact bonus has not been decided. A bonus will only be announced with an equitable opportunity plan, such as a rotation or equivalent access for students who want to volunteer.
-
-## Submission status
-
-Keep your file and a separate backup. The approved private submission route, exact file-naming rule, deadlines and any volunteer bonus details will be announced before they apply.
+Save your response and a backup. The private submission route, exact file name and deadline will be announced. The discussion week is not a newly specified submission deadline. Any voluntary-sharing bonus requires a separately announced cap and fair opportunity plan.
