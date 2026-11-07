@@ -12,4 +12,4 @@ In this course, students practice a habit that matters in both software engineer
 
 For questions that could help classmates, use the course repository’s **Issues** during or after class once the course repository is available. Include the week, a small input, the expected result and what happened. Keep personal matters, attendance explanations and private assessed work out of Issues; email [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) for private submissions and personal matters. Issues are visible to everyone who can access the repository; they are not private messages to the instructor.
 
-Read the [course overview](COURSE_OVERVIEW.md), [setup guide](SETUP.md) and [course links](COURSE_LINKS.md) to get started.
+Read the [course guide](COURSE_GUIDE.md), [setup guide](SETUP.md) and [course links](COURSE_LINKS.md) to get started.

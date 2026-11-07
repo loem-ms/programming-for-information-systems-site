@@ -14,264 +14,109 @@
         "title": "Course home"
       },
       {
-        "file": "content/COURSE_OVERVIEW.md",
-        "title": "Course overview"
-      },
-      {
-        "file": "content/orientation.md",
-        "title": "Orientation"
-      },
-      {
-        "file": "content/INSTRUCTOR.md",
-        "title": "Meet the instructor"
+        "file": "content/COURSE_GUIDE.md",
+        "title": "Course guide"
       },
       {
         "file": "content/SETUP.md",
-        "title": "GitHub and Python setup"
+        "title": "Setup"
       },
       {
-        "title": "Week 1",
+        "title": "Weekly notebooks",
         "children": [
           {
-            "file": "content/learning_materials/Week_01.ipynb",
-            "title": "Values, types and execution"
+            "file": "content/notebooks/Week_01.ipynb",
+            "title": "Week 1 · What is an information system?"
           },
           {
-            "file": "content/assignments/Week_01.md",
-            "title": "Assignment"
+            "file": "content/notebooks/Week_02.ipynb",
+            "title": "Week 2 · Rules and decisions"
           },
           {
-            "file": "content/reflections/Week_01.md",
-            "title": "Reflection form"
+            "file": "content/notebooks/Week_03.ipynb",
+            "title": "Week 3 · Records and data"
+          },
+          {
+            "file": "content/notebooks/Week_04.ipynb",
+            "title": "Week 4 · Functions you can trust · Midterm"
+          },
+          {
+            "file": "content/notebooks/Week_05.ipynb",
+            "title": "Week 5 · Checking input"
+          },
+          {
+            "file": "content/notebooks/Week_06.ipynb",
+            "title": "Week 6 · Objects and lifecycles"
+          },
+          {
+            "file": "content/notebooks/Week_07.ipynb",
+            "title": "Week 7 · Saving and history"
+          },
+          {
+            "file": "content/notebooks/Week_08.ipynb",
+            "title": "Week 8 · Reports and screens"
+          },
+          {
+            "file": "content/notebooks/Week_09.ipynb",
+            "title": "Week 9 · Putting the system together"
+          },
+          {
+            "file": "content/notebooks/Week_10.ipynb",
+            "title": "Week 10 · Verify, hand over, present"
           }
         ]
       },
       {
-        "title": "Week 2",
+        "title": "Midterm and final project",
         "children": [
           {
-            "file": "content/learning_materials/Week_02.ipynb",
-            "title": "Comparisons, branches and dispatch"
+            "file": "content/notebooks/Midterm.ipynb",
+            "title": "Midterm · Plan the day"
           },
           {
-            "file": "content/assignments/Week_02.md",
-            "title": "Assignment"
+            "file": "content/FINAL_PROJECT.md",
+            "title": "Final project guide"
           },
           {
-            "file": "content/reflections/Week_02.md",
-            "title": "Reflection form"
+            "file": "content/notebooks/Final_Project.ipynb",
+            "title": "Final project notebook"
           }
         ]
       },
       {
-        "title": "Week 3",
+        "title": "Reference",
         "children": [
           {
-            "file": "content/learning_materials/Week_03.ipynb",
-            "title": "Collections, loops and totals"
-          },
-          {
-            "file": "content/assignments/Week_03.md",
-            "title": "Assignment"
-          },
-          {
-            "file": "content/reflections/Week_03.md",
-            "title": "Reflection form"
-          }
-        ]
-      },
-      {
-        "title": "Week 4",
-        "children": [
-          {
-            "file": "content/learning_materials/Week_04.ipynb",
-            "title": "Functions and returned values"
-          },
-          {
-            "file": "content/assignments/Week_04.md",
-            "title": "Assignment"
-          },
-          {
-            "file": "content/reflections/Week_04.md",
-            "title": "Reflection form"
-          }
-        ]
-      },
-      {
-        "title": "Week 5",
-        "children": [
-          {
-            "file": "content/learning_materials/Week_05.ipynb",
-            "title": "Conversion, validation and exceptions"
-          },
-          {
-            "file": "content/assignments/Week_05.md",
-            "title": "Assignment"
-          },
-          {
-            "file": "content/reflections/Week_05.md",
-            "title": "Reflection form"
-          }
-        ]
-      },
-      {
-        "title": "Week 6",
-        "children": [
-          {
-            "file": "content/learning_materials/Week_06.ipynb",
-            "title": "Classes and persistent records"
-          },
-          {
-            "file": "content/assignments/Week_06.md",
-            "title": "Assignment"
-          },
-          {
-            "file": "content/reflections/Week_06.md",
-            "title": "Reflection form"
-          }
-        ]
-      },
-      {
-        "title": "Week 7",
-        "children": [
-          {
-            "file": "content/learning_materials/Week_07.ipynb",
-            "title": "Exceptions and reliable reservations"
-          },
-          {
-            "file": "content/assignments/Week_07.md",
-            "title": "Assignment"
-          },
-          {
-            "file": "content/reflections/Week_07.md",
-            "title": "Reflection form"
-          }
-        ]
-      },
-      {
-        "title": "Week 8",
-        "children": [
-          {
-            "file": "content/learning_materials/Week_08.ipynb",
-            "title": "JSON, reports and service integration"
-          },
-          {
-            "file": "content/assignments/Week_08.md",
-            "title": "Assignment"
-          },
-          {
-            "file": "content/reflections/Week_08.md",
-            "title": "Reflection form"
-          }
-        ]
-      },
-      {
-        "title": "Week 9",
-        "children": [
-          {
-            "file": "content/learning_materials/Week_09.ipynb",
-            "title": "Functions, filters and reproduction"
-          },
-          {
-            "file": "content/assignments/Week_09.md",
-            "title": "Assignment"
-          },
-          {
-            "file": "content/reflections/Week_09.md",
-            "title": "Reflection form"
-          }
-        ]
-      },
-      {
-        "title": "Week 10",
-        "children": [
-          {
-            "file": "content/learning_materials/Week_10.ipynb",
-            "title": "Clean runs and handoff"
-          },
-          {
-            "file": "content/assignments/Week_10.md",
-            "title": "Assignment"
-          },
-          {
-            "file": "content/reflections/Week_10.md",
-            "title": "Reflection form"
-          }
-        ]
-      },
-      {
-        "title": "Tasks and downloads",
-        "children": [
-          {
-            "file": "content/assignments/README.md",
-            "title": "Weekly tasks"
-          },
-          {
-            "file": "content/resources.md",
-            "title": "PDFs and downloads"
-          },
-          {
-            "file": "content/previews/Food_Rescue_System.ipynb",
-            "title": "Food Rescue System (preview)"
-          }
-        ]
-      },
-      {
-        "title": "Reference and course guidance",
-        "children": [
-          {
-            "file": "content/learning_materials/Python_Basics.ipynb",
+            "file": "content/notebooks/Python_Basics.ipynb",
             "title": "Python Basics (optional)"
-          },
-          {
-            "file": "content/LEARNING_PATH.md",
-            "title": "Learning path"
           },
           {
             "file": "content/ASSESSMENT.md",
             "title": "Assessment"
           },
           {
-            "file": "content/RESEARCH_ASSIGNMENTS.md",
-            "title": "Research assignments"
+            "file": "content/RESEARCH.md",
+            "title": "Research tasks"
           },
           {
-            "file": "content/CONTRIBUTING.md",
-            "title": "Questions and help"
+            "file": "content/INSTRUCTOR.md",
+            "title": "Meet the instructor"
           },
           {
             "file": "content/COURSE_LINKS.md",
             "title": "Course links and reflection"
           },
           {
-            "file": "content/learning_materials/CLASS_QA.md",
-            "title": "Common questions"
-          },
-          {
-            "file": "content/learning_materials/LOCAL_REVIEW.md",
-            "title": "Question and change review"
-          },
-          {
-            "file": "content/learning_materials/README.md",
-            "title": "Notebook files"
-          },
-          {
-            "file": "content/learning_materials/programs/README.md",
-            "title": "Program guide"
-          },
-          {
-            "file": "content/learning_materials/programs/project_starter/README.md",
-            "title": "Supplied project reference"
+            "file": "content/CONTRIBUTING.md",
+            "title": "Questions and help"
           }
         ]
       }
     ],
     "static_files": [
       "content/slides",
-      "content/assignments",
       "content/downloads",
-      "content/assets",
-      "content/learning_materials"
+      "content/assets"
     ],
     "exclude": [
       "README.md",
