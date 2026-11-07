@@ -50,3 +50,5 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
+        with:
+          timeout: 1800000   # 30 minutes; GitHub's file sync sometimes takes longer than the default 10
