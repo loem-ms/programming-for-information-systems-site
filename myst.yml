@@ -224,7 +224,10 @@
     "template": "book-theme",
     "title": "Programming for Information Systems",
     "options": {
-      "logo_text": "Programming for IS",
+      "logo": "content/assets/logo/logo.svg",
+      "logo_dark": "content/assets/logo/logo_dark.svg",
+      "logo_alt": "Programming for Information Systems",
+      "favicon": "content/assets/logo/favicon.png",
       "folders": true
     }
   }

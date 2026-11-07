@@ -7,7 +7,7 @@ You need only a web browser and a Google account. Every notebook carries its own
 1. On the [course home](README.md), click **Open in Colab** for your week.
 2. **File → Save a copy in Drive.** Do this first, every week. Changes you make before saving a copy can be lost.
 3. Work in your copy (its name starts with "Copy of").
-4. Run the first code cell, **▶ Run this cell first (setup)**. It prints `✅ Food Rescue system ready`.
+4. Run the first code cell, **▶ Run this cell first (setup)**. It prints `✅ FoodBridge system ready`.
 5. Work from top to bottom. Use **Shift + Enter** to run a cell.
 
 **Things to know about Colab**
@@ -25,7 +25,7 @@ Use this if you prefer working offline.
 2. Install Jupyter: open a terminal and run `python -m pip install notebook` (on some computers, `python3 -m pip install notebook`).
 3. On the course home, use **Download** to save the week's `.ipynb` file into a folder.
 4. In a terminal in that folder, run `python -m notebook` and open the file.
-5. Run the setup cell. It creates a `food_rescue_kit` folder next to the notebook.
+5. Run the setup cell. It creates a `foodbridge_kit` folder next to the notebook.
 
 VS Code with the Python and Jupyter extensions also works: open the `.ipynb` file and choose a Python 3 kernel.
 
@@ -33,18 +33,18 @@ VS Code with the Python and Jupyter extensions also works: open the `.ipynb` fil
 
 In the final project (Level 4) you can download **your own** system as a ZIP and run it outside a notebook:
 
-1. Unzip `my_food_rescue.zip`.
-2. Open a terminal in the `food_rescue_kit` folder.
+1. Unzip `my_foodbridge.zip`.
+2. Open a terminal in the `foodbridge_kit` folder.
 3. Run `python run_web.py` and open http://localhost:8000 in your browser. Stop it with **Ctrl + C**.
 4. `python run_menu.py` starts a text menu; `python run_tests.py` runs the system's tests.
 
-The [Food Rescue kit ZIP](/downloads/food_rescue_kit.zip) is the same system with the default settings.
+The [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) is the same system with the default settings.
 
 ## When something goes wrong
 
 | What you see | What to do |
 |---|---|
-| `NameError: name 'fr' is not defined` | Run the setup cell first. |
+| `NameError: name 'bridge' is not defined` | Run the setup cell first. |
 | A name you defined is "not defined" | Run the cell that defines it, or use **Restart session and run all**. |
 | A check shows ❌ | Read the 💡 hint under it. The check never stops your notebook; fix and run again. |
 | `⚠️ your … fell back to the default` | Your function crashed or returned something unexpected; the system used its own rule. Read the message. |

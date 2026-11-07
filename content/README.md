@@ -2,7 +2,7 @@
 
 **ភាសាខ្មែរ (Khmer):** [មេរៀនទាំងអស់ជាភាសាខ្មែរ](km/README.md)
 
-**Campus Food Rescue · Instructor: [Mengsay Loem](https://loem-ms.github.io/) · English-language course for beginners**
+**Campus FoodBridge · Instructor: [Mengsay Loem](https://loem-ms.github.io/) · English-language course for beginners**
 
 AI can now write a lot of code. What it cannot do for you is decide what a system *should* do, or notice when code is risky. In this course you learn Python basics so you can **read code, test it and judge it**. Each week you build one part of a small information system and make **your own decisions** about it. By Week 10 you have your own working system.
 
@@ -34,14 +34,14 @@ New here? Read the [course guide](COURSE_GUIDE.md) first: it explains the idea o
 | **9** · Putting the system together | Separate what changes from what stays | [Notebook](notebooks/Week_09.ipynb) | [PDF](/slides/Week_09_Slides.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_09.ipynb) | [.ipynb](/downloads/Week_09.ipynb) |
 | **10** · Verify, hand over, present | Verify before you trust | [Notebook](notebooks/Week_10.ipynb) | [PDF](/slides/Week_10_Slides.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_10.ipynb) | [.ipynb](/downloads/Week_10.ipynb) |
 
-**Before you edit a notebook in Colab: File → Save a copy in Drive.** Every notebook unpacks the course system itself; nothing to upload. The [Food Rescue kit ZIP](/downloads/food_rescue_kit.zip) is the complete system for running at home.
+**Before you edit a notebook in Colab: File → Save a copy in Drive.** Every notebook unpacks the course system itself; nothing to upload. The [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) is the complete system for running at home.
 
 ## Midterm, final project and reference
 
 | | When | Read | Slides | Run |
 |---|---|---|---|---|
 | **Midterm · Plan the day** | Week 4, Session 3 | [Notebook](notebooks/Midterm.ipynb) | [PDF](/slides/Midterm_Brief.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Midterm.ipynb) |
-| **Final project · Your Food Rescue system** | Weeks 9–10 | [Notebook](notebooks/Final_Project.ipynb) | [PDF](/slides/Final_Project_Brief.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Final_Project.ipynb) |
+| **Final project · Your FoodBridge system** | Weeks 9–10 | [Notebook](notebooks/Final_Project.ipynb) | [PDF](/slides/Final_Project_Brief.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Final_Project.ipynb) |
 | **Python Basics · Quick lookup (optional)** | any week | [Notebook](notebooks/Python_Basics.ipynb) | — | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Python_Basics.ipynb) |
 | **Orientation** (first class) | Week 1 | [Course guide](COURSE_GUIDE.md) | [PDF](/slides/Orientation.pdf) | — |
 
@@ -54,4 +54,4 @@ New here? Read the [course guide](COURSE_GUIDE.md) first: it explains the idea o
 - [Final project](FINAL_PROJECT.md): the four levels, from "run it" to "web page"
 - [Instructor](INSTRUCTOR.md) · [Course links](COURSE_LINKS.md) · [Questions and help](CONTRIBUTING.md)
 
-*Campus Food Rescue is fictional. All organisations, people and numbers in this course are invented.*
+*Campus FoodBridge is fictional. All organisations, people and numbers in this course are invented.*

@@ -2,7 +2,7 @@
 
 **English:** [the same course in English](../README.md)
 
-**Campus Food Rescue · គ្រូបង្រៀន: [Mengsay Loem](https://loem-ms.github.io/) · កំណែភាសាខ្មែរ សម្រាប់អ្នកចាប់ផ្ដើមដំបូង**
+**Campus FoodBridge · គ្រូបង្រៀន: [Mengsay Loem](https://loem-ms.github.io/) · កំណែភាសាខ្មែរ សម្រាប់អ្នកចាប់ផ្ដើមដំបូង**
 
 ពាក្យ programming និងពាក្យបច្ចេកទេស រក្សាជាភាសាអង់គ្លេសដោយចេតនា ព្រោះនៅកម្ពុជា មិនទាន់មានពាក្យបច្ចេកទេសជាភាសាខ្មែរ ដែលគេឯកភាពគ្នានៅឡើយ។
 
@@ -36,14 +36,14 @@
 | **9** · ការផ្គុំប្រព័ន្ធបញ្ចូលគ្នា | បំបែកអ្វីដែលប្រែប្រួល ចេញពីអ្វីដែលនៅដដែល | [Notebook](notebooks/Week_09.ipynb) | [PDF](/slides/km/Week_09_Slides.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_09.ipynb) | [.ipynb](/downloads/km/Week_09.ipynb) |
 | **10** · ផ្ទៀងផ្ទាត់ ប្រគល់ និងបង្ហាញ | ផ្ទៀងផ្ទាត់ មុននឹងទុកចិត្ត | [Notebook](notebooks/Week_10.ipynb) | [PDF](/slides/km/Week_10_Slides.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_10.ipynb) | [.ipynb](/downloads/km/Week_10.ipynb) |
 
-**មុននឹងកែ notebook ក្នុង Colab: File → Save a copy in Drive។** notebook នីមួយៗដកយក (unpack) ប្រព័ន្ធរបស់វគ្គសិក្សាដោយខ្លួនឯង មិនបាច់ upload អ្វីទេ។ [Food Rescue kit ZIP](/downloads/food_rescue_kit.zip) គឺជាប្រព័ន្ធពេញលេញ សម្រាប់ run នៅផ្ទះ (ដាក់ `LANGUAGE = "km"` ក្នុង `my_settings.py` ដើម្បីឃើញអេក្រង់ជាភាសាខ្មែរ)។
+**មុននឹងកែ notebook ក្នុង Colab: File → Save a copy in Drive។** notebook នីមួយៗដកយក (unpack) ប្រព័ន្ធរបស់វគ្គសិក្សាដោយខ្លួនឯង មិនបាច់ upload អ្វីទេ។ [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) គឺជាប្រព័ន្ធពេញលេញ សម្រាប់ run នៅផ្ទះ (ដាក់ `LANGUAGE = "km"` ក្នុង `my_settings.py` ដើម្បីឃើញអេក្រង់ជាភាសាខ្មែរ)។
 
 ## Midterm, final project និងឯកសារយោង
 
 | | ពេលណា | អាន | ស្លាយ | Run |
 |---|---|---|---|---|
 | **Midterm · រៀបចំផែនការសម្រាប់មួយថ្ងៃ** | សប្ដាហ៍ទី 4 · វគ្គទី 3 | [Notebook](notebooks/Midterm.ipynb) | [PDF](/slides/km/Midterm_Brief.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Midterm.ipynb) |
-| **Final project · ប្រព័ន្ធ Food Rescue របស់អ្នក** | សប្ដាហ៍ទី 9–10 | [Notebook](notebooks/Final_Project.ipynb) | [PDF](/slides/km/Final_Project_Brief.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Final_Project.ipynb) |
+| **Final project · ប្រព័ន្ធ FoodBridge របស់អ្នក** | សប្ដាហ៍ទី 9–10 | [Notebook](notebooks/Final_Project.ipynb) | [PDF](/slides/km/Final_Project_Brief.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Final_Project.ipynb) |
 | **Python Basics · មើលរហ័ស (ស្រេចចិត្ត)** | សប្ដាហ៍ណាក៏បាន | [Notebook](notebooks/Python_Basics.ipynb) | — | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Python_Basics.ipynb) |
 | **ការណែនាំវគ្គសិក្សា** (ថ្នាក់ដំបូង) | សប្ដាហ៍ទី 1 | [មគ្គុទ្ទេសក៍វគ្គសិក្សា](COURSE_GUIDE.md) | [PDF](/slides/km/Orientation.pdf) | — |
 
@@ -56,4 +56,4 @@
 - [Final project](FINAL_PROJECT.md): កម្រិតទាំងបួន ចាប់ពី "run វា" រហូតដល់ "ទំព័រ web"
 - [អំពីគ្រូ (English)](../INSTRUCTOR.md) · [Links របស់វគ្គសិក្សា](COURSE_LINKS.md) · [សំណួរ និងជំនួយ (English)](../CONTRIBUTING.md)
 
-*Campus Food Rescue ជាករណីប្រឌិត។ អង្គការ មនុស្ស និងលេខទាំងអស់ក្នុងវគ្គសិក្សានេះ សុទ្ធតែប្រឌិតឡើង។*
+*Campus FoodBridge ជាករណីប្រឌិត។ អង្គការ មនុស្ស និងលេខទាំងអស់ក្នុងវគ្គសិក្សានេះ សុទ្ធតែប្រឌិតឡើង។*

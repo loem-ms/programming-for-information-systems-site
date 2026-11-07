@@ -1,4 +1,4 @@
-# Final project · Your Food Rescue system
+# Final project · Your FoodBridge system
 
 In Weeks 2–8 you build the parts of an information system. In Weeks 9–10 you put them together into **your own** system. It runs a day of offers, follows **your** decisions, and you can explain and hand over every choice. Everything happens in one notebook: `Final_Project.ipynb`.
 
@@ -56,6 +56,6 @@ See [assessment](ASSESSMENT.md) for how the project is graded.
 ## Ideas for Level 3
 
 - A smarter `pickup_label` or `urgency` that also uses another value you decide (with named constants).
-- A stricter `clean_offer` that refuses something new, with a clear message. Start from the kit's own check (`fr.validation.clean_offer`) and add one rule; the notebook shows how.
+- A stricter `clean_offer` that refuses something new, with a clear message. Start from the kit's own check (`bridge.validation.clean_offer`) and add one rule; the notebook shows how.
 - An honest number, such as `rejected_or_cancelled_percent(records)`: the share of offers that were rejected or cancelled.
 - A new status such as `"reserved"` in your own `ALLOWED_MOVES`, and who would use it. Known limit: the kit's reports know only the six statuses, so a reserved offer disappears from the coordinator view. Write a test that shows this, and name it in your handoff note.
