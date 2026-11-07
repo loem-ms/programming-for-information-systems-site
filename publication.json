@@ -53,19 +53,19 @@
     },
     {
       "path": "slides/Week_01_Slides.pdf",
-      "source_sha256": "0f7a1ccbf9daee1129b9cd0aadea51c3310db19f38176a813ceff22050c78d10"
+      "source_sha256": "0a1f50811359a1589531b1a277a3c01f0f045bcd4aba07f34be0935fad96a88a"
     },
     {
       "path": "assignments/Week_01_Assignments.pdf",
-      "source_sha256": "305686bc964a373dbc9dffc467cf479b6212a32963470866a1377faed254f33d"
+      "source_sha256": "47bb8bd43360b8980d234eb52adbf1acdce619277e18ce6c3b94126a6c891bd7"
     },
     {
       "path": "slides/Week_02_Slides.pdf",
-      "source_sha256": "96195b23f7485e53539c9c75605adf2f1d461ac07eb5df917e20eba024453e88"
+      "source_sha256": "697ad70ee5c0154da114faa4b0943246a6ba09bdda3b749eefbe45ce4270762c"
     },
     {
       "path": "assignments/Week_02_Assignments.pdf",
-      "source_sha256": "1b94d1ea639cd395a0b37748a4c8d0bc185186a8f70e3f0256f9fd1120bf953b"
+      "source_sha256": "719b012c371ec708be76fd5f3ced07fac259eec64330841c7973cab95e69e715"
     },
     {
       "path": "assets/diagrams/course_overview.svg",
@@ -173,11 +173,11 @@
     },
     {
       "path": "learning_materials/Week_01.ipynb",
-      "source_sha256": "bf432966b56f073d055fb65816977710a13130cdf5e746039036da476dff8dc7"
+      "source_sha256": "b2d23135faf69f9b5b51560178f5ed1632af2f865a92ef3170d97473f0bdc5f5"
     },
     {
       "path": "learning_materials/Week_02.ipynb",
-      "source_sha256": "17680370d19c657e74a6c36a52909c3550e84430c2c54e67f54250122e83d408"
+      "source_sha256": "cbcb7415a3ba94ab670f9484103d8f527215c44f4e0bd35bb7768b959d2a2b2c"
     },
     {
       "path": "learning_materials/Python_Basics.ipynb",
@@ -254,7 +254,7 @@
     },
     {
       "path": "assignments/Week_01_Assignments.pdf",
-      "sha256": "305686bc964a373dbc9dffc467cf479b6212a32963470866a1377faed254f33d"
+      "sha256": "47bb8bd43360b8980d234eb52adbf1acdce619277e18ce6c3b94126a6c891bd7"
     },
     {
       "path": "assignments/Week_02.md",
@@ -262,7 +262,7 @@
     },
     {
       "path": "assignments/Week_02_Assignments.pdf",
-      "sha256": "1b94d1ea639cd395a0b37748a4c8d0bc185186a8f70e3f0256f9fd1120bf953b"
+      "sha256": "719b012c371ec708be76fd5f3ced07fac259eec64330841c7973cab95e69e715"
     },
     {
       "path": "downloads/Food_Rescue_System.ipynb",
@@ -278,19 +278,19 @@
     },
     {
       "path": "downloads/Week_01.ipynb",
-      "sha256": "0c99301c34bf35d2c3abeda3e73124284f4e67a573e2fa515ef2fc2c290821f6"
+      "sha256": "4c54323f8a79fede9428c301e9dfb696588d179a54b452a698ff727d7d1f8831"
     },
     {
       "path": "downloads/Week_01.zip",
-      "sha256": "02a08af423d5880392b4428e2c03bb222349144de4f8b4e5eb8e7a6873ab12e9"
+      "sha256": "46d6e151d7c936e65892574f5255267de13329110373e3c790aa769478ee41b2"
     },
     {
       "path": "downloads/Week_02.ipynb",
-      "sha256": "1752a8d0eef71145b418dbc334d3708a5fefa3b4d871691a31320074ee117a5a"
+      "sha256": "ff48f8c2430d48adb6cd240a17047ae1e47897207b9d0919c30ad5b0cbcfede2"
     },
     {
       "path": "downloads/Week_02.zip",
-      "sha256": "952d7a3a8964bbe415ae3f8a0e5a027278e0892c3f1275226ae0875638d11d61"
+      "sha256": "d83c7f8bffb97bcc418a75526cdb36e499a345093ef233fe89f6844f4b2a8675"
     },
     {
       "path": "learning_materials/CLASS_QA.md",
@@ -310,11 +310,11 @@
     },
     {
       "path": "learning_materials/Week_01.ipynb",
-      "sha256": "e44987779217310ee577fae4a3a3d9d8f57798e5650aabc7aa444d6b1c073edb"
+      "sha256": "204ae479acc1cdbe6639e6bae4ffefd4a3bf3988c9caf6a4672904c0389d7682"
     },
     {
       "path": "learning_materials/Week_02.ipynb",
-      "sha256": "dab438d6c80c59ab8d9373759d379a4c416dec4c7430f0f55944e7976f90d6c9"
+      "sha256": "3d452f078214c23a038eceea32586287d121cbf9fd74cc8ede534a2835772cab"
     },
     {
       "path": "learning_materials/assets/diagrams/course_week_01.svg",
@@ -430,11 +430,11 @@
     },
     {
       "path": "slides/Week_01_Slides.pdf",
-      "sha256": "0f7a1ccbf9daee1129b9cd0aadea51c3310db19f38176a813ceff22050c78d10"
+      "sha256": "0a1f50811359a1589531b1a277a3c01f0f045bcd4aba07f34be0935fad96a88a"
     },
     {
       "path": "slides/Week_02_Slides.pdf",
-      "sha256": "96195b23f7485e53539c9c75605adf2f1d461ac07eb5df917e20eba024453e88"
+      "sha256": "697ad70ee5c0154da114faa4b0943246a6ba09bdda3b749eefbe45ce4270762c"
     }
   ],
   "preview_notebooks": [
