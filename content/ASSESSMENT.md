@@ -9,7 +9,7 @@ The course assesses what you can **build, test, explain and hand over**. Both te
 | Participation and attendance | 10% | Announced attendance evidence, active participation and short weekly reflection |
 | Six individual research assignments | 30% | Six submissions worth 5% each, with sources, a concrete example and the student's reasoning |
 | Individual midterm | 30% | Week 4 planning function, four independently expected tests and an explanation |
-| Final project | 30% | Scoped improvement, verification, peer evidence, handoff and individual understanding |
+| Final project | 30% | Baseline reproduction, completed notes, verification, handoff and individual understanding |
 | **Total** | **100%** | |
 
 The exact attendance calculation, assessment dates, permitted resources, and final-project rubric split still require confirmation. They will be announced before they apply.
@@ -109,45 +109,40 @@ Week 4 includes functions and guided practice followed by the Midterm. Detailed 
 
 ## Final project: 30%
 
-### Where to start
+### Required minimum: reproduce and explain
 
-- **Week 8:** use **Project preparation for Week 9** in your weekly notebook. Write the user problem, your proposed change and two inputs with expected results.
-- **Week 9:** use the `project-task` area in `Week_09.ipynb`. Run the supplied setup, write your function or query, and check the expected cases.
-- **Week 10:** use the **Volunteer-led demonstration** in `Week_10.ipynb` in Session 2, then complete individual verification in Session 3. Keep the working files, run guide and peer finding/retest.
+You may complete the final project **without changing any program code**. Reproduce the supplied Food Rescue system, compare the observed results with the supplied expectations, and complete every requested response/note in your own words. Keep your predictions, observations, explanations, peer/run evidence and handoff instructions. Running all cells without completing the notes is not the full submission.
 
-### One useful improvement
+Use the small planning example first: input counts → `plan_pickup(...)` → returned portions and label → printed output. Bread has 2 declared portions/container; rice has 5. Then run the supplied full baseline and its tests. Do not rebuild the database engine or the interface.
 
-Improve the supplied Campus Food Rescue Python/SQLite system for a concrete stakeholder need. Keep the change small enough to test convincingly. Examples include a clearer pending-collection report, better handling of incomplete donor proposals, or a more useful handoff step. The team chooses and justifies its own approved scope.
+### Where to work
 
-A complete web app, polished UI, paid AI integration or live food-rescue operation is **not required**. A reliable Python or SQL improvement with clear evidence is a valid project. Preserve the course rules: human review, explicit units, atomic reservation and distinct collection/delivery records.
-
-| When | What you do | What you keep |
+| When | Required minimum | Optional if you have time |
 |---|---|---|
-| Week 8 | Each student pitches a stakeholder need in a small group; the team selects a feasible improvement | Need, scope and at least two acceptance cases |
-| Week 9 | Freeze expected outcomes, implement the change, exchange a peer test and revise | Code, acceptance/regression evidence, peer finding and retest |
-| Week 10, Session 1 | Rehearse from clean inputs and exchange run instructions | A guide another person can follow |
-| Week 10, Session 2 | Present the baseline and improvement; a peer operator tries an unseen input and asks a coordinator question | Demonstration and acceptance evidence |
-| Week 10, Session 3 | Independently trace a result or make a small approved change | Your own explanation of a judgment, test and revision |
+| Week 8 | Identify the baseline input, processing and output; predict two results | Suggest one coordinator improvement |
+| Week 9 | Reproduce the supplied system, compare results and fill the notes; ask a peer to follow the run steps | Propose or implement an approved small change |
+| Week 10, Session 1 | Rehearse from clean inputs and check the run guide | Refine an optional change |
+| Week 10, Session 2 | Demonstrate the baseline and let a peer reproduce it | Show the optional improvement separately |
+| Week 10, Session 3 | Explain or trace a result independently and finish the requested writing | Explain an optional code change |
 
-For larger classes, the timetable uses parallel demonstration stations with role reversal. The instructor will announce the calendar date and each team's demonstration arrangements.
+### Optional improvements and notebook form
 
-## What to show in the final demonstration
+If you have time, you may propose an improvement, rewrite a small part or implement an approved change. Explain what you changed, why, and its expected/observed results. Keep the unchanged baseline for comparison. Proposing an idea does not oblige you to implement it. No extra feature or UI is required for standard completion, and no bonus points are promised.
 
-Use this sequence as a guide; explain the work in your own words.
+Week 5 introduces libraries and a supplied `ipywidgets` form. The final notebook can use the same form pattern to call the same planning function. The form is off by default. If it is absent, blank, displayed as text or unresponsive, use ordinary input cells and printed output. No server, package installation, paid AI, key or GPU is needed for the required route. UI appearance and callback code are not assessed.
 
-1. **Need:** who needs the improvement, and what decision is difficult now?
-2. **Scope:** what did you change, and what remains outside scope?
-3. **Working result:** start from known data and run the actual program or notebook.
-4. **Evidence:** show the acceptance cases, one unaffected regression case and a boundary or failure case. Compare expected and observed results.
-5. **Revision:** explain a peer finding, the resulting change and the retest.
-6. **Handoff:** give the next operator the files, run instructions, expected observations and an honest limitation or recovery step.
+### What to show and submit
 
-Every member should understand the team's result and be ready to explain their own contribution. A successful demonstration is not enough if another person cannot reproduce it. Slides can support the explanation; the course does not require a particular slide count or presentation software.
+1. **Reproduction:** start from known data and follow the supplied run order. Show the real outputs and test results.
+2. **Understanding:** identify an input, the processing step and the output. Explain units, human review and one failure/boundary case.
+3. **Written responses:** complete every requested response/note. Record predictions, observations and an honest explanation of any mismatch or limitation.
+4. **Peer and handoff evidence:** give another learner the run guide, record what happened and clarify confusing instructions if needed. A successful repeat with no code revision is valid evidence.
+5. **Optional work:** clearly separate any improvement proposal or changed code from the reproduced baseline. If none, say “No code change” where the notebook asks.
 
-## Submission and questions
+The canonical full fixture has 94 offered, 60 reserved, 42 collected and 29 delivered planned portions. These are overlapping lifecycle measures, not values to add together or counts of distinct people served. Preserve human review, declared units, atomic reservations and event evidence.
 
-Keep a notebook/program copy, required fictional inputs, run instructions, tests and review evidence, plus a separate backup. Send submissions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). The file-naming rule will be announced before work is due. Use that email for your completed work. The class repository's Issues are for questions and small reproducible examples, not complete assessment solutions or individual grades.
+The proposed final weight remains 30%. The numeric split, calendar dates, team arrangements and exact file-naming rule will be announced before they apply. The minimum does not require an implemented improvement. Each student must understand and explain the submitted results.
 
-Research Assignment 6 is discussed at the start of Week 8 before the project-proposal work. There is no new research assignment in Week 8 and no research obligation in Weeks 9 or 10, so those weeks can focus on project scope, implementation, peer verification and handoff.
+Send the notebook/program copy, required fictional inputs, completed notes, run guide and evidence to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Keep a separate backup. Do not post completed assessment work in GitHub Issues. A separate slide deck is not required.
 
-If you use a code suggestion from another person or a tool, inspect it, test it and be able to explain it. Optional AI use is not required for assessment. Ask about an unclear rule early through [GitHub Issues](CONTRIBUTING.md) or [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) when the question concerns your own assessed work.
+Research 6 closes at the start of Week 8. Weeks 9–10 have no new research obligation. Optional AI suggestions must be inspected, tested and understood; no AI tool is required.

@@ -36,11 +36,11 @@ These are the **same 3 containers** throughout. A plan is not yet a booking, and
 
 In Weeks 1–8 you write and check small parts using supplied notebooks, programs and starting data. You calculate, choose a label, combine food lines, check incoming information, save plans and track pickups.
 
-For the final project, we supply an integrated Python/SQLite starting application. In Weeks 9–10 you **improve one small feature**, check it and let a classmate run it using your instructions. For example, you might help a volunteer find pickups still awaiting collection. A browser dashboard is optional; the required work can run through notebooks and Python programs. You do not rebuild the entire application from an empty folder.
+For the final project, we supply an integrated Python/SQLite starting application. In Weeks 9–10 you **reproduce the supplied baseline**, complete the notes, and let a classmate run it using your instructions. For example, you might help a volunteer find pickups still awaiting collection. Improvement proposals and code changes are optional. A supplied notebook form is optional; ordinary notebook inputs and printed output are enough. No separate web app is required. You do not rebuild the entire application from an empty folder.
 
 ## See how the weeks fit together
 
-![Weeks 1–4 calculate and choose, Weeks 5–8 remember and coordinate, and Weeks 9–10 improve one feature and let another person use it.](assets/diagrams/course_overview.svg)
+![Weeks 1–4 calculate and choose, Weeks 5–8 remember and coordinate, and Weeks 9–10 reproduce the system, complete the notes and let another person use it.](assets/diagrams/course_overview.svg)
 
 The table keeps the full ten-week route visible. Python topic names are introduced in the relevant week; you do not need to know them now. Each week supplies its own starting files, so an unfinished earlier notebook does not prevent you from joining the next lesson.
 
@@ -54,8 +54,8 @@ The table keeps the full ten-week route visible. Python topic names are introduc
 | 5: Donor data | How do we validate rows and explain their outcomes? | Conversion and exception handling → CSV validation and audit; supplied duplicate grouping | Every source record has a justified disposition |
 | 6: Saved plans | Can the next volunteer retrieve the same plan tomorrow? | Objects and methods; SQLite, identifiers, relationships, parameters and persistence | A saved plan with historical line facts |
 | 7: Reliable reservations | What if availability runs out halfway through a pickup request? | Exceptions and with-blocks → transactions, guarded updates and failure-state checks | Complete success or unchanged state after failure |
-| 8: Reports and intake | What was offered, reserved, collected and delivered—and what still needs review? | JSON values and dictionary checks → aggregation, HTTP validation and review queues | Stage evidence, six intake outcomes and a project proposal |
-| 9: Your improvement | Which small change helps a volunteer or partner make a decision? | Functions, filters and assertions → acceptance cases, implementation and peer review | A working change and a justified revision |
+| 8: Reports and intake | What was offered, reserved, collected and delivered—and what still needs review? | JSON values and dictionary checks → aggregation, HTTP validation and review queues | Stage evidence, six intake outcomes and baseline preparation notes |
+| 9: Reproduce and explain | Can another learner reproduce and understand the supplied result? | Functions, filters and assertions → baseline checks, notes and peer review | Reproduced outputs and completed explanations |
 | 10: Handoff | Can another volunteer run the system and explain its records? | Clean starts, commands, operating instructions and independent verification | A reproducible handoff and individual evidence |
 
 
@@ -81,3 +81,12 @@ A useful learning cycle is **ask → predict → run or change → check → exp
 - [Question guide](CONTRIBUTING.md) and [course links](COURSE_LINKS.md): shared technical questions and the separately announced class routes.
 
 The course home lists the weeks included in your package or website edition. Use [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) for completed assessed submissions, personal matters and attendance questions. Instructor notes and completed weekly model answers stay separate from the student package.
+
+## A beginner route into the final project
+
+Start with a small visible flow: **input counts → one Python function → printed plan**. The final Food Rescue notebook includes a complete runnable planning example before its supplied full system. Bread has 2 declared portions/container and rice has 5. `plan_pickup(bread_containers, rice_containers, reviewed, team_threshold=20)` returns `portions` and `label`. The supplied checks reject invalid inputs; the review-first rule and the meaning of portions stay fixed.
+
+The minimum is to reproduce the supplied baseline, explain its input, processing and output, and complete every requested response/note. No code change is required. If you choose an optional improvement, explain it and compare expected and observed results. The supplied library controls and storage engine are not code you must rebuild. Keep the canonical baseline unchanged for comparison, including its reservation and collection/delivery checks.
+
+Week 4 introduces reusable return values; after the Midterm, Week 5 offers a short library example and an optional notebook form. The form only calls the same function. It is off by default and needs no server, API key or package installation for the required route. If it is absent, blank, shown as text or unresponsive, continue with ordinary inputs and `print`. UI appearance and callback wiring are not assessed; the requested notes, checks, peer evidence, handoff and individual explanation still apply.
+

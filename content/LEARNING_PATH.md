@@ -9,7 +9,7 @@ The weekly slides and notebooks share three sessions: Python foundations, hands-
 3. Complete the short core Python experiments in the same notebook: predict, run, change and repair, then explain the concept. Continue to the separate **project or assessment evidence** below. Be ready to explain the result.
 4. Save your notebook and any files you created, plus a backup. Then stop. Optional extensions can wait.
 
-Research briefs are assigned in Weeks 1–2 and 4–7. Use the supplied reading card. Research Assignment 2 is shared in Week 3. Week 4 has no research submission or presentation; Research Assignment 3 is released after the Midterm. Week 8 closes Research Assignment 6, then shifts to the project proposal. Weeks 9–10 contain no research obligation. If setup, access or an unclear instruction blocks you, record the exact point and ask for help.
+Research briefs are assigned in Weeks 1–2 and 4–7. Use the supplied reading card. Research Assignment 2 is shared in Week 3. Week 4 has no research submission or presentation; Research Assignment 3 is released after the Midterm. Week 8 closes Research Assignment 6, then shifts to final-project preparation. Weeks 9–10 contain no research obligation. If setup, access or an unclear instruction blocks you, record the exact point and ask for help.
 
 | Week | Project / assessment evidence | Already supplied—use it | Optional extension |
 |---|---|---|---|
@@ -17,12 +17,20 @@ Research briefs are assigned in Weeks 1–2 and 4–7. Use the supplied reading 
 | 2 | Six review/dispatch cases: below, at and above the boundary, both reviewed and unreviewed | Case, rule examples and starter cells | Another boundary case |
 | 3 | Multi-batch totals and a short hand trace | Batch records, accumulator examples and diagrams | Alternative representation |
 | 4 | Canonical Midterm function, four common tests, reproducible ZIP and AI disclosure | Valid input records, function contract, test expectations and package checklist | 16-boundary rehearsal, main/import detail and extra refactoring |
-| 5 | Row validation and a justified audit outcome for each of the six supplied records | CSV fixture, duplicate-grouping helper, CLI scaffold and audit pattern | A custom duplicate algorithm, extra CLI exploration or malformed rows |
+| 5 | Row validation and a justified audit outcome for each of the six supplied records | CSV fixture, duplicate-grouping helper, CLI scaffold and audit pattern | Supplied library/form preview, extra CLI exploration or malformed rows |
 | 6 | Save/retrieve one plan; explain identifiers, historical facts and the supplied class/instance/method example | Schema, fixture, object examples and SQLite pattern | Object-alias tracing exploration |
 | 7 | Atomic reservation evidence for success and failure | Database fixture, transaction scaffold and test commands | Additional failure cases |
-| 8 | Stage report, six actual local HTTP intake outcomes, unchanged-state evidence and one small project need | Replay service, HTTP client, messages, database and baseline report | Live-model or coding-assistant comparison |
-| 9 | One approved small change, its acceptance cases, one peer finding and retest | Baseline app, starter scaffold, fixtures and review form | Web UI, broad redesign or extra feature |
-| 10 | Clean-start handoff, approved-change demonstration and individual verification | Canonical data, reset commands, prompts and test tools | Extra polish; no new research brief or slide deck |
+| 8 | Stage report, six actual local HTTP intake outcomes, unchanged-state evidence and baseline preparation notes | Replay service, HTTP client, messages, database and baseline report | Live-model or coding-assistant comparison |
+| 9 | Baseline reproduction, completed notes, checks and one peer run record | Baseline app, starter scaffold, fixtures and review form | Improvement proposal, code change or supplied form after reproduction |
+| 10 | Clean-start baseline demonstration, completed notes and individual explanation | Canonical data, reset commands, prompts and test tools | Extra polish; no new research brief or slide deck |
+
+## A beginner route into the final project
+
+Start with a small visible flow: **input counts → one Python function → printed plan**. The final Food Rescue notebook includes a complete runnable planning example before its supplied full system. Bread has 2 declared portions/container and rice has 5. `plan_pickup(bread_containers, rice_containers, reviewed, team_threshold=20)` returns `portions` and `label`. The supplied checks reject invalid inputs; the review-first rule and the meaning of portions stay fixed.
+
+The minimum is to reproduce the supplied baseline, explain its input, processing and output, and complete every requested response/note. No code change is required. If you choose an optional improvement, explain it and compare expected and observed results. The supplied library controls and storage engine are not code you must rebuild. Keep the canonical baseline unchanged for comparison, including its reservation and collection/delivery checks.
+
+Week 4 introduces reusable return values; after the Midterm, Week 5 offers a short library example and an optional notebook form. The form only calls the same function. It is off by default and needs no server, API key or package installation for the required route. If it is absent, blank, shown as text or unresponsive, continue with ordinary inputs and `print`. UI appearance and callback wiring are not assessed; the requested notes, checks, peer evidence, handoff and individual explanation still apply.
 
 ## Optional syntax lookup
 

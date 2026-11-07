@@ -17,4 +17,4 @@ Everyone with repository access can read an Issue; in a public repository, that 
 
 ## Your first practice question
 
-During orientation, draft one clear question of your own. Once the course repository is announced, you can also find its Issues tab and read an existing question; until then, keep the question locally or use the separately announced class route. You do not need to commit code to ask. After trying a suggestion, record what changed. Use the local review form during Week 9 to record a chosen improvement and its tests.
+During orientation, draft one clear question of your own. Once the course repository is announced, you can also find its Issues tab and read an existing question; until then, keep the question locally or use the separately announced class route. You do not need to commit code to ask. After trying a suggestion, record what changed. Use the local review form during Week 9 to record baseline reproduction and an optional improvement.

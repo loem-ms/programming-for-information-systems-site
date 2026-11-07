@@ -1,8 +1,24 @@
-# Local question and change review
+# Local reproduction and optional change review
 
 For a shared question, use the [GitHub Issues question guide](CLASS_QA.md): record the week, input, expected result, observed result and agreed explanation. Keep a local note if offline and follow up during class or through [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Use this sheet for project review evidence. Keep a working copy and backup. Send submissions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com).
 
-For a proposed improvement, record:
+## Required baseline reproduction record
+
+The minimum final project does not require a code change. Complete the requested notebook responses and use this short record for a peer run:
+
+| Field | What to write |
+|---|---|
+| Starting point | Supplied fixture, notebook copy and reset/run steps |
+| Prediction | One expected result and its units |
+| Observation | Actual result and test outcome |
+| Explanation | How the input and processing produced that output |
+| Peer run | What the peer could reproduce or where they got stuck |
+| Response | Clarified instruction and rerun, or why no change was needed |
+| Limit | What the output cannot establish |
+
+## Optional improvement record
+
+Only if you choose to propose or implement an improvement, record:
 
 | Field | What to write |
 |---|---|
@@ -15,6 +31,6 @@ For a proposed improvement, record:
 | Revision | What changed, why, and the retest result |
 | Limitation | What the evidence does not establish |
 
-Example need: a coordinator wants to see accepted reservations still awaiting collection. A list of reserved pickups is not a delivered-food report. Test both a pending reservation and one with a collection event. This is an illustrative scope, not the only eligible project.
+Example need: a coordinator wants to see accepted reservations still awaiting collection. A list of reserved pickups is not a delivered-food report. Test both a pending reservation and one with a collection event. This is an optional illustrative scope, not a requirement for the minimum project.
 
 Exchange the notebook or files with a peer and preserve their observed evidence. Use invented data and keep assessed work out of shared Issues. Send submissions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) and follow any further instructions when announced.
