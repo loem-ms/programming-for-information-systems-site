@@ -4,7 +4,7 @@ The weekly slides and notebooks share three sessions: Python foundations, hands-
 
 ## One simple rule
 
-1. Open the current week’s notebook and run its setup cell.
+1. Open the current week’s notebook and save a personal copy. Weeks 1–2 need no setup cell or support files. For Weeks 3–10, download the matching weekly ZIP and run the setup cell; in Colab, upload that ZIP when prompted. For local Jupyter, extract the ZIP and open the notebook from its learning_materials/ folder, keeping the support folders together.
 2. Use the supplied starter, programs, data, diagrams and examples. You are not expected to rebuild that infrastructure.
 3. Complete the short core Python experiments in the same notebook: predict, run, change and repair, then explain the concept. Continue to the separate **project or assessment evidence** below. Be ready to explain the result.
 4. Save your notebook and any files you created, plus a backup. Then stop. Optional extensions can wait.

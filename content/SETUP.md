@@ -12,6 +12,19 @@ Choose your week on the [course home](README.md), then click **Open in Colab**. 
 
 Colab may show its standard warning before running a notebook from GitHub. Read it and run only course code you have reviewed. Never paste passwords or tokens into a notebook. This course does not mount your Google Drive or request access to private GitHub files.
 
+## Weeks 3–10: load the matching weekly ZIP
+
+These notebooks retain support-file setup for diagrams, saved-program exercises and later CSV fixtures. They are not standalone downloads.
+
+1. Open the week's **Colab** link on the [course home](README.md) and choose **File → Save a copy in Drive**.
+2. Download that week's ZIP from the same page. Do not upload an individual notebook instead of the ZIP.
+3. Connect to a normal Python runtime. Run **Prepare the course files** near the start and upload the complete ZIP when asked. Wait for **Course files ready** before running the lesson cells.
+4. Read and run one cell at a time. TODOs and deliberately unfinished student work are for you to complete, not setup failures.
+
+For local Jupyter, extract the ZIP and open the notebook inside `learning_materials/`. Keep its `programs/`, `assets/` and `final-data/` folders together. Run the setup cell to check the workspace. The lessons use Python's standard library; Jupyter supplies notebook display tools. No GPU or paid service is required.
+
+A new Colab runtime needs the ZIP again. Save your notebook and download your edited programs, reports or data separately before leaving: notebook saving does not preserve runtime files. Keep a backup before starting a fresh workspace. Never overwrite your work with a fresh starter package.
+
 ## Save your work and return to it
 
 - Return to your named copy in Drive next time, rather than starting again from the course link. **File → Save** keeps your notebook edits and saved outputs; **File → Download → Download .ipynb** makes a separate backup.
@@ -46,11 +59,11 @@ python3 -m venv .venv
 
 Open your saved notebook in Jupyter's file list. On later days, run only the last command from the same folder. Keep the terminal open; save your work before stopping the server with Ctrl+C. If a campus computer blocks installation, ask campus support or use Colab. Do not change system Python or security settings.
 
-## Optional full reference package
+## Weekly packages and optional reference
 
 The [PDFs and downloads page](resources.md) retains weekly ZIPs for offline reference. These contain the notebook, PDFs, Python Basics and shared programs/data. They are **not required for Weeks 1–2**. The full Python Basics reference includes later file/program examples that use those support files; its own setup guide applies only to that optional reference. Keep an extracted full package together and never replace a folder containing your own work without backing it up.
 
-The older [full-package setup PDF](/slides/Setup.pdf) describes ZIP-based setup. Use this web guide for the current standalone Week 1–2 workflow.
+The older [full-package setup PDF](/slides/Setup.pdf) describes ZIP-based setup. Use this web guide for the current Week 1–2 standalone and Week 3–10 ZIP workflows.
 
 ## Private class repository access, if requested later
 

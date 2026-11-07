@@ -64,6 +64,142 @@
         ]
       },
       {
+        "title": "Week 3",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_03.ipynb",
+            "title": "Collections, loops and totals"
+          },
+          {
+            "file": "content/assignments/Week_03.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_03.md",
+            "title": "Reflection form"
+          }
+        ]
+      },
+      {
+        "title": "Week 4",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_04.ipynb",
+            "title": "Functions and returned values"
+          },
+          {
+            "file": "content/assignments/Week_04.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_04.md",
+            "title": "Reflection form"
+          }
+        ]
+      },
+      {
+        "title": "Week 5",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_05.ipynb",
+            "title": "Conversion, validation and exceptions"
+          },
+          {
+            "file": "content/assignments/Week_05.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_05.md",
+            "title": "Reflection form"
+          }
+        ]
+      },
+      {
+        "title": "Week 6",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_06.ipynb",
+            "title": "Classes and persistent records"
+          },
+          {
+            "file": "content/assignments/Week_06.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_06.md",
+            "title": "Reflection form"
+          }
+        ]
+      },
+      {
+        "title": "Week 7",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_07.ipynb",
+            "title": "Exceptions and reliable reservations"
+          },
+          {
+            "file": "content/assignments/Week_07.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_07.md",
+            "title": "Reflection form"
+          }
+        ]
+      },
+      {
+        "title": "Week 8",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_08.ipynb",
+            "title": "JSON, reports and service integration"
+          },
+          {
+            "file": "content/assignments/Week_08.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_08.md",
+            "title": "Reflection form"
+          }
+        ]
+      },
+      {
+        "title": "Week 9",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_09.ipynb",
+            "title": "Functions, filters and improvements"
+          },
+          {
+            "file": "content/assignments/Week_09.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_09.md",
+            "title": "Reflection form"
+          }
+        ]
+      },
+      {
+        "title": "Week 10",
+        "children": [
+          {
+            "file": "content/learning_materials/Week_10.ipynb",
+            "title": "Clean runs and handoff"
+          },
+          {
+            "file": "content/assignments/Week_10.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_10.md",
+            "title": "Reflection form"
+          }
+        ]
+      },
+      {
         "title": "Tasks and downloads",
         "children": [
           {

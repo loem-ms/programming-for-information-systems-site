@@ -18,7 +18,8 @@ def require(condition, message):
 
 def validate_weeks(weeks):
     require(isinstance(weeks, list) and all(type(w) is int for w in weeks)
-            and weeks in ([1], [1, 2]), 'Only reviewed Weeks 1–2 may be published')
+            and bool(weeks) and weeks == list(range(1, len(weeks)+1)) and len(weeks) <= 10,
+            'Only a consecutive selection of Weeks 1–10 may be published')
     return weeks
 
 
@@ -36,8 +37,8 @@ def check_name(name, rendered=False, weeks=(1, 2)):
     require(allowed_profile or not any(p in rel.parts for p in ('.git', 'instructor', 'examples', 'notes', '__pycache__')),
             'Private/runtime path: '+name)
     require('_Completed' not in name, 'Completed weekly solution: '+name)
-    require(Path(name).name not in ('Midterm_Assignment.pdf', 'Final_Assignment.pdf', 'Assignment_Guide.pdf'),
-            'Later assessment PDF: '+name)
+    require(Path(name).name not in ('Midterm_Assignment.pdf', 'Final_Assignment.pdf', 'Assignment_Guide.pdf') or list(weeks) == list(range(1, 11)),
+            'Later assessment PDF outside all-week release: '+name)
 
 
 def markdown_parts(path):
@@ -187,7 +188,8 @@ def validate(folder, html=None, log=None):
         require(hashlib.sha256(path.read_bytes()).hexdigest() == digest, 'Changed export bytes: '+name)
     require({p.name for p in (content/'slides').glob('*.pdf')} ==
             {'Orientation.pdf', 'Course_Overview.pdf', 'Setup.pdf', *(f'Week_{w:02}_Slides.pdf' for w in weeks)}, 'Unexpected lesson PDFs')
-    require({p.name for p in (content/'assignments').glob('*.pdf')} == {f'Week_{w:02}_Assignments.pdf' for w in weeks}, 'Unexpected task PDFs')
+    assessment_pdfs = {'Assignment_Guide.pdf', 'Midterm_Assignment.pdf', 'Final_Assignment.pdf'} if weeks == list(range(1, 11)) else set()
+    require({p.name for p in (content/'assignments').glob('*.pdf')} == {f'Week_{w:02}_Assignments.pdf' for w in weeks} | assessment_pdfs, 'Unexpected task PDFs')
     require({p.name for p in (content/'learning_materials').glob('*.ipynb')} ==
             {'Python_Basics.ipynb', *(f'Week_{w:02}.ipynb' for w in weeks)}, 'Unexpected notebook set')
     book = json.loads((folder/'myst.yml').read_text())
@@ -242,10 +244,28 @@ def validate(folder, html=None, log=None):
             markdown = '\n'.join(''.join(c['source']) for c in notebook['cells'] if c['cell_type'] == 'markdown')
             require('](' + launch + ')' in markdown, 'Wrong Colab notebook target: ' + name)
             require('](https://colab.research.google.com/)' not in markdown, 'Generic Colab target: ' + name)
+            require('automatic translation' in markdown, 'Missing Khmer translation warning: '+name)
+            require('fluent_review' not in json.dumps(notebook), 'Internal Khmer review metadata: '+name)
             for cell in notebook['cells']:
+                if cell['cell_type'] == 'markdown' and cell.get('metadata', {}).get('course_khmer'):
+                    translated = ''.join(cell['source'])
+                    require(translated.count('<details>') == 1 and translated.count('</details>') == 1,
+                            'Each translated cell needs its own Khmer toggle: '+name)
+                    require('<details open' not in translated and 'automatic translation</summary>' in translated,
+                            'Each Khmer cell toggle must start closed with a warning: '+name)
+                    require(bool(translated.split('<details>', 1)[0].strip()),
+                            'English must remain before each Khmer cell toggle: '+name)
+                if week > 2:
+                    continue
                 require(not set(cell.get('metadata', {}).get('tags', [])) &
                         {'course-setup', 'course-setup-guide', 'course-figure'}, 'Runtime bootstrap in standalone week: ' + name)
                 require('assets/diagrams/' not in ''.join(cell['source']), 'Diagram dependency in standalone week: ' + name)
+    for name in ('README.md', 'resources.md', 'assignments/README.md'):
+        require('Khmer text is automatically translated' in (content/name).read_text(), 'Missing visible translation warning: '+name)
+    internal_note = re.compile(r'(?i)(PUBLIC PREVIEW FOR REVIEW|LOCAL DRAFT FOR INSTRUCTOR REVIEW|Instructor release check|draft translation|fluent_review|will be added after review|pending fluent review|review pending|work[- ]in[- ]progress)')
+    for path in content.rglob('*'):
+        if path.is_file() and path.suffix in ('.md', '.ipynb'):
+            require(not internal_note.search(path.read_text()), 'Internal release note in '+str(path))
     validate_preview(content, publication, book)
     check_links(content, approved_form_url)
     for archive_path in (content/'downloads').glob('*.zip'):
@@ -274,6 +294,39 @@ def validate(folder, html=None, log=None):
             for folder in ('assignments', 'reflections'):
                 page = html/f'content/{folder}/week-{week:02}/index.html'
                 require(page.is_file(), f'Missing rendered weekly {folder} page: '+str(page))
+        class WeeklyKhmerToggleCheck(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.stack = []
+                self.in_summary = False
+                self.summary = ''
+                self.khmer_toggles = []
+            def handle_starttag(self, tag, attrs):
+                if tag == 'details':self.stack.append(dict(attrs))
+                if tag == 'summary':self.in_summary = True;self.summary = ''
+            def handle_data(self, data):
+                if self.in_summary:self.summary += data
+            def handle_endtag(self, tag):
+                if tag == 'summary':
+                    if 'automatic translation' in self.summary:
+                        require(bool(self.stack), 'Khmer summary is outside details')
+                        self.khmer_toggles.append(self.stack[-1])
+                    self.in_summary = False
+                if tag == 'details':
+                    require(bool(self.stack), 'Unbalanced details in weekly HTML')
+                    self.stack.pop()
+        for week in weeks:
+            path = content/f'learning_materials/Week_{week:02}.ipynb'
+            notebook = json.loads(path.read_text())
+            expected_toggles = sum(c['cell_type'] == 'markdown' and '<!-- course-khmer:start -->' in ''.join(c['source']) for c in notebook['cells'])
+            page = html/f'content/learning-materials/week-{week:02}/index.html'
+            require(page.is_file(), 'Missing weekly reading page: '+str(page))
+            parser = WeeklyKhmerToggleCheck()
+            parser.feed(page.read_text())
+            require(len(parser.khmer_toggles) == expected_toggles and expected_toggles > 1,
+                    f'Week {week} must render a separate Khmer toggle for every translated cell')
+            require(all('open' not in attrs for attrs in parser.khmer_toggles) and not parser.stack,
+                    f'Week {week} Khmer toggles must be closed and balanced')
         for entry in publication.get('preview_notebooks', []):
             require((html/'downloads'/entry['name']).is_file(), 'Preview static download missing')
             class ToggleCheck(HTMLParser):
@@ -331,6 +384,8 @@ def validate(folder, html=None, log=None):
                         if c.get('outputs')]
             require(len(rendered) == 10 and [t.strip() for t in rendered] == [t.strip() for t in expected_outputs],
                     'The website must render all ten exact saved checkpoint examples')
+        for assessment in assessment_pdfs:
+            require((html/'assignments'/assessment).is_file(), 'Assessment static download missing: '+assessment)
         for name in ('slides/Setup.pdf', 'slides/Orientation.pdf', 'slides/Course_Overview.pdf',
                      *(f'{folder}/Week_{w:02}{suffix}' for w in weeks for folder, suffix in (
                          ('slides', '_Slides.pdf'), ('assignments', '_Assignments.pdf'),
