@@ -15,13 +15,13 @@ You need only a web browser and a Google account. Every notebook carries its own
 - If Colab says the runtime was reset or disconnected, run the setup cell again, then the cells you need.
 - When confused, use **Runtime → Restart session and run all**. This runs everything fresh, in order.
 - Files that your code writes (for example `my_offers.json` in Week 7) live in a temporary folder and **disappear when the runtime resets**. Your notebook itself is safe in Drive.
-- Colab currently uses Python 3.12. That is what the course is tested with.
+- Colab currently uses Python 3.13 (checked in November 2026). The course works with any Python from 3.9 on, so a newer Colab version is fine.
 
 ## Option B · Your own computer
 
 Use this if you prefer working offline.
 
-1. Install **Python 3.12** from [python.org](https://www.python.org/downloads/) (3.9 or newer also works).
+1. Install the latest **Python 3** from [python.org](https://www.python.org/downloads/) (any version from 3.9 on works).
 2. Install Jupyter: open a terminal and run `python -m pip install notebook` (on some computers, `python3 -m pip install notebook`).
 3. On the course home, use **Download** to save the week's `.ipynb` file into a folder.
 4. In a terminal in that folder, run `python -m notebook` and open the file.

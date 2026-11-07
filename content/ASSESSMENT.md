@@ -56,11 +56,11 @@ See the [final project guide](FINAL_PROJECT.md) for the four levels and what to 
 |---|---:|
 | **It runs and is verified:** Level 1, clean run, `verify()` healthy | 25% |
 | **Your decisions:** Level 2 settings and the quality of the decision log | 30% |
-| **Extension and tests:** Level 3 / Level 4 (optional; strengthens the grade) | 15% |
+| **Tests and extension:** tests for your own decisions (expected) + Level 3 / Level 4 (optional) | 15% |
 | **Handoff:** handoff note and peer test record | 15% |
 | **Presentation and individual explanation** (Week 10) | 15% |
 
-Completing Levels 1 and 2 well, with a clear handoff and presentation, is enough for a good grade. Levels 3 and 4 add marks, but a long program with weak decisions scores lower than a short one with strong, well-explained decisions.
+Completing Levels 1 and 2 well, with two tests for your own decisions, a clear handoff and a presentation, is enough for a good grade. Levels 3 and 4 add marks, but a long program with weak decisions scores lower than a short one with strong, well-explained decisions.
 
 ## Fairness and integrity
 
