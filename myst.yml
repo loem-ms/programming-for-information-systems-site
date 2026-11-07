@@ -2,11 +2,6 @@
   "version": 1,
   "project": {
     "title": "Programming for Information Systems",
-    "authors": [
-      {
-        "name": "Mengsay Loem"
-      }
-    ],
     "github": "https://github.com/loem-ms/programming-for-information-systems-site",
     "toc": [
       {
