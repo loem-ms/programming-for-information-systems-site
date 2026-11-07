@@ -1,69 +1,53 @@
-# Open your weekly notebook
+# Setup
 
-## Weeks 1–2: start directly in Colab
+You need only a web browser and a Google account. Every notebook carries its own copy of the course system, so there is **nothing to install and no files to upload**.
 
-Choose your week on the [course home](README.md), then click **Open in Colab**. The button opens that exact weekly notebook, not the Colab home page.
+## Option A · Google Colab (recommended)
 
-1. Choose **File → Save a copy in Drive** once, give the copy a recognisable name and work in it. Sign in to Google if prompted. Opening the course link alone does not create or save a personal copy.
-2. Connect to a normal Python runtime, then run the first lesson code cell. No GPU, paid plan, API key, GitHub authorization or installation is needed.
-3. Read and run one cell at a time. Make predictions before running and complete the marked student tasks yourself. An untouched starter is not completed work.
+1. On the [course home](README.md), click **Open in Colab** for your week.
+2. **File → Save a copy in Drive.** Do this first, every week. Changes you make before saving a copy can be lost.
+3. Work in your copy (its name starts with "Copy of").
+4. Run the first code cell, **▶ Run this cell first (setup)**. It prints `✅ Food Rescue system ready`.
+5. Work from top to bottom. Use **Shift + Enter** to run a cell.
 
-**There is no notebook upload, ZIP upload, support-file download or setup cell for Weeks 1–2.** All required code, inputs and exercises are already in each notebook. Optional reference links open the course website. You do not need to open them to finish the required work.
+**Things to know about Colab**
 
-Colab may show its standard warning before running a notebook from GitHub. Read it and run only course code you have reviewed. Never paste passwords or tokens into a notebook. This course does not mount your Google Drive or request access to private GitHub files.
+- If Colab says the runtime was reset or disconnected, run the setup cell again, then the cells you need.
+- When confused, use **Runtime → Restart session and run all**. This runs everything fresh, in order.
+- Files that your code writes (for example `my_offers.json` in Week 7) live in a temporary folder and **disappear when the runtime resets**. Your notebook itself is safe in Drive.
+- Colab currently uses Python 3.12. That is what the course is tested with.
 
-## Weeks 3–10: restore embedded course files
+## Option B · Your own computer
 
-Each week is a single downloadable notebook. Its setup cell contains the required support files: no separate ZIP, file upload or support-file network download is needed.
+Use this if you prefer working offline.
 
-1. Open the week's exact **Open in Colab** link on the [course home](README.md) and choose **File → Save a copy in Drive**.
-2. Connect to a normal Python runtime. Run **Prepare the course files** near the start. It automatically restores the embedded programs, diagrams and data into the workspace.
-3. Read and run one cell at a time. TODOs and deliberately unfinished student work are for you to complete, not setup failures.
+1. Install **Python 3.12** from [python.org](https://www.python.org/downloads/) (3.9 or newer also works).
+2. Install Jupyter: open a terminal and run `python -m pip install notebook` (on some computers, `python3 -m pip install notebook`).
+3. On the course home, use **Download** to save the week's `.ipynb` file into a folder.
+4. In a terminal in that folder, run `python -m notebook` and open the file.
+5. Run the setup cell. It creates a `food_rescue_kit` folder next to the notebook.
 
-For local Jupyter, download just the weekly `.ipynb`, save a personal copy in its own folder and run its setup cell. Support files are restored locally without a network request. Required lesson code uses Python's standard library; Jupyter supplies notebook display tools. No GPU or paid service is required.
+VS Code with the Python and Jupyter extensions also works: open the `.ipynb` file and choose a Python 3 kernel.
 
-After a runtime reset, rerun setup before the lesson cells. Save your notebook and download edited programs, reports or data separately before leaving: notebook saving does not preserve runtime files. Keep a backup before starting a fresh workspace or loading updated course files.
+## The final project at home (optional)
 
-## Save your work and return to it
+In the final project (Level 4) you can download **your own** system as a ZIP and run it outside a notebook:
 
-- Return to your named copy in Drive next time, rather than starting again from the course link. **File → Save** keeps your notebook edits and saved outputs; **File → Download → Download .ipynb** makes a separate backup.
-- The website button always opens the instructor's starting notebook. It cannot find or overwrite your personal copy. Your changes do not update the course repository.
-- A fresh Colab runtime loses Python variables. Rerun your own notebook from the top; Weeks 1–2 need no files to restore; for Weeks 3–10, rerun setup to restore the embedded support files, then restore your separately saved work. A browser tab left open is not a backup.
-- If you choose the optional saved-file exercise, download any files you create separately. Saving a notebook to Drive does not save runtime files.
-- Follow the private submission instructions and contact [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) for access or course questions. Do not post assessed work or personal information in shared Issues.
+1. Unzip `my_food_rescue.zip`.
+2. Open a terminal in the `food_rescue_kit` folder.
+3. Run `python run_web.py` and open http://localhost:8000 in your browser. Stop it with **Ctrl + C**.
+4. `python run_menu.py` starts a text menu; `python run_tests.py` runs the system's tests.
 
-Google's [Colab FAQ](https://research.google.com/colaboratory/faq.html) explains notebook storage and runtime lifetime.
+The [Food Rescue kit ZIP](/downloads/food_rescue_kit.zip) is the same system with the default settings.
 
-## Offline alternative: one notebook in Jupyter
+## When something goes wrong
 
-Download the **weekly notebook** from its matching course page before going offline. Open that `.ipynb` in an existing Python 3 Jupyter installation. Save a personal copy such as `Week_01_MyWork.ipynb` in any folder. Weeks 1–2 need no setup. For Weeks 3–10, run the notebook’s setup cell to restore its embedded support files.
+| What you see | What to do |
+|---|---|
+| `NameError: name 'fr' is not defined` | Run the setup cell first. |
+| A name you defined is "not defined" | Run the cell that defines it, or use **Restart session and run all**. |
+| A check shows ❌ | Read the 💡 hint under it. The check never stops your notebook; fix and run again. |
+| `⚠️ your … fell back to the default` | Your function crashed or returned something unexpected; the system used its own rule. Read the message. |
+| The setup cell says the kit was updated | Fine: a newer course version was unpacked. Your `my_settings.py` and `my_rules.py` were kept. |
 
-If you need Jupyter, install a supported stable Python 3 release (Python 3.12 or newer recommended) from [python.org](https://www.python.org/downloads/) or use the university's prepared environment. Installation needs internet access once. From the folder where you saved the notebook:
-
-**Windows PowerShell**
-
-```powershell
-py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install jupyterlab
-.\.venv\Scripts\python.exe -m jupyterlab
-```
-
-**macOS / Linux terminal**
-
-```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install jupyterlab
-.venv/bin/python -m jupyterlab
-```
-
-Open your saved notebook in Jupyter's file list. On later days, run only the last command from the same folder. Keep the terminal open; save your work before stopping the server with Ctrl+C. If a campus computer blocks installation, ask campus support or use Colab. Do not change system Python or security settings.
-
-## Weekly packages and optional reference
-
-The [PDFs and downloads page](resources.md) retains weekly ZIPs for offline reference. These contain the notebook, PDFs, Python Basics and shared programs/data. They are **optional for all Weeks 1–10**. Python Basics remains optional; its setup also restores embedded support files for its file/program examples. Keep an extracted full package together and never replace a folder containing your own work without backing it up.
-
-The [setup PDF](/slides/Setup.pdf) is a companion to this guide. Use the single-notebook workflow for all ten weeks.
-
-## Private class repository access, if requested later
-
-You can read this public site and open its Colab notebooks without a GitHub account. If the instructor asks you to join the private class repository, create or reuse a free [GitHub account](https://github.com/signup), verify your email and send only your name and GitHub username to the course contact. Accept the instructor's invitation while signed in to that account. A 404 may mean the invitation was not accepted or the wrong account is signed in. Never send passwords, codes or access tokens. You do not need to install Git or create your own repository.
+Still stuck? See [questions and help](CONTRIBUTING.md).

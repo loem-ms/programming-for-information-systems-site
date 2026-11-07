@@ -1,36 +1,43 @@
-# Questions belong here
+# Questions and help
 
-You are encouraged to ask questions **during and after class**. Once the course repository is announced, use its **Issues** tab for shared technical questions. Until then, keep a local note with the smallest example or use the separately announced class route. Questions about Python, the food-rescue rules, notebook instructions, setup and unexpected results all help improve the class. You do not need a proposed answer before asking.
+Questions are welcome **during and after class**. A question that helps you usually helps a classmate too. You do not need to know the answer before you ask.
 
 ## Ask a useful question
 
-1. Search existing Issues for the week, concept or exact error message.
-2. Choose **Issues → New issue**, then **Learning question** or **Setup / notebook problem**.
-3. Add the teaching week, notebook section, a small fictional input, your expectation, what happened and what you have tried. If you are unsure what to expect, say so.
-4. For a setup problem, include Windows/macOS/Linux/Ubuntu/Colab, the Python version and a short traceback as text. Do not include credentials, access tokens or personal file paths from an unedited log.
-5. Try a suggested answer and reply with the result. A useful final reply helps the next student. Close the issue when resolved, or explain what is still unclear.
+Good questions are small and concrete. Include:
 
-Students with repository read access can create Issues when Issues are enabled. You do not need to commit, push or open a pull request to ask a question. [GitHub's issue guide](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue)
+1. **The week and the section**, for example "Week 3, Session 3, Part 2".
+2. **The smallest piece of code** that shows the problem.
+3. **What you expected**, and **what happened** (copy the last line of the error as text).
+4. **What you already tried.**
+
+For a setup problem, also say whether you use Colab, Windows, macOS or Linux, and your Python version (`import sys; print(sys.version)`).
 
 ## Example
 
-**Title:** `[W02] Does exactly 20 planned portions need team dispatch?`
+**Title:** `[W02] Does exactly 20 portions need a team?`
 
-> The request has been reviewed. Four containers have five declared portions each, so I calculate 20. The rule says “at least 20.” I expect the team label, but my condition is `portions > 20` and it returns standard. Should the equality case be included?
+> The rule says "20 portions or more need a team". My function returns "standard" for 20. My condition is `portions > 20`. I expected "team". Should the boundary be included?
 
-A helpful answer explains the inclusive boundary, tests 19/20/21 and distinguishes dispatch workload from food suitability or delivery evidence.
-
-Use fenced code blocks for short examples:
-
+````
 ```python
-portions = 5 * 4
-print(portions > 20)  # What does this comparison exclude?
+def pickup_label(portions, approved):
+    if portions > 20:      # is this the problem?
+        return "team"
+    ...
 ```
+````
 
-## Discuss respectfully
+A helpful answer explains the boundary, tests 19, 20 and 21, and connects it to Principle 2 (explicit rules).
 
-Explain the reasoning, ask clarifying questions and avoid posting a complete answer to someone else's assessed task. Share one small distinguishing input or test. When you discover an error in the course material, report the file and section so it can be corrected for everyone.
+## Where to ask
 
-Everyone with access to a private repository can read its Issues. In a public repository, anyone can read them. An Issue is not a private message to the instructor. Keep complete submissions, grades, attendance details and sensitive personal concerns in private email to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Use fictional donor/partner data. This question space is not an attendance register or an emergency contact channel.
+- **In class:** any time, especially during Sessions 2 and 3.
+- **Issues** in the course repository (when access is announced): **Issues → New issue**. Search first: your question may already have an answer. When you get an answer, reply with what worked and close the issue.
+- **Email** [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) for anything private: submissions, grades, attendance or personal matters.
 
-If you cannot access GitHub or your connection fails, keep a local note with the smallest example and ask during class or through [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). When useful, a general version of the question can later be added here without identifying personal details. The instructor will announce response expectations; no immediate-response promise is implied.
+Issues are visible to everyone with access to the repository. They are not private messages. Do not post complete answers to assessed tasks, passwords or personal data.
+
+## Found a mistake in the course?
+
+Report the file and section (for example "Week 5 notebook, Part 2, the check for portions") so it can be fixed for everyone. Thank you!

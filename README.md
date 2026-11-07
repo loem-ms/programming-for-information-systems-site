@@ -1,7 +1,6 @@
-# Programming for Information Systems — public website
+# Programming for Information Systems: course website
 
-Public reading edition: orientation, preparation and Weeks 1–10, with Python Basics as an optional reference.
+Published at https://loem-ms.github.io/programming-for-information-systems-site/ by GitHub Actions (MyST, Jupyter Book 2).
 
-This site uses the standard MyST book theme, the engine behind Jupyter Book 2. Use Node.js 24, then run `npx --yes mystmd@1.12.0 start` to preview or `npx --yes mystmd@1.12.0 build --html` to build. GitHub Pages deploys `_build/html`. Notebook execution is disabled.
-
-Content is a reviewed export from the private course repository. Do not add instructor notes, completed weekly solutions, attendance records or private class links. Refresh with the export.py tool maintained in MIS_Teaching_Kit/website.
+This repository is generated. Do not edit it by hand: change the course sources and rebuild.
+`scripts/validate.py` checks links, notebooks and downloads, and runs every student notebook.
