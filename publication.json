@@ -185,12 +185,12 @@
     },
     {
       "path": "previews/Food_Rescue_System.ipynb",
-      "source_sha256": "65d5126c0b0dabf4c9413722668e4bb75318062724eec04f3ade16e9f549a5f5"
+      "source_sha256": "fc34151089e3e9628e988ee350d1b81f55ccd12fc43629d02eab7b007519d28b"
     }
   ],
   "reflection_form_url": "https://forms.gle/Z3JhR3GHmHDWKxuN7",
   "contact_email": "submit.progmis@gmail.com",
-  "scope": "Orientation, preparation and Weeks 1–2; Python Basics and shared support infrastructure are optional references. Food Rescue System (preview) is an approved draft preview, not a finalized assessment.",
+  "scope": "Orientation, preparation and Weeks 1–2; Python Basics and shared support infrastructure are optional references. Food Rescue System is a standalone learning resource; grading and submission follow the instructor’s announced final rubric.",
   "files": [
     {
       "path": "ASSESSMENT.md",
@@ -266,7 +266,7 @@
     },
     {
       "path": "downloads/Food_Rescue_System.ipynb",
-      "sha256": "8289056846f6064df1a98cbcab83c8eff11b81898b0050b2352825bd37912fd0"
+      "sha256": "ae16f76649ff09bb7e48c3a946421a0ecc637ac01bb3aa4075bfbedeae1b6620"
     },
     {
       "path": "downloads/Python_Basics.ipynb",
@@ -402,7 +402,7 @@
     },
     {
       "path": "previews/Food_Rescue_System.ipynb",
-      "sha256": "7ed7f488c4fad4e4d746b17d0f57634458ad67bf93520f27f80067c04a690c0a"
+      "sha256": "c1898e46c63aa41478789590623d2df2ef6d4d375cc5648f3c1eb6f500a633e6"
     },
     {
       "path": "reflections/Week_01.md",
@@ -441,7 +441,7 @@
     {
       "name": "Food_Rescue_System.ipynb",
       "title": "Food Rescue System (preview)",
-      "sha256": "65d5126c0b0dabf4c9413722668e4bb75318062724eec04f3ade16e9f549a5f5"
+      "sha256": "fc34151089e3e9628e988ee350d1b81f55ccd12fc43629d02eab7b007519d28b"
     }
   ]
 }

@@ -57,7 +57,9 @@ def markdown_parts(path):
                             type(cell.get('execution_count')) is int,
                             'Checkpoint must have one saved standard-text example: '+str(path))
                     text = ''.join(outputs[0].get('text', []))
-                    require(text.count('ប្រព័ន្ធសង្គ្រោះអាហារ | ចំណុចត្រួតពិនិត្យ') == 1 and
+                    require(' / 10' not in text and 'មិនទាន់អនុវត្ត' not in text and 'PLACEHOLDER' not in text,
+                            'Learning progress must stay outside the operator display: '+str(path))
+                    require(text.count('ប្រព័ន្ធសង្គ្រោះអាហារ') == 1 and
                             all(len(line) <= 60 for line in text.splitlines()),
                             'Checkpoint example missing or wider than 60 characters: '+str(path))
                 else:
@@ -134,7 +136,7 @@ def validate_preview(content, publication, book):
                 'The ten saved checkpoint examples must be refreshed')
         require([c['source'] for c in raw['cells'] if c['cell_type']=='code'] ==
                 [c['source'] for c in reading['cells'] if c['cell_type']=='code'], 'Preview runnable code differs')
-        require(raw['metadata']['course_draft']['status'] == 'public_preview_not_final_assessment',
+        require(raw['metadata']['course_draft']['status'] == 'learning_resource',
                 'Preview status missing')
         for notebook in (raw, reading):
             checkpoints = [c for c in notebook['cells']
@@ -149,8 +151,8 @@ def validate_preview(content, publication, book):
             markdown = '\n'.join(''.join(c['source']) for c in notebook['cells'] if c['cell_type']=='markdown')
             require(']('+launch+')' in markdown, 'Preview Colab target missing')
             require('File → Save a copy in Drive' in markdown, 'Preview personal-copy guidance missing')
-            require('not a finalized assessment' in markdown and 'fluent Khmer' in markdown,
-                    'Preview review limitations missing')
+            require('announced final rubric' in markdown and 'automatically translated' in markdown,
+                    'Student grading guidance or translation notice missing')
             require('LOCAL DRAFT' not in markdown, 'Outdated local-only preview wording')
             for cell in notebook['cells']:
                 if cell['cell_type'] == 'markdown':
@@ -279,6 +281,8 @@ def validate(folder, html=None, log=None):
                     super().__init__()
                     self.details = []
                     self.summaries = 0
+                    self.summary_text = []
+                    self.in_summary = False
                     self.depth = 0
                     self.english_inside = False
                     self.in_pre = 0
@@ -292,12 +296,18 @@ def validate(folder, html=None, log=None):
                         self.depth += 1
                     if tag == 'summary':
                         self.summaries += 1
+                        self.in_summary = True
+                        self.summary_text.append('')
                 def handle_endtag(self, tag):
+                    if tag == 'summary':
+                        self.in_summary = False
                     if tag == 'pre':
                         self.in_pre -= 1
                     if tag == 'details':
                         self.depth -= 1
                 def handle_data(self, data):
+                    if self.in_summary:
+                        self.summary_text[-1] += data
                     if self.in_pre:
                         self.pre_text[-1] += data
                     if self.depth and data.strip() == 'English':
@@ -306,11 +316,15 @@ def validate(folder, html=None, log=None):
             parser.feed((html/'content/previews/food-rescue-system/index.html').read_text())
             expected_toggles = sum(c['cell_type'] == 'markdown' for c in json.loads(
                 (content/'previews'/entry['name']).read_text())['cells'])
-            require(len(parser.details) == expected_toggles and parser.summaries == expected_toggles,
-                    'All Khmer explanations must render as native toggles')
+            notebook = json.loads((content/'previews'/entry['name']).read_text())
+            code_toggles = sum('hide-input' in c.get('metadata', {}).get('tags', []) for c in notebook['cells'])
+            require(len(parser.details) == expected_toggles + code_toggles and parser.summaries == expected_toggles + code_toggles,
+                    'Khmer and provided-code toggles must all render')
+            require(sum('automatic translation' in t for t in parser.summary_text) == expected_toggles,
+                    'Every Khmer toggle needs its automatic-translation warning')
             require(all('open' not in attrs for attrs in parser.details), 'Khmer toggles must start closed')
             require(not parser.english_inside and parser.depth == 0, 'English must stay outside balanced toggles')
-            rendered = [t for t in parser.pre_text if 'ប្រព័ន្ធសង្គ្រោះអាហារ | ចំណុចត្រួតពិនិត្យ' in t
+            rendered = [t for t in parser.pre_text if 'ប្រព័ន្ធសង្គ្រោះអាហារ' in t
                         and 'def show_checkpoint' not in t]
             reading = json.loads((content/'previews'/entry['name']).read_text())
             expected_outputs = [''.join(c['outputs'][0]['text']) for c in reading['cells']
