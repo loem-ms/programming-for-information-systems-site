@@ -111,6 +111,106 @@
             "title": "Questions and help"
           }
         ]
+      },
+      {
+        "title": "ភាសាខ្មែរ (Khmer)",
+        "children": [
+          {
+            "file": "content/km/README.md",
+            "title": "ទំព័រដើម (ភាសាខ្មែរ)"
+          },
+          {
+            "file": "content/km/COURSE_GUIDE.md",
+            "title": "មគ្គុទ្ទេសក៍វគ្គសិក្សា"
+          },
+          {
+            "file": "content/km/SETUP.md",
+            "title": "ការរៀបចំ (Setup)"
+          },
+          {
+            "title": "Notebooks ប្រចាំសប្ដាហ៍",
+            "children": [
+              {
+                "file": "content/km/notebooks/Week_01.ipynb",
+                "title": "សប្ដាហ៍ទី 1 · តើប្រព័ន្ធព័ត៌មានជាអ្វី?"
+              },
+              {
+                "file": "content/km/notebooks/Week_02.ipynb",
+                "title": "សប្ដាហ៍ទី 2 · វិធាន និងការសម្រេចចិត្ត"
+              },
+              {
+                "file": "content/km/notebooks/Week_03.ipynb",
+                "title": "សប្ដាហ៍ទី 3 · Records និងទិន្នន័យ"
+              },
+              {
+                "file": "content/km/notebooks/Week_04.ipynb",
+                "title": "សប្ដាហ៍ទី 4 · Functions ដែលអាចទុកចិត្តបាន · Midterm"
+              },
+              {
+                "file": "content/km/notebooks/Week_05.ipynb",
+                "title": "សប្ដាហ៍ទី 5 · ការពិនិត្យ input"
+              },
+              {
+                "file": "content/km/notebooks/Week_06.ipynb",
+                "title": "សប្ដាហ៍ទី 6 · Objects និង lifecycle"
+              },
+              {
+                "file": "content/km/notebooks/Week_07.ipynb",
+                "title": "សប្ដាហ៍ទី 7 · ការរក្សាទុក និងប្រវត្តិ"
+              },
+              {
+                "file": "content/km/notebooks/Week_08.ipynb",
+                "title": "សប្ដាហ៍ទី 8 · របាយការណ៍ និងអេក្រង់"
+              },
+              {
+                "file": "content/km/notebooks/Week_09.ipynb",
+                "title": "សប្ដាហ៍ទី 9 · ការផ្គុំប្រព័ន្ធបញ្ចូលគ្នា"
+              },
+              {
+                "file": "content/km/notebooks/Week_10.ipynb",
+                "title": "សប្ដាហ៍ទី 10 · ផ្ទៀងផ្ទាត់ ប្រគល់ និងបង្ហាញ"
+              }
+            ]
+          },
+          {
+            "title": "Midterm និង Final project",
+            "children": [
+              {
+                "file": "content/km/notebooks/Midterm.ipynb",
+                "title": "Midterm · រៀបចំផែនការសម្រាប់មួយថ្ងៃ"
+              },
+              {
+                "file": "content/km/FINAL_PROJECT.md",
+                "title": "មគ្គុទ្ទេសក៍ Final project"
+              },
+              {
+                "file": "content/km/notebooks/Final_Project.ipynb",
+                "title": "Final project notebook"
+              }
+            ]
+          },
+          {
+            "title": "ឯកសារយោង",
+            "children": [
+              {
+                "file": "content/km/notebooks/Python_Basics.ipynb",
+                "title": "Python Basics (ស្រេចចិត្ត)"
+              },
+              {
+                "file": "content/km/ASSESSMENT.md",
+                "title": "ការវាយតម្លៃ"
+              },
+              {
+                "file": "content/km/RESEARCH.md",
+                "title": "កិច្ចការស្រាវជ្រាវ"
+              },
+              {
+                "file": "content/km/COURSE_LINKS.md",
+                "title": "Links និងការឆ្លុះបញ្ចាំង (reflection)"
+              }
+            ]
+          }
+        ]
       }
     ],
     "static_files": [
