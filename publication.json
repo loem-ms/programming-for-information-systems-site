@@ -214,7 +214,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "42363a7b7e88b940730d9ff239861750f3887bc1eafe15c968c72d4922d32104"
+      "sha256": "402085d833dbd71345e0aa3f753db14cbbe36a8fea7fde2868045d352f6c5236"
     },
     {
       "path": "RESEARCH_ASSIGNMENTS.md",
@@ -254,27 +254,27 @@
     },
     {
       "path": "downloads/Python_Basics.ipynb",
-      "sha256": "d7e320bdde551c88a49a284567a5918149bac6cc98d6637ae87fdb63f7678dc3"
+      "sha256": "e59f7fa570f78ae4e3eba27926e79bf3f0ca83cd3b253ccb84428ac4616f5266"
     },
     {
       "path": "downloads/Python_Basics.zip",
-      "sha256": "178ccd3ac2af7b0943db627167c42e4295d273bd66c204ad0c6b000b3dc17666"
+      "sha256": "0df8617ff7c4ece4f1e4e1b465485a95211242e04935ae5527cef573a80ed3d1"
     },
     {
       "path": "downloads/Week_01.ipynb",
-      "sha256": "fe4c40ee3c7b592d1ebcf6f8623491846aefeabbf79b672029903c2957039b22"
+      "sha256": "8f3114418291e005f1a17b2a486bba6afb04315c26d6585da1605faa5f5bde92"
     },
     {
       "path": "downloads/Week_01.zip",
-      "sha256": "af681064214a0d3213cd5652b2fbe0623815de6a881a6d9581a9afecebbddc63"
+      "sha256": "182046e43adf807fed6fd6e5c3505e62db86da92a96b5f15cc3d606246b4bca5"
     },
     {
       "path": "downloads/Week_02.ipynb",
-      "sha256": "7f98b866f0ab5c339cda3f072db7f3e402c0b9572d34b02793679e39be882526"
+      "sha256": "c78dcf03d50bedc1e0534b54b7a2355f045e4d00f36af306034029895f5cbc3b"
     },
     {
       "path": "downloads/Week_02.zip",
-      "sha256": "a17a19ebfa4b04363d65ae3afdefba2c9b6993254230d93d71c2e10634a979f2"
+      "sha256": "b227737ac274780ce02b8622b0357cd33062b72334e1d2027d2e21b341e7f02f"
     },
     {
       "path": "learning_materials/CLASS_QA.md",
@@ -286,7 +286,7 @@
     },
     {
       "path": "learning_materials/Python_Basics.ipynb",
-      "sha256": "fa8f7d680083c65f574eaf1f91efb8bcb042b115fedcbbe50038e3adfb874121"
+      "sha256": "63d2884c2d89a64e2e2af3d2f0ec3cfdb73a076048b12eba46056bd25ba3916e"
     },
     {
       "path": "learning_materials/README.md",
@@ -294,11 +294,11 @@
     },
     {
       "path": "learning_materials/Week_01.ipynb",
-      "sha256": "91037c085b68b855e6e1474b03b3910f96a08920ebb6fe14d94bc10333251f46"
+      "sha256": "2b5384dd233d8f4282b7af98248e3ef24d9e1100c79e33e65318db53a5c2b5c7"
     },
     {
       "path": "learning_materials/Week_02.ipynb",
-      "sha256": "ed5200344093123928eef9a757391a9ca99afb3b42c3eb9b12eee761a6b2e41a"
+      "sha256": "92f8e237f224ff40375c21f7a1af894f9bf88950bd1afb601bee6ed5f5907fda"
     },
     {
       "path": "learning_materials/assets/diagrams/course_week_01.svg",
