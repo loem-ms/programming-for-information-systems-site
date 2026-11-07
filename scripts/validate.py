@@ -57,7 +57,7 @@ def markdown_parts(path):
                             type(cell.get('execution_count')) is int,
                             'Checkpoint must have one saved standard-text example: '+str(path))
                     text = ''.join(outputs[0].get('text', []))
-                    require(text.count('FOOD RESCUE | SYSTEM CHECKPOINT') == 1 and
+                    require(text.count('ប្រព័ន្ធសង្គ្រោះអាហារ | ចំណុចត្រួតពិនិត្យ') == 1 and
                             all(len(line) <= 60 for line in text.splitlines()),
                             'Checkpoint example missing or wider than 60 characters: '+str(path))
                 else:
@@ -310,7 +310,7 @@ def validate(folder, html=None, log=None):
                     'All Khmer explanations must render as native toggles')
             require(all('open' not in attrs for attrs in parser.details), 'Khmer toggles must start closed')
             require(not parser.english_inside and parser.depth == 0, 'English must stay outside balanced toggles')
-            rendered = [t for t in parser.pre_text if 'FOOD RESCUE | SYSTEM CHECKPOINT' in t
+            rendered = [t for t in parser.pre_text if 'ប្រព័ន្ធសង្គ្រោះអាហារ | ចំណុចត្រួតពិនិត្យ' in t
                         and 'def show_checkpoint' not in t]
             reading = json.loads((content/'previews'/entry['name']).read_text())
             expected_outputs = [''.join(c['outputs'][0]['text']) for c in reading['cells']
