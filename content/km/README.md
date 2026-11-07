@@ -2,7 +2,7 @@
 
 **English:** [the same course in English](../README.md)
 
-**Campus Food Rescue · Mengsay Loem · កំណែភាសាខ្មែរ សម្រាប់អ្នកចាប់ផ្ដើមដំបូង**
+**Campus Food Rescue · គ្រូបង្រៀន: [Mengsay Loem](https://loem-ms.github.io/) · កំណែភាសាខ្មែរ សម្រាប់អ្នកចាប់ផ្ដើមដំបូង**
 
 ពាក្យ programming និងពាក្យបច្ចេកទេស រក្សាជាភាសាអង់គ្លេសដោយចេតនា ព្រោះនៅកម្ពុជា មិនទាន់មានពាក្យបច្ចេកទេសជាភាសាខ្មែរ ដែលគេឯកភាពគ្នានៅឡើយ។
 

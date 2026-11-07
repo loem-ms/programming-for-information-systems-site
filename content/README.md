@@ -2,7 +2,7 @@
 
 **ភាសាខ្មែរ (Khmer):** [មេរៀនទាំងអស់ជាភាសាខ្មែរ](km/README.md)
 
-**Campus Food Rescue · Mengsay Loem · English-language course for beginners**
+**Campus Food Rescue · Instructor: [Mengsay Loem](https://loem-ms.github.io/) · English-language course for beginners**
 
 AI can now write a lot of code. What it cannot do for you is decide what a system *should* do, or notice when code is risky. In this course you learn Python basics so you can **read code, test it and judge it**. Each week you build one part of a small information system and make **your own decisions** about it. By Week 10 you have your own working system.
 
