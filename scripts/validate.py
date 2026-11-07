@@ -96,6 +96,44 @@ def check_links(root, approved_form_url=None):
                 require(resolved.exists(), f'Missing link: {path.relative_to(root)} -> {target}')
 
 
+def validate_preview(content, publication, book):
+    previews = publication.get('preview_notebooks', [])
+    names = [entry.get('name') for entry in previews]
+    require(names in ([], ['Food_Rescue_System.ipynb']), 'Unreviewed preview notebook')
+    actual = {p.name for p in (content/'previews').glob('*.ipynb')}
+    require(actual == set(names), 'Preview reading files differ from explicit allowlist')
+    expected_downloads = {'Python_Basics.ipynb', *(f'Week_{w:02}.ipynb' for w in publication['weeks']), *names}
+    require({p.name for p in (content/'downloads').glob('*.ipynb')} == expected_downloads,
+            'Unexpected standalone notebook download')
+    for entry in previews:
+        name = entry['name']
+        require(entry.get('title') == 'Food Rescue System (preview)', 'Preview menu label missing')
+        require(re.fullmatch(r'[0-9a-f]{64}', entry.get('sha256', '')), 'Preview source hash missing')
+        section = next(node for node in book['project']['toc'] if node.get('title') == 'Tasks and downloads')
+        require({'file':'content/previews/'+name, 'title':entry['title']} in section['children'],
+                'Preview must be under Tasks and downloads')
+        raw = json.loads((content/'downloads'/name).read_text())
+        reading = json.loads((content/'previews'/name).read_text())
+        require('skip-execution' in reading['metadata'].get('tags', []), 'Preview execution guard missing')
+        require([c['source'] for c in raw['cells'] if c['cell_type']=='code'] ==
+                [c['source'] for c in reading['cells'] if c['cell_type']=='code'], 'Preview runnable code differs')
+        require(raw['metadata']['course_draft']['status'] == 'public_preview_not_final_assessment',
+                'Preview status missing')
+        launch = ('https://colab.research.google.com/github/' + publication['public_repository']
+                  + '/blob/main/content/downloads/' + name)
+        for notebook in (raw, reading):
+            markdown = '\n'.join(''.join(c['source']) for c in notebook['cells'] if c['cell_type']=='markdown')
+            require(']('+launch+')' in markdown, 'Preview Colab target missing')
+            require('File → Save a copy in Drive' in markdown, 'Preview personal-copy guidance missing')
+            require('not a finalized assessment' in markdown and 'fluent Khmer' in markdown,
+                    'Preview review limitations missing')
+            require('LOCAL DRAFT' not in markdown, 'Outdated local-only preview wording')
+            require(not any(value in json.dumps(notebook) for value in ('/Users/', '/workspace/', 'instructor/final_project_notebook_draft')),
+                    'Private local path in preview')
+            require(sum('student-response' in c.get('metadata', {}).get('tags', []) for c in notebook['cells']) == 9,
+                    'Required student response blocks changed')
+
+
 def validate(folder, html=None, log=None):
     folder = folder.resolve()
     content = folder/'content'
@@ -151,6 +189,7 @@ def validate(folder, html=None, log=None):
                 require(not set(cell.get('metadata', {}).get('tags', [])) &
                         {'course-setup', 'course-setup-guide', 'course-figure'}, 'Runtime bootstrap in standalone week: ' + name)
                 require('assets/diagrams/' not in ''.join(cell['source']), 'Diagram dependency in standalone week: ' + name)
+    validate_preview(content, publication, book)
     check_links(content, approved_form_url)
     for archive_path in (content/'downloads').glob('*.zip'):
         with zipfile.ZipFile(archive_path) as archive:
@@ -174,6 +213,8 @@ def validate(folder, html=None, log=None):
         for path in html.rglob('*'):
             if path.is_file():
                 check_name(path.relative_to(html).as_posix(), rendered=True, weeks=weeks)
+        for entry in publication.get('preview_notebooks', []):
+            require((html/'downloads'/entry['name']).is_file(), 'Preview static download missing')
         for name in ('slides/Setup.pdf', 'slides/Orientation.pdf', 'slides/Course_Overview.pdf',
                      *(f'{folder}/Week_{w:02}{suffix}' for w in weeks for folder, suffix in (
                          ('slides', '_Slides.pdf'), ('assignments', '_Assignments.pdf'),

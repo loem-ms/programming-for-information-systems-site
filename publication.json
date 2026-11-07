@@ -182,11 +182,15 @@
     {
       "path": "learning_materials/Python_Basics.ipynb",
       "source_sha256": "d8b7e72595e20c2f60b2ff1217245ea45df9aac4e7b3f777f132351f93772524"
+    },
+    {
+      "path": "previews/Food_Rescue_System.ipynb",
+      "source_sha256": "cda681f5168db7f8efa2f3a14be3f82a114a56f8f0eed39b59ebb4cf0c1df6cf"
     }
   ],
   "reflection_form_url": "https://forms.gle/Z3JhR3GHmHDWKxuN7",
   "contact_email": "submit.progmis@gmail.com",
-  "scope": "Orientation, preparation and Weeks 1–2; Python Basics and shared support infrastructure are optional references.",
+  "scope": "Orientation, preparation and Weeks 1–2; Python Basics and shared support infrastructure are optional references. Food Rescue System (preview) is an approved draft preview, not a finalized assessment.",
   "files": [
     {
       "path": "ASSESSMENT.md",
@@ -251,6 +255,10 @@
     {
       "path": "assignments/Week_02_Assignments.pdf",
       "sha256": "1b94d1ea639cd395a0b37748a4c8d0bc185186a8f70e3f0256f9fd1120bf953b"
+    },
+    {
+      "path": "downloads/Food_Rescue_System.ipynb",
+      "sha256": "4f4f5869eb15aeeb4ebfb81b30ee67ae5a18fb13497416bb685f30746426b933"
     },
     {
       "path": "downloads/Python_Basics.ipynb",
@@ -385,6 +393,10 @@
       "sha256": "87e863ddf4ff8c51357ec1aaa5e13b00c61f7577af30ce3c41bc5a04d1bbaceb"
     },
     {
+      "path": "previews/Food_Rescue_System.ipynb",
+      "sha256": "f80143de35acee6ec19150c3424bfd689c4ab2acdbd27401890fc193c6a8221c"
+    },
+    {
       "path": "resources.md",
       "sha256": "704b98e022a2562bdc4c65a820627d7a5536a7f903e032751e0d09258d038b73"
     },
@@ -407,6 +419,13 @@
     {
       "path": "slides/Week_02_Slides.pdf",
       "sha256": "96195b23f7485e53539c9c75605adf2f1d461ac07eb5df917e20eba024453e88"
+    }
+  ],
+  "preview_notebooks": [
+    {
+      "name": "Food_Rescue_System.ipynb",
+      "title": "Food Rescue System (preview)",
+      "sha256": "cda681f5168db7f8efa2f3a14be3f82a114a56f8f0eed39b59ebb4cf0c1df6cf"
     }
   ]
 }
