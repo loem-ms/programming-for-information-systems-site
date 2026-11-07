@@ -1,6 +1,6 @@
 # Research assignments
 
-Research the topic below and briefly explain what you found. The directions suggest things to look at; the examples show how a short summary could read. You may choose another relevant example. There is no required response template. Use your own words and name your sources. Plan about 15–20 minutes per task.
+Research the topic below and briefly explain what you found. The directions suggest things to look at; the examples show how a short summary could read. You may choose another relevant example. There is no required response template. Use your own words and name your sources.
 
 ## Research 1 · a real information system
 

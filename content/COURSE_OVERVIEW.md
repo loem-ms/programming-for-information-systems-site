@@ -67,9 +67,9 @@ The table keeps the full ten-week route visible. Python topic names are introduc
 | 2 · Practise | Run, change and check examples in the same weekly notebook. |
 | 3 · Project studio | Use the skill to help the volunteer team with one small task. |
 
-The course has **10 weeks, three 90-minute sessions per week: 45 contact hours**. Week 4 reserves its final 135 minutes for the Midterm. Week 10 includes the operator demonstration in Session 2 and individual verification in Session 3. The weekly notebook and task PDF give the exact instructions and timing.
+The course has **10 weeks with three sessions per week**. Week 4 includes the Midterm. Week 10 includes the operator demonstration in Session 2 and individual verification in Session 3. The weekly notebook and task PDF give the exact instructions.
 
-A useful learning cycle is **ask → predict → run or change → check → explain**. Save the required evidence and a backup, then stop; optional reference material can wait. Most weeks plan about 30–60 minutes of work outside class. See the [learning path](LEARNING_PATH.md) for the weekly expectations and exceptions.
+A useful learning cycle is **ask → predict → run or change → check → explain**. Save the required evidence and a backup, then stop; optional reference material can wait. See the [learning path](LEARNING_PATH.md) for the weekly expectations and exceptions.
 
 ## Find what you need
 

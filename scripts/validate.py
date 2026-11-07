@@ -244,24 +244,21 @@ def validate(folder, html=None, log=None):
             markdown = '\n'.join(''.join(c['source']) for c in notebook['cells'] if c['cell_type'] == 'markdown')
             require('](' + launch + ')' in markdown, 'Wrong Colab notebook target: ' + name)
             require('](https://colab.research.google.com/)' not in markdown, 'Generic Colab target: ' + name)
-            require('automatic translation' in markdown, 'Missing Khmer translation warning: '+name)
-            require('fluent_review' not in json.dumps(notebook), 'Internal Khmer review metadata: '+name)
+            require(not re.search(r'[\u1780-\u17ff]|course-khmer|automatic translation', markdown),
+                    'Weekly instructions must be English-only: '+name)
+            require('course_khmer' not in json.dumps(notebook), 'Stale translation metadata: '+name)
+            require(not re.search(r'(?i)\d+[- ]minute|\d+ min\b|class pacing|time plan|Typical work outside class', markdown),
+                    'Student time allocation remains: '+name)
             for cell in notebook['cells']:
-                if cell['cell_type'] == 'markdown' and cell.get('metadata', {}).get('course_khmer'):
-                    translated = ''.join(cell['source'])
-                    require(translated.count('<details>') == 1 and translated.count('</details>') == 1,
-                            'Each translated cell needs its own Khmer toggle: '+name)
-                    require('<details open' not in translated and 'automatic translation</summary>' in translated,
-                            'Each Khmer cell toggle must start closed with a warning: '+name)
-                    require(bool(translated.split('<details>', 1)[0].strip()),
-                            'English must remain before each Khmer cell toggle: '+name)
+                if cell['cell_type'] == 'code':
+                    require('files.upload(' not in ''.join(cell['source']), 'ZIP upload in standalone week: '+name)
                 if week > 2:
                     continue
                 require(not set(cell.get('metadata', {}).get('tags', [])) &
                         {'course-setup', 'course-setup-guide', 'course-figure'}, 'Runtime bootstrap in standalone week: ' + name)
                 require('assets/diagrams/' not in ''.join(cell['source']), 'Diagram dependency in standalone week: ' + name)
     for name in ('README.md', 'resources.md', 'assignments/README.md'):
-        require('Khmer text is automatically translated' in (content/name).read_text(), 'Missing visible translation warning: '+name)
+        require(not re.search(r'[\u1780-\u17ff]|automatic translation', (content/name).read_text()), 'Translation remains in weekly guide: '+name)
     internal_note = re.compile(r'(?i)(PUBLIC PREVIEW FOR REVIEW|LOCAL DRAFT FOR INSTRUCTOR REVIEW|Instructor release check|draft translation|fluent_review|will be added after review|pending fluent review|review pending|work[- ]in[- ]progress)')
     for path in content.rglob('*'):
         if path.is_file() and path.suffix in ('.md', '.ipynb'):
@@ -294,39 +291,14 @@ def validate(folder, html=None, log=None):
             for folder in ('assignments', 'reflections'):
                 page = html/f'content/{folder}/week-{week:02}/index.html'
                 require(page.is_file(), f'Missing rendered weekly {folder} page: '+str(page))
-        class WeeklyKhmerToggleCheck(HTMLParser):
-            def __init__(self):
-                super().__init__()
-                self.stack = []
-                self.in_summary = False
-                self.summary = ''
-                self.khmer_toggles = []
-            def handle_starttag(self, tag, attrs):
-                if tag == 'details':self.stack.append(dict(attrs))
-                if tag == 'summary':self.in_summary = True;self.summary = ''
-            def handle_data(self, data):
-                if self.in_summary:self.summary += data
-            def handle_endtag(self, tag):
-                if tag == 'summary':
-                    if 'automatic translation' in self.summary:
-                        require(bool(self.stack), 'Khmer summary is outside details')
-                        self.khmer_toggles.append(self.stack[-1])
-                    self.in_summary = False
-                if tag == 'details':
-                    require(bool(self.stack), 'Unbalanced details in weekly HTML')
-                    self.stack.pop()
         for week in weeks:
-            path = content/f'learning_materials/Week_{week:02}.ipynb'
-            notebook = json.loads(path.read_text())
-            expected_toggles = sum(c['cell_type'] == 'markdown' and '<!-- course-khmer:start -->' in ''.join(c['source']) for c in notebook['cells'])
             page = html/f'content/learning-materials/week-{week:02}/index.html'
             require(page.is_file(), 'Missing weekly reading page: '+str(page))
-            parser = WeeklyKhmerToggleCheck()
-            parser.feed(page.read_text())
-            require(len(parser.khmer_toggles) == expected_toggles and expected_toggles > 1,
-                    f'Week {week} must render a separate Khmer toggle for every translated cell')
-            require(all('open' not in attrs for attrs in parser.khmer_toggles) and not parser.stack,
-                    f'Week {week} Khmer toggles must be closed and balanced')
+            # Navigation may link to the bilingual final-program preview, but
+            # weekly body text must not contain translation blocks or pacing.
+            text = page.read_text()
+            require('course-khmer:start' not in text and 'automatic translation</summary>' not in text,
+                    f'Week {week} contains a stale translation block')
         for entry in publication.get('preview_notebooks', []):
             require((html/'downloads'/entry['name']).is_file(), 'Preview static download missing')
             class ToggleCheck(HTMLParser):

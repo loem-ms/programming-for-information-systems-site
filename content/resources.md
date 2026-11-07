@@ -1,9 +1,5 @@
 # PDFs and downloads
 
-⚠️ **Khmer text is automatically translated and may contain errors.** Use the English text as a reference and ask the instructor if meaning is unclear.
-
-⚠️ **អត្ថបទខ្មែរបកប្រែដោយស្វ័យប្រវត្តិ ហើយអាចមានកំហុស។** សូមយោងអត្ថបទអង់គ្លេស ហើយសួរគ្រូបើអត្ថន័យមិនច្បាស់។
-
 ## Before Week 1
 
 - [Orientation PDF](/slides/Orientation.pdf)
@@ -85,4 +81,4 @@
 - [Python Basics](learning_materials/Python_Basics.ipynb)
 - [Python Basics ZIP](/downloads/Python_Basics.zip)
 
-Web pages show the notebook text and code. For Weeks 1–2, use the direct Colab links on the course home or download just the notebook for local JupyterLab. ZIPs are optional offline packs for Weeks 1–2. For Weeks 3–10, download the matching ZIP for the setup cell or local use.
+Web pages show the notebook text and code. For Weeks 1–2, use the direct Colab links on the course home or download just the notebook for local JupyterLab. ZIPs are optional offline packs for Weeks 1–2. Weeks 3–10 also run as single files; their setup cell restores embedded support files. No ZIP upload is needed.

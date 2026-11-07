@@ -12,24 +12,23 @@ Choose your week on the [course home](README.md), then click **Open in Colab**. 
 
 Colab may show its standard warning before running a notebook from GitHub. Read it and run only course code you have reviewed. Never paste passwords or tokens into a notebook. This course does not mount your Google Drive or request access to private GitHub files.
 
-## Weeks 3–10: load the matching weekly ZIP
+## Weeks 3–10: restore embedded course files
 
-These notebooks retain support-file setup for diagrams, saved-program exercises and later CSV fixtures. They are not standalone downloads.
+Each week is a single downloadable notebook. Its setup cell contains the required support files: no separate ZIP, file upload or support-file network download is needed.
 
-1. Open the week's **Colab** link on the [course home](README.md) and choose **File → Save a copy in Drive**.
-2. Download that week's ZIP from the same page. Do not upload an individual notebook instead of the ZIP.
-3. Connect to a normal Python runtime. Run **Prepare the course files** near the start and upload the complete ZIP when asked. Wait for **Course files ready** before running the lesson cells.
-4. Read and run one cell at a time. TODOs and deliberately unfinished student work are for you to complete, not setup failures.
+1. Open the week's exact **Open in Colab** link on the [course home](README.md) and choose **File → Save a copy in Drive**.
+2. Connect to a normal Python runtime. Run **Prepare the course files** near the start. It automatically restores the embedded programs, diagrams and data into the workspace.
+3. Read and run one cell at a time. TODOs and deliberately unfinished student work are for you to complete, not setup failures.
 
-For local Jupyter, extract the ZIP and open the notebook inside `learning_materials/`. Keep its `programs/`, `assets/` and `final-data/` folders together. Run the setup cell to check the workspace. The lessons use Python's standard library; Jupyter supplies notebook display tools. No GPU or paid service is required.
+For local Jupyter, download just the weekly `.ipynb`, save a personal copy in its own folder and run its setup cell. Support files are restored locally without a network request. Required lesson code uses Python's standard library; Jupyter supplies notebook display tools. No GPU or paid service is required.
 
-A new Colab runtime needs the ZIP again. Save your notebook and download your edited programs, reports or data separately before leaving: notebook saving does not preserve runtime files. Keep a backup before starting a fresh workspace. Never overwrite your work with a fresh starter package.
+After a runtime reset, rerun setup before the lesson cells. Save your notebook and download edited programs, reports or data separately before leaving: notebook saving does not preserve runtime files. Keep a backup before starting a fresh workspace or loading updated course files.
 
 ## Save your work and return to it
 
 - Return to your named copy in Drive next time, rather than starting again from the course link. **File → Save** keeps your notebook edits and saved outputs; **File → Download → Download .ipynb** makes a separate backup.
 - The website button always opens the instructor's starting notebook. It cannot find or overwrite your personal copy. Your changes do not update the course repository.
-- A fresh Colab runtime loses Python variables. Rerun your own notebook from the top; Weeks 1–2 need no files to restore. A browser tab left open is not a backup.
+- A fresh Colab runtime loses Python variables. Rerun your own notebook from the top; Weeks 1–2 need no files to restore; for Weeks 3–10, rerun setup to restore the embedded support files, then restore your separately saved work. A browser tab left open is not a backup.
 - If you choose the optional saved-file exercise, download any files you create separately. Saving a notebook to Drive does not save runtime files.
 - Follow the private submission instructions and contact [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) for access or course questions. Do not post assessed work or personal information in shared Issues.
 
@@ -37,7 +36,7 @@ Google's [Colab FAQ](https://research.google.com/colaboratory/faq.html) explains
 
 ## Offline alternative: one notebook in Jupyter
 
-Download **Week 1 notebook** or **Week 2 notebook** from the matching course page before going offline. Open that `.ipynb` in an existing Python 3 Jupyter installation. Save a personal copy such as `Week_01_MyWork.ipynb` in any folder. No neighbouring course files are needed for these weeks.
+Download the **weekly notebook** from its matching course page before going offline. Open that `.ipynb` in an existing Python 3 Jupyter installation. Save a personal copy such as `Week_01_MyWork.ipynb` in any folder. Weeks 1–2 need no setup. For Weeks 3–10, run the notebook’s setup cell to restore its embedded support files.
 
 If you need Jupyter, install a supported stable Python 3 release (Python 3.12 or newer recommended) from [python.org](https://www.python.org/downloads/) or use the university's prepared environment. Installation needs internet access once. From the folder where you saved the notebook:
 
@@ -61,9 +60,9 @@ Open your saved notebook in Jupyter's file list. On later days, run only the las
 
 ## Weekly packages and optional reference
 
-The [PDFs and downloads page](resources.md) retains weekly ZIPs for offline reference. These contain the notebook, PDFs, Python Basics and shared programs/data. They are **not required for Weeks 1–2**. The full Python Basics reference includes later file/program examples that use those support files; its own setup guide applies only to that optional reference. Keep an extracted full package together and never replace a folder containing your own work without backing it up.
+The [PDFs and downloads page](resources.md) retains weekly ZIPs for offline reference. These contain the notebook, PDFs, Python Basics and shared programs/data. They are **optional for all Weeks 1–10**. Python Basics remains optional; its setup also restores embedded support files for its file/program examples. Keep an extracted full package together and never replace a folder containing your own work without backing it up.
 
-The older [full-package setup PDF](/slides/Setup.pdf) describes ZIP-based setup. Use this web guide for the current Week 1–2 standalone and Week 3–10 ZIP workflows.
+The [setup PDF](/slides/Setup.pdf) is a companion to this guide. Use the single-notebook workflow for all ten weeks.
 
 ## Private class repository access, if requested later
 

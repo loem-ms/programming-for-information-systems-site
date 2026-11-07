@@ -105,7 +105,7 @@ AI use or non-use does not itself change the mark. Every student must run and ex
 
 Full standard marks do not require AI or optional refactoring. A small capped bonus may later be offered for identifying and improving a visible, working-but-improvable design while preserving the tests. The bonus value and fairness rule are **not decided**.
 
-Week 4 protects its final **135 minutes** for the Midterm: the last 45 minutes of Session 2 and all of Session 3. Budget **90 minutes implementation + 30 minutes tests/README/ZIP + 15 minutes review and hand-in**. The first 135 minutes are for functions and guided practice. Detailed main/import work and the 16-boundary exercise are optional rehearsal. The five-minute individual explanation is scheduled according to cohort size and examiner capacity; the final 15 minutes do not guarantee an oral slot for every student. Calendar dates remain to be announced. Send submissions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Outside class, Week 4 requires only the 15–20-minute Research 3 preparation after the Midterm and keeping a backup.
+Week 4 includes functions and guided practice followed by the Midterm. Detailed main/import work and the 16-boundary exercise are optional rehearsal. Individual explanations and calendar dates will be announced. Send submissions to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Prepare Research 3 after the Midterm and keep a backup.
 
 ## Final project: 30%
 
@@ -129,7 +129,7 @@ A complete web app, polished UI, paid AI integration or live food-rescue operati
 | Week 10, Session 2 | Present the baseline and improvement; a peer operator tries an unseen input and asks a coordinator question | Demonstration and acceptance evidence |
 | Week 10, Session 3 | Independently trace a result or make a small approved change | Your own explanation of a judgment, test and revision |
 
-For larger classes, the timetable uses parallel demonstration stations with role reversal. The instructor will announce the calendar date and each team's allocation; the 50-minute station block is not a promised presentation length for every team.
+For larger classes, the timetable uses parallel demonstration stations with role reversal. The instructor will announce the calendar date and each team's demonstration arrangements.
 
 ## What to show in the final demonstration
 

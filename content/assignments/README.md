@@ -1,9 +1,5 @@
 # Assignments
 
-⚠️ **Khmer text is automatically translated and may contain errors.** Use the English text as a reference and ask the instructor if meaning is unclear.
-
-⚠️ **អត្ថបទខ្មែរបកប្រែដោយស្វ័យប្រវត្តិ ហើយអាចមានកំហុស។** សូមយោងអត្ថបទអង់គ្លេស ហើយសួរគ្រូបើអត្ថន័យមិនច្បាស់។
-
 - [Week 1 task briefing](/assignments/Week_01_Assignments.pdf)
 - [Week 2 task briefing](/assignments/Week_02_Assignments.pdf)
 - [Week 3 task briefing](/assignments/Week_03_Assignments.pdf)
