@@ -14,25 +14,20 @@
         "title": "Course home"
       },
       {
-        "title": "Before Week 1",
-        "children": [
-          {
-            "file": "content/COURSE_OVERVIEW.md",
-            "title": "Course overview"
-          },
-          {
-            "file": "content/orientation.md",
-            "title": "Orientation"
-          },
-          {
-            "file": "content/INSTRUCTOR.md",
-            "title": "Meet the instructor"
-          },
-          {
-            "file": "content/SETUP.md",
-            "title": "GitHub and Python setup"
-          }
-        ]
+        "file": "content/COURSE_OVERVIEW.md",
+        "title": "Course overview"
+      },
+      {
+        "file": "content/orientation.md",
+        "title": "Orientation"
+      },
+      {
+        "file": "content/INSTRUCTOR.md",
+        "title": "Meet the instructor"
+      },
+      {
+        "file": "content/SETUP.md",
+        "title": "GitHub and Python setup"
       },
       {
         "title": "Week 1",
@@ -40,6 +35,14 @@
           {
             "file": "content/learning_materials/Week_01.ipynb",
             "title": "Values, types and execution"
+          },
+          {
+            "file": "content/assignments/Week_01.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_01.md",
+            "title": "Reflection form"
           }
         ]
       },
@@ -49,6 +52,14 @@
           {
             "file": "content/learning_materials/Week_02.ipynb",
             "title": "Comparisons, branches and dispatch"
+          },
+          {
+            "file": "content/assignments/Week_02.md",
+            "title": "Assignment"
+          },
+          {
+            "file": "content/reflections/Week_02.md",
+            "title": "Reflection form"
           }
         ]
       },

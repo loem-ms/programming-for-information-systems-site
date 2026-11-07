@@ -185,7 +185,7 @@
     },
     {
       "path": "previews/Food_Rescue_System.ipynb",
-      "source_sha256": "6780cdd44411d915df566b51713471ac11601a04d275fc19981de57df237b5d1"
+      "source_sha256": "8a0f9d95ec26d608fbedc5f96f4c6e1c11b90ed972d4272eb675f91606f9d508"
     }
   ],
   "reflection_form_url": "https://forms.gle/Z3JhR3GHmHDWKxuN7",
@@ -249,8 +249,16 @@
       "sha256": "d88fbae735d556185c23e14c4626ffc21161b977a90d27a6ff558eb6f8fea769"
     },
     {
+      "path": "assignments/Week_01.md",
+      "sha256": "3deb62340eec91216b211c120bede6ac5efe8c64a463f5db0b74a545e7aba0e0"
+    },
+    {
       "path": "assignments/Week_01_Assignments.pdf",
       "sha256": "305686bc964a373dbc9dffc467cf479b6212a32963470866a1377faed254f33d"
+    },
+    {
+      "path": "assignments/Week_02.md",
+      "sha256": "b49707f403db2608ace1dfedf9e94cb40ff4d9a52df91561d111b69076500035"
     },
     {
       "path": "assignments/Week_02_Assignments.pdf",
@@ -258,7 +266,7 @@
     },
     {
       "path": "downloads/Food_Rescue_System.ipynb",
-      "sha256": "6f7f6a7620a7511a0487d058868dee9c79f3efc48b5f3132509af09d0373255f"
+      "sha256": "33dc1cd97dc38d8bb0068bd809965e78497e7c6401a6fb8a5abf244dbe6356a1"
     },
     {
       "path": "downloads/Python_Basics.ipynb",
@@ -270,19 +278,19 @@
     },
     {
       "path": "downloads/Week_01.ipynb",
-      "sha256": "8f3114418291e005f1a17b2a486bba6afb04315c26d6585da1605faa5f5bde92"
+      "sha256": "0c99301c34bf35d2c3abeda3e73124284f4e67a573e2fa515ef2fc2c290821f6"
     },
     {
       "path": "downloads/Week_01.zip",
-      "sha256": "182046e43adf807fed6fd6e5c3505e62db86da92a96b5f15cc3d606246b4bca5"
+      "sha256": "02a08af423d5880392b4428e2c03bb222349144de4f8b4e5eb8e7a6873ab12e9"
     },
     {
       "path": "downloads/Week_02.ipynb",
-      "sha256": "c78dcf03d50bedc1e0534b54b7a2355f045e4d00f36af306034029895f5cbc3b"
+      "sha256": "1752a8d0eef71145b418dbc334d3708a5fefa3b4d871691a31320074ee117a5a"
     },
     {
       "path": "downloads/Week_02.zip",
-      "sha256": "b227737ac274780ce02b8622b0357cd33062b72334e1d2027d2e21b341e7f02f"
+      "sha256": "952d7a3a8964bbe415ae3f8a0e5a027278e0892c3f1275226ae0875638d11d61"
     },
     {
       "path": "learning_materials/CLASS_QA.md",
@@ -302,11 +310,11 @@
     },
     {
       "path": "learning_materials/Week_01.ipynb",
-      "sha256": "2b5384dd233d8f4282b7af98248e3ef24d9e1100c79e33e65318db53a5c2b5c7"
+      "sha256": "e44987779217310ee577fae4a3a3d9d8f57798e5650aabc7aa444d6b1c073edb"
     },
     {
       "path": "learning_materials/Week_02.ipynb",
-      "sha256": "92f8e237f224ff40375c21f7a1af894f9bf88950bd1afb601bee6ed5f5907fda"
+      "sha256": "dab438d6c80c59ab8d9373759d379a4c416dec4c7430f0f55944e7976f90d6c9"
     },
     {
       "path": "learning_materials/assets/diagrams/course_week_01.svg",
@@ -394,7 +402,15 @@
     },
     {
       "path": "previews/Food_Rescue_System.ipynb",
-      "sha256": "f039b7c5a6d2500c207ed641cb0f77fa5b6f5f8852a1ceb4186c12990698ec78"
+      "sha256": "c1a3b5e65756bc90dd71cda0dac50ba457d0a818922a4d0bc1b337f0eca32535"
+    },
+    {
+      "path": "reflections/Week_01.md",
+      "sha256": "18924a3baa8489b1d7e612e6e70029ca1c5be005838f74522664063cb568b60e"
+    },
+    {
+      "path": "reflections/Week_02.md",
+      "sha256": "b6333f999f1444b1e0b163e665a629dd67da61d51d7f0f7034f4e1e7d30eb01a"
     },
     {
       "path": "resources.md",
@@ -425,7 +441,7 @@
     {
       "name": "Food_Rescue_System.ipynb",
       "title": "Food Rescue System (preview)",
-      "sha256": "6780cdd44411d915df566b51713471ac11601a04d275fc19981de57df237b5d1"
+      "sha256": "8a0f9d95ec26d608fbedc5f96f4c6e1c11b90ed972d4272eb675f91606f9d508"
     }
   ]
 }

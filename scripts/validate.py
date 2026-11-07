@@ -47,8 +47,22 @@ def markdown_parts(path):
         data = json.loads(path.read_text())
         for cell in data['cells']:
             if cell['cell_type'] == 'code':
-                require(cell.get('outputs') == [] and cell.get('execution_count') is None,
-                        'Notebook output was published: '+str(path))
+                saved_checkpoint = (path.parent.name == 'previews' and
+                                    path.name == 'Food_Rescue_System.ipynb' and
+                                    'system-checkpoint' in cell.get('metadata', {}).get('tags', []))
+                if saved_checkpoint:
+                    outputs = cell.get('outputs', [])
+                    require(len(outputs) == 1 and outputs[0].get('output_type') == 'stream' and
+                            outputs[0].get('name') == 'stdout' and
+                            type(cell.get('execution_count')) is int,
+                            'Checkpoint must have one saved standard-text example: '+str(path))
+                    text = ''.join(outputs[0].get('text', []))
+                    require(text.count('FOOD RESCUE | SYSTEM CHECKPOINT') == 1 and
+                            all(len(line) <= 60 for line in text.splitlines()),
+                            'Checkpoint example missing or wider than 60 characters: '+str(path))
+                else:
+                    require(cell.get('outputs') == [] and cell.get('execution_count') is None,
+                            'Notebook output was published: '+str(path))
         return [''.join(c['source']) for c in data['cells'] if c['cell_type'] == 'markdown']
     return []
 
@@ -116,6 +130,8 @@ def validate_preview(content, publication, book):
         raw = json.loads((content/'downloads'/name).read_text())
         reading = json.loads((content/'previews'/name).read_text())
         require('skip-execution' in reading['metadata'].get('tags', []), 'Preview execution guard missing')
+        require(reading['metadata']['course_draft'].get('saved_checkpoint_outputs') == 10,
+                'The ten saved checkpoint examples must be refreshed')
         require([c['source'] for c in raw['cells'] if c['cell_type']=='code'] ==
                 [c['source'] for c in reading['cells'] if c['cell_type']=='code'], 'Preview runnable code differs')
         require(raw['metadata']['course_draft']['status'] == 'public_preview_not_final_assessment',
@@ -179,11 +195,33 @@ def validate(folder, html=None, log=None):
             if 'file' in node:
                 yield node['file']
             yield from entries(node.get('children', []))
+    top_level = book['project']['toc']
+    require(not any(node.get('title') == 'Before Week 1' for node in top_level),
+            'Preparation pages must not be hidden behind a Before Week 1 toggle')
+    preparation = ['content/COURSE_OVERVIEW.md', 'content/orientation.md',
+                   'content/INSTRUCTOR.md', 'content/SETUP.md']
+    require([node.get('file') for node in top_level[1:5]] == preparation and
+            top_level[5].get('title') == 'Week 1',
+            'The four preparation pages must appear directly before Week 1')
     toc = list(entries(book['project']['toc']))
     for name in toc:
         require((folder/name).is_file(), 'Missing TOC page: '+name)
     pages = {p.relative_to(folder).as_posix() for p in content.rglob('*') if p.suffix in ('.md', '.ipynb') and 'downloads' not in p.parts}
     require(set(toc) == pages, 'Every book page must be explicitly listed in the TOC: '+str(set(toc) ^ pages))
+    for week in weeks:
+        section = next((node for node in book['project']['toc'] if node.get('title') == f'Week {week}'), {})
+        for folder, title in (('assignments', 'Assignment'), ('reflections', 'Reflection form')):
+            name = f'{folder}/Week_{week:02}.md'
+            require({'file': 'content/'+name, 'title': title} in section.get('children', []),
+                    f'Week {week} must contain its {title} menu entry')
+            text = (content/name).read_text()
+            if folder == 'assignments':
+                require(f'](/assignments/Week_{week:02}_Assignments.pdf)' in text and 'mailto:'+email in text,
+                        f'Week {week} assignment links must match the existing PDF and submission email')
+            elif approved_form_url:
+                require(']('+approved_form_url+')' in text and f'**Week {week}**' in text and
+                        'not anonymous' in text and 'does not automatically prove attendance' in text,
+                        f'Week {week} reflection must use the approved form and explain week/privacy guidance')
     for path in (content/'learning_materials').glob('*.ipynb'):
         require('skip-execution' in json.loads(path.read_text())['metadata']['tags'], 'Missing execution guard')
     for name in ('README.md', 'INSTRUCTOR.md', 'COURSE_LINKS.md', 'assignments/README.md'):
@@ -230,6 +268,10 @@ def validate(folder, html=None, log=None):
         for path in html.rglob('*'):
             if path.is_file():
                 check_name(path.relative_to(html).as_posix(), rendered=True, weeks=weeks)
+        for week in weeks:
+            for folder in ('assignments', 'reflections'):
+                page = html/f'content/{folder}/week-{week:02}/index.html'
+                require(page.is_file(), f'Missing rendered weekly {folder} page: '+str(page))
         for entry in publication.get('preview_notebooks', []):
             require((html/'downloads'/entry['name']).is_file(), 'Preview static download missing')
             class ToggleCheck(HTMLParser):
@@ -239,16 +281,25 @@ def validate(folder, html=None, log=None):
                     self.summaries = 0
                     self.depth = 0
                     self.english_inside = False
+                    self.in_pre = 0
+                    self.pre_text = []
                 def handle_starttag(self, tag, attrs):
+                    if tag == 'pre':
+                        self.in_pre += 1
+                        self.pre_text.append('')
                     if tag == 'details':
                         self.details.append(dict(attrs))
                         self.depth += 1
                     if tag == 'summary':
                         self.summaries += 1
                 def handle_endtag(self, tag):
+                    if tag == 'pre':
+                        self.in_pre -= 1
                     if tag == 'details':
                         self.depth -= 1
                 def handle_data(self, data):
+                    if self.in_pre:
+                        self.pre_text[-1] += data
                     if self.depth and data.strip() == 'English':
                         self.english_inside = True
             parser = ToggleCheck()
@@ -259,6 +310,13 @@ def validate(folder, html=None, log=None):
                     'All Khmer explanations must render as native toggles')
             require(all('open' not in attrs for attrs in parser.details), 'Khmer toggles must start closed')
             require(not parser.english_inside and parser.depth == 0, 'English must stay outside balanced toggles')
+            rendered = [t for t in parser.pre_text if 'FOOD RESCUE | SYSTEM CHECKPOINT' in t
+                        and 'def show_checkpoint' not in t]
+            reading = json.loads((content/'previews'/entry['name']).read_text())
+            expected_outputs = [''.join(c['outputs'][0]['text']) for c in reading['cells']
+                        if c.get('outputs')]
+            require(len(rendered) == 10 and [t.strip() for t in rendered] == [t.strip() for t in expected_outputs],
+                    'The website must render all ten exact saved checkpoint examples')
         for name in ('slides/Setup.pdf', 'slides/Orientation.pdf', 'slides/Course_Overview.pdf',
                      *(f'{folder}/Week_{w:02}{suffix}' for w in weeks for folder, suffix in (
                          ('slides', '_Slides.pdf'), ('assignments', '_Assignments.pdf'),
