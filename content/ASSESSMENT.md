@@ -9,7 +9,7 @@ The course assesses what you can **build, test, explain and hand over**. Both te
 | Participation and attendance | 10% | Announced attendance evidence, active participation and short weekly reflection |
 | Six individual research assignments | 30% | Six submissions worth 5% each, with sources, a concrete example and the student's reasoning |
 | Individual midterm | 30% | Week 4 planning function, four independently expected tests and an explanation |
-| Final project | 30% | Baseline reproduction, completed notes, verification, handoff and individual understanding |
+| Final project | 30% | Baseline reproduction, one reasoned decision, completed notes, verification and handoff |
 | **Total** | **100%** | |
 
 The exact attendance calculation, assessment dates, permitted resources, and final-project rubric split still require confirmation. They will be announced before they apply.
@@ -109,9 +109,15 @@ Week 4 includes functions and guided practice followed by the Midterm. Detailed 
 
 ## Final project: 30%
 
-### Required minimum: reproduce and explain
+### Required minimum: reproduce, decide and explain
 
 You may complete the final project **without changing any program code**. Reproduce the supplied Food Rescue system, compare the observed results with the supplied expectations, and complete every requested response/note in your own words. Keep your predictions, observations, explanations, peer/run evidence and handoff instructions. Running all cells without completing the notes is not the full submission.
+
+Own one small meaningful decision: a threshold, a rule, or information wording/display. In the existing decision note, state the user and context, your choice, one alternative, your reason, a tradeoff or consequence, and two contrasting cases. Keeping the supplied setting is valid if you explain why it fits. Keep this within the existing nine evidence notes, especially the decision note; it is not another assignment. There is no single preferred threshold or design. Correct calculations, human review, declared units, atomic reservations and honest event evidence remain fixed.
+
+**🎯 Final presentation focus:** use the text cell **My evidence 3** and the editable code cell immediately below it as one focal pair. Write your decision and reasoning in the text cell; use the adjacent code cell to show the supplied comparison or your optional implementation/change and its actual output. The supplied `my_team_threshold = 20` comparison calls the provided planning function; keeping that setting is valid if reasoned. If your decision concerns another rule or wording/display that you have not implemented, label it as a paper proposal and explain that this code still demonstrates supplied behavior. Present the text, relevant code and two contrasting cases together. The reference system stays unchanged; implementing a new rule is optional.
+
+Label proposed/paper behavior separately from implemented results. No code change, new feature, custom UI or extra slide deck is required. Presentations can differ through your choice, rationale and examples even with the same engine.
 
 Use the small planning example first: input counts → `plan_pickup(...)` → returned portions and label → printed output. Bread has 2 declared portions/container; rice has 5. Then run the supplied full baseline and its tests. Do not rebuild the database engine or the interface.
 
@@ -119,15 +125,15 @@ Use the small planning example first: input counts → `plan_pickup(...)` → re
 
 | When | Required minimum | Optional if you have time |
 |---|---|---|
-| Week 8 | Identify the baseline input, processing and output; predict two results | Suggest one coordinator improvement |
-| Week 9 | Reproduce the supplied system, compare results and fill the notes; ask a peer to follow the run steps | Propose or implement an approved small change |
-| Week 10, Session 1 | Rehearse from clean inputs and check the run guide | Refine an optional change |
-| Week 10, Session 2 | Demonstrate the baseline and let a peer reproduce it | Show the optional improvement separately |
+| Week 8 | Identify the baseline flow; choose a small decision and two contrasting cases | Explore another possible improvement |
+| Week 9 | Reproduce the baseline; explain your decision in the notes; ask a peer to follow the run steps | Propose or implement an approved small change |
+| Week 10, Session 1 | Rehearse from clean inputs, your decision cases and the run guide | Refine an optional change |
+| Week 10, Session 2 | Demonstrate the baseline, explain your choice and let a peer reproduce it | Show the optional improvement separately |
 | Week 10, Session 3 | Explain or trace a result independently and finish the requested writing | Explain an optional code change |
 
-### Optional improvements and notebook form
+### Optional implementation and notebook form
 
-If you have time, you may propose an improvement, rewrite a small part or implement an approved change. Explain what you changed, why, and its expected/observed results. Keep the unchanged baseline for comparison. Proposing an idea does not oblige you to implement it. No extra feature or UI is required for standard completion, and no bonus points are promised.
+The decision and its explanation are required; implementing a different behavior is optional. If you have time, you may develop a further proposal, rewrite a small part or implement an approved change. Explain what you changed, why, and its expected/observed results. Keep the unchanged baseline for comparison. Proposing an idea does not oblige you to implement it. No extra feature or UI is required for standard completion, and no bonus points are promised.
 
 Week 5 introduces libraries and a supplied `ipywidgets` form. The final notebook can use the same form pattern to call the same planning function. The form is off by default. If it is absent, blank, displayed as text or unresponsive, use ordinary input cells and printed output. No server, package installation, paid AI, key or GPU is needed for the required route. UI appearance and callback code are not assessed.
 
@@ -135,13 +141,13 @@ Week 5 introduces libraries and a supplied `ipywidgets` form. The final notebook
 
 1. **Reproduction:** start from known data and follow the supplied run order. Show the real outputs and test results.
 2. **Understanding:** identify an input, the processing step and the output. Explain units, human review and one failure/boundary case.
-3. **Written responses:** complete every requested response/note. Record predictions, observations and an honest explanation of any mismatch or limitation.
+3. **Written responses:** complete every requested response/note. Record predictions, observations and an honest explanation of any mismatch or limitation. Include your decision, alternative, reason, consequence and two contrasting cases in the existing notes.
 4. **Peer and handoff evidence:** give another learner the run guide, record what happened and clarify confusing instructions if needed. A successful repeat with no code revision is valid evidence.
-5. **Optional work:** clearly separate any improvement proposal or changed code from the reproduced baseline. If none, say “No code change” where the notebook asks.
+5. **Optional work:** clearly separate any improvement proposal or changed code from the reproduced baseline. If you did not change code, say “No code change” where the notebook asks, and still explain your decision. A paper proposal is not an observed implemented result.
 
 The canonical full fixture has 94 offered, 60 reserved, 42 collected and 29 delivered planned portions. These are overlapping lifecycle measures, not values to add together or counts of distinct people served. Preserve human review, declared units, atomic reservations and event evidence.
 
-The proposed final weight remains 30%. The numeric split, calendar dates, team arrangements and exact file-naming rule will be announced before they apply. The minimum does not require an implemented improvement. Each student must understand and explain the submitted results.
+The proposed final weight remains 30%. The numeric split, calendar dates, team arrangements and exact file-naming rule will be announced before they apply. The minimum does not require an implemented improvement. Each student must understand and explain the submitted results and their own decision. Reasoning, consistency and evidence matter, rather than selecting one preferred design.
 
 Send the notebook/program copy, required fictional inputs, completed notes, run guide and evidence to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). Keep a separate backup. Do not post completed assessment work in GitHub Issues. A separate slide deck is not required.
 

@@ -6,7 +6,7 @@ Learn to turn people’s needs into systems they can trust. **No programming bac
 
 ![A food business offers food, university volunteers plan the pickup, and a community partner receives it.](assets/diagrams/course_story.svg)
 
-[See the illustrated course story and ten-week route](COURSE_OVERVIEW.md). In the final project, you reproduce a supplied application, complete the requested notes and let a classmate use it. Begin with ordinary inputs, a small Python function and printed output. An optional supplied notebook form uses the same function.
+[See the illustrated course story and ten-week route](COURSE_OVERVIEW.md). In the final project, you reproduce a supplied application, explain one small decision in the requested notes and let a classmate use it. Begin with ordinary inputs, a small Python function and printed output. An optional supplied notebook form uses the same function.
 
 > **Updated 2026-11-07:** The illustrated course overview now starts with the people, one small program and one pickup. Weekly project introductions explain whose problem you are solving. Open the weekly notebook directly and keep your own work backed up.
 

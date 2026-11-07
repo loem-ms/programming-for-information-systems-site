@@ -54,12 +54,12 @@ Research the topic below and briefly explain what you found. The directions sugg
 
 | Research | Prepare after | Discuss |
 |---|---|---|
-| 1 | Week 1 | Week 2 Session 1 |
-| 2 | Week 2 | Week 3 Session 1 |
-| 3 | Week 4 Midterm | Week 5 Session 1 |
-| 4 | Week 5 | Week 6 Session 1 |
-| 5 | Week 6 | Week 7 Session 1 |
-| 6 | Week 7 | Week 8 Session 1 |
+| 1 | Week 1 | Week 2 class warm-up before Session 1 |
+| 2 | Week 2 | Week 3 class warm-up before Session 1 |
+| 3 | Week 4 Midterm | Week 5 class warm-up before Session 1 |
+| 4 | Week 5 | Week 6 class warm-up before Session 1 |
+| 5 | Week 6 | Week 7 class warm-up before Session 1 |
+| 6 | Week 7 | Week 8 class warm-up before Session 1 |
 
 No research submission or presentation is due during the Week 4 Midterm. Weeks 3 and 8 only discuss the previous task; Weeks 9–10 have no Research task.
 

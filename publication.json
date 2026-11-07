@@ -17,11 +17,11 @@
   "source_files": [
     {
       "path": "README.md",
-      "source_sha256": "56b2ffb10401d825f62b5e986dcc04cb2029d10d5c52666216fdbc38344e0dfb"
+      "source_sha256": "4487a8ccdd4301e5a80c58e90881574526c1aa0ca259c152fa8e262695e73c5e"
     },
     {
       "path": "COURSE_OVERVIEW.md",
-      "source_sha256": "e4bdc0a590057fd1110cf67f6019a67af5129a75b96710df1a827d18d620bc07"
+      "source_sha256": "5bec96b96e6b960f8a2bf7e0a3f0a57ad9ca1a1851dc5e713deee1de3b88ec72"
     },
     {
       "path": "INSTRUCTOR.md",
@@ -33,15 +33,15 @@
     },
     {
       "path": "LEARNING_PATH.md",
-      "source_sha256": "5c82ebb0ac3a6b7627ec8ca5844a22aa4116b3cbcc737348144d64d850fce33c"
+      "source_sha256": "b19a654641fe2ee0f0f98f9af959308fcd559ab20ef0b7457cded52c79c7e289"
     },
     {
       "path": "ASSESSMENT.md",
-      "source_sha256": "d2e540c914c0063c88072e56dc4d8647bb5191ad9c29412fdc10c0dd0d06e5e8"
+      "source_sha256": "0bb5f5f593ebbb5aaeafc09e5cc77bc4e52053fdfc32934b9d84c424fe3ef2b0"
     },
     {
       "path": "RESEARCH_ASSIGNMENTS.md",
-      "source_sha256": "9e2d4cead1c98e085f82fb264c9a271ee9afed87792971eca79627f51422aacd"
+      "source_sha256": "76de0a501f5f45c7d422341abf9b1a5129b7ab03f5538e707d0404d6e7118845"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -49,107 +49,107 @@
     },
     {
       "path": "slides/Orientation.pdf",
-      "source_sha256": "0a4a920093120dac2987b88e66fcea83f6890b557d51f838af8bd45abb6647fb"
+      "source_sha256": "37d1436b1ec8417fa6fccfb36ad1cda7c5a817ca890e339a8d34c55908dd6286"
     },
     {
       "path": "slides/Course_Overview.pdf",
-      "source_sha256": "68b6f48f87262cb2ffda47ddae4990bd850a6ff00fd9bf299fa508fba9c0421c"
+      "source_sha256": "08ac1f3fffb5e69debe7ef7ceb312d03ea883c3d72d4919c404ea124847f992c"
     },
     {
       "path": "slides/Setup.pdf",
-      "source_sha256": "336ca99f3479fb02a3d3d0fbc383bc8d92f53afe4259ff9b7c906b0621134a56"
+      "source_sha256": "77abec3771719bfaddb49962a945f7f17261bb9028031297afa0ab863391bee2"
     },
     {
       "path": "slides/Week_01_Slides.pdf",
-      "source_sha256": "ba2ea4f3155e2c5c1cfa4d7c1897096a4ddbb6aba21100e9eb5647c15e52869b"
+      "source_sha256": "c89c997701dd92a94f5df8b7c22edfca827249529dbb9d768c48bb3309202760"
     },
     {
       "path": "assignments/Week_01_Assignments.pdf",
-      "source_sha256": "4750d69fa8106c0a373f3313a5f06c487e37d24520e69d0d6caf4ed2c4f3658e"
+      "source_sha256": "3a3c67bd577cd478952470a02287d35b0ad7a7ff1b9e11bda973c6e51f83e878"
     },
     {
       "path": "slides/Week_02_Slides.pdf",
-      "source_sha256": "f01f37be4720e6347400b5c858c34cd4febf48d8a207ae78665908974ebcbbf1"
+      "source_sha256": "455b0baba51de808718d345863c96d535c08a79b6fd207512725b926378725a6"
     },
     {
       "path": "assignments/Week_02_Assignments.pdf",
-      "source_sha256": "98bd605b46b823293876b49dd2d4cdfe6e019cfef8bf0ed794fc95ad6c3ea03f"
+      "source_sha256": "b04eaf7bde68f53c88ce2982fe910a7555fea4e8bfcfe6991c0b9f26514235cd"
     },
     {
       "path": "slides/Week_03_Slides.pdf",
-      "source_sha256": "b2a74e749347a7f55eec4e92f8fb46a0d3d268f2f752d1a500ec458165c95e4c"
+      "source_sha256": "d255359d7ef457d70a152b690d3f918c012ac927d842e864c9e588a0a1829161"
     },
     {
       "path": "assignments/Week_03_Assignments.pdf",
-      "source_sha256": "299730b2311963dd635109a229264d57b7da26c9a0bbb7107c8e038fd9f4f764"
+      "source_sha256": "78e484651601d605c0b643f989cde6612abf44763ee6bc882fe28d5a5de836de"
     },
     {
       "path": "slides/Week_04_Slides.pdf",
-      "source_sha256": "3be3e1246243c2f7c032efefcc312b2a5f77f80f78297b8f6981d3f250fce52e"
+      "source_sha256": "fd0a886a02e0047b9c85b0dc4542b815ee0166687e74960b4cc2b655c8192a0e"
     },
     {
       "path": "assignments/Week_04_Assignments.pdf",
-      "source_sha256": "880fbafd8cf93d0dd85466bba55d244bcfa8f8a1c3befbb61c14d90e0514ecdd"
+      "source_sha256": "acf525d9cdd65eeac2ba9afc54438c7905c3bd4490d6412cfa3a5f055bb01106"
     },
     {
       "path": "slides/Week_05_Slides.pdf",
-      "source_sha256": "b506cc23a5fedae91dce3353947909ed523aeb75eec085e1ff304a1a7d739056"
+      "source_sha256": "b6d768aaff0bcdf351773f327b99740bb46a0b685c38dca56ece7cc522b2f2d6"
     },
     {
       "path": "assignments/Week_05_Assignments.pdf",
-      "source_sha256": "c901762942baee14d55d2fd921217285a0af7975e93e958bbc5575d0b95ece88"
+      "source_sha256": "f20cfa9e4d742fc365bfca4e99159e7988ee7c47dcf8aed9eaddb9a2dba6517c"
     },
     {
       "path": "slides/Week_06_Slides.pdf",
-      "source_sha256": "b6f1c33978d4c4b9c98bc0b0d0c3aa7384a6a7143373396b65a0c504e33e93ec"
+      "source_sha256": "0b5e1f29a54eed8f67120c7da3f8f29138c2d96b7b02bf017e7e2c59b53e6331"
     },
     {
       "path": "assignments/Week_06_Assignments.pdf",
-      "source_sha256": "08766d386c013f4c07f25bcd15ce118a5c97ffcb74043ffd002b6587586089ba"
+      "source_sha256": "aff731e3f88ea4711584edf37800e46374b80216e3fe837626b8184992660775"
     },
     {
       "path": "slides/Week_07_Slides.pdf",
-      "source_sha256": "fc4600a3da4e5e6cd5844c1d4d18dcbb4d753136f7499488f4a86555e203684e"
+      "source_sha256": "39501cb1f68a403ce56094f54c0f33b2f965d60a3c91aa6a6a67c4edad0fab63"
     },
     {
       "path": "assignments/Week_07_Assignments.pdf",
-      "source_sha256": "f6a59a2e4a59c397a92bdf0dcb895a7715e8ef0c5f8b73c57c796f1e7155e7ce"
+      "source_sha256": "5b0619bd397e37707d657e6aa261c131f65e06c3d0e87f17691ad7ddda4a1185"
     },
     {
       "path": "slides/Week_08_Slides.pdf",
-      "source_sha256": "a4d6c9ecf702474d62c3dd0270e1dac6de5b929f605b5047b367a3819a249b1e"
+      "source_sha256": "255b38c6dafe25c75c3c392f919e56d96278de2d604fd17072f2327501df0744"
     },
     {
       "path": "assignments/Week_08_Assignments.pdf",
-      "source_sha256": "a4553f046b7c2b337b56c258fedc102ef485ae1796c85503b9590d238d2fd98f"
+      "source_sha256": "a8e51909e1cbe0940d071477d5e746fc79fb40c4b5bf329a764db644e9ef83d7"
     },
     {
       "path": "slides/Week_09_Slides.pdf",
-      "source_sha256": "88584c7d6f1e5f4aa034b83fe1ea26838e7572230693da69837de6af64f8cf43"
+      "source_sha256": "17293169ff3a7109733e1ca5284ec4d54260228bd9d877b6b4be815ca40b2c1a"
     },
     {
       "path": "assignments/Week_09_Assignments.pdf",
-      "source_sha256": "ac096f2a6f62494b786b8618f6a91b2deceae93620c64f03b1545da0f8736711"
+      "source_sha256": "2f7d9947a2b8a4651153f0b8e2f5d31c55664f0dd1cc405f485a0d7b4489c39e"
     },
     {
       "path": "slides/Week_10_Slides.pdf",
-      "source_sha256": "c3a86c87598ae1eb0ea98c27a5e1a205e39bc020510aff32e8210b5258a885f6"
+      "source_sha256": "c068862e5b3ed2fc0d862e1ee63fe48b0ce4940c0a0973cf60462b60c9720bb5"
     },
     {
       "path": "assignments/Week_10_Assignments.pdf",
-      "source_sha256": "297432140d5841a8298a5892a4df34c4b279e189877dba496a6d7a7ab6c34edf"
+      "source_sha256": "78b34d66334de97a53bf4a2fc03f074cd563ad121179f2443900522053a747ff"
     },
     {
       "path": "assignments/Assignment_Guide.pdf",
-      "source_sha256": "35636b797d1147b5ea43e4b719a0899f070b325b6140191f070d2abf3a89f3af"
+      "source_sha256": "6352316cb548f37a2c1d9edef2f7689df54335751949f8201a0d3a662c09585f"
     },
     {
       "path": "assignments/Midterm_Assignment.pdf",
-      "source_sha256": "2b2f09d4c3932138a7c8011f935480a2b1c15f1a966898ebd36ffa27116d7116"
+      "source_sha256": "1ab3bff3a71be62ddb4966027311e4563a31e6cb58e163eb1521ce758cd26153"
     },
     {
       "path": "assignments/Final_Assignment.pdf",
-      "source_sha256": "f9be1d87f412aeb0ceed42c5611613caaf8a15da0921737cd20ab2f25dd18bac"
+      "source_sha256": "4ff56710b12e47651e51213d242a69b9235fc6963c64ce88e99096bb5fde8922"
     },
     {
       "path": "assets/diagrams/course_overview.svg",
@@ -161,7 +161,7 @@
     },
     {
       "path": "learning_materials/LOCAL_REVIEW.md",
-      "source_sha256": "46e0a8387673731f245f944335a090f326b5063ef739b3bdf2d469c1db46abc2"
+      "source_sha256": "66b938b4d168a240988702835ea39fde8ee321b5f3b786d7a94ff52a564ad3a1"
     },
     {
       "path": "learning_materials/assets/diagrams/python_execution_modes.svg",
@@ -349,58 +349,58 @@
     },
     {
       "path": "learning_materials/Week_01.ipynb",
-      "source_sha256": "684a44b2ce42aefd2ab6e778333d02c719dd74de61d2701accdc091cbb740f78"
+      "source_sha256": "3ebe55a82a6229b37aa569f6405882412d65f393be4a9d438b285278b0f342e8"
     },
     {
       "path": "learning_materials/Week_02.ipynb",
-      "source_sha256": "43f1c7c8c5b83de09bef8cf5cdba209ecdd1906e5f72106b565f8df7dc6ee0db"
+      "source_sha256": "b681af5a0b432e8820f70fb6e17f9c188ad640ced73a19fbe5db8c868a787fee"
     },
     {
       "path": "learning_materials/Week_03.ipynb",
-      "source_sha256": "657f7e4bb7bddda3ab9c797993b6dd5ffa03f7c20cb6eb65503899f258536b72"
+      "source_sha256": "c4f656477b9151810fad4f9df6fa674611b1637777d7d3d041a76b5878529e43"
     },
     {
       "path": "learning_materials/Week_04.ipynb",
-      "source_sha256": "e6e5e6379a4cb201ea57c540b38cb4b08788ed79e1a7767143f5d87d5099eb56"
+      "source_sha256": "e92f8fc633e7f7e7aee201cbdc53810a214ffb09b0c4ed149d2bca5a9070d6a8"
     },
     {
       "path": "learning_materials/Week_05.ipynb",
-      "source_sha256": "faad3f9f64ac4059311c87444797b6032bc133770be18ae80448643d5acdf780"
+      "source_sha256": "65103346cb3fb4a02dd03e76114ddcf3491122e2fbdac71e3cb0636c5258b403"
     },
     {
       "path": "learning_materials/Week_06.ipynb",
-      "source_sha256": "771c249faabeca1222886c8fb336bb56b888ef2d973a6d012c1141d054b42c77"
+      "source_sha256": "23b7fa6f86aad706e28f37e7f744b2a7665d74ff0e9e5762bc38324c0cf76ac3"
     },
     {
       "path": "learning_materials/Week_07.ipynb",
-      "source_sha256": "8d1890f58ac3f935d1583c353b7a9af34fda51c926ee7d67844940eb9279cc78"
+      "source_sha256": "48f0412c14ce87f36aefdd736455f436dd348f2464fe55630ab1853f67657ca3"
     },
     {
       "path": "learning_materials/Week_08.ipynb",
-      "source_sha256": "5f673705db34b29be593327c8ed22c423a3e9c5570408fc1098d5994af44538f"
+      "source_sha256": "a5896574cfbc213221f0c3c06e77ec70b6e43a0f0d272588d8cbf16c2513a6e2"
     },
     {
       "path": "learning_materials/Week_09.ipynb",
-      "source_sha256": "d1f3d7bdd464ed845d21a81954a75cfe660c7a7aaf2671e606f5b1b9635498b5"
+      "source_sha256": "baaff10a8c019915f490e42b3d83c2add09974d3f2eaf7809b9bfdabaa110c1a"
     },
     {
       "path": "learning_materials/Week_10.ipynb",
-      "source_sha256": "f87456f074ed1d19af5e7a7cfecb123c3d2f84ab630793aa42d63c15f84d130e"
+      "source_sha256": "c4d542b7cf7911c6154f49ac40a2d8e67ccd63c665be18205ac0bf97a44a77b5"
     },
     {
       "path": "learning_materials/Python_Basics.ipynb",
-      "source_sha256": "424478d357032b7e70a127b5567e1d8e4c6bbe98ac9026fe03f847213e04d26d"
+      "source_sha256": "18efa191303e0253daa6e0e36308ea69d85d9a907693113f5dd840d49a1d23a4"
     },
     {
       "path": "previews/Food_Rescue_System.ipynb",
-      "source_sha256": "7d3d6462e013042479a12c7350e43047464b3010f37ca11b96c17663661275d0"
+      "source_sha256": "12b0f6bf3259623a1cdc51de3b1acf6d5db49158cdd29381ff2514e318c5e8dd"
     }
   ],
   "preview_notebooks": [
     {
       "name": "Food_Rescue_System.ipynb",
       "title": "Food Rescue System (preview)",
-      "sha256": "7d3d6462e013042479a12c7350e43047464b3010f37ca11b96c17663661275d0"
+      "sha256": "12b0f6bf3259623a1cdc51de3b1acf6d5db49158cdd29381ff2514e318c5e8dd"
     }
   ],
   "reflection_form_url": "https://forms.gle/Z3JhR3GHmHDWKxuN7",
@@ -409,7 +409,7 @@
   "files": [
     {
       "path": "ASSESSMENT.md",
-      "sha256": "d2e540c914c0063c88072e56dc4d8647bb5191ad9c29412fdc10c0dd0d06e5e8"
+      "sha256": "0bb5f5f593ebbb5aaeafc09e5cc77bc4e52053fdfc32934b9d84c424fe3ef2b0"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -421,7 +421,7 @@
     },
     {
       "path": "COURSE_OVERVIEW.md",
-      "sha256": "a80279778aac0bae9be9b5c5027bcca7987240c8264cefe3184fa47902852b8c"
+      "sha256": "4e4f7d0b5bfd47c0ea6cce4eaf9581297043945c1587b2a1169551eede21b9f4"
     },
     {
       "path": "INSTRUCTOR.md",
@@ -429,15 +429,15 @@
     },
     {
       "path": "LEARNING_PATH.md",
-      "sha256": "5c82ebb0ac3a6b7627ec8ca5844a22aa4116b3cbcc737348144d64d850fce33c"
+      "sha256": "b19a654641fe2ee0f0f98f9af959308fcd559ab20ef0b7457cded52c79c7e289"
     },
     {
       "path": "README.md",
-      "sha256": "4815573c7b8251b920bb6ae4299101c8a9862d0f215682e973062066bdcbfb32"
+      "sha256": "6bdd249c5d051b6cea94d4607d156d80cd6a98cd69101ba77332f4424e3c2314"
     },
     {
       "path": "RESEARCH_ASSIGNMENTS.md",
-      "sha256": "9e2d4cead1c98e085f82fb264c9a271ee9afed87792971eca79627f51422aacd"
+      "sha256": "76de0a501f5f45c7d422341abf9b1a5129b7ab03f5538e707d0404d6e7118845"
     },
     {
       "path": "SETUP.md",
@@ -461,15 +461,15 @@
     },
     {
       "path": "assignments/Assignment_Guide.pdf",
-      "sha256": "35636b797d1147b5ea43e4b719a0899f070b325b6140191f070d2abf3a89f3af"
+      "sha256": "6352316cb548f37a2c1d9edef2f7689df54335751949f8201a0d3a662c09585f"
     },
     {
       "path": "assignments/Final_Assignment.pdf",
-      "sha256": "f9be1d87f412aeb0ceed42c5611613caaf8a15da0921737cd20ab2f25dd18bac"
+      "sha256": "4ff56710b12e47651e51213d242a69b9235fc6963c64ce88e99096bb5fde8922"
     },
     {
       "path": "assignments/Midterm_Assignment.pdf",
-      "sha256": "2b2f09d4c3932138a7c8011f935480a2b1c15f1a966898ebd36ffa27116d7116"
+      "sha256": "1ab3bff3a71be62ddb4966027311e4563a31e6cb58e163eb1521ce758cd26153"
     },
     {
       "path": "assignments/README.md",
@@ -481,7 +481,7 @@
     },
     {
       "path": "assignments/Week_01_Assignments.pdf",
-      "sha256": "4750d69fa8106c0a373f3313a5f06c487e37d24520e69d0d6caf4ed2c4f3658e"
+      "sha256": "3a3c67bd577cd478952470a02287d35b0ad7a7ff1b9e11bda973c6e51f83e878"
     },
     {
       "path": "assignments/Week_02.md",
@@ -489,7 +489,7 @@
     },
     {
       "path": "assignments/Week_02_Assignments.pdf",
-      "sha256": "98bd605b46b823293876b49dd2d4cdfe6e019cfef8bf0ed794fc95ad6c3ea03f"
+      "sha256": "b04eaf7bde68f53c88ce2982fe910a7555fea4e8bfcfe6991c0b9f26514235cd"
     },
     {
       "path": "assignments/Week_03.md",
@@ -497,7 +497,7 @@
     },
     {
       "path": "assignments/Week_03_Assignments.pdf",
-      "sha256": "299730b2311963dd635109a229264d57b7da26c9a0bbb7107c8e038fd9f4f764"
+      "sha256": "78e484651601d605c0b643f989cde6612abf44763ee6bc882fe28d5a5de836de"
     },
     {
       "path": "assignments/Week_04.md",
@@ -505,7 +505,7 @@
     },
     {
       "path": "assignments/Week_04_Assignments.pdf",
-      "sha256": "880fbafd8cf93d0dd85466bba55d244bcfa8f8a1c3befbb61c14d90e0514ecdd"
+      "sha256": "acf525d9cdd65eeac2ba9afc54438c7905c3bd4490d6412cfa3a5f055bb01106"
     },
     {
       "path": "assignments/Week_05.md",
@@ -513,7 +513,7 @@
     },
     {
       "path": "assignments/Week_05_Assignments.pdf",
-      "sha256": "c901762942baee14d55d2fd921217285a0af7975e93e958bbc5575d0b95ece88"
+      "sha256": "f20cfa9e4d742fc365bfca4e99159e7988ee7c47dcf8aed9eaddb9a2dba6517c"
     },
     {
       "path": "assignments/Week_06.md",
@@ -521,7 +521,7 @@
     },
     {
       "path": "assignments/Week_06_Assignments.pdf",
-      "sha256": "08766d386c013f4c07f25bcd15ce118a5c97ffcb74043ffd002b6587586089ba"
+      "sha256": "aff731e3f88ea4711584edf37800e46374b80216e3fe837626b8184992660775"
     },
     {
       "path": "assignments/Week_07.md",
@@ -529,7 +529,7 @@
     },
     {
       "path": "assignments/Week_07_Assignments.pdf",
-      "sha256": "f6a59a2e4a59c397a92bdf0dcb895a7715e8ef0c5f8b73c57c796f1e7155e7ce"
+      "sha256": "5b0619bd397e37707d657e6aa261c131f65e06c3d0e87f17691ad7ddda4a1185"
     },
     {
       "path": "assignments/Week_08.md",
@@ -537,7 +537,7 @@
     },
     {
       "path": "assignments/Week_08_Assignments.pdf",
-      "sha256": "a4553f046b7c2b337b56c258fedc102ef485ae1796c85503b9590d238d2fd98f"
+      "sha256": "a8e51909e1cbe0940d071477d5e746fc79fb40c4b5bf329a764db644e9ef83d7"
     },
     {
       "path": "assignments/Week_09.md",
@@ -545,7 +545,7 @@
     },
     {
       "path": "assignments/Week_09_Assignments.pdf",
-      "sha256": "ac096f2a6f62494b786b8618f6a91b2deceae93620c64f03b1545da0f8736711"
+      "sha256": "2f7d9947a2b8a4651153f0b8e2f5d31c55664f0dd1cc405f485a0d7b4489c39e"
     },
     {
       "path": "assignments/Week_10.md",
@@ -553,99 +553,99 @@
     },
     {
       "path": "assignments/Week_10_Assignments.pdf",
-      "sha256": "297432140d5841a8298a5892a4df34c4b279e189877dba496a6d7a7ab6c34edf"
+      "sha256": "78b34d66334de97a53bf4a2fc03f074cd563ad121179f2443900522053a747ff"
     },
     {
       "path": "downloads/Food_Rescue_System.ipynb",
-      "sha256": "16a00cdee2aa09db9cae253d351349552202e94b111161f21f78f0e8b5c74b65"
+      "sha256": "0ef38496258f940cda6da1c4298cce46bdcfd282d66a7ead08ccf5b568f9519c"
     },
     {
       "path": "downloads/Python_Basics.ipynb",
-      "sha256": "e4e7e15c61d1415f146b8c4ded5aeaa61487b62ce0dc8811287c7a67516af906"
+      "sha256": "ae696d53a34b371aaebfd26bc048cbaa12b037b05dcfb4090b53ecfee3e7a77f"
     },
     {
       "path": "downloads/Python_Basics.zip",
-      "sha256": "2ee56b44a6307f8b0c60c03b96a53ad30c1956cc94239ab93c89bd8178000225"
+      "sha256": "f6124aa0087d04ed70b01320e53f3111cf5979269448ced4ba7cba0160fb04df"
     },
     {
       "path": "downloads/Week_01.ipynb",
-      "sha256": "b039883c3f21602bb2aacda436b1eaf398bda3ed485ac6354e27cf159d863b7d"
+      "sha256": "67a4912fbf41fcdee0d2ece260c6e4c5e46a2b0664a7081a97433bc1d441c9df"
     },
     {
       "path": "downloads/Week_01.zip",
-      "sha256": "b312fa2aee6575998c10c3b56ba2b17b7f15619c1ceeb8e9ecab3b18f21fb7a8"
+      "sha256": "53e4019dcfc17200e83c29cfe15e57f047dc67234fb1e1da4931b010258d890e"
     },
     {
       "path": "downloads/Week_02.ipynb",
-      "sha256": "53bfa9609ff650e78e70a2dd8a0c6761dce332c414df16cf6507afc295e82687"
+      "sha256": "27b2837dba6fe3433ce03bd510c1f8aa6dfab74e8c078ed3b3dfd5e178954d31"
     },
     {
       "path": "downloads/Week_02.zip",
-      "sha256": "388fb84477ce67d1982db5bba1f0d8a60d6aee931b15b286e551063be5b908e4"
+      "sha256": "039453863f41af618fd421915ab5e5e86caa54a1b3af4d41d1e04039e9aa63c4"
     },
     {
       "path": "downloads/Week_03.ipynb",
-      "sha256": "655daae600e3ffd0ed552239ee61adc460b057fabfd576e2fd86225578e1b5e3"
+      "sha256": "a93a3636e2687f489576c881da728f042387aa566321d3e81a978e4c8d28aeb7"
     },
     {
       "path": "downloads/Week_03.zip",
-      "sha256": "759c528d5b1683410f2eb1b1a0377e5f25efe41c2ff6fc46c3858ce3ca4ad45b"
+      "sha256": "dabe26d392c671b91c99ad7e136b05ecabf7c1ad372a2c1f448805ba78573cd9"
     },
     {
       "path": "downloads/Week_04.ipynb",
-      "sha256": "66cfd56a21a92a1b279c60c7fdedb17988619bd7cb9b60c733dd5d6393b42698"
+      "sha256": "31b1039fad14eaf0681e024547e97281b5e33d752a0ab778ad353d1536ee0468"
     },
     {
       "path": "downloads/Week_04.zip",
-      "sha256": "1b25a458452b74bb55cbd0f352880616b6685a57fa909cd4237e0ddfdc02621e"
+      "sha256": "7ad16ff0b36e04f79bb254b843354f544d190290f2663caa901aa8d524e68232"
     },
     {
       "path": "downloads/Week_05.ipynb",
-      "sha256": "8e48c2add5f1aff0b4b3a804eebaea895440984ca79742d215956feb7119ec91"
+      "sha256": "00ba627693ca97f53353fb591185f8707b92f57c5a8423dd861fef3f2ab4edf1"
     },
     {
       "path": "downloads/Week_05.zip",
-      "sha256": "086b6b88b0fc67b8afb975303fb2742dee772729b03144ab44294578801eebba"
+      "sha256": "7fe48e02d0a863c27cb44a4c81999fa5392f78cf9ca6b3f60e209e20f64681d7"
     },
     {
       "path": "downloads/Week_06.ipynb",
-      "sha256": "68c1d37006f41ef5866e94e98ee8b779ae1374d86b3061358906e098c31e49f3"
+      "sha256": "6627f65619f0bf8c9981ec71593f6d5880dcd6f1ff0b1d39c85316918c7ee89f"
     },
     {
       "path": "downloads/Week_06.zip",
-      "sha256": "5cb6f7262ed21f3ea64ac6003fd217a7b0583aa6c80c3c68fe93fae76c31bd6a"
+      "sha256": "9e3a666a516d10438c84a9f2117267aa79aaac1220dece55a26bb796d28c50a7"
     },
     {
       "path": "downloads/Week_07.ipynb",
-      "sha256": "795666d9648b11a440c4780c835e603706217f6c41a5d74a9d73f467369b237c"
+      "sha256": "aa12bd450fbfdfc9cec7aee8f0d55a6a0e65d10e67feef55590e25deaa2baed2"
     },
     {
       "path": "downloads/Week_07.zip",
-      "sha256": "9171b455671450f0c04994b0b3c1d27ab430e2855d0dad9864cb5ca6cb952c9b"
+      "sha256": "2f53aada9e1bd214f0879c63311eb5649af841ba1d72b4a5a865bbd78df702f9"
     },
     {
       "path": "downloads/Week_08.ipynb",
-      "sha256": "080e93ee74f7ce47d46001a084e62ec261df1a417ea738ef72775d4c16e375d6"
+      "sha256": "d6671b59f22c686f2c976afbb86428ee903a174e36813d9d2578f8c1a3684cb3"
     },
     {
       "path": "downloads/Week_08.zip",
-      "sha256": "79b0ad7bd97cb334b7c968d8859bf288d826b2b5f2feb5dacb984a07f4091047"
+      "sha256": "a904f57a4e4b2fd066a9847bceb66dec863af16f3a8c4288a6b33e2247351424"
     },
     {
       "path": "downloads/Week_09.ipynb",
-      "sha256": "98e32c894a77437722fd15288504c172e8562c68958464627c3a140bf20c6bd9"
+      "sha256": "6c7ba037d674320df8878e967f0d78b555855506e37943c09c18e898340eb2bc"
     },
     {
       "path": "downloads/Week_09.zip",
-      "sha256": "e5cb1d7478452b0824d7119a2c9d1b1a0dc664a9230573b9ed0e7b979de7b8f1"
+      "sha256": "15c2082e0dda08a2681799b3de87c448e032815a96f1f2c0a953d9458bf5693d"
     },
     {
       "path": "downloads/Week_10.ipynb",
-      "sha256": "2f40378cfbaf8c7aa3efcc64532c6f6d2452f297a7dd3142b0587666556a7dcd"
+      "sha256": "08f1bd1006caf28faa76824160c1522f05167688b7ad83fa57cff229a51d20a3"
     },
     {
       "path": "downloads/Week_10.zip",
-      "sha256": "5543dd28b4beb121d16d4695f5b3e3aeb0c8b9374545a1ac806ad83c71778753"
+      "sha256": "98a3b6de8582474a61512a34c8eba46598604c630a627e9393da6f3a696dac74"
     },
     {
       "path": "learning_materials/CLASS_QA.md",
@@ -653,11 +653,11 @@
     },
     {
       "path": "learning_materials/LOCAL_REVIEW.md",
-      "sha256": "46e0a8387673731f245f944335a090f326b5063ef739b3bdf2d469c1db46abc2"
+      "sha256": "66b938b4d168a240988702835ea39fde8ee321b5f3b786d7a94ff52a564ad3a1"
     },
     {
       "path": "learning_materials/Python_Basics.ipynb",
-      "sha256": "61f57c4c2eab1ed05e42d4c1a9e7957eb20762a7aca2498e6e5ac724a4cef14e"
+      "sha256": "d9296fdf4bfd5f3903eead79ea508ba9c8410ac3c04d1a5999f0e58f859d4b6b"
     },
     {
       "path": "learning_materials/README.md",
@@ -665,43 +665,43 @@
     },
     {
       "path": "learning_materials/Week_01.ipynb",
-      "sha256": "c8cb28c5a0ba388d196dd6ceca1ab6395a0bfe4283fed6cff2cc4ef825f49f1d"
+      "sha256": "87ac3bc646ad78787da00f119121e93da7baad3d2b2a45b58b3e00a99b3d7f3c"
     },
     {
       "path": "learning_materials/Week_02.ipynb",
-      "sha256": "28be876d43cbc0e6abb49c8c8fb3391a5510db4128b876be86db88093689f9e2"
+      "sha256": "f929a43e5b427db125152461b3543788ad1d5eca68b258050de9f543138c957a"
     },
     {
       "path": "learning_materials/Week_03.ipynb",
-      "sha256": "9124881db9e32b09d88b796307991b5285a92f8f8fa9ac57988bc3dac9c7fea2"
+      "sha256": "81ad4bcf7302d5d77ec03892e0c6ee30c0ffee3f7a9dd0d862cc08c27e3e8f35"
     },
     {
       "path": "learning_materials/Week_04.ipynb",
-      "sha256": "2fe4a1ed5ebd4077f63a23c0acb520a7670aa8bb63d757cec18fa976b7295e97"
+      "sha256": "f3aec0a8007d3adba9f3c65659c801c25d34534bfa1d092b4b514b064408864d"
     },
     {
       "path": "learning_materials/Week_05.ipynb",
-      "sha256": "c32f9bcd02be400a8c191780bcf18cc0a5015854bd063f2c58e4907d60764e72"
+      "sha256": "d69e5d24d03753c339b5e0e99ee6058a18c0f48fdb39d55e28a19be6e588954f"
     },
     {
       "path": "learning_materials/Week_06.ipynb",
-      "sha256": "9ae1869a5cf441fb09fb54e9cd0c9abb37a94952534a042c2adb1711be338d79"
+      "sha256": "8c49dd00a58dba6e1d32b7ba0ebc77e2f32da7fe6a447da75aef417d5e3abcc5"
     },
     {
       "path": "learning_materials/Week_07.ipynb",
-      "sha256": "d308ad0f434bd75b051b0487eb43d2677da34a8688a714a1824277ae19f4bbcd"
+      "sha256": "2573e3f3c3a1c6be1b285d22539a298a009a917eaca93b48f7ce6e0a6859f10d"
     },
     {
       "path": "learning_materials/Week_08.ipynb",
-      "sha256": "277a13061bf531c0ec96393ad66f5546c6b130b97c4a1d995266728db3048d0a"
+      "sha256": "c16e6c0808f1f76bb97acd22aecc9094d17380e6339846b2f93c57f71863456e"
     },
     {
       "path": "learning_materials/Week_09.ipynb",
-      "sha256": "420105f627bf45ad47a1e47e9ae8f583db98ac00acacabd0dec98bd18797b70e"
+      "sha256": "bcefd77195b03ad2bffaafcdf06463b429cd1758444e412b4ab8a7b1e4e3c209"
     },
     {
       "path": "learning_materials/Week_10.ipynb",
-      "sha256": "aa19f2761309e6a93042b4d46ea1a07ad3adc73427859e5dc97e38905f41773e"
+      "sha256": "29df7b2b9095368935974f42eb0f47fad588ae8fd4c53ab84f2673b3e6aa898b"
     },
     {
       "path": "learning_materials/assets/diagrams/course_week_01.svg",
@@ -881,7 +881,7 @@
     },
     {
       "path": "previews/Food_Rescue_System.ipynb",
-      "sha256": "3fbd69e768911fa54e56d195cb42bfa14ba6af760812ed6bfaf9214f4ce90b62"
+      "sha256": "74f28d6813a51d956a878b489542a73982ceb00d9065a6808c4ece0ec136f028"
     },
     {
       "path": "reflections/Week_01.md",
@@ -929,55 +929,55 @@
     },
     {
       "path": "slides/Course_Overview.pdf",
-      "sha256": "68b6f48f87262cb2ffda47ddae4990bd850a6ff00fd9bf299fa508fba9c0421c"
+      "sha256": "08ac1f3fffb5e69debe7ef7ceb312d03ea883c3d72d4919c404ea124847f992c"
     },
     {
       "path": "slides/Orientation.pdf",
-      "sha256": "0a4a920093120dac2987b88e66fcea83f6890b557d51f838af8bd45abb6647fb"
+      "sha256": "37d1436b1ec8417fa6fccfb36ad1cda7c5a817ca890e339a8d34c55908dd6286"
     },
     {
       "path": "slides/Setup.pdf",
-      "sha256": "336ca99f3479fb02a3d3d0fbc383bc8d92f53afe4259ff9b7c906b0621134a56"
+      "sha256": "77abec3771719bfaddb49962a945f7f17261bb9028031297afa0ab863391bee2"
     },
     {
       "path": "slides/Week_01_Slides.pdf",
-      "sha256": "ba2ea4f3155e2c5c1cfa4d7c1897096a4ddbb6aba21100e9eb5647c15e52869b"
+      "sha256": "c89c997701dd92a94f5df8b7c22edfca827249529dbb9d768c48bb3309202760"
     },
     {
       "path": "slides/Week_02_Slides.pdf",
-      "sha256": "f01f37be4720e6347400b5c858c34cd4febf48d8a207ae78665908974ebcbbf1"
+      "sha256": "455b0baba51de808718d345863c96d535c08a79b6fd207512725b926378725a6"
     },
     {
       "path": "slides/Week_03_Slides.pdf",
-      "sha256": "b2a74e749347a7f55eec4e92f8fb46a0d3d268f2f752d1a500ec458165c95e4c"
+      "sha256": "d255359d7ef457d70a152b690d3f918c012ac927d842e864c9e588a0a1829161"
     },
     {
       "path": "slides/Week_04_Slides.pdf",
-      "sha256": "3be3e1246243c2f7c032efefcc312b2a5f77f80f78297b8f6981d3f250fce52e"
+      "sha256": "fd0a886a02e0047b9c85b0dc4542b815ee0166687e74960b4cc2b655c8192a0e"
     },
     {
       "path": "slides/Week_05_Slides.pdf",
-      "sha256": "b506cc23a5fedae91dce3353947909ed523aeb75eec085e1ff304a1a7d739056"
+      "sha256": "b6d768aaff0bcdf351773f327b99740bb46a0b685c38dca56ece7cc522b2f2d6"
     },
     {
       "path": "slides/Week_06_Slides.pdf",
-      "sha256": "b6f1c33978d4c4b9c98bc0b0d0c3aa7384a6a7143373396b65a0c504e33e93ec"
+      "sha256": "0b5e1f29a54eed8f67120c7da3f8f29138c2d96b7b02bf017e7e2c59b53e6331"
     },
     {
       "path": "slides/Week_07_Slides.pdf",
-      "sha256": "fc4600a3da4e5e6cd5844c1d4d18dcbb4d753136f7499488f4a86555e203684e"
+      "sha256": "39501cb1f68a403ce56094f54c0f33b2f965d60a3c91aa6a6a67c4edad0fab63"
     },
     {
       "path": "slides/Week_08_Slides.pdf",
-      "sha256": "a4d6c9ecf702474d62c3dd0270e1dac6de5b929f605b5047b367a3819a249b1e"
+      "sha256": "255b38c6dafe25c75c3c392f919e56d96278de2d604fd17072f2327501df0744"
     },
     {
       "path": "slides/Week_09_Slides.pdf",
-      "sha256": "88584c7d6f1e5f4aa034b83fe1ea26838e7572230693da69837de6af64f8cf43"
+      "sha256": "17293169ff3a7109733e1ca5284ec4d54260228bd9d877b6b4be815ca40b2c1a"
     },
     {
       "path": "slides/Week_10_Slides.pdf",
-      "sha256": "c3a86c87598ae1eb0ea98c27a5e1a205e39bc020510aff32e8210b5258a885f6"
+      "sha256": "c068862e5b3ed2fc0d862e1ee63fe48b0ce4940c0a0973cf60462b60c9720bb5"
     }
   ]
 }
