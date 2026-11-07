@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 72" width="400" height="72" role="img" aria-label="Programming for Information Systems">
+  <title>Programming for Information Systems</title>
+  <rect width="72" height="72" rx="18" fill="#0f766e"/>
+  <path d="M20 23 L9 36 L20 49 M52 23 L63 36 L52 49" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26 36 L46 36" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="26" cy="36" r="4.5" fill="#ffffff"/>
+  <circle cx="46" cy="36" r="4.5" fill="#ffffff"/>
+  <circle cx="36" cy="36" r="6" fill="#fbbf24"/>
+  <text x="86" y="27" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="2" fill="#5eead4" textLength="308" lengthAdjust="spacingAndGlyphs">PROGRAMMING FOR</text>
+  <text x="85" y="60" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="31" font-weight="700" fill="#f1f5f9" textLength="310" lengthAdjust="spacingAndGlyphs">Information Systems</text>
+</svg>

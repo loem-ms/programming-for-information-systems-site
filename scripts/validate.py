@@ -83,7 +83,7 @@ def check_notebook(path, colab):
     has_setup = any("setup" in c.get("metadata", {}).get("tags", []) for c in notebook["cells"])
     if colab and has_setup:
         setup = "".join(next(c for c in notebook["cells"] if "setup" in c.get("metadata", {}).get("tags", []))["source"])
-        require("_prepare_kit()" in setup and "import rescue as fr" in setup,
+        require("_prepare_kit()" in setup and "import foodbridge as bridge" in setup,
                 "Setup cell does not unpack the kit: " + path.name)
     if not colab:
         require(path.stat().st_size < 400000, "Website notebook embeds the kit (too large): " + path.name)
@@ -113,8 +113,8 @@ def run_notebook(path):
                     return "cell " + str(number) + ": " + type(error).__name__ + ": " + str(error)
         finally:
             builtins.input = original_input
-            if "fr" in namespace and hasattr(namespace["fr"], "stop_web"):
-                namespace["fr"].stop_web()
+            if "bridge" in namespace and hasattr(namespace["bridge"], "stop_web"):
+                namespace["bridge"].stop_web()
             os.chdir(here)
     return None
 
@@ -122,13 +122,13 @@ def run_notebook(path):
 def check_kit_zip(path):
     with zipfile.ZipFile(path) as archive:
         names = archive.namelist()
-        for needed in ("food_rescue_kit/rescue/__init__.py", "food_rescue_kit/run_tests.py",
-                       "food_rescue_kit/run_web.py", "food_rescue_kit/my_settings.py"):
+        for needed in ("foodbridge_kit/foodbridge/__init__.py", "foodbridge_kit/run_tests.py",
+                       "foodbridge_kit/run_web.py", "foodbridge_kit/my_settings.py"):
             require(needed in names, "Kit ZIP is missing " + needed)
         require(not any("__pycache__" in n or "saved_data" in n for n in names), "Kit ZIP contains cache or data")
         with tempfile.TemporaryDirectory() as folder:
             archive.extractall(folder)
-            result = subprocess.run([sys.executable, "run_tests.py"], cwd=os.path.join(folder, "food_rescue_kit"),
+            result = subprocess.run([sys.executable, "run_tests.py"], cwd=os.path.join(folder, "foodbridge_kit"),
                                     capture_output=True, text=True)
             require(result.returncode == 0, "Kit tests failed:\n" + result.stdout[-1500:] + result.stderr[-1500:])
             last = (result.stdout.strip().splitlines() or ["?"])[-1]
@@ -160,7 +160,7 @@ def validate(folder, html=None, log=None, run=True):
         check_notebook(path, colab=False)
     for path in downloads:
         check_notebook(path, colab=True)
-    check_kit_zip(content / "downloads" / "food_rescue_kit.zip")
+    check_kit_zip(content / "downloads" / "foodbridge_kit.zip")
     if run and not problems:
         python = sys.version.split()[0]
         for path in downloads:

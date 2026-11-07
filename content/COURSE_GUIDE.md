@@ -10,7 +10,7 @@ This course teaches you to be that person. You learn enough Python to:
 2. **Code** the small pieces yourself, so you understand how they work.
 3. **Judge** code, your own or an AI's, as *good* or *risky*, using ten design principles.
 
-## The system you build: Campus Food Rescue
+## The system you build: Campus FoodBridge
 
 A fictional university volunteer team collects surplus food from **donors** (bakeries, canteens, market stalls) and delivers it to **community partners** (a children's centre, a community kitchen, an elders' group).
 
