@@ -5,7 +5,8 @@
 
 Before the build it checks that every page in myst.yml exists, every link and Colab
 button points to a real file, no instructor material is published, the kit ZIP passes
-its own tests, and every student notebook runs from top to bottom with this Python.
+its own tests, and every student notebook (English and Khmer) runs from top to bottom
+with this Python.
 After the build it checks the generated pages, the static downloads and the build log.
 This file is generated from tools/site_validate.py in the authoring workspace.
 """
@@ -82,7 +83,8 @@ def check_notebook(path, colab):
     has_setup = any("setup" in c.get("metadata", {}).get("tags", []) for c in notebook["cells"])
     if colab and has_setup:
         setup = "".join(next(c for c in notebook["cells"] if "setup" in c.get("metadata", {}).get("tags", []))["source"])
-        require("Food Rescue system ready" in setup, "Setup cell does not unpack the kit: " + path.name)
+        require("_prepare_kit()" in setup and "import rescue as fr" in setup,
+                "Setup cell does not unpack the kit: " + path.name)
     if not colab:
         require(path.stat().st_size < 400000, "Website notebook embeds the kit (too large): " + path.name)
 
@@ -146,10 +148,14 @@ def validate(folder, html=None, log=None, run=True):
             check_links(content, path)
             if path.suffix == ".md":
                 require(not INSTRUCTOR.search(path.read_text()), "Instructor material in " + path.name)
-    site_notebooks = sorted((content / "notebooks").glob("*.ipynb"))
-    downloads = sorted((content / "downloads").glob("*.ipynb"))
-    require([p.name for p in site_notebooks] == [p.name for p in downloads],
-            "Each website notebook needs a matching Colab download")
+    site_notebooks, downloads = [], []
+    for pages_folder, download_folder in ((content / "notebooks", content / "downloads"),
+                                          (content / "km" / "notebooks", content / "downloads" / "km")):
+        pages_here, downloads_here = sorted(pages_folder.glob("*.ipynb")), sorted(download_folder.glob("*.ipynb"))
+        require([p.name for p in pages_here] == [p.name for p in downloads_here],
+                "Each website notebook needs a matching Colab download: " + str(pages_folder.relative_to(content)))
+        site_notebooks += pages_here
+        downloads += downloads_here
     for path in site_notebooks:
         check_notebook(path, colab=False)
     for path in downloads:
@@ -159,8 +165,9 @@ def validate(folder, html=None, log=None, run=True):
         python = sys.version.split()[0]
         for path in downloads:
             problem = run_notebook(path)
-            require(problem is None, "Notebook does not run on Python " + python + ": " + path.name + " (" + str(problem) + ")")
-            print(("  ✅ " if problem is None else "  ❌ ") + path.name + " runs on Python " + python)
+            require(problem is None, "Notebook does not run on Python " + python + ": " + str(path.relative_to(content)) +
+                    " (" + str(problem) + ")")
+            print(("  ✅ " if problem is None else "  ❌ ") + str(path.relative_to(content)) + " runs on Python " + python)
     if html:
         html = html.resolve()
         require((html / "index.html").is_file(), "MyST HTML entry point is missing")

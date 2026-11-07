@@ -48,6 +48,6 @@ The [Food Rescue kit ZIP](/downloads/food_rescue_kit.zip) is the same system wit
 | A name you defined is "not defined" | Run the cell that defines it, or use **Restart session and run all**. |
 | A check shows ❌ | Read the 💡 hint under it. The check never stops your notebook; fix and run again. |
 | `⚠️ your … fell back to the default` | Your function crashed or returned something unexpected; the system used its own rule. Read the message. |
-| The setup cell says the kit was updated | Fine: a newer course version was unpacked. Your `my_settings.py` and `my_rules.py` were kept. |
+| The setup cell shows a new version number | Fine: a newer course version was unpacked. Your `my_settings.py` and `my_rules.py` were kept. |
 
 Still stuck? See [questions and help](CONTRIBUTING.md).
