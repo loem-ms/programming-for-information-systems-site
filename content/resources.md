@@ -25,4 +25,4 @@
 - [Python Basics](learning_materials/Python_Basics.ipynb)
 - [Python Basics ZIP](/downloads/Python_Basics.zip)
 
-Web pages show the notebook text and code. To edit and run code, use the downloaded notebook in Colab or local JupyterLab.
+Web pages show the notebook text and code. For Weeks 1–2, use the direct Colab links on the course home or download just the notebook for local JupyterLab. ZIPs are optional offline packs.

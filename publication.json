@@ -214,7 +214,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "733c936b07decd9ab7c46b01b5a9b88082756bb9107e58a52b14e1336ad88444"
+      "sha256": "42363a7b7e88b940730d9ff239861750f3887bc1eafe15c968c72d4922d32104"
     },
     {
       "path": "RESEARCH_ASSIGNMENTS.md",
@@ -222,7 +222,7 @@
     },
     {
       "path": "SETUP.md",
-      "sha256": "a0a66eb3826e0aa37b7f3ebd677e702a96dabbc6e6c6e61a8e34e514c5ce7e2f"
+      "sha256": "3a4b63e3fd62e98edb02cc3ea386ab991cff07c595de3c929e540d75be4fe152"
     },
     {
       "path": "assets/diagrams/course_first_program.svg",
@@ -258,23 +258,23 @@
     },
     {
       "path": "downloads/Python_Basics.zip",
-      "sha256": "f85d3e2bb66172c639df395b469525f3f3e60e61809929a2c03b9e1e7673d67d"
+      "sha256": "178ccd3ac2af7b0943db627167c42e4295d273bd66c204ad0c6b000b3dc17666"
     },
     {
       "path": "downloads/Week_01.ipynb",
-      "sha256": "19548be549fb53791a547a14b261ea99c6dac8c25461d95ce01c4cfe5b02b89a"
+      "sha256": "fe4c40ee3c7b592d1ebcf6f8623491846aefeabbf79b672029903c2957039b22"
     },
     {
       "path": "downloads/Week_01.zip",
-      "sha256": "450f057a20d8f6656f5e05e1722484cbfb072db93e0f2c14bec013aabf0f1a78"
+      "sha256": "af681064214a0d3213cd5652b2fbe0623815de6a881a6d9581a9afecebbddc63"
     },
     {
       "path": "downloads/Week_02.ipynb",
-      "sha256": "af1a96cea6e300e8483512f5669c7612b5a30548e68c3bcae34341966dd4562e"
+      "sha256": "7f98b866f0ab5c339cda3f072db7f3e402c0b9572d34b02793679e39be882526"
     },
     {
       "path": "downloads/Week_02.zip",
-      "sha256": "d6a02c17147ec7be63887c77c3aa9879ba981034c69e35744692b8bb8fcfacca"
+      "sha256": "a17a19ebfa4b04363d65ae3afdefba2c9b6993254230d93d71c2e10634a979f2"
     },
     {
       "path": "learning_materials/CLASS_QA.md",
@@ -286,19 +286,19 @@
     },
     {
       "path": "learning_materials/Python_Basics.ipynb",
-      "sha256": "24c9e03d2182afd49e57fafd6ea6e061bf702b977b1ec55ee502738bb40a3d49"
+      "sha256": "fa8f7d680083c65f574eaf1f91efb8bcb042b115fedcbbe50038e3adfb874121"
     },
     {
       "path": "learning_materials/README.md",
-      "sha256": "88f7570f852df33747b82ee9f2ce9d1e04442f6853fbf45e837c7b9bcdbdcf92"
+      "sha256": "a1325e000bbfe695ff649444052d67d93766276ca035034540d9b2a866b13cdc"
     },
     {
       "path": "learning_materials/Week_01.ipynb",
-      "sha256": "437fcdcbf122b16fea17ce6b77d49e877ada9f1268d45c3ed07b8f0bd444bf28"
+      "sha256": "91037c085b68b855e6e1474b03b3910f96a08920ebb6fe14d94bc10333251f46"
     },
     {
       "path": "learning_materials/Week_02.ipynb",
-      "sha256": "fb5c139a77f0adc855332ae82a881f0162b5f9391e62713e95532879c528aef4"
+      "sha256": "ed5200344093123928eef9a757391a9ca99afb3b42c3eb9b12eee761a6b2e41a"
     },
     {
       "path": "learning_materials/assets/diagrams/course_week_01.svg",
@@ -382,11 +382,11 @@
     },
     {
       "path": "orientation.md",
-      "sha256": "cd183a35801e9e061c5ef5d838afc0566928e38b19372e8332c6ccaddf06543f"
+      "sha256": "87e863ddf4ff8c51357ec1aaa5e13b00c61f7577af30ce3c41bc5a04d1bbaceb"
     },
     {
       "path": "resources.md",
-      "sha256": "d4892fdb8c3288fa444537e1cb87e40c98c30d0b06814c4937a7c7da790799c7"
+      "sha256": "704b98e022a2562bdc4c65a820627d7a5536a7f903e032751e0d09258d038b73"
     },
     {
       "path": "slides/Course_Overview.pdf",

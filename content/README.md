@@ -8,13 +8,13 @@ Learn to turn people’s needs into systems they can trust. **No programming bac
 
 [See the illustrated course story and ten-week route](COURSE_OVERVIEW.md). In the final project, you improve one small feature of a supplied application and let a classmate use it.
 
-> **Updated 2026-11-07:** The illustrated course overview now starts with the people, one small program and one pickup. Weekly project introductions explain whose problem you are solving. Download a fresh weekly ZIP and keep your own work backed up.
+> **Updated 2026-11-07:** The illustrated course overview now starts with the people, one small program and one pickup. Weekly project introductions explain whose problem you are solving. Open your week directly in Colab and keep your own work backed up.
 
 ## Start here
 
 1. **Prepare once:** follow the [setup guide](SETUP.md) for Colab or local Python/Jupyter.
-2. **Download your week:** choose its ZIP in the table below and keep the extracted folders together.
-3. **Open `Week_XX.ipynb`:** follow **Start Here → Sessions 1–3 → Finish**. Write your predictions, code and checks in that notebook.
+2. **Open your week in Colab:** click its button below, then choose **File → Save a copy in Drive**. No files to upload.
+3. **Work in your notebook copy:** follow **Start Here → Sessions 1–3 → Finish**. Write your predictions, code and checks in that notebook.
 4. **Save and back up:** use the notebook's Finish checklist. The [weekly learning path](LEARNING_PATH.md) defines required work and when to stop.
 
 Slides support the class explanation. The [assignment guide](assignments/README.md) separates **Programming tasks** (understand the Python topic through short experiments, then apply it) from **Research tasks** (investigate questions and explain with sources). The weekly PDF gives the steps, an example and a done checklist. [Python Basics](learning_materials/Python_Basics.ipynb) is an optional syntax lookup and is already included in every weekly ZIP.
@@ -22,19 +22,17 @@ Slides support the class explanation. The [assignment guide](assignments/README.
 ## Weekly materials
 
 <!-- COLAB_STATUS:START -->
-[![Open Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
-
-Use Colab’s upload route: open the downloaded notebook and upload its matching ZIP as described in [Setup](SETUP.md). The buttons below open Colab’s home page; choose **File → Open notebook → Upload** to open your file.
+Choose **Open in Colab** for your week below. It opens that exact notebook. Weeks 1–2 are self-contained: no notebook upload, ZIP, setup cell or extra files. Save a personal copy in Drive before editing.
 <!-- COLAB_STATUS:END -->
 
 <!-- WEEK_TABLE:START -->
-| Week | Notebook | Slides | Run in Colab | Download |
+| Week | Notebook | Slides | Run in Colab | Offline download |
 |---|---|---|---|---|
-| 1 · A clear pickup plan | [Notebook](learning_materials/Week_01.ipynb) | [Lesson](/slides/Week_01_Slides.pdf) · [Tasks](/assignments/Week_01_Assignments.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/) | [Week 1 ZIP](/downloads/Week_01.zip) |
-| 2 · Review and dispatch | [Notebook](learning_materials/Week_02.ipynb) | [Lesson](/slides/Week_02_Slides.pdf) · [Tasks](/assignments/Week_02_Assignments.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/) | [Week 2 ZIP](/downloads/Week_02.zip) |
+| 1 · A clear pickup plan | [Notebook](learning_materials/Week_01.ipynb) | [Lesson](/slides/Week_01_Slides.pdf) · [Tasks](/assignments/Week_01_Assignments.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_01.ipynb) | [Notebook](/downloads/Week_01.ipynb) · [Optional ZIP](/downloads/Week_01.zip) |
+| 2 · Review and dispatch | [Notebook](learning_materials/Week_02.ipynb) | [Lesson](/slides/Week_02_Slides.pdf) · [Tasks](/assignments/Week_02_Assignments.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_02.ipynb) | [Notebook](/downloads/Week_02.ipynb) · [Optional ZIP](/downloads/Week_02.zip) |
 <!-- WEEK_TABLE:END -->
 
-Each ZIP contains its weekly notebook, lesson/task PDFs, Python Basics and the shared support files. Opening a notebook in Colab does not copy those support files: run the setup cell and upload the matching weekly ZIP. Keep `assets/`, `programs/` and `final-data/` inside `learning_materials/`, beside the notebook. For local Jupyter, open the extracted notebook directly.
+Weeks 1–2 also work locally as single `.ipynb` files: download the notebook from its page and open it in Jupyter. The ZIPs are optional offline packs with PDFs, Python Basics and shared reference files. They are not required to complete the weekly notebook. See [Setup](SETUP.md) for saving and local installation.
 
 ## How the course fits together
 

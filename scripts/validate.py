@@ -136,6 +136,21 @@ def validate(folder, html=None, log=None):
     require(not re.search(r"\bI(?:['’]\w+)?\b", (content/'INSTRUCTOR.md').read_text()), 'First-person instructor introduction')
     require({p.name for p in (content/'downloads').glob('*.zip')} ==
             {'Python_Basics.zip', *(f'Week_{w:02}.zip' for w in weeks)}, 'Unexpected ZIP set')
+    # Colab must launch the runnable raw weekly copy, never the generic home page.
+    for week in weeks:
+        name = f'Week_{week:02}.ipynb'
+        launch = ('https://colab.research.google.com/github/' + publication['public_repository']
+                  + '/blob/main/content/downloads/' + name)
+        require('](' + launch + ')' in (content/'README.md').read_text(), 'Missing direct weekly Colab link')
+        for folder in ('downloads', 'learning_materials'):
+            notebook = json.loads((content/folder/name).read_text())
+            markdown = '\n'.join(''.join(c['source']) for c in notebook['cells'] if c['cell_type'] == 'markdown')
+            require('](' + launch + ')' in markdown, 'Wrong Colab notebook target: ' + name)
+            require('](https://colab.research.google.com/)' not in markdown, 'Generic Colab target: ' + name)
+            for cell in notebook['cells']:
+                require(not set(cell.get('metadata', {}).get('tags', [])) &
+                        {'course-setup', 'course-setup-guide', 'course-figure'}, 'Runtime bootstrap in standalone week: ' + name)
+                require('assets/diagrams/' not in ''.join(cell['source']), 'Diagram dependency in standalone week: ' + name)
     check_links(content, approved_form_url)
     for archive_path in (content/'downloads').glob('*.zip'):
         with zipfile.ZipFile(archive_path) as archive:
