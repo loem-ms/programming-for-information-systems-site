@@ -185,7 +185,7 @@
     },
     {
       "path": "previews/Food_Rescue_System.ipynb",
-      "source_sha256": "b918dc6cd3cfadf5012e8de0dbe194cc47afda473b7e084358cbb3ab5aafe4a3"
+      "source_sha256": "6780cdd44411d915df566b51713471ac11601a04d275fc19981de57df237b5d1"
     }
   ],
   "reflection_form_url": "https://forms.gle/Z3JhR3GHmHDWKxuN7",
@@ -258,7 +258,7 @@
     },
     {
       "path": "downloads/Food_Rescue_System.ipynb",
-      "sha256": "90b8ca5c890237b3871d8bce69fb1049324d12e2558b07d17dba32b563d64cd7"
+      "sha256": "6f7f6a7620a7511a0487d058868dee9c79f3efc48b5f3132509af09d0373255f"
     },
     {
       "path": "downloads/Python_Basics.ipynb",
@@ -394,7 +394,7 @@
     },
     {
       "path": "previews/Food_Rescue_System.ipynb",
-      "sha256": "1178fa736d93d171d2f25262be4534d20c1492b31f7937d3aae5b5300b212856"
+      "sha256": "f039b7c5a6d2500c207ed641cb0f77fa5b6f5f8852a1ceb4186c12990698ec78"
     },
     {
       "path": "resources.md",
@@ -425,7 +425,7 @@
     {
       "name": "Food_Rescue_System.ipynb",
       "title": "Food Rescue System (preview)",
-      "sha256": "b918dc6cd3cfadf5012e8de0dbe194cc47afda473b7e084358cbb3ab5aafe4a3"
+      "sha256": "6780cdd44411d915df566b51713471ac11601a04d275fc19981de57df237b5d1"
     }
   ]
 }

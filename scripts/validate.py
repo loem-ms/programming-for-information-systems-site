@@ -120,6 +120,13 @@ def validate_preview(content, publication, book):
                 [c['source'] for c in reading['cells'] if c['cell_type']=='code'], 'Preview runnable code differs')
         require(raw['metadata']['course_draft']['status'] == 'public_preview_not_final_assessment',
                 'Preview status missing')
+        for notebook in (raw, reading):
+            checkpoints = [c for c in notebook['cells']
+                           if 'system-checkpoint' in c.get('metadata', {}).get('tags', [])]
+            require([c['metadata'].get('checkpoint') for c in checkpoints] == list(range(1, 11)),
+                    'The ten ordered progressive system checkpoints are required')
+            require(notebook['metadata']['course_draft'].get('system_checkpoints') == 10,
+                    'Progressive checkpoint metadata missing')
         launch = ('https://colab.research.google.com/github/' + publication['public_repository']
                   + '/blob/main/content/downloads/' + name)
         for notebook in (raw, reading):
@@ -246,8 +253,10 @@ def validate(folder, html=None, log=None):
                         self.english_inside = True
             parser = ToggleCheck()
             parser.feed((html/'content/previews/food-rescue-system/index.html').read_text())
-            require(len(parser.details) == 24 and parser.summaries == 24,
-                    'All 24 Khmer explanations must render as native toggles')
+            expected_toggles = sum(c['cell_type'] == 'markdown' for c in json.loads(
+                (content/'previews'/entry['name']).read_text())['cells'])
+            require(len(parser.details) == expected_toggles and parser.summaries == expected_toggles,
+                    'All Khmer explanations must render as native toggles')
             require(all('open' not in attrs for attrs in parser.details), 'Khmer toggles must start closed')
             require(not parser.english_inside and parser.depth == 0, 'English must stay outside balanced toggles')
         for name in ('slides/Setup.pdf', 'slides/Orientation.pdf', 'slides/Course_Overview.pdf',
