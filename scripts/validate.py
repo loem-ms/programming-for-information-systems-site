@@ -2,6 +2,7 @@
 from __future__ import annotations
 import argparse
 import hashlib
+from html.parser import HTMLParser
 import json
 from pathlib import Path, PurePosixPath
 import re
@@ -128,6 +129,15 @@ def validate_preview(content, publication, book):
             require('not a finalized assessment' in markdown and 'fluent Khmer' in markdown,
                     'Preview review limitations missing')
             require('LOCAL DRAFT' not in markdown, 'Outdated local-only preview wording')
+            for cell in notebook['cells']:
+                if cell['cell_type'] == 'markdown':
+                    text = ''.join(cell['source'])
+                    require(text.count('<details>') == 1 and text.count('</details>') == 1,
+                            'Each Khmer explanation must have one closed-by-default toggle')
+                    require(text.index('**English**') < text.index('<details>') < text.index('**ភាសាខ្មែរ**'),
+                            'English must remain outside the Khmer toggle')
+                    require('<summary>' in text and '</summary>' in text, 'Khmer toggle label missing')
+
             require(not any(value in json.dumps(notebook) for value in ('/Users/', '/workspace/', 'instructor/final_project_notebook_draft')),
                     'Private local path in preview')
             require(sum('student-response' in c.get('metadata', {}).get('tags', []) for c in notebook['cells']) == 9,
@@ -215,6 +225,31 @@ def validate(folder, html=None, log=None):
                 check_name(path.relative_to(html).as_posix(), rendered=True, weeks=weeks)
         for entry in publication.get('preview_notebooks', []):
             require((html/'downloads'/entry['name']).is_file(), 'Preview static download missing')
+            class ToggleCheck(HTMLParser):
+                def __init__(self):
+                    super().__init__()
+                    self.details = []
+                    self.summaries = 0
+                    self.depth = 0
+                    self.english_inside = False
+                def handle_starttag(self, tag, attrs):
+                    if tag == 'details':
+                        self.details.append(dict(attrs))
+                        self.depth += 1
+                    if tag == 'summary':
+                        self.summaries += 1
+                def handle_endtag(self, tag):
+                    if tag == 'details':
+                        self.depth -= 1
+                def handle_data(self, data):
+                    if self.depth and data.strip() == 'English':
+                        self.english_inside = True
+            parser = ToggleCheck()
+            parser.feed((html/'content/previews/food-rescue-system/index.html').read_text())
+            require(len(parser.details) == 24 and parser.summaries == 24,
+                    'All 24 Khmer explanations must render as native toggles')
+            require(all('open' not in attrs for attrs in parser.details), 'Khmer toggles must start closed')
+            require(not parser.english_inside and parser.depth == 0, 'English must stay outside balanced toggles')
         for name in ('slides/Setup.pdf', 'slides/Orientation.pdf', 'slides/Course_Overview.pdf',
                      *(f'{folder}/Week_{w:02}{suffix}' for w in weeks for folder, suffix in (
                          ('slides', '_Slides.pdf'), ('assignments', '_Assignments.pdf'),
