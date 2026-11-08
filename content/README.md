@@ -4,7 +4,7 @@
 
 **Campus FoodBridge · Instructor: [Mengsay Loem](https://loem-ms.github.io/) · English-language course for beginners**
 
-AI can now write a lot of code. What it cannot do for you is decide what a system *should* do, or notice when code is risky. In this course you learn Python basics so you can **read code, test it and judge it**. Each week you build one part of a small information system and make **your own decisions** about it. By Week 10 you have your own working system.
+AI can now write a lot of code, and it gets better every year. But an AI cannot take responsibility for what a system does to people. The person who decides to use the code, or who chooses the rules and the approach, is responsible. In this course you learn Python basics so you can **read code, test it and judge it**, because you cannot take responsibility for code you do not understand. Each week you build one part of a small information system and make **your own decisions** about it. By Week 10 you have your own working system, and you can explain every choice in it.
 
 **No programming background is needed.**
 
