@@ -29,6 +29,7 @@ COLAB = "https://colab.research.google.com/github/" + PUBLIC_REPO + "/blob/main/
 PRIVATE = re.compile(r"programming-for-information-systems(?!-site)")
 INSTRUCTOR = re.compile(r"INSTRUCTOR MODEL ANSWER|instructor-only|```\{solution\}|Model answer\.")
 LINK = re.compile(r"\]\(([^)\s]+)\)")
+REMOTE_PICTURE = re.compile(r"!\[[^\]]*\]\((https?://[^)\s]+)\)")
 problems = []
 
 
@@ -53,6 +54,8 @@ def markdown_of(path):
 
 def check_links(content, path):
     text = markdown_of(path)
+    for picture in REMOTE_PICTURE.findall(text):   # MyST downloads these on every build; one failure fails the build
+        require(False, "Remote picture in " + path.name + " (use a copy under assets/): " + picture)
     for target in LINK.findall(text):
         target = target.split("#")[0]
         if not target or target.startswith(("mailto:", "#")):
