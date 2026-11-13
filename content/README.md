@@ -34,7 +34,7 @@ New here? Read the [course guide](COURSE_GUIDE.md) first: it explains the idea o
 | **9** · Putting the system together | Separate what changes from what stays | [Notebook](notebooks/Week_09.ipynb) | [PDF](/slides/Week_09_Slides.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_09.ipynb) | [.ipynb](/downloads/Week_09.ipynb) |
 | **10** · Verify, hand over, present | Verify before you trust | [Notebook](notebooks/Week_10.ipynb) | [PDF](/slides/Week_10_Slides.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_10.ipynb) | [.ipynb](/downloads/Week_10.ipynb) |
 
-**Before you edit a notebook in Colab: File → Save a copy in Drive.** Every notebook unpacks the course system itself; nothing to upload. The [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) is the complete system for running at home.
+**Before you edit a notebook in Colab: click Copy to Drive (or File → Save a copy in Drive).** Every notebook unpacks the course system itself; nothing to upload. The [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) is the complete system for running at home.
 
 ## Midterm, final project and reference
 
