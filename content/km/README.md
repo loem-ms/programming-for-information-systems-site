@@ -36,7 +36,7 @@
 | **9** · ការផ្គុំប្រព័ន្ធបញ្ចូលគ្នា | បំបែកអ្វីដែលប្រែប្រួល ចេញពីអ្វីដែលនៅដដែល | [Notebook](notebooks/Week_09.ipynb) | [PDF](/slides/km/Week_09_Slides.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_09.ipynb) | [.ipynb](/downloads/km/Week_09.ipynb) |
 | **10** · ផ្ទៀងផ្ទាត់ ប្រគល់ និងបង្ហាញ | ផ្ទៀងផ្ទាត់ មុននឹងទុកចិត្ត | [Notebook](notebooks/Week_10.ipynb) | [PDF](/slides/km/Week_10_Slides.pdf) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_10.ipynb) | [.ipynb](/downloads/km/Week_10.ipynb) |
 
-**មុននឹងកែ notebook ក្នុង Colab: File → Save a copy in Drive។** notebook នីមួយៗដកយក (unpack) ប្រព័ន្ធរបស់វគ្គសិក្សាដោយខ្លួនឯង មិនបាច់ upload អ្វីទេ។ [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) គឺជាប្រព័ន្ធពេញលេញ សម្រាប់ run នៅផ្ទះ (ដាក់ `LANGUAGE = "km"` ក្នុង `my_settings.py` ដើម្បីឃើញអេក្រង់ជាភាសាខ្មែរ)។
+**មុននឹងកែ notebook ក្នុង Colab: ចុចលើពាក្យ Copy to Drive (ឬ ចូលទៅកាន់ File រួចចុច Save a copy in Drive)។** notebook នីមួយៗដកយក (unpack) ប្រព័ន្ធរបស់វគ្គសិក្សាដោយខ្លួនឯង មិនបាច់ upload អ្វីទេ។ [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) គឺជាប្រព័ន្ធពេញលេញ សម្រាប់ run នៅផ្ទះ (ដាក់ `LANGUAGE = "km"` ក្នុង `my_settings.py` ដើម្បីឃើញអេក្រង់ជាភាសាខ្មែរ)។
 
 ## Midterm, final project និងឯកសារយោង
 
