@@ -1,53 +1,57 @@
 # ការរៀបចំ (Setup)
 
-អ្នកត្រូវការតែ web browser មួយ និងគណនី Google មួយប៉ុណ្ណោះ។ notebook នីមួយៗមានច្បាប់ចម្លងនៃប្រព័ន្ធរបស់វគ្គសិក្សានៅក្នុងខ្លួនវា ដូច្នេះ **មិនចាំបាច់ install អ្វី ហើយក៏មិនចាំបាច់ upload file ណាដែរ**។
+អ្នកត្រូវការតែ web browser មួយ និងគណនី Google មួយប៉ុណ្ណោះ។ notebook នីមួយៗមានច្បាប់ចម្លងនៃប្រព័ន្ធវគ្គសិក្សានៅក្នុងខ្លួនវា។ ដូច្នេះ **មិនចាំបាច់ install អ្វីទាំងអស់ ហើយមិនចាំបាច់ upload file ណាមួយទេ**។
+
+សូមអានទំព័រនេះ មុនពេលអ្នកបើក notebook ដំបូងរបស់អ្នក។ សូមត្រឡប់មកទំព័រនេះវិញ នៅពេល notebook មិនដំណើរការ។ និស្សិតភាគច្រើនប្រើជម្រើស A។ ជម្រើស B មានសម្រាប់អ្នកដែលចូលចិត្តធ្វើការដោយគ្មាន internet (offline)។
 
 ## ជម្រើស A · Google Colab (ណែនាំ)
 
 1. នៅ [ទំព័រដើមរបស់វគ្គសិក្សា](README.md) ចុច **Open in Colab** សម្រាប់សប្ដាហ៍របស់អ្នក។
-2. **File → Save a copy in Drive។** ធ្វើបែបនេះមុនគេ រៀងរាល់សប្ដាហ៍។ ការកែប្រែដែលអ្នកធ្វើ មុននឹង save ច្បាប់ចម្លង អាចបាត់បង់។
+2. **File → Save a copy in Drive**។ ចូរធ្វើបែបនេះមុនគេ រៀងរាល់សប្ដាហ៍។ ការកែប្រែដែលអ្នកធ្វើ មុនពេល save ច្បាប់ចម្លង អាចបាត់បង់បាន។
 3. ធ្វើការក្នុងច្បាប់ចម្លងរបស់អ្នក (ឈ្មោះរបស់វាចាប់ផ្ដើមដោយ "Copy of")។
-4. Run code cell ទីមួយ **▶ សូម run cell នេះមុនគេ (setup)**។ វា print `✅ ប្រព័ន្ធ FoodBridge រួចរាល់ហើយ`។
-5. ធ្វើពីលើចុះក្រោម។ ចុច **Shift + Enter** ដើម្បី run cell មួយ។
+4. ចូរ Run setup cell ទីមួយ៖ **▶ សូម run cell នេះមុនគេ (setup)**។ វា print `✅ ប្រព័ន្ធ FoodBridge រួចរាល់ហើយ`។
+5. ធ្វើការពីលើចុះក្រោម។ ចុច **Shift + Enter** ដើម្បី Run cell មួយ។
 
 **អ្វីដែលគួរដឹងអំពី Colab**
 
-- បើ Colab ប្រាប់ថា runtime ត្រូវបាន reset ឬដាច់ការតភ្ជាប់ (disconnected) សូម run setup cell ម្ដងទៀត បន្ទាប់មក run cell ដែលអ្នកត្រូវការ។
-- ពេលអ្នកច្រឡំ សូមប្រើ **Runtime → Restart session and run all**។ វា run អ្វីៗទាំងអស់ឡើងវិញពីដំបូង តាមលំដាប់។
-- File ដែល code របស់អ្នកសរសេរ (ឧទាហរណ៍ `my_offers.json` ក្នុងសប្ដាហ៍ទី 7) នៅក្នុង folder បណ្ដោះអាសន្ន ហើយ **បាត់ទៅវិញពេល runtime reset**។ ចំណែក notebook របស់អ្នកផ្ទាល់ នៅមានសុវត្ថិភាពក្នុង Drive។
-- បច្ចុប្បន្ន Colab ប្រើ Python 3.13 (បានពិនិត្យនៅខែវិច្ឆិកា ឆ្នាំ 2026)។ វគ្គសិក្សានេះដំណើរការជាមួយ Python ណាក៏បាន ចាប់ពី 3.9 ឡើងទៅ ដូច្នេះ Colab កំណែថ្មីជាងនេះក៏មិនអីដែរ។
+- ប្រសិនបើ Colab ប្រាប់ថា runtime ត្រូវបាន reset ឬដាច់ការតភ្ជាប់ (disconnected) សូម Run setup cell ម្ដងទៀត។ បន្ទាប់មក សូម Run cell ដែលអ្នកត្រូវការ។
+- នៅពេលអ្នកច្រឡំ សូមប្រើ **Runtime → Restart session and run all**។ វា Run អ្វីៗទាំងអស់ឡើងវិញពីដំបូង តាមលំដាប់។
+- File ដែល code របស់អ្នកសរសេរ (ឧទាហរណ៍ `my_offers.json` ក្នុង[សប្ដាហ៍ទី 7](notebooks/Week_07.ipynb)) ស្ថិតនៅក្នុង folder បណ្ដោះអាសន្ន។ វា **បាត់ទៅវិញ នៅពេល runtime reset**។ ចំណែក notebook របស់អ្នកផ្ទាល់ នៅមានសុវត្ថិភាពក្នុង Drive។
+- បច្ចុប្បន្ន Colab ប្រើ Python 3.13 (បានពិនិត្យនៅខែវិច្ឆិកា ឆ្នាំ 2026)។ វគ្គសិក្សានេះដំណើរការជាមួយ Python ណាក៏បាន ចាប់ពី 3.9 ឡើងទៅ។ ដូច្នេះ Colab កំណែថ្មីជាងនេះ ក៏មិនអីដែរ។
 
 ## ជម្រើស B · កុំព្យូទ័រផ្ទាល់ខ្លួនរបស់អ្នក
 
-ប្រើជម្រើសនេះ បើអ្នកចូលចិត្តធ្វើការដោយគ្មាន internet (offline)។
+ប្រសិនបើ Colab មិនមែនជាជម្រើសសម្រាប់អ្នកទេ notebook ដដែលនេះ ក៏ដំណើរការនៅលើកុំព្យូទ័រផ្ទាល់ខ្លួនរបស់អ្នកបានដែរ។ សូមប្រើជម្រើសនេះ ប្រសិនបើអ្នកចូលចិត្តធ្វើការដោយគ្មាន internet (offline)។
 
-1. Install **Python 3** កំណែចុងក្រោយពី [python.org](https://www.python.org/downloads/) (កំណែណាក៏បាន ចាប់ពី 3.9 ឡើងទៅ)។
-2. Install Jupyter: បើក terminal ហើយ run `python -m pip install notebook` (នៅលើកុំព្យូទ័រខ្លះ `python3 -m pip install notebook`)។
-3. នៅទំព័រដើមរបស់វគ្គសិក្សា ប្រើ **ទាញយក** (Download) ដើម្បីរក្សាទុក file `.ipynb` របស់សប្ដាហ៍នោះក្នុង folder មួយ។
-4. ក្នុង terminal នៅ folder នោះ run `python -m notebook` ហើយបើក file នោះ។
-5. Run setup cell។ វាបង្កើត folder `foodbridge_kit` នៅជាប់នឹង notebook។
+1. Install **Python 3** កំណែចុងក្រោយពី [python.org](https://www.python.org/downloads/) (កំណែណាក៏បាន ចាប់ពី 3.9 ឡើងទៅ ក៏ប្រើបានដែរ)។
+2. Install Jupyter៖ បើក terminal ហើយ Run `python -m pip install notebook` (នៅលើកុំព្យូទ័រខ្លះ ត្រូវប្រើ `python3 -m pip install notebook`)។
+3. នៅទំព័រដើមរបស់វគ្គសិក្សា សូមប្រើ **Download** ដើម្បីរក្សាទុក file `.ipynb` របស់សប្ដាហ៍នោះ ក្នុង folder មួយ។
+4. ក្នុង terminal នៅ folder នោះ សូម Run `python -m notebook` ហើយបើក file នោះ។
+5. ចូរ Run setup cell។ វាបង្កើត folder `foodbridge_kit` នៅជាប់នឹង notebook។
 
-VS Code ជាមួយ extension Python និង Jupyter ក៏ប្រើបានដែរ: បើក file `.ipynb` ហើយជ្រើសរើស kernel Python 3។
+VS Code ជាមួយ extension Python និង Jupyter ក៏ប្រើបានដែរ៖ បើក file `.ipynb` ហើយជ្រើសរើស kernel Python 3។
 
 ## Final project នៅផ្ទះ (ស្រេចចិត្ត)
 
-ក្នុង final project (កម្រិតទី 4) អ្នកអាចទាញយកប្រព័ន្ធ **ផ្ទាល់ខ្លួនរបស់អ្នក** ជា ZIP ហើយ run វានៅក្រៅ notebook:
+មិនថាអ្នកជ្រើសរើសជម្រើសមួយណា សម្រាប់ការងារប្រចាំថ្ងៃទេ final project បន្ថែមលទ្ធភាពមួយទៀត។ ក្នុង Final project (កម្រិតទី 4) អ្នកអាចទាញយកប្រព័ន្ធ **ផ្ទាល់ខ្លួនរបស់អ្នក** ជា ZIP ហើយដំណើរការវានៅក្រៅ notebook៖
 
 1. ពន្លា (unzip) `my_foodbridge.zip`។
 2. បើក terminal នៅក្នុង folder `foodbridge_kit`។
 3. Run `python run_web.py` ហើយបើក http://localhost:8000 ក្នុង browser របស់អ្នក។ បញ្ឈប់វាដោយចុច **Ctrl + C**។
-4. `python run_menu.py` បើក menu ជាអក្សរ (text menu)។ `python run_tests.py` run test របស់ប្រព័ន្ធ។
+4. `python run_menu.py` បើក menu ជាអក្សរ (text menu)។ `python run_tests.py` ដំណើរការ test របស់ប្រព័ន្ធ។
 
 [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) គឺជាប្រព័ន្ធដដែល ជាមួយ default settings។ ដើម្បីឃើញអេក្រង់ជាភាសាខ្មែរ សូមដាក់ `LANGUAGE = "km"` ក្នុង `my_settings.py` (ZIP ផ្ទាល់ខ្លួនរបស់អ្នក ដែលអ្នកទាញយកពី notebook មានបន្ទាត់នេះរួចហើយ)។
 
 ## ពេលមានបញ្ហា
 
+បញ្ហាភាគច្រើន មានវិធីដោះស្រាយរហ័ស។ ចូររកអ្វីដែលអ្នកឃើញ នៅក្នុងតារាង ហើយធ្វើតាមអ្វីដែលតារាងប្រាប់។
+
 | អ្វីដែលអ្នកឃើញ | អ្វីដែលត្រូវធ្វើ |
 |---|---|
-| `NameError: name 'bridge' is not defined` | Run setup cell មុនសិន។ |
-| ឈ្មោះមួយដែលអ្នកបានកំណត់ ត្រូវបានប្រាប់ថា "not defined" | Run cell ដែលកំណត់ឈ្មោះនោះ ឬប្រើ **Restart session and run all**។ |
-| ការពិនិត្យមួយបង្ហាញ ❌ | អានការណែនាំ 💡 នៅខាងក្រោមវា។ ការពិនិត្យមិនដែលបញ្ឈប់ notebook របស់អ្នកទេ: កែ ហើយ run ម្ដងទៀត។ |
-| `⚠️ … របស់អ្នកមិនដំណើរការ ប្រព័ន្ធបានប្រើ default` | function របស់អ្នកបាន crash ឬបាន return អ្វីមួយដែលមិនរំពឹងទុក ដូច្នេះប្រព័ន្ធបានប្រើវិធានរបស់ខ្លួនវាជំនួស។ សូមអានសារនោះ។ |
-| setup cell បង្ហាញលេខ version ថ្មី | មិនអីទេ: វគ្គសិក្សាកំណែថ្មីជាងមួយត្រូវបានដកយក (unpack)។ `my_settings.py` និង `my_rules.py` របស់អ្នកនៅដដែល។ |
+| `NameError: name 'bridge' is not defined` | ចូរ Run setup cell មុនសិន។ |
+| ឈ្មោះមួយដែលអ្នកបានកំណត់ ត្រូវបានប្រាប់ថា "not defined" | ចូរ Run cell ដែលកំណត់ឈ្មោះនោះ ឬប្រើ **Restart session and run all**។ |
+| ការពិនិត្យមួយបង្ហាញ ❌ | សូមអានការណែនាំ 💡 នៅខាងក្រោមវា។ ការពិនិត្យមិនដែលបញ្ឈប់ notebook របស់អ្នកទេ៖ សូមកែ ហើយ Run ម្ដងទៀត។ |
+| `⚠️ … របស់អ្នកមិនដំណើរការ ប្រព័ន្ធបានប្រើ default` | function របស់អ្នកបាន crash ឬបាន return អ្វីមួយដែលមិនបានរំពឹងទុក។ ដូច្នេះ ប្រព័ន្ធបានប្រើវិធានរបស់ខ្លួនវាជំនួស។ សូមអានសារនោះ។ |
+| setup cell បង្ហាញលេខ version ថ្មី | មិនអីទេ៖ វគ្គសិក្សាកំណែថ្មីជាងមួយ ត្រូវបានពន្លា (unpack)។ `my_settings.py` និង `my_rules.py` របស់អ្នក នៅដដែល។ |
 
 នៅតែមិនទាន់ដោះស្រាយបាន? សូមមើល [សំណួរ និងជំនួយ (English)](../CONTRIBUTING.md)។

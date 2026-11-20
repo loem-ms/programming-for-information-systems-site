@@ -28,7 +28,7 @@ def pickup_label(portions, approved):
 ```
 ````
 
-A helpful answer explains the boundary, tests 19, 20 and 21, and connects it to Principle 2 (explicit rules).
+A helpful answer explains the boundary, tests 19, 20 and 21, and connects it to Principle 2 (**Explicit rules**).
 
 ## Where to ask
 

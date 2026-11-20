@@ -12,6 +12,8 @@ The course assesses what you **understand, build, test and explain**. The weight
 
 **Submit** by email to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com), unless the instructor announces another route. Keep your own copy of everything you submit.
 
+Read this page at the start of the course, and again before the midterm and the final project. The sections below follow the order of the course itself: taking part each week, the research tasks, the midterm, and then the final project.
+
 ## Participation (10%)
 
 Join the Session 1–3 activities: predictions, pair work, Good-or-risky discussions and class warm-ups. After each week, fill in the [weekly reflection form](COURSE_LINKS.md). A missing form is followed up; it is not an automatic absence.
@@ -24,7 +26,7 @@ Six short tasks, 5% each. Each one connects a week's idea to a real system. See 
 |---|---:|
 | A relevant example and at least one named source | 1 |
 | An accurate explanation in your own words | 1 |
-| A concrete case (for example, a boundary case or a real field) | 1 |
+| A concrete case (for example, an edge case or a real field) | 1 |
 | Your reasoning, including one limit or open question | 1 |
 | Clear evidence, including how you checked any AI answer | 1 |
 | **Total** | **5** |
@@ -33,7 +35,9 @@ AI tools are allowed for research. If you use one, check at least one claim your
 
 ## Midterm (30%)
 
-**When:** Week 4, Session 3 (90 minutes). **Notebook:** `Midterm.ipynb`. **Individual work.** Allowed: your own notes, the weekly notebooks and the Python Basics notebook. **Not allowed:** AI tools, messaging or sharing code.
+After the weekly participation and research tasks, the midterm is the first component you complete entirely on your own.
+
+**When:** Week 4, Session 3 (90 minutes). **Notebook:** [`Midterm.ipynb`](notebooks/Midterm.ipynb). **Individual work.** Allowed: your own notes, the weekly notebooks and the Python Basics notebook. **Not allowed:** AI tools, messaging or sharing code.
 
 The midterm tests **understanding** of Weeks 1–4, not memory.
 
@@ -48,7 +52,9 @@ The midterm tests **understanding** of Weeks 1–4, not memory.
 
 After you submit, a **3-minute oral check**: the instructor points at one line of your code and one test, and you explain them. If you cannot explain your own code, the marks for that part can be reduced.
 
-## Final project (30%)
+## [Final project](notebooks/Final_Project.ipynb) (30%)
+
+The last component brings the whole course together in Weeks 9–10, when you assemble the parts you built into your own system.
 
 See the [final project guide](FINAL_PROJECT.md) for the four levels and what to submit.
 
@@ -63,6 +69,8 @@ See the [final project guide](FINAL_PROJECT.md) for the four levels and what to 
 Completing Levels 1 and 2 well, with two tests for your own decisions, a clear handoff and a presentation, is enough for a good grade. Levels 3 and 4 add marks, but a long program with weak decisions scores lower than a short one with strong, well-explained decisions.
 
 ## Fairness and integrity
+
+The same fairness rules apply to every component above.
 
 - Your submitted work must be your own, and you must be able to explain it.
 - Share ideas and help classmates understand; do not share complete answers to assessed tasks.

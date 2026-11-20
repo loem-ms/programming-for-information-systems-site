@@ -2,6 +2,8 @@
 
 Return to the [course home](README.md) for notebooks, slides and Colab buttons. Live-class access is announced separately.
 
+This page collects the links and addresses you need again and again during the course. Open it whenever you need the weekly reflection form, the submission address, or help with access.
+
 | Destination | Link / status |
 |---|---|
 | Course repository | The instructor will announce the link. |
@@ -14,6 +16,8 @@ Return to the [course home](README.md) for notebooks, slides and Colab buttons. 
 The same form is used every week: choose the correct week and submit a new response. It takes about three minutes. The form asks who you are, so responses are not anonymous. Your answers help the instructor improve the next class. A missing response is followed up; it is not an automatic absence.
 
 ## Submissions
+
+The reflection form above is weekly. The submissions below are the other regular reason to open this page.
 
 Send assessed work to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). The file-naming rule and deadlines are announced before work is due. Keep your notebook in Drive and a separate backup.
 

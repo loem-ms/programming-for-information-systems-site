@@ -4,11 +4,34 @@
 
 **Campus FoodBridge · Instructor: [Mengsay Loem](https://loem-ms.github.io/) · English-language course for beginners**
 
+## The morning the notebook failed
+
+It is 8:10 on a busy morning at Campus FoodBridge, a university volunteer team that collects surplus food and delivers it to community partners. The phone keeps ringing. Sunrise Bakery has bread rolls that must be collected within two hours, a canteen has cooked rice, and a market stall has vegetables. As always, the coordinator writes each offer in a paper notebook.
+
+By 8:40 the page is full. A phone number is written twice, one offer is squeezed into the margin and lost, and nobody can tell which partner was promised what. The food is real and the partners are waiting, but the paper notebook cannot keep up.
+
+This course replaces that notebook. Week by week, you build a small information system that does what the notebook could not.
+
 AI can now write a lot of code, and it gets better every year. But an AI cannot take responsibility for what a system does to people. The person who decides to use the code, or who chooses the rules and the approach, is responsible. In this course you learn Python basics so you can **read code, test it and judge it**, because you cannot take responsibility for code you do not understand. Each week you build one part of a small information system and make **your own decisions** about it. By Week 10 you have your own working system, and you can explain every choice in it.
 
 **No programming background is needed.**
 
 ![Ten weeks: each week adds one part and one principle, and Weeks 9–10 put your system together.](assets/diagrams/course_route.svg)
+
+## How the course flows
+
+The ten weeks follow the story of that notebook. Each week replaces one weakness of the paper notebook with one part of the system, and each part brings one principle with it.
+
+- **Week 1 — [What is an information system?](notebooks/Week_01.ipynb)** · Clear names and units: you meet the finished system and learn to name things clearly, so nothing is a scribble that only one person understands.
+- **Week 2 — [Rules and decisions](notebooks/Week_02.ipynb)** · Explicit rules: the decisions the coordinator kept in her head are written down as rules that are stated plainly and tested.
+- **Week 3 — [Records and data](notebooks/Week_03.ipynb)** · One record per real thing: every offer gets one record of its own, so no phone number is written twice and no offer is lost in a margin.
+- **Week 4 — [Functions you can trust](notebooks/Week_04.ipynb)** · One function, one job: the parts are built as small functions you can test and trust, and the Midterm checks the system so far.
+- **Week 5 — [Checking input](notebooks/Week_05.ipynb)** · Never trust input: a wrong or incomplete offer is refused at the door, instead of being copied into the book and causing trouble later.
+- **Week 6 — [Objects and lifecycles](notebooks/Week_06.ipynb)** · Make wrong states hard to reach: an offer can only move through the steps that make sense, so a promise cannot quietly jump to the wrong state.
+- **Week 7 — [Saving and history](notebooks/Week_07.ipynb)** · Never lose data: the day no longer disappears when the book is closed, and the history shows what was promised to whom.
+- **Week 8 — [Reports and screens](notebooks/Week_08.ipynb)** · Right information for the right person: the coordinator sees the full report, while the public board shows no private phone numbers.
+- **Week 9 — [Putting the system together](notebooks/Week_09.ipynb)** · Separate what changes from what stays: the parts you built become one system of your own.
+- **Week 10 — [Verify, hand over, present](notebooks/Week_10.ipynb)** · Verify before you trust: you test the finished system and hand it over, so the next coordinator can run the busy morning without you.
 
 ## Start here
 

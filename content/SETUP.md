@@ -2,6 +2,8 @@
 
 You need only a web browser and a Google account. Every notebook carries its own copy of the course system, so there is **nothing to install and no files to upload**.
 
+Read this page before you open your first notebook, and come back to it whenever a notebook will not run. Most students use Option A; Option B is there if you prefer to work offline.
+
 ## Option A · Google Colab (recommended)
 
 1. On the [course home](README.md), click **Open in Colab** for your week.
@@ -14,12 +16,12 @@ You need only a web browser and a Google account. Every notebook carries its own
 
 - If Colab says the runtime was reset or disconnected, run the setup cell again, then the cells you need.
 - When confused, use **Runtime → Restart session and run all**. This runs everything fresh, in order.
-- Files that your code writes (for example `my_offers.json` in Week 7) live in a temporary folder and **disappear when the runtime resets**. Your notebook itself is safe in Drive.
+- Files that your code writes (for example `my_offers.json` in [Week 7](notebooks/Week_07.ipynb)) live in a temporary folder and **disappear when the runtime resets**. Your notebook itself is safe in Drive.
 - Colab currently uses Python 3.13 (checked in November 2026). The course works with any Python from 3.9 on, so a newer Colab version is fine.
 
 ## Option B · Your own computer
 
-Use this if you prefer working offline.
+If Colab is not an option for you, the same notebooks also run on your own computer. Use this if you prefer working offline.
 
 1. Install the latest **Python 3** from [python.org](https://www.python.org/downloads/) (any version from 3.9 on works).
 2. Install Jupyter: open a terminal and run `python -m pip install notebook` (on some computers, `python3 -m pip install notebook`).
@@ -31,7 +33,7 @@ VS Code with the Python and Jupyter extensions also works: open the `.ipynb` fil
 
 ## The final project at home (optional)
 
-In the final project (Level 4) you can download **your own** system as a ZIP and run it outside a notebook:
+Whichever option you choose day to day, the final project adds one more possibility. In the final project (Level 4) you can download **your own** system as a ZIP and run it outside a notebook:
 
 1. Unzip `my_foodbridge.zip`.
 2. Open a terminal in the `foodbridge_kit` folder.
@@ -41,6 +43,8 @@ In the final project (Level 4) you can download **your own** system as a ZIP and
 The [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) is the same system with the default settings.
 
 ## When something goes wrong
+
+Most problems have a quick fix. Find what you see in the table and do what it says.
 
 | What you see | What to do |
 |---|---|
