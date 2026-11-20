@@ -1,6 +1,8 @@
 # Final project · Your FoodBridge system
 
-In Weeks 2–8 you build the parts of an information system. In Weeks 9–10 you put them together into **your own** system. It runs a day of offers, follows **your** decisions, and you can explain and hand over every choice. Everything happens in one notebook: `Final_Project.ipynb`.
+In Weeks 2–8 you build the parts of an information system. In Weeks 9–10 you put them together into **your own** system. It runs a day of offers, follows **your** decisions, and you can explain and hand over every choice. Everything happens in one notebook: [`Final_Project.ipynb`](notebooks/Final_Project.ipynb).
+
+This guide is the reference for those two weeks. Read it before Week 9, when you open [`Final_Project.ipynb`](notebooks/Final_Project.ipynb) for the first time, and keep it open while you work through the levels.
 
 ## Four levels
 
@@ -13,9 +15,11 @@ In Weeks 2–8 you build the parts of an information system. In Weeks 9–10 you
 
 Levels 1 and 2 are the **minimum** and need settings, not new code, so every student can finish them. Your grade depends mostly on the **quality of your decisions and explanations**.
 
+The project is **30% of your course grade**. Within the project: it runs and is verified 25% · your decisions 30% · tests and extension 15% · handoff 15% · presentation and individual explanation 15%.
+
 ## Your decisions
 
-These are the settings you met during the course. Each one is a real tradeoff.
+Level 2 is where the project becomes yours, and it rests on the decisions you record in your decision log. These are the settings you met during the course. Each one is a real tradeoff.
 
 | Setting | Week | The question it answers |
 |---|---|---|
@@ -33,16 +37,20 @@ A **strong decision log entry** names a specific value, a real alternative, a re
 
 ## Timeline
 
+With the levels and the decisions clear, the timeline shows when each part happens.
+
 | When | What |
 |---|---|
-| Week 9, Session 3 | Open `Final_Project.ipynb`; finish Level 1 in class and start Level 2. |
+| Week 9, Session 3 | Open [`Final_Project.ipynb`](notebooks/Final_Project.ipynb); finish Level 1 in class and start Level 2. |
 | Week 10, Session 1 | Finish Level 2; optional Levels 3–4; write two tests for your own decisions and copy them into section 5 of the Final; review your code with the ten principles. |
 | Week 10, Session 2 | **Peer test:** a classmate runs your system from your handoff note while you watch silently. Then a **3-minute presentation** at your station. |
 | Week 10, Session 3 | **Individual check:** explain one decision and one test to the instructor. |
 
 ## What to submit
 
-1. Your `Final_Project.ipynb`, after **Runtime → Restart session and run all**, with:
+When the work is done, the submission is a single notebook.
+
+1. Your [`Final_Project.ipynb`](notebooks/Final_Project.ipynb), after **Runtime → Restart session and run all**, with:
    - Level 1 and Level 2 complete, including the decision log;
    - your two decision tests in section 5, both ✅;
    - Level 3 and 4 work, if you did it;
@@ -54,6 +62,8 @@ A **strong decision log entry** names a specific value, a real alternative, a re
 See [assessment](ASSESSMENT.md) for how the project is graded.
 
 ## Ideas for Level 3
+
+If you choose the optional Level 3, the ideas below are starting points, not requirements.
 
 - A smarter `pickup_label` or `urgency` that also uses another value you decide (with named constants).
 - A stricter `clean_offer` that refuses something new, with a clear message. Start from the kit's own check (`bridge.validation.clean_offer`) and add one rule; the notebook shows how.

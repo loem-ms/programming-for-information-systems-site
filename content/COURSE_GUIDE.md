@@ -16,6 +16,10 @@ Responsibility needs understanding. You cannot approve code you cannot read, or 
 
 ## The system you build: Campus FoodBridge
 
+Before any system exists, offers arrive by phone and are written in a paper notebook. On one busy morning, that notebook fails. The phone keeps ringing — Sunrise Bakery has bread rolls that must be collected within two hours, a canteen has cooked rice, a market stall has vegetables — and the coordinator writes each offer down as fast as she can. By the time the page is full, a phone number has been written twice, one offer squeezed into the margin is lost, and nobody can tell what was promised to whom.
+
+The course replaces that notebook, one part per week. This is the system you build to replace it:
+
 A fictional university volunteer team collects surplus food from **donors** (bakeries, canteens, market stalls) and delivers it to **community partners** (a children's centre, a community kitchen, an elders' group).
 
 ![An information system combines people, data, rules, a process and outputs.](assets/diagrams/is_parts.svg)
@@ -37,7 +41,7 @@ Each principle is a habit of a responsible developer. Together they help you che
 | 1 | **Clear names and units** | Code is read by people: a name should say what a value means and in what unit. |
 | 2 | **Explicit rules** | Name your numbers, cover every case, and test the boundary. |
 | 3 | **One record per real thing** | Each thing gets one record and one unique ID; do not store the same fact twice. |
-| 4 | **One function, one job** | Return values instead of printing them; test normal, boundary and odd cases. |
+| 4 | **One function, one job** | Return values instead of printing them; test normal, edge and odd cases. |
 | 5 | **Never trust input** | Check at the door, explain problems in plain words, change nothing when input is bad. |
 | 6 | **Make wrong states hard to reach** | Allow only the moves that make sense; keep the rule next to the data. |
 | 7 | **Never lose data** | Save safely, keep a history, and be able to explain what happened. |
@@ -49,18 +53,22 @@ Every week has a **⚖️ Good or risky?** exercise: two versions of code that b
 
 ## The ten weeks
 
+Read this table as a journey that starts with the paper notebook. In Week 1 you meet the finished system that replaces it. From Week 2 you rebuild that system yourself, one part per week: first the rules the notebook left in people's heads, then one record for each real offer, then functions you can trust, checks at the door, safe lifecycles, saving and history, and reports for the right readers. Each week removes one way the notebook failed on that busy morning.
+
 | Week | Topic | Python you learn | Part you build | Your decision |
 |---|---|---|---|---|
-| 1 | What is an information system? | values, names, types, f-strings | an offer summary | the system's name |
-| 2 | Rules and decisions | comparisons, `if`/`elif`/`else`, a first function | `pickup_label`, `urgency` | team size, urgency hours |
-| 3 | Records and data | lists, dictionaries, `for` loops, totals | `total_portions`, `find_offer` | food categories |
-| 4 | Functions you can trust · **Midterm** | `def`, `return`, docstrings, `assert` tests | `open_portions` + tests | which statuses count as open |
-| 5 | Checking input | strings, `int()`, `try`/`except` | `clean_offer` | limits and required fields |
-| 6 | Objects and lifecycles | classes, objects, methods | `can_move` | whether approval is required |
-| 7 | Saving and history | files, `with`, JSON | `to_record`, `from_record` | what the history keeps |
-| 8 | Reports and screens | sorting with a key, formatting, a menu | `public_row`, `handle_choice` | what the public sees |
-| 9 | Putting the system together | modules, `import` | your whole system | every setting; optional web page |
-| 10 | Verify, hand over, present | tests, clean runs, code review | the finished final project | — |
+| 1 | [What is an information system?](notebooks/Week_01.ipynb) | values, names, types, f-strings | an offer summary | the system's name |
+| 2 | [Rules and decisions](notebooks/Week_02.ipynb) | comparisons, `if`/`elif`/`else`, a first function | `pickup_label`, `urgency` | team size, urgency hours |
+| 3 | [Records and data](notebooks/Week_03.ipynb) | lists, dictionaries, `for` loops, totals | `total_portions`, `find_offer` | food categories |
+| 4 | [Functions you can trust · **Midterm**](notebooks/Week_04.ipynb) | `def`, `return`, docstrings, `assert` tests | `open_portions` + tests | which statuses count as open |
+| 5 | [Checking input](notebooks/Week_05.ipynb) | strings, `int()`, `try`/`except` | `clean_offer` | limits and required fields |
+| 6 | [Objects and lifecycles](notebooks/Week_06.ipynb) | classes, objects, methods | `can_move` | whether approval is required |
+| 7 | [Saving and history](notebooks/Week_07.ipynb) | files, `with`, JSON | `to_record`, `from_record` | what the history keeps |
+| 8 | [Reports and screens](notebooks/Week_08.ipynb) | sorting with a key, formatting, a menu | `public_row`, `handle_choice` | what the public sees |
+| 9 | [Putting the system together](notebooks/Week_09.ipynb) | modules, `import` | your whole system | every setting; optional web page |
+| 10 | [Verify, hand over, present](notebooks/Week_10.ipynb) | tests, clean runs, code review | the finished final project | — |
+
+By Week 9 the parts work together as one system, with your own decisions in it. Week 10 closes the journey: you verify the system before you trust it, and you hand it over so that someone else can run the busy morning. The notebook's last weakness — that only the person who wrote it could use it — is gone.
 
 ## How a week works
 
