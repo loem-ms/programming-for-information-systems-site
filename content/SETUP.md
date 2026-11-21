@@ -16,7 +16,7 @@ Read this page before you open your first notebook, and come back to it whenever
 
 - If Colab says the runtime was reset or disconnected, run the setup cell again, then the cells you need.
 - When confused, use **Runtime → Restart session and run all**. This runs everything fresh, in order.
-- Files that your code writes (for example `my_offers.json` in [Week 7](notebooks/Week_07.ipynb)) live in a temporary folder and **disappear when the runtime resets**. Your notebook itself is safe in Drive.
+- Files that your code writes (for example `my_offers.json` in Week 7 (being updated)) live in a temporary folder and **disappear when the runtime resets**. Your notebook itself is safe in Drive.
 - Colab currently uses Python 3.13 (checked in November 2026). The course works with any Python from 3.9 on, so a newer Colab version is fine.
 
 ## Option B · Your own computer

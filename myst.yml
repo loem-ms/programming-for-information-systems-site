@@ -30,51 +30,15 @@
           {
             "file": "content/notebooks/Week_03.ipynb",
             "title": "Week 3 · Records and data"
-          },
-          {
-            "file": "content/notebooks/Week_04.ipynb",
-            "title": "Week 4 · Functions you can trust · Midterm"
-          },
-          {
-            "file": "content/notebooks/Week_05.ipynb",
-            "title": "Week 5 · Checking input"
-          },
-          {
-            "file": "content/notebooks/Week_06.ipynb",
-            "title": "Week 6 · Objects and lifecycles"
-          },
-          {
-            "file": "content/notebooks/Week_07.ipynb",
-            "title": "Week 7 · Saving and history"
-          },
-          {
-            "file": "content/notebooks/Week_08.ipynb",
-            "title": "Week 8 · Reports and screens"
-          },
-          {
-            "file": "content/notebooks/Week_09.ipynb",
-            "title": "Week 9 · Putting the system together"
-          },
-          {
-            "file": "content/notebooks/Week_10.ipynb",
-            "title": "Week 10 · Verify, hand over, present"
           }
         ]
       },
       {
-        "title": "Midterm and final project",
+        "title": "Midterm",
         "children": [
           {
             "file": "content/notebooks/Midterm.ipynb",
             "title": "Midterm · Plan the day"
-          },
-          {
-            "file": "content/FINAL_PROJECT.md",
-            "title": "Final project guide"
-          },
-          {
-            "file": "content/notebooks/Final_Project.ipynb",
-            "title": "Final project notebook"
           }
         ]
       },
@@ -136,51 +100,15 @@
               {
                 "file": "content/km/notebooks/Week_03.ipynb",
                 "title": "សប្ដាហ៍ទី 3 · Records និងទិន្នន័យ"
-              },
-              {
-                "file": "content/km/notebooks/Week_04.ipynb",
-                "title": "សប្ដាហ៍ទី 4 · Functions ដែលអាចទុកចិត្តបាន · Midterm"
-              },
-              {
-                "file": "content/km/notebooks/Week_05.ipynb",
-                "title": "សប្ដាហ៍ទី 5 · ការពិនិត្យ input"
-              },
-              {
-                "file": "content/km/notebooks/Week_06.ipynb",
-                "title": "សប្ដាហ៍ទី 6 · Objects និង lifecycle"
-              },
-              {
-                "file": "content/km/notebooks/Week_07.ipynb",
-                "title": "សប្ដាហ៍ទី 7 · ការរក្សាទុក និងប្រវត្តិ"
-              },
-              {
-                "file": "content/km/notebooks/Week_08.ipynb",
-                "title": "សប្ដាហ៍ទី 8 · របាយការណ៍ និងអេក្រង់"
-              },
-              {
-                "file": "content/km/notebooks/Week_09.ipynb",
-                "title": "សប្ដាហ៍ទី 9 · ការផ្គុំប្រព័ន្ធបញ្ចូលគ្នា"
-              },
-              {
-                "file": "content/km/notebooks/Week_10.ipynb",
-                "title": "សប្ដាហ៍ទី 10 · ផ្ទៀងផ្ទាត់ ប្រគល់ និងបង្ហាញ"
               }
             ]
           },
           {
-            "title": "Midterm និង Final project",
+            "title": "Midterm",
             "children": [
               {
                 "file": "content/km/notebooks/Midterm.ipynb",
                 "title": "Midterm · រៀបចំផែនការសម្រាប់មួយថ្ងៃ"
-              },
-              {
-                "file": "content/km/FINAL_PROJECT.md",
-                "title": "មគ្គុទ្ទេសក៍ Final project"
-              },
-              {
-                "file": "content/km/notebooks/Final_Project.ipynb",
-                "title": "Final project notebook"
               }
             ]
           },
