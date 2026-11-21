@@ -177,7 +177,7 @@ def validate(folder, html=None, log=None, run=True):
         for page in pages[1:]:
             slug = re.sub(r"[_\s]+", "-", Path(page).with_suffix("").as_posix().lower())
             require((html / slug / "index.html").is_file(), "Missing rendered page: " + slug)
-        for static in ("slides", "downloads", "assets"):
+        for static in ("slides", "downloads", "assets", "wip"):
             for path in (content / static).rglob("*"):
                 if path.is_file():
                     require((html / static / path.relative_to(content / static)).is_file(),
