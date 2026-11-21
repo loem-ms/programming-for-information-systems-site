@@ -139,7 +139,8 @@
     "static_files": [
       "content/slides",
       "content/downloads",
-      "content/assets"
+      "content/assets",
+      "content/wip"
     ],
     "exclude": [
       "README.md",
