@@ -21,6 +21,6 @@ The reflection form above is weekly. The submissions below are the other regular
 
 Send assessed work to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com). The file-naming rule and deadlines are announced before work is due. Keep your notebook in Drive and a separate backup.
 
-The final project demonstration is in **Week 10**. Read the [final project guide](FINAL_PROJECT.md) and [assessment](ASSESSMENT.md) before you start.
+The final project demonstration is in **Week 10**. Read the final project guide (being updated) and [assessment](ASSESSMENT.md) before you start.
 
 If a private repository or notebook link shows "not found", you may be signed in to the wrong GitHub account or may not have accepted the invitation yet. Email [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) if access is still missing. Do not make assessed work public to solve an access problem.

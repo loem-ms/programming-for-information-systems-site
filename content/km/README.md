@@ -22,18 +22,20 @@
 
 ## ដំណើរនៃវគ្គសិក្សា
 
+**សប្ដាហ៍ទី 4–10 កំពុងធ្វើបច្ចុប្បន្នភាព។** ឯកសារថ្មីនឹងដាក់នៅទីនេះ មុនថ្នាក់រៀននីមួយៗ ដូច្នេះផែនការខាងក្រោមអាចនឹងផ្លាស់ប្ដូរ។
+
 ដប់សប្ដាហ៍នេះ ដើរតាមដំណើររឿងនៃសៀវភៅក្រដាសនោះ។ ក្នុងមួយសប្ដាហ៍ម្ដង អ្នកជំនួសចំណុចខ្សោយមួយរបស់សៀវភៅក្រដាស ដោយផ្នែកមួយនៃប្រព័ន្ធ ហើយផ្នែកនីមួយៗ នាំមកជាមួយគោលការណ៍មួយ។
 
 - **សប្ដាហ៍ទី 1 — [តើប្រព័ន្ធព័ត៌មានជាអ្វី?](notebooks/Week_01.ipynb)** · ឈ្មោះ និងឯកតាច្បាស់លាស់: អ្នកជួបប្រព័ន្ធដែលបានបញ្ចប់រួច ហើយរៀនដាក់ឈ្មោះឱ្យច្បាស់លាស់ ដើម្បីកុំឱ្យមានអ្វីជាការសរសេររញ៉េរញ៉ៃ ដែលមានតែមនុស្សម្នាក់យល់។
 - **សប្ដាហ៍ទី 2 — [វិធាន និងការសម្រេចចិត្ត](notebooks/Week_02.ipynb)** · វិធានច្បាស់លាស់: ការសម្រេចចិត្តដែលអ្នកសម្របសម្រួលទុកក្នុងចិត្ត ត្រូវបានសរសេរចុះជាវិធាន ដែលប្រាប់យ៉ាងច្បាស់លាស់ ហើយត្រូវបានសាកល្បង។
 - **សប្ដាហ៍ទី 3 — [Records និងទិន្នន័យ](notebooks/Week_03.ipynb)** · record មួយ សម្រាប់របស់ពិតមួយ: សំណើនីមួយៗ មាន record ផ្ទាល់ខ្លួនមួយ ដូច្នេះគ្មានលេខទូរស័ព្ទណាត្រូវបានសរសេរពីរដង ហើយគ្មានសំណើណាបាត់នៅគែមទំព័រទេ។
-- **សប្ដាហ៍ទី 4 — [Functions ដែលអាចទុកចិត្តបាន · Midterm](notebooks/Week_04.ipynb)** · function មួយ ការងារមួយ: ផ្នែកនីមួយៗ ត្រូវបានបង្កើតជា function តូចៗ ដែលអ្នកអាចសាកល្បង និងទុកចិត្តបាន ហើយ Midterm ពិនិត្យប្រព័ន្ធរហូតមកដល់ពេលនេះ។
-- **សប្ដាហ៍ទី 5 — [ការពិនិត្យ input](notebooks/Week_05.ipynb)** · កុំទុកចិត្ត input: សំណើដែលខុស ឬមិនពេញលេញ ត្រូវបានបដិសេធនៅមាត់ទ្វារ ជំនួសឱ្យការចម្លងចូលសៀវភៅ ហើយបង្កបញ្ហានៅពេលក្រោយ។
-- **សប្ដាហ៍ទី 6 — [Objects និង lifecycle](notebooks/Week_06.ipynb)** · ធ្វើឱ្យស្ថានភាពខុស កើតឡើងបានពិបាក: សំណើមួយ អាចផ្លាស់ទីបានតែតាមជំហានដែលសមហេតុផល ដូច្នេះការសន្យាមួយ មិនអាចលោតទៅស្ថានភាពខុសដោយស្ងាត់ៗបានទេ។
-- **សប្ដាហ៍ទី 7 — [ការរក្សាទុក និងប្រវត្តិ](notebooks/Week_07.ipynb)** · កុំឱ្យបាត់បង់ទិន្នន័យ: ថ្ងៃធ្វើការ លែងបាត់ទៅនៅពេលបិទសៀវភៅទៀតហើយ ហើយប្រវត្តិបង្ហាញថា បានសន្យាអ្វីជាមួយនរណា។
-- **សប្ដាហ៍ទី 8 — [របាយការណ៍ និងអេក្រង់](notebooks/Week_08.ipynb)** · ព័ត៌មានត្រឹមត្រូវ សម្រាប់មនុស្សត្រឹមត្រូវ: អ្នកសម្របសម្រួលឃើញរបាយការណ៍ពេញលេញ រីឯក្ដារព័ត៌មានសាធារណៈ មិនបង្ហាញលេខទូរស័ព្ទឯកជនទេ។
-- **សប្ដាហ៍ទី 9 — [ការផ្គុំប្រព័ន្ធបញ្ចូលគ្នា](notebooks/Week_09.ipynb)** · បំបែកអ្វីដែលប្រែប្រួល ចេញពីអ្វីដែលនៅដដែល: ផ្នែកដែលអ្នកបានបង្កើត ក្លាយជាប្រព័ន្ធតែមួយរបស់អ្នក។
-- **សប្ដាហ៍ទី 10 — [ផ្ទៀងផ្ទាត់ ប្រគល់ និងបង្ហាញ](notebooks/Week_10.ipynb)** · ផ្ទៀងផ្ទាត់ មុននឹងទុកចិត្ត: អ្នកផ្ទៀងផ្ទាត់ប្រព័ន្ធដែលបានបញ្ចប់ ហើយប្រគល់វាទៅឱ្យអ្នកសម្របសម្រួលបន្ទាប់ អាចដំណើរការព្រឹកដ៏មមាញឹកនោះ ដោយគ្មានអ្នក។
+- **សប្ដាហ៍ទី 4 — Functions ដែលអាចទុកចិត្តបាន · Midterm (កំពុងធ្វើបច្ចុប្បន្នភាព)** · function មួយ ការងារមួយ: ផ្នែកនីមួយៗ ត្រូវបានបង្កើតជា function តូចៗ ដែលអ្នកអាចសាកល្បង និងទុកចិត្តបាន ហើយ Midterm ពិនិត្យប្រព័ន្ធរហូតមកដល់ពេលនេះ។
+- **សប្ដាហ៍ទី 5 — ការពិនិត្យ input (កំពុងធ្វើបច្ចុប្បន្នភាព)** · កុំទុកចិត្ត input: សំណើដែលខុស ឬមិនពេញលេញ ត្រូវបានបដិសេធនៅមាត់ទ្វារ ជំនួសឱ្យការចម្លងចូលសៀវភៅ ហើយបង្កបញ្ហានៅពេលក្រោយ។
+- **សប្ដាហ៍ទី 6 — Objects និង lifecycle (កំពុងធ្វើបច្ចុប្បន្នភាព)** · ធ្វើឱ្យស្ថានភាពខុស កើតឡើងបានពិបាក: សំណើមួយ អាចផ្លាស់ទីបានតែតាមជំហានដែលសមហេតុផល ដូច្នេះការសន្យាមួយ មិនអាចលោតទៅស្ថានភាពខុសដោយស្ងាត់ៗបានទេ។
+- **សប្ដាហ៍ទី 7 — ការរក្សាទុក និងប្រវត្តិ (កំពុងធ្វើបច្ចុប្បន្នភាព)** · កុំឱ្យបាត់បង់ទិន្នន័យ: ថ្ងៃធ្វើការ លែងបាត់ទៅនៅពេលបិទសៀវភៅទៀតហើយ ហើយប្រវត្តិបង្ហាញថា បានសន្យាអ្វីជាមួយនរណា។
+- **សប្ដាហ៍ទី 8 — របាយការណ៍ និងអេក្រង់ (កំពុងធ្វើបច្ចុប្បន្នភាព)** · ព័ត៌មានត្រឹមត្រូវ សម្រាប់មនុស្សត្រឹមត្រូវ: អ្នកសម្របសម្រួលឃើញរបាយការណ៍ពេញលេញ រីឯក្ដារព័ត៌មានសាធារណៈ មិនបង្ហាញលេខទូរស័ព្ទឯកជនទេ។
+- **សប្ដាហ៍ទី 9 — ការផ្គុំប្រព័ន្ធបញ្ចូលគ្នា (កំពុងធ្វើបច្ចុប្បន្នភាព)** · បំបែកអ្វីដែលប្រែប្រួល ចេញពីអ្វីដែលនៅដដែល: ផ្នែកដែលអ្នកបានបង្កើត ក្លាយជាប្រព័ន្ធតែមួយរបស់អ្នក។
+- **សប្ដាហ៍ទី 10 — ផ្ទៀងផ្ទាត់ ប្រគល់ និងបង្ហាញ (កំពុងធ្វើបច្ចុប្បន្នភាព)** · ផ្ទៀងផ្ទាត់ មុននឹងទុកចិត្ត: អ្នកផ្ទៀងផ្ទាត់ប្រព័ន្ធដែលបានបញ្ចប់ ហើយប្រគល់វាទៅឱ្យអ្នកសម្របសម្រួលបន្ទាប់ អាចដំណើរការព្រឹកដ៏មមាញឹកនោះ ដោយគ្មានអ្នក។
 
 ## ចាប់ផ្ដើមនៅទីនេះ
 
@@ -51,13 +53,7 @@
 | **1** · តើប្រព័ន្ធព័ត៌មានជាអ្វី? | ឈ្មោះ និងឯកតាច្បាស់លាស់ | [Notebook](notebooks/Week_01.ipynb) | [PDF](/slides/km/Week_01_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_01.ipynb) | [.ipynb](/downloads/km/Week_01.ipynb) |
 | **2** · វិធាន និងការសម្រេចចិត្ត | វិធានច្បាស់លាស់ | [Notebook](notebooks/Week_02.ipynb) | [PDF](/slides/km/Week_02_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_02.ipynb) | [.ipynb](/downloads/km/Week_02.ipynb) |
 | **3** · Records និងទិន្នន័យ | record មួយ សម្រាប់របស់ពិតមួយ | [Notebook](notebooks/Week_03.ipynb) | [PDF](/slides/km/Week_03_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_03.ipynb) | [.ipynb](/downloads/km/Week_03.ipynb) |
-| **4** · Functions ដែលអាចទុកចិត្តបាន · Midterm | function មួយ ការងារមួយ | [Notebook](notebooks/Week_04.ipynb) | [PDF](/slides/km/Week_04_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_04.ipynb) | [.ipynb](/downloads/km/Week_04.ipynb) |
-| **5** · ការពិនិត្យ input | កុំទុកចិត្ត input | [Notebook](notebooks/Week_05.ipynb) | [PDF](/slides/km/Week_05_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_05.ipynb) | [.ipynb](/downloads/km/Week_05.ipynb) |
-| **6** · Objects និង lifecycle | ធ្វើឱ្យស្ថានភាពខុស កើតឡើងបានពិបាក | [Notebook](notebooks/Week_06.ipynb) | [PDF](/slides/km/Week_06_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_06.ipynb) | [.ipynb](/downloads/km/Week_06.ipynb) |
-| **7** · ការរក្សាទុក និងប្រវត្តិ | កុំឱ្យបាត់បង់ទិន្នន័យ | [Notebook](notebooks/Week_07.ipynb) | [PDF](/slides/km/Week_07_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_07.ipynb) | [.ipynb](/downloads/km/Week_07.ipynb) |
-| **8** · របាយការណ៍ និងអេក្រង់ | ព័ត៌មានត្រឹមត្រូវ សម្រាប់មនុស្សត្រឹមត្រូវ | [Notebook](notebooks/Week_08.ipynb) | [PDF](/slides/km/Week_08_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_08.ipynb) | [.ipynb](/downloads/km/Week_08.ipynb) |
-| **9** · ការផ្គុំប្រព័ន្ធបញ្ចូលគ្នា | បំបែកអ្វីដែលប្រែប្រួល ចេញពីអ្វីដែលនៅដដែល | [Notebook](notebooks/Week_09.ipynb) | [PDF](/slides/km/Week_09_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_09.ipynb) | [.ipynb](/downloads/km/Week_09.ipynb) |
-| **10** · ផ្ទៀងផ្ទាត់ ប្រគល់ និងបង្ហាញ | ផ្ទៀងផ្ទាត់ មុននឹងទុកចិត្ត | [Notebook](notebooks/Week_10.ipynb) | [PDF](/slides/km/Week_10_Slides.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Week_10.ipynb) | [.ipynb](/downloads/km/Week_10.ipynb) |
+| **4–10** · កំពុងធ្វើបច្ចុប្បន្នភាព | ឯកសារថ្មីនឹងដាក់ មុនថ្នាក់រៀននីមួយៗ | — | — | — | — |
 
 **មុននឹងកែ notebook ក្នុង Colab: ចុចលើពាក្យ Copy to Drive (ឬ ចូលទៅកាន់ File រួចចុច Save a copy in Drive)។** notebook នីមួយៗដកយក (unpack) ប្រព័ន្ធរបស់វគ្គសិក្សាដោយខ្លួនឯង មិនបាច់ upload អ្វីទេ។ [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) គឺជាប្រព័ន្ធពេញលេញ សម្រាប់ run នៅផ្ទះ (ដាក់ `LANGUAGE = "km"` ក្នុង `my_settings.py` ដើម្បីឃើញអេក្រង់ជាភាសាខ្មែរ)។
 
@@ -66,7 +62,6 @@
 | | ពេលណា | អាន | ស្លាយ | Run |
 |---|---|---|---|---|
 | **Midterm · រៀបចំផែនការសម្រាប់មួយថ្ងៃ** | សប្ដាហ៍ទី 4 · វគ្គទី 3 | [Notebook](notebooks/Midterm.ipynb) | [PDF](/slides/km/Midterm_Brief.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Midterm.ipynb) |
-| **Final project · ប្រព័ន្ធ FoodBridge របស់អ្នក** | សប្ដាហ៍ទី 9–10 | [Notebook](notebooks/Final_Project.ipynb) | [PDF](/slides/km/Final_Project_Brief.pdf) | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Final_Project.ipynb) |
 | **Python Basics · មើលរហ័ស (ស្រេចចិត្ត)** | សប្ដាហ៍ណាក៏បាន | [Notebook](notebooks/Python_Basics.ipynb) | — | [![Open in Colab](../assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/km/Python_Basics.ipynb) |
 | **ការណែនាំវគ្គសិក្សា** (ថ្នាក់ដំបូង) | សប្ដាហ៍ទី 1 | [មគ្គុទ្ទេសក៍វគ្គសិក្សា](COURSE_GUIDE.md) | [PDF](/slides/km/Orientation.pdf) | — |
 
@@ -76,7 +71,7 @@
 - [ការរៀបចំ (Setup)](SETUP.md): Colab ឬកុំព្យូទ័រផ្ទាល់ខ្លួនរបស់អ្នក
 - [ការវាយតម្លៃ](ASSESSMENT.md): របៀបដាក់ពិន្ទុ និងវិធានសម្រាប់ប្រើឧបករណ៍ AI
 - [កិច្ចការស្រាវជ្រាវ](RESEARCH.md): កិច្ចការស្រាវជ្រាវខ្លីៗទាំងប្រាំមួយ និងពេលដែលត្រូវចែករំលែក
-- [Final project](FINAL_PROJECT.md): កម្រិតទាំងបួន ចាប់ពី "run វា" រហូតដល់ "ទំព័រ web"
+- Final project (កំពុងធ្វើបច្ចុប្បន្នភាព): កម្រិតទាំងបួន ចាប់ពី "run វា" រហូតដល់ "ទំព័រ web"
 - [អំពីគ្រូ (English)](../INSTRUCTOR.md) · [Links របស់វគ្គសិក្សា](COURSE_LINKS.md) · [សំណួរ និងជំនួយ (English)](../CONTRIBUTING.md)
 
 *Campus FoodBridge ជាករណីប្រឌិត។ អង្គការ មនុស្ស និងលេខទាំងអស់ក្នុងវគ្គសិក្សានេះ សុទ្ធតែប្រឌិតឡើង។*

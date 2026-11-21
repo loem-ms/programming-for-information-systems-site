@@ -52,11 +52,11 @@ The midterm tests **understanding** of Weeks 1–4, not memory.
 
 After you submit, a **3-minute oral check**: the instructor points at one line of your code and one test, and you explain them. If you cannot explain your own code, the marks for that part can be reduced.
 
-## [Final project](notebooks/Final_Project.ipynb) (30%)
+## Final project (being updated) (30%)
 
 The last component brings the whole course together in Weeks 9–10, when you assemble the parts you built into your own system.
 
-See the [final project guide](FINAL_PROJECT.md) for the four levels and what to submit.
+See the final project guide (being updated) for the four levels and what to submit.
 
 | What is assessed | Weight within the project |
 |---|---:|
