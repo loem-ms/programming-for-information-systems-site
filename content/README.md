@@ -64,6 +64,7 @@ New here? Read the [course guide](COURSE_GUIDE.md) first: it explains the idea o
 | | When | Read | Slides | Run |
 |---|---|---|---|---|
 | **Midterm · Campus Library Desk** | Week 4, Session 3 | [Exam info & PIN](MIDTERM.md) | [PDF](/slides/Midterm_Brief.pdf) | [🔒 Unlock with PIN](/exam/midterm.html) |
+| **Final project · Your FoodBridge system** | Weeks 9–10 | [Notebook](notebooks/Final_Project.ipynb) | [PDF](/slides/Final_Project_Brief.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Final_Project.ipynb) |
 | **Python Basics · Quick lookup (optional)** | any week | [Notebook](notebooks/Python_Basics.ipynb) | — | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Python_Basics.ipynb) |
 | **Orientation** (first class) | Week 1 | [Course guide](COURSE_GUIDE.md) | [PDF](/slides/Orientation.pdf) | — |
 
@@ -73,7 +74,7 @@ New here? Read the [course guide](COURSE_GUIDE.md) first: it explains the idea o
 - [Setup](SETUP.md): Colab or your own computer
 - [Assessment](ASSESSMENT.md): how you are graded, and the rules for AI tools
 - [Research tasks](RESEARCH.md): the six short research tasks and when they are shared
-- Final project (being updated): the four levels, from "run it" to "web page"
+- [Final project](FINAL_PROJECT.md): the four levels, from "it runs" to "a screen"
 - [Free Python & programming reading](COURSE_LINKS.md): optional free online books (PY4E, Automate the Boring Stuff, Think Python) and Python Tutor
 - [Instructor](INSTRUCTOR.md) · [Course links & extra reading](COURSE_LINKS.md) · [Questions and help](CONTRIBUTING.md)
 
