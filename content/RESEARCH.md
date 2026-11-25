@@ -33,25 +33,25 @@ Choose a rule from real life: a bus fare for children, a library late fee, a dat
 
 ## R3 · Checking input
 
-*From Week 4 · Functions you can trust · Midterm (being updated).*
+*From [Week 4 · Functions you can trust · Your first files · Midterm](notebooks/Week_04.ipynb).*
 
 Why do systems check input before saving it? Choose a form you have used. For two of its fields, give the allowed values, an invalid example, the message shown (or the message that should be shown), and what must stay unchanged when the input is bad.
 
 ## R4 · How systems keep data and history
 
-*From Week 5 · Checking input (being updated).*
+*From [Week 5 · Checking input](notebooks/Week_05.ipynb).*
 
 Choose a real example: a bank statement, school records, a phone's call log. What is kept? Which IDs are used? When something is corrected, is the old value kept? Who needs the history, and why?
 
 ## R5 · Keeping data safe
 
-*From Week 6 · Objects and lifecycles (being updated).*
+*From [Week 6 · Lifecycles](notebooks/Week_06.ipynb).*
 
 Learn about backups, audit logs and transactions. Example: a bank transfer has two updates (take money from one account, add it to another) that must succeed or fail together. What could go wrong between two updates? How would you check the records before and after?
 
 ## R6 · Checking AI output
 
-*From Week 7 · Saving and history (being updated).*
+*From [Week 7 · Saving and history](notebooks/Week_07.ipynb).*
 
 Take an AI answer to a factual or technical question (or use the example in the Week 7 notebook). Check it against an original source. List what you would accept, what you would correct and what you would ask about, and say how you checked each one.
 

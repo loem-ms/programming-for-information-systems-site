@@ -92,6 +92,49 @@ def check_notebook(path, colab):
         require(path.stat().st_size < 400000, "Website notebook embeds the kit (too large): " + path.name)
 
 
+class _Anything:
+    """Stands in for matplotlib when it is not installed (Colab has it): accepts any call and draws nothing."""
+    def __init__(self, *args, **kwargs):
+        pass
+
+    def __call__(self, *args, **kwargs):
+        return _Anything()
+
+    def __getattr__(self, name):
+        return _Anything()
+
+    def __iter__(self):
+        return iter([_Anything(), _Anything()])
+
+    def __getitem__(self, key):
+        return _Anything()
+
+
+def fake_matplotlib():
+    """Let notebooks that draw charts run where matplotlib is missing. Return True when the stand-in is used."""
+    try:
+        import matplotlib  # noqa: F401
+        return False
+    except ImportError:
+        pass
+    import types
+    package, pyplot = types.ModuleType("matplotlib"), types.ModuleType("matplotlib.pyplot")
+    package.__getattr__ = lambda name: _Anything()
+    pyplot.__getattr__ = lambda name: _Anything()
+    package.pyplot = pyplot
+    sys.modules["matplotlib"], sys.modules["matplotlib.pyplot"] = package, pyplot
+    return True
+
+
+def write_file(source):
+    """Do what %%writefile path does in Colab: save the rest of the cell as a file."""
+    first, _, body = source.lstrip().partition("\n")
+    words = first.split()[1:]
+    path = [word for word in words if not word.startswith("-")][0]
+    with open(path, "a" if ("-a" in words or "--append" in words) else "w", encoding="utf-8") as file:
+        file.write(body)
+
+
 def run_notebook(path):
     """Run every code cell in a fresh folder. Return a problem message or None."""
     notebook = json.loads(path.read_text())
@@ -101,6 +144,7 @@ def run_notebook(path):
     def no_input(prompt=""):
         raise RuntimeError("input() was called while running all cells")
 
+    fake_matplotlib()
     with tempfile.TemporaryDirectory() as folder:
         os.chdir(folder)
         original_input, builtins.input = builtins.input, no_input
@@ -111,7 +155,10 @@ def run_notebook(path):
                 source = "".join(cell["source"])
                 try:
                     with contextlib.redirect_stdout(io.StringIO()):
-                        exec(compile(source, path.name + " cell " + str(number), "exec"), namespace)
+                        if source.lstrip().startswith("%%writefile"):
+                            write_file(source)
+                        else:
+                            exec(compile(source, path.name + " cell " + str(number), "exec"), namespace)
                 except Exception as error:
                     return "cell " + str(number) + ": " + type(error).__name__ + ": " + str(error)
         finally:
@@ -163,6 +210,16 @@ def validate(folder, html=None, log=None, run=True):
         check_notebook(path, colab=False)
     for path in downloads:
         check_notebook(path, colab=True)
+    for leaked in (content / "notebooks" / "Midterm.ipynb", content / "downloads" / "Midterm.ipynb",
+                   content / "km" / "notebooks" / "Midterm.ipynb", content / "downloads" / "km" / "Midterm.ipynb"):
+        require(not leaked.exists(), "Plaintext Midterm.ipynb leaked into public site: " + str(leaked.relative_to(content)))
+    for exam_page in (content / "exam" / "midterm.html", content / "exam" / "km" / "midterm.html"):
+        require(exam_page.is_file(), "PIN-locked Midterm page is missing: " + str(exam_page.relative_to(content)))
+        if exam_page.is_file():
+            body = exam_page.read_text()
+            require('"iv":' in body and '"data":' in body, "Midterm page is not encrypted: " + exam_page.name)
+            require("most_overdue_id" not in body and not INSTRUCTOR.search(body),
+                    "Plaintext Midterm content leaked into " + exam_page.name)
     check_kit_zip(content / "downloads" / "foodbridge_kit.zip")
     if run and not problems:
         python = sys.version.split()[0]
@@ -177,7 +234,7 @@ def validate(folder, html=None, log=None, run=True):
         for page in pages[1:]:
             slug = re.sub(r"[_\s]+", "-", Path(page).with_suffix("").as_posix().lower())
             require((html / slug / "index.html").is_file(), "Missing rendered page: " + slug)
-        for static in ("slides", "downloads", "assets", "wip"):
+        for static in ("slides", "downloads", "assets", "wip", "exam"):
             for path in (content / static).rglob("*"):
                 if path.is_file():
                     require((html / static / path.relative_to(content / static)).is_file(),

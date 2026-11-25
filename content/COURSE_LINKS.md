@@ -24,3 +24,18 @@ Send assessed work to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com
 The final project demonstration is in **Week 10**. Read the final project guide (being updated) and [assessment](ASSESSMENT.md) before you start.
 
 If a private repository or notebook link shows "not found", you may be signed in to the wrong GitHub account or may not have accepted the invitation yet. Email [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) if access is still missing. Do not make assessed work public to solve an access problem.
+
+## Free Python & programming reading (optional)
+
+Nothing here is required — the weekly notebooks and the [Python Basics notebook](notebooks/Python_Basics.ipynb) cover everything you need for class and assessments. If you want extra explanations, practice, or a free online book to read at your own pace, start with one of these beginner-friendly resources:
+
+| Resource | Best for | Cost |
+|---|---|---|
+| [Python Basics notebook](notebooks/Python_Basics.ipynb) (this course) | Quick reference for every Python pattern used in Weeks 1–10 — runnable in Colab. | Free |
+| [Python for Everybody (PY4E)](https://www.py4e.com/book) — Charles Severance | Complete beginners from non-CS backgrounds; clear chapters on variables, functions, files, dictionaries, and data (HTML, PDF, and videos). | Free |
+| [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) — Al Sweigart | Practical, step-by-step Python for everyday work (lists, dictionaries, strings, reading/writing files). | Free online |
+| [Think Python (3rd edition)](https://greenteapress.com/wp/think-python-3rd-edition/) — Allen B. Downey | Building mental models of how programs work, with interactive Jupyter notebooks you can run in Colab. | Free online |
+| [Python Tutor](https://pythontutor.com/python-compiler.html) | Seeing code run one line at a time — paste a short function to watch variables, lists, and dictionaries change visually. | Free |
+| [The Official Python Tutorial](https://docs.python.org/3/tutorial/) | Checking how a Python feature works once you are comfortable with the basics. | Free |
+
+**Tip:** pick **one** book or tool that matches your style rather than trying to read all of them. When you feel stuck on a loop or dictionary, pasting a 5-line example into **Python Tutor** is often the fastest way to see what is happening.

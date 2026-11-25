@@ -16,7 +16,7 @@
 
 - ប្រសិនបើ Colab ប្រាប់ថា runtime ត្រូវបាន reset ឬដាច់ការតភ្ជាប់ (disconnected) សូម Run setup cell ម្ដងទៀត។ បន្ទាប់មក សូម Run cell ដែលអ្នកត្រូវការ។
 - នៅពេលអ្នកច្រឡំ សូមប្រើ **Runtime → Restart session and run all**។ វា Run អ្វីៗទាំងអស់ឡើងវិញពីដំបូង តាមលំដាប់។
-- File ដែល code របស់អ្នកសរសេរ (ឧទាហរណ៍ `my_offers.json` ក្នុងសប្ដាហ៍ទី 7 (កំពុងធ្វើបច្ចុប្បន្នភាព)) ស្ថិតនៅក្នុង folder បណ្ដោះអាសន្ន។ វា **បាត់ទៅវិញ នៅពេល runtime reset**។ ចំណែក notebook របស់អ្នកផ្ទាល់ នៅមានសុវត្ថិភាពក្នុង Drive។
+- **ចាប់ពីសប្ដាហ៍ទី 4 តទៅ** setup cell នឹងសួរដើម្បីភ្ជាប់ Google Drive ដើម្បីឱ្យ folder `my_foodbridge/` របស់អ្នកត្រូវបានរក្សាទុកក្នុង `MyDrive/my_foodbridge` ហើយនៅជាមួយអ្នកពីសប្ដាហ៍មួយទៅសប្ដាហ៍មួយ។ ប្រសិនបើអ្នកមិនអនុញ្ញាតឱ្យភ្ជាប់ Drive ទេ Colab នឹងរក្សា `my_foodbridge/` ក្នុង folder បណ្ដោះអាសន្នសម្រាប់វគ្គនោះប៉ុណ្ណោះ — វា **បាត់ទៅវិញនៅពេល runtime ដាច់ការតភ្ជាប់** (សូមទាញយកច្បាប់ចម្លង ឬភ្ជាប់ Drive វិញ ប្រសិនបើអ្នកចង់រក្សាទុក file របស់អ្នក)។ ចំណែក notebook របស់អ្នកផ្ទាល់ នៅមានសុវត្ថិភាពក្នុង Drive ជានិច្ច នៅពេលអ្នក save ច្បាប់ចម្លង។
 - បច្ចុប្បន្ន Colab ប្រើ Python 3.13 (បានពិនិត្យនៅខែវិច្ឆិកា ឆ្នាំ 2026)។ វគ្គសិក្សានេះដំណើរការជាមួយ Python ណាក៏បាន ចាប់ពី 3.9 ឡើងទៅ។ ដូច្នេះ Colab កំណែថ្មីជាងនេះ ក៏មិនអីដែរ។
 
 ## ជម្រើស B · កុំព្យូទ័រផ្ទាល់ខ្លួនរបស់អ្នក
@@ -24,10 +24,10 @@
 ប្រសិនបើ Colab មិនមែនជាជម្រើសសម្រាប់អ្នកទេ notebook ដដែលនេះ ក៏ដំណើរការនៅលើកុំព្យូទ័រផ្ទាល់ខ្លួនរបស់អ្នកបានដែរ។ សូមប្រើជម្រើសនេះ ប្រសិនបើអ្នកចូលចិត្តធ្វើការដោយគ្មាន internet (offline)។
 
 1. Install **Python 3** កំណែចុងក្រោយពី [python.org](https://www.python.org/downloads/) (កំណែណាក៏បាន ចាប់ពី 3.9 ឡើងទៅ ក៏ប្រើបានដែរ)។
-2. Install Jupyter៖ បើក terminal ហើយ Run `python -m pip install notebook` (នៅលើកុំព្យូទ័រខ្លះ ត្រូវប្រើ `python3 -m pip install notebook`)។
+2. Install Jupyter និង matplotlib៖ បើក terminal ហើយ Run `python -m pip install notebook matplotlib` (នៅលើកុំព្យូទ័រខ្លះ ត្រូវប្រើ `python3 -m pip install notebook matplotlib`)។ `matplotlib` ត្រូវបានប្រើសម្រាប់គូរក្រាហ្វ (chart) ក្នុងសប្ដាហ៍ទី 8–9។
 3. នៅទំព័រដើមរបស់វគ្គសិក្សា សូមប្រើ **Download** ដើម្បីរក្សាទុក file `.ipynb` របស់សប្ដាហ៍នោះ ក្នុង folder មួយ។
 4. ក្នុង terminal នៅ folder នោះ សូម Run `python -m notebook` ហើយបើក file នោះ។
-5. ចូរ Run setup cell។ វាបង្កើត folder `foodbridge_kit` នៅជាប់នឹង notebook។
+5. ចូរ Run setup cell។ វាបង្កើត folder `foodbridge_kit` (ហើយចាប់ពីសប្ដាហ៍ទី 4 តទៅ ក៏បង្កើត folder `my_foodbridge` របស់អ្នកដែរ) នៅជាប់នឹង notebook។
 
 VS Code ជាមួយ extension Python និង Jupyter ក៏ប្រើបានដែរ៖ បើក file `.ipynb` ហើយជ្រើសរើស kernel Python 3។
 
@@ -52,6 +52,7 @@ VS Code ជាមួយ extension Python និង Jupyter ក៏ប្រើប
 | ឈ្មោះមួយដែលអ្នកបានកំណត់ ត្រូវបានប្រាប់ថា "not defined" | ចូរ Run cell ដែលកំណត់ឈ្មោះនោះ ឬប្រើ **Restart session and run all**។ |
 | ការពិនិត្យមួយបង្ហាញ ❌ | សូមអានការណែនាំ 💡 នៅខាងក្រោមវា។ ការពិនិត្យមិនដែលបញ្ឈប់ notebook របស់អ្នកទេ៖ សូមកែ ហើយ Run ម្ដងទៀត។ |
 | `⚠️ … របស់អ្នកមិនដំណើរការ ប្រព័ន្ធបានប្រើ default` | function របស់អ្នកបាន crash ឬបាន return អ្វីមួយដែលមិនបានរំពឹងទុក។ ដូច្នេះ ប្រព័ន្ធបានប្រើវិធានរបស់ខ្លួនវាជំនួស។ សូមអានសារនោះ។ |
-| setup cell បង្ហាញលេខ version ថ្មី | មិនអីទេ៖ វគ្គសិក្សាកំណែថ្មីជាងមួយ ត្រូវបានពន្លា (unpack)។ `my_settings.py` និង `my_rules.py` របស់អ្នក នៅដដែល។ |
+| `bridge.show()` សម្គាល់ file មួយដោយ `🔧` (កំណែគំរូ) | file នោះមិនទាន់មានក្នុង `my_foodbridge/` ឬវាមានកំហុស Python។ សូមអានកំណត់ចំណាំបញ្ហាក្នុង `bridge.show()` ហើយ Run cell `%%writefile` ម្ដងទៀត ឬកែ file នោះ។ |
+| setup cell បង្ហាញលេខ version ថ្មី | មិនអីទេ៖ វគ្គសិក្សាកំណែថ្មីជាងមួយ ត្រូវបានពន្លា (unpack)។ folder `my_foodbridge/` របស់អ្នក (និង `my_settings.py` / `my_rules.py` ពីមុន) នៅដដែល។ |
 
 នៅតែមិនទាន់ដោះស្រាយបាន? សូមមើល [សំណួរ និងជំនួយ (English)](../CONTRIBUTING.md)។

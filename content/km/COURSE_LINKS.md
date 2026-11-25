@@ -24,3 +24,18 @@ form ការឆ្លុះបញ្ចាំងខាងលើ គឺសម�
 ការបង្ហាញ Final project ធ្វើនៅ **សប្ដាហ៍ទី 10**។ សូមអាន មគ្គុទ្ទេសក៍ Final project (កំពុងធ្វើបច្ចុប្បន្នភាព) និង [ការវាយតម្លៃ](ASSESSMENT.md) មុនពេលអ្នកចាប់ផ្ដើម។
 
 ប្រសិនបើ link ទៅ repository ឯកជន ឬ notebook បង្ហាញ "not found" អ្នកប្រហែលជាបាន sign in ក្នុងគណនី GitHub ខុស។ ឬ អ្នកមិនទាន់បានទទួលយកការអញ្ជើញទេ។ សូមផ្ញើ email ទៅ [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com) ប្រសិនបើអ្នកនៅតែមិនអាចចូលបាន។ កុំដាក់ការងារដែលត្រូវវាយតម្លៃជាសាធារណៈ ដើម្បីដោះស្រាយបញ្ហាការចូលប្រើ។
+
+## ឯកសារអានបន្ថែមអំពី Python និងការសរសេរកម្មវិធីដោយឥតគិតថ្លៃ (ស្រេចចិត្ត)
+
+ឯកសារខាងក្រោមមិនមែនជាកាតព្វកិច្ចទេ — notebook ប្រចាំសប្ដាហ៍ និង [notebook មូលដ្ឋានគ្រឹះ Python](notebooks/Python_Basics.ipynb) គ្របដណ្ដប់គ្រប់យ៉ាងដែលអ្នកត្រូវការសម្រាប់ថ្នាក់ និងការវាយតម្លៃ។ ប្រសិនបើអ្នកចង់អានការពន្យល់បន្ថែម ហាត់ធ្វើលំហាត់ ឬអានសៀវភៅអនឡាញឥតគិតថ្លៃតាមល្បឿនផ្ទាល់ខ្លួន សូមចាប់ផ្ដើមពីប្រភពណាមួយខាងក្រោម (ភាគច្រើនជាភាសាអង់គ្លេស)៖
+
+| ប្រភព | សមស្របសម្រាប់ | តម្លៃ |
+|---|---|---|
+| [notebook មូលដ្ឋានគ្រឹះ Python](notebooks/Python_Basics.ipynb) (វគ្គសិក្សានេះ) | ឯកសារយោងរហ័សសម្រាប់គ្រប់ទម្រង់ Python ដែលប្រើក្នុងសប្ដាហ៍ទី 1–10 — អាច Run ក្នុង Colab បាន។ | ឥតគិតថ្លៃ |
+| [Python for Everybody (PY4E)](https://www.py4e.com/book) — Charles Severance | អ្នកចាប់ផ្ដើមដំបូងដែលមិនមានមូលដ្ឋានវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ជំពូកច្បាស់លាស់អំពី variable, function, file, dictionary និងទិន្នន័យ (HTML, PDF និងវីដេអូ)។ | ឥតគិតថ្លៃ |
+| [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) — Al Sweigart | ការប្រើ Python ជាក់ស្ដែងសម្រាប់ការងារប្រចាំថ្ងៃ (list, dictionary, string, ការអាន និងសរសេរ file)។ | ឥតគិតថ្លៃតាមអនឡាញ |
+| [Think Python (កំណែទី 3)](https://greenteapress.com/wp/think-python-3rd-edition/) — Allen B. Downey | ការបង្កើតគំនិតយល់ពីរបៀបដំណើរការរបស់កម្មវិធី ដោយមាន Jupyter notebook ដែលអាច Run ក្នុង Colab បាន។ | ឥតគិតថ្លៃតាមអនឡាញ |
+| [Python Tutor](https://pythontutor.com/python-compiler.html) | មើលកូដដំណើរការម្ដងមួយបន្ទាត់ — បិទភ្ជាប់ function ខ្លីមួយ ដើម្បីមើល variable, list និង dictionary ផ្លាស់ប្ដូរជាគំនូរ។ | ឥតគិតថ្លៃ |
+| [The Official Python Tutorial](https://docs.python.org/3/tutorial/) | ពិនិត្យមើលរបៀបដំណើរការរបស់ Python នៅពេលអ្នកស្គាល់មូលដ្ឋានគ្រឹះរួចហើយ។ | ឥតគិតថ្លៃ |
+
+**គន្លឹះ៖** ចូរជ្រើសរើសសៀវភៅ ឬឧបករណ៍ **តែមួយ** ដែលសមនឹងរបៀបរៀនរបស់អ្នក ជំនួសឱ្យការព្យាយាមអានទាំងអស់។ នៅពេលអ្នកជាប់គាំងលើ loop ឬ dictionary ការយកឧទាហរណ៍ 5 បន្ទាត់ទៅដាក់ក្នុង **Python Tutor** ជារឿយៗគឺជាវិធីលឿនបំផុតដើម្បីមើលឃើញអ្វីដែលកំពុងកើតឡើង។

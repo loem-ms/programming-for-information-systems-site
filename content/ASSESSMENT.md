@@ -37,20 +37,19 @@ AI tools are allowed for research. If you use one, check at least one claim your
 
 After the weekly participation and research tasks, the midterm is the first component you complete entirely on your own.
 
-**When:** Week 4, Session 3 (90 minutes). **Notebook:** [`Midterm.ipynb`](notebooks/Midterm.ipynb). **Individual work.** Allowed: your own notes, the weekly notebooks and the Python Basics notebook. **Not allowed:** AI tools, messaging or sharing code.
+**When:** Week 4, Session 3 (**60 minutes** individual exam + **30 minutes** setup, submission & live debrief). **Access:** [Midterm page](MIDTERM.md) (PIN code shared in class). **Individual work.** Allowed: your own notes, the weekly notebooks and the Python Basics notebook. **Not allowed:** AI tools, messaging or sharing code.
 
-The midterm tests **understanding** of Weeks 1–4, not memory.
+The midterm tests **understanding** of Weeks 1–4 in a new everyday setting (**Campus Library Desk**), not memory.
 
 | Part | Task | Points |
 |---|---|---:|
-| A | Read five short pieces of code and explain *why* they behave as they do | 20 |
-| B | Write a rule: `volunteers_needed(portions)` with a named constant | 20 |
-| C | Work with records: `plan_day(offers)` returns a summary of the day | 25 |
-| D | Write tests that catch planted bugs | 15 |
-| E | Judge AI-written code: find the problems and who they harm | 10 |
-| F | Make a decision, rerun everything cleanly, and log it | 10 |
+| 1 | Read & trace code by hand (types, loop trace, `print` vs `return`, records) | 24 |
+| 2 | Turn a flowchart into a rule function (`loan_action`) + explain a policy change | 24 |
+| 3 | Work with records: `desk_summary(loans)` returns a summary dictionary | 28 |
+| 4 | Audit, test & repair AI-written code (`most_overdue_id`) + harm report | 24 |
+| End | **My key line** (mandatory ownership check) + clean run | required |
 
-After you submit, a **3-minute oral check**: the instructor points at one line of your code and one test, and you explain them. If you cannot explain your own code, the marks for that part can be reduced.
+After you submit, a short **2–3 minute oral check**: the instructor asks about your **My key line** and one other line or test from your notebook. If you cannot explain your own code, the marks for that part can be reduced.
 
 ## Final project (being updated) (30%)
 

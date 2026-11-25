@@ -16,7 +16,7 @@ Read this page before you open your first notebook, and come back to it whenever
 
 - If Colab says the runtime was reset or disconnected, run the setup cell again, then the cells you need.
 - When confused, use **Runtime → Restart session and run all**. This runs everything fresh, in order.
-- Files that your code writes (for example `my_offers.json` in Week 7 (being updated)) live in a temporary folder and **disappear when the runtime resets**. Your notebook itself is safe in Drive.
+- **From Week 4 onward**, the setup cell offers to connect Google Drive so your `my_foodbridge/` folder is saved in `MyDrive/my_foodbridge` and stays with you from week to week. If you decline Drive access, Colab keeps `my_foodbridge/` in a temporary folder for the current session only — it **disappears when the runtime disconnects** (download a copy or reconnect Drive if you want to keep your files). Your notebook itself is always safe in Drive once you save a copy.
 - Colab currently uses Python 3.13 (checked in November 2026). The course works with any Python from 3.9 on, so a newer Colab version is fine.
 
 ## Option B · Your own computer
@@ -24,10 +24,10 @@ Read this page before you open your first notebook, and come back to it whenever
 If Colab is not an option for you, the same notebooks also run on your own computer. Use this if you prefer working offline.
 
 1. Install the latest **Python 3** from [python.org](https://www.python.org/downloads/) (any version from 3.9 on works).
-2. Install Jupyter: open a terminal and run `python -m pip install notebook` (on some computers, `python3 -m pip install notebook`).
+2. Install Jupyter and matplotlib: open a terminal and run `python -m pip install notebook matplotlib` (on some computers, `python3 -m pip install notebook matplotlib`). `matplotlib` is used for charts in Weeks 8–9.
 3. On the course home, use **Download** to save the week's `.ipynb` file into a folder.
 4. In a terminal in that folder, run `python -m notebook` and open the file.
-5. Run the setup cell. It creates a `foodbridge_kit` folder next to the notebook.
+5. Run the setup cell. It creates a `foodbridge_kit` folder (and, from Week 4 onward, your `my_foodbridge` folder) next to the notebook.
 
 VS Code with the Python and Jupyter extensions also works: open the `.ipynb` file and choose a Python 3 kernel.
 
@@ -52,6 +52,7 @@ Most problems have a quick fix. Find what you see in the table and do what it sa
 | A name you defined is "not defined" | Run the cell that defines it, or use **Restart session and run all**. |
 | A check shows ❌ | Read the 💡 hint under it. The check never stops your notebook; fix and run again. |
 | `⚠️ your … fell back to the default` | Your function crashed or returned something unexpected; the system used its own rule. Read the message. |
-| The setup cell shows a new version number | Fine: a newer course version was unpacked. Your `my_settings.py` and `my_rules.py` were kept. |
+| `bridge.show()` marks a file with `🔧` (model version) | Either that file is not in `my_foodbridge/` yet, or it has a Python error. Check the problem note in `bridge.show()` and re-run the `%%writefile` cell or fix the file. |
+| The setup cell shows a new version number | Fine: a newer course version was unpacked. Your `my_foodbridge/` folder (and any earlier `my_settings.py` / `my_rules.py`) were kept. |
 
 Still stuck? See [questions and help](CONTRIBUTING.md).

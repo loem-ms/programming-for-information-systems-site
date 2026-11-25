@@ -30,6 +30,34 @@
           {
             "file": "content/notebooks/Week_03.ipynb",
             "title": "Week 3 · Records and data"
+          },
+          {
+            "file": "content/notebooks/Week_04.ipynb",
+            "title": "Week 4 · Functions you can trust · Your first files · Midterm"
+          },
+          {
+            "file": "content/notebooks/Week_05.ipynb",
+            "title": "Week 5 · Checking input"
+          },
+          {
+            "file": "content/notebooks/Week_06.ipynb",
+            "title": "Week 6 · Lifecycles"
+          },
+          {
+            "file": "content/notebooks/Week_07.ipynb",
+            "title": "Week 7 · Saving and history"
+          },
+          {
+            "file": "content/notebooks/Week_08.ipynb",
+            "title": "Week 8 · Reports, screens and a first chart"
+          },
+          {
+            "file": "content/notebooks/Week_09.ipynb",
+            "title": "Week 9 · Assemble and analyse"
+          },
+          {
+            "file": "content/notebooks/Week_10.ipynb",
+            "title": "Week 10 · Verify, hand over, present"
           }
         ]
       },
@@ -37,8 +65,8 @@
         "title": "Midterm",
         "children": [
           {
-            "file": "content/notebooks/Midterm.ipynb",
-            "title": "Midterm · Plan the day"
+            "file": "content/MIDTERM.md",
+            "title": "Midterm · Campus Library Desk"
           }
         ]
       },
@@ -63,7 +91,7 @@
           },
           {
             "file": "content/COURSE_LINKS.md",
-            "title": "Course links and reflection"
+            "title": "Course links & extra reading"
           },
           {
             "file": "content/CONTRIBUTING.md",
@@ -100,6 +128,34 @@
               {
                 "file": "content/km/notebooks/Week_03.ipynb",
                 "title": "សប្ដាហ៍ទី 3 · Records និងទិន្នន័យ"
+              },
+              {
+                "file": "content/km/notebooks/Week_04.ipynb",
+                "title": "សប្ដាហ៍ទី 4 · Functions ដែលអាចទុកចិត្តបាន · file ដំបូងរបស់អ្នក · Midterm"
+              },
+              {
+                "file": "content/km/notebooks/Week_05.ipynb",
+                "title": "សប្ដាហ៍ទី 5 · ការពិនិត្យ input"
+              },
+              {
+                "file": "content/km/notebooks/Week_06.ipynb",
+                "title": "សប្ដាហ៍ទី 6 · Lifecycle"
+              },
+              {
+                "file": "content/km/notebooks/Week_07.ipynb",
+                "title": "សប្ដាហ៍ទី 7 · ការរក្សាទុក និងប្រវត្តិ"
+              },
+              {
+                "file": "content/km/notebooks/Week_08.ipynb",
+                "title": "សប្ដាហ៍ទី 8 · របាយការណ៍ អេក្រង់ និងក្រាហ្វដំបូង"
+              },
+              {
+                "file": "content/km/notebooks/Week_09.ipynb",
+                "title": "សប្ដាហ៍ទី 9 · ការផ្គុំប្រព័ន្ធ និងការវិភាគទិន្នន័យ"
+              },
+              {
+                "file": "content/km/notebooks/Week_10.ipynb",
+                "title": "សប្ដាហ៍ទី 10 · ផ្ទៀងផ្ទាត់ ប្រគល់ និងបង្ហាញ"
               }
             ]
           },
@@ -107,8 +163,8 @@
             "title": "Midterm",
             "children": [
               {
-                "file": "content/km/notebooks/Midterm.ipynb",
-                "title": "Midterm · រៀបចំផែនការសម្រាប់មួយថ្ងៃ"
+                "file": "content/km/MIDTERM.md",
+                "title": "Midterm · តុបណ្ណាល័យសាកលវិទ្យាល័យ"
               }
             ]
           },
@@ -129,7 +185,7 @@
               },
               {
                 "file": "content/km/COURSE_LINKS.md",
-                "title": "Links និងការឆ្លុះបញ្ចាំង (reflection)"
+                "title": "Links និងឯកសារអានបន្ថែម"
               }
             ]
           }
@@ -140,7 +196,8 @@
       "content/slides",
       "content/downloads",
       "content/assets",
-      "content/wip"
+      "content/wip",
+      "content/exam"
     ],
     "exclude": [
       "README.md",

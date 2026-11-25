@@ -53,8 +53,6 @@ Every week has a **⚖️ Good or risky?** exercise: two versions of code that b
 
 ## The ten weeks
 
-**Weeks 4–10 are being updated.** The new materials will be posted here before each class, so the plan below may still change.
-
 Read this table as a journey that starts with the paper notebook. In Week 1 you meet the finished system that replaces it. From Week 2 you rebuild that system yourself, one part per week: first the rules the notebook left in people's heads, then one record for each real offer, then functions you can trust, checks at the door, safe lifecycles, saving and history, and reports for the right readers. Each week removes one way the notebook failed on that busy morning.
 
 | Week | Topic | Python you learn | Part you build | Your decision |
@@ -62,13 +60,13 @@ Read this table as a journey that starts with the paper notebook. In Week 1 you 
 | 1 | [What is an information system?](notebooks/Week_01.ipynb) | values, names, types, f-strings | an offer summary | the system's name |
 | 2 | [Rules and decisions](notebooks/Week_02.ipynb) | comparisons, `if`/`elif`/`else`, a first function | `pickup_label`, `urgency` | team size, urgency hours |
 | 3 | [Records and data](notebooks/Week_03.ipynb) | lists, dictionaries, `for` loops, totals | `total_portions`, `find_offer` | food categories |
-| 4 | Functions you can trust · **Midterm** (being updated) | `def`, `return`, docstrings, `assert` tests | `open_portions` + tests | which statuses count as open |
-| 5 | Checking input (being updated) | strings, `int()`, `try`/`except` | `clean_offer` | limits and required fields |
-| 6 | Objects and lifecycles (being updated) | classes, objects, methods | `can_move` | whether approval is required |
-| 7 | Saving and history (being updated) | files, `with`, JSON | `to_record`, `from_record` | what the history keeps |
-| 8 | Reports and screens (being updated) | sorting with a key, formatting, a menu | `public_row`, `handle_choice` | what the public sees |
-| 9 | Putting the system together (being updated) | modules, `import` | your whole system | every setting; optional web page |
-| 10 | Verify, hand over, present (being updated) | tests, clean runs, code review | the finished final project | — |
+| 4 | [Functions you can trust · Your first files · **Midterm**](notebooks/Week_04.ipynb) | `def`, `return`, docstrings, `assert` tests, `%%writefile` | `rules.py`, `records.py` (`open_portions`) | rule constants in `rules.py` |
+| 5 | [Checking input](notebooks/Week_05.ipynb) | strings, `int()`, `try`/`except`, error list | `data_model.py`: `clean_offer` | limits and required fields |
+| 6 | [Lifecycles](notebooks/Week_06.ipynb) | dict of lists, `in`, `.get()`, `while` loops | `lifecycle.py`: `ALLOWED_MOVES`, `can_move` | whether approval is required |
+| 7 | [Saving and history](notebooks/Week_07.ipynb) | files, `with`, JSON, JSON Lines, safe save | `storage.py`: save, load, history | what the history keeps |
+| 8 | [Reports, screens and a first chart](notebooks/Week_08.ipynb) | `sorted` with a key, formatting, matplotlib bar chart | `report.py`: `public_row`, `most_urgent_first`, `portions_by_status` | what the public sees |
+| 9 | [Assemble and analyse](notebooks/Week_09.ipynb) | `import`, `if __name__ == "__main__"`, CSV, line chart & histogram | `app.py` (menu + browser screen) & semester analysis | all settings |
+| 10 | [Verify, hand over, present](notebooks/Week_10.ipynb) | `test_…()` in `tests.py`, clean runs, AI code review | `tests.py`, `README.md`, presentation | — |
 
 By Week 9 the parts work together as one system, with your own decisions in it. Week 10 closes the journey: you verify the system before you trust it, and you hand it over so that someone else can run the busy morning. The notebook's last weakness — that only the person who wrote it could use it — is gone.
 
@@ -79,9 +77,9 @@ Each week has three 90-minute sessions and one notebook.
 | Part | What happens |
 |---|---|
 | **Class warm-up** | Share your research task in small groups (Weeks 2, 3 and 5–8). |
-| **Session 1 · Learn** | One information-systems idea, then the Python for it: explain, run, **predict**, check. |
-| **Session 2 · Practise and judge** | Short exercises, then **⚖️ Good or risky?** |
-| **Session 3 · Build** | Write this week's part, check it (✅/❌), plug it into the real system, and record **your decision**. |
+| **Session 1 · Learn and try** | One information-systems idea, then the Python for it: explain, run, **predict**, **try it** (short checked exercises). |
+| **Session 2 · Practise and judge** | This week's ticket, model it on paper, a 3-step ladder, then **⚖️ Good or risky?** |
+| **Session 3 · Build** | Write this week's file (`%%writefile`), check it (✅/❌), see your system (`bridge.show`), and record **your decision**. |
 | **Finish** | A checklist, the research task (if any) and a look at next week. |
 
 **The minimum is always reachable.** If you run every cell and complete the ⭐ tasks, you have a working part. ⭐⭐ tasks are for going further with a little more thinking.

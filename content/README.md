@@ -20,20 +20,18 @@ AI can now write a lot of code, and it gets better every year. But an AI cannot 
 
 ## How the course flows
 
-**Weeks 4–10 are being updated.** The new materials will be posted here before each class, so the plan below may still change.
-
 The ten weeks follow the story of that notebook. Each week replaces one weakness of the paper notebook with one part of the system, and each part brings one principle with it.
 
 - **Week 1 — [What is an information system?](notebooks/Week_01.ipynb)** · Clear names and units: you meet the finished system and learn to name things clearly, so nothing is a scribble that only one person understands.
 - **Week 2 — [Rules and decisions](notebooks/Week_02.ipynb)** · Explicit rules: the decisions the coordinator kept in her head are written down as rules that are stated plainly and tested.
 - **Week 3 — [Records and data](notebooks/Week_03.ipynb)** · One record per real thing: every offer gets one record of its own, so no phone number is written twice and no offer is lost in a margin.
-- **Week 4 — Functions you can trust (being updated)** · One function, one job: the parts are built as small functions you can test and trust, and the Midterm checks the system so far.
-- **Week 5 — Checking input (being updated)** · Never trust input: a wrong or incomplete offer is refused at the door, instead of being copied into the book and causing trouble later.
-- **Week 6 — Objects and lifecycles (being updated)** · Make wrong states hard to reach: an offer can only move through the steps that make sense, so a promise cannot quietly jump to the wrong state.
-- **Week 7 — Saving and history (being updated)** · Never lose data: the day no longer disappears when the book is closed, and the history shows what was promised to whom.
-- **Week 8 — Reports and screens (being updated)** · Right information for the right person: the coordinator sees the full report, while the public board shows no private phone numbers.
-- **Week 9 — Putting the system together (being updated)** · Separate what changes from what stays: the parts you built become one system of your own.
-- **Week 10 — Verify, hand over, present (being updated)** · Verify before you trust: you test the finished system and hand it over, so the next coordinator can run the busy morning without you.
+- **Week 4 — [Functions you can trust · Your first files · Midterm](notebooks/Week_04.ipynb)** · One function, one job: the parts are built as small functions you can test and trust, moved into your first system files, and the Midterm checks the system so far.
+- **Week 5 — [Checking input](notebooks/Week_05.ipynb)** · Never trust input: a wrong or incomplete offer is refused at the door, instead of being copied into the book and causing trouble later.
+- **Week 6 — [Lifecycles](notebooks/Week_06.ipynb)** · Make wrong states hard to reach: an offer can only move through the steps that make sense, so a promise cannot quietly jump to the wrong state.
+- **Week 7 — [Saving and history](notebooks/Week_07.ipynb)** · Never lose data: the day no longer disappears when the book is closed, and the history shows what was promised to whom.
+- **Week 8 — [Reports, screens and a first chart](notebooks/Week_08.ipynb)** · Right information for the right person: the coordinator sees the full report and a first chart, while the public board shows no private phone numbers.
+- **Week 9 — [Assemble and analyse](notebooks/Week_09.ipynb)** · Separate what changes from what stays: you analyse a semester of data for patterns and connect your files into one working system (menu and browser screen).
+- **Week 10 — [Verify, hand over, present](notebooks/Week_10.ipynb)** · Verify before you trust: you test the finished system and hand it over, so the next coordinator can run the busy morning without you.
 
 ## Start here
 
@@ -51,7 +49,13 @@ New here? Read the [course guide](COURSE_GUIDE.md) first: it explains the idea o
 | **1** · What is an information system? | Clear names and units | [Notebook](notebooks/Week_01.ipynb) | [PDF](/slides/Week_01_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_01.ipynb) | [.ipynb](/downloads/Week_01.ipynb) |
 | **2** · Rules and decisions | Explicit rules | [Notebook](notebooks/Week_02.ipynb) | [PDF](/slides/Week_02_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_02.ipynb) | [.ipynb](/downloads/Week_02.ipynb) |
 | **3** · Records and data | One record per real thing | [Notebook](notebooks/Week_03.ipynb) | [PDF](/slides/Week_03_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_03.ipynb) | [.ipynb](/downloads/Week_03.ipynb) |
-| **4–10** · Being updated | New materials are posted before each class | — | — | — | — |
+| **4** · Functions you can trust · Your first files · Midterm | One function, one job | [Notebook](notebooks/Week_04.ipynb) | [PDF](/slides/Week_04_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_04.ipynb) | [.ipynb](/downloads/Week_04.ipynb) |
+| **5** · Checking input | Never trust input | [Notebook](notebooks/Week_05.ipynb) | [PDF](/slides/Week_05_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_05.ipynb) | [.ipynb](/downloads/Week_05.ipynb) |
+| **6** · Lifecycles | Make wrong states hard to reach | [Notebook](notebooks/Week_06.ipynb) | [PDF](/slides/Week_06_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_06.ipynb) | [.ipynb](/downloads/Week_06.ipynb) |
+| **7** · Saving and history | Never lose data | [Notebook](notebooks/Week_07.ipynb) | [PDF](/slides/Week_07_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_07.ipynb) | [.ipynb](/downloads/Week_07.ipynb) |
+| **8** · Reports, screens and a first chart | Right information for the right person | [Notebook](notebooks/Week_08.ipynb) | [PDF](/slides/Week_08_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_08.ipynb) | [.ipynb](/downloads/Week_08.ipynb) |
+| **9** · Assemble and analyse | Separate what changes from what stays | [Notebook](notebooks/Week_09.ipynb) | [PDF](/slides/Week_09_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_09.ipynb) | [.ipynb](/downloads/Week_09.ipynb) |
+| **10** · Verify, hand over, present | Verify before you trust | [Notebook](notebooks/Week_10.ipynb) | [PDF](/slides/Week_10_Slides.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Week_10.ipynb) | [.ipynb](/downloads/Week_10.ipynb) |
 
 **Before you edit a notebook in Colab: click Copy to Drive (or File → Save a copy in Drive).** Every notebook unpacks the course system itself; nothing to upload. The [FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) is the complete system for running at home.
 
@@ -59,7 +63,7 @@ New here? Read the [course guide](COURSE_GUIDE.md) first: it explains the idea o
 
 | | When | Read | Slides | Run |
 |---|---|---|---|---|
-| **Midterm · Plan the day** | Week 4, Session 3 | [Notebook](notebooks/Midterm.ipynb) | [PDF](/slides/Midterm_Brief.pdf) | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Midterm.ipynb) |
+| **Midterm · Campus Library Desk** | Week 4, Session 3 | [Exam info & PIN](MIDTERM.md) | [PDF](/slides/Midterm_Brief.pdf) | [🔒 Unlock with PIN](/exam/midterm.html) |
 | **Python Basics · Quick lookup (optional)** | any week | [Notebook](notebooks/Python_Basics.ipynb) | — | [![Open in Colab](assets/badges/colab-badge.svg)](https://colab.research.google.com/github/loem-ms/programming-for-information-systems-site/blob/main/content/downloads/Python_Basics.ipynb) |
 | **Orientation** (first class) | Week 1 | [Course guide](COURSE_GUIDE.md) | [PDF](/slides/Orientation.pdf) | — |
 
@@ -70,6 +74,7 @@ New here? Read the [course guide](COURSE_GUIDE.md) first: it explains the idea o
 - [Assessment](ASSESSMENT.md): how you are graded, and the rules for AI tools
 - [Research tasks](RESEARCH.md): the six short research tasks and when they are shared
 - Final project (being updated): the four levels, from "run it" to "web page"
-- [Instructor](INSTRUCTOR.md) · [Course links](COURSE_LINKS.md) · [Questions and help](CONTRIBUTING.md)
+- [Free Python & programming reading](COURSE_LINKS.md): optional free online books (PY4E, Automate the Boring Stuff, Think Python) and Python Tutor
+- [Instructor](INSTRUCTOR.md) · [Course links & extra reading](COURSE_LINKS.md) · [Questions and help](CONTRIBUTING.md)
 
 *Campus FoodBridge is fictional. All organisations, people and numbers in this course are invented.*
