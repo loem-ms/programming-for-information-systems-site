@@ -4,7 +4,8 @@
     python scripts/validate.py . --html _build/html --log myst-build.log   # after the build
 
 Before the build it checks that every page in myst.yml exists, every link and Colab
-button points to a real file, no instructor material is published, the kit ZIP passes
+button points to a real file, every embedded animation ({iframe}) and every link to this
+site's own assets is a real file, no instructor material is published, the kit ZIP passes
 its own tests, and every student notebook (English and Khmer) runs from top to bottom
 with this Python.
 After the build it checks the generated pages, the static downloads and the build log.
@@ -21,11 +22,17 @@ import subprocess
 import sys
 import tempfile
 import zipfile
+from html.parser import HTMLParser
 from pathlib import Path
 
 PUBLIC_REPO = "loem-ms/programming-for-information-systems-site"
 FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdM6P3ZrTaTwMAEcwZNa6-4Wl-ebus3ClRLIZinsTr4kXOBaA/viewform"
 COLAB = "https://colab.research.google.com/github/" + PUBLIC_REPO + "/blob/main/content/"
+SITE_ASSETS = "https://loem-ms.github.io/programming-for-information-systems-site/assets/"
+FENCE = re.compile(r"^[ \t]*(`{3,}|~{3,}|:{3,})(.*)$")
+ANIM_SRC = re.compile(re.escape(SITE_ASSETS) + r"anim/(?:km/)?[A-Za-z0-9_]+\.html")
+ANIM_PAGE = re.compile(r"(?:km/)?[A-Za-z0-9_]+\.html")
+CSS_REFERENCE = re.compile(r"""url\(\s*['"]?([^'")]*)['"]?\s*\)|@import\s+['"]([^'"]+)['"]""", re.I)
 PRIVATE = re.compile(r"programming-for-information-systems(?!-site)")
 INSTRUCTOR = re.compile(r"INSTRUCTOR MODEL ANSWER|instructor-only|```\{solution\}|Model answer\.")
 LINK = re.compile(r"\]\(([^)\s]+)\)")
@@ -52,8 +59,50 @@ def markdown_of(path):
     return "\n".join("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "markdown")
 
 
+def iframe_sources(text):
+    """The src of every {iframe} directive MyST would render: code blocks (``` with no {directive}) are skipped,
+    the bodies of other directives are not (they can hold nested directives)."""
+    sources, directives, code = [], [], None
+
+    def closes(opening, found):
+        return found.group(1)[0] == opening[0] and len(found.group(1)) >= len(opening) and not found.group(2).strip()
+    for line in text.splitlines():
+        found = FENCE.match(line)
+        if code:
+            if found and closes(code, found):
+                code = None
+            continue
+        if not found:
+            continue
+        info = found.group(2).strip()
+        if directives and closes(directives[-1], found):
+            directives.pop()
+        elif info.startswith("{"):
+            directives.append(found.group(1))
+            if re.match(r"\{iframe\}", info):
+                sources.append(info[len("{iframe}"):].strip())
+        else:
+            code = found.group(1)
+    return sources
+
+
+def check_anim_link(content, path, url, kind):
+    """An embedded or linked animation page: exactly assets/anim/(km/)<name>.html, the notebook's own edition,
+    and the file is published."""
+    km_notebook = "km" in path.relative_to(content).parts
+    if not ANIM_SRC.fullmatch(url):
+        require(False, kind + " that is not a course animation page in " + path.name + ": " + url)
+    elif url[len(SITE_ASSETS):].startswith("anim/km/") != km_notebook:
+        require(False, kind + " in the other language in " + str(path.relative_to(content)) + ": " + url)
+    else:
+        require((content / "assets" / url[len(SITE_ASSETS):]).is_file(),
+                kind + " is missing in " + path.name + ": " + url)
+
+
 def check_links(content, path):
     text = markdown_of(path)
+    for source in iframe_sources(text):           # animations: only pages of this site, and they must exist
+        check_anim_link(content, path, source, "Embedded page")
     for picture in REMOTE_PICTURE.findall(text):   # MyST downloads these on every build; one failure fails the build
         require(False, "Remote picture in " + path.name + " (use a copy under assets/): " + picture)
     for target in LINK.findall(text):
@@ -62,6 +111,15 @@ def check_links(content, path):
             continue
         if target.startswith("http"):
             require(not PRIVATE.search(target), "Link to the private repository in " + path.name + ": " + target)
+            if target.startswith(SITE_ASSETS + "anim/"):
+                check_anim_link(content, path, target, "Link to an animation")
+            elif target.startswith(SITE_ASSETS):
+                rest = target[len(SITE_ASSETS):].split("?")[0]
+                if "%" in rest or any(part in ("", ".", "..") for part in rest.split("/")):
+                    require(False, "Link to a site asset with an unusual path in " + path.name + ": " + target)
+                else:
+                    require((content / "assets" / rest).is_file(),
+                            "Link to a missing site asset in " + path.name + ": " + target)
             if "docs.google.com/forms" in target:
                 require(target == FORM, "Unapproved form link in " + path.name + ": " + target)
             if target.startswith(COLAB):
@@ -73,6 +131,70 @@ def check_links(content, path):
             continue
         else:
             require((path.parent / target).resolve().is_file(), "Broken link in " + path.name + ": " + target)
+
+
+class _Resources(HTMLParser):
+    """The files an HTML page loads: src= on any tag, href= on <link>, url() and @import in <style> and style=.
+    Text (for example inside <pre>) is not a reference."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.found, self.in_style = [], False
+
+    def handle_starttag(self, tag, attrs):
+        for key, value in attrs:
+            if key == "src" or (key == "href" and tag == "link"):
+                self.found.append(value or "")
+            elif key == "style" and value:
+                self.found += css_references(value)
+        self.in_style = tag == "style"
+
+    def handle_endtag(self, tag):
+        self.in_style = False
+
+    def handle_data(self, data):
+        if self.in_style:
+            self.found += css_references(data)
+
+
+def css_references(text):
+    return [url or imported for url, imported in CSS_REFERENCE.findall(text)]
+
+
+def anim_page_problems(folder):
+    """Problems in a folder of animation pages (build/anim or content/assets/anim): every page exists in both
+    editions (<name>.html and km/<name>.html), every file a page or a stylesheet loads exists in the folder,
+    and nothing is loaded from the network."""
+    folder = Path(folder).resolve()
+    found, pages = [], sorted(folder.rglob("*.html"))
+    names = {page.relative_to(folder).as_posix() for page in pages}
+    for name in sorted(names):
+        if not ANIM_PAGE.fullmatch(name):
+            found.append("Unexpected animation page (want <name>.html or km/<name>.html): " + name)
+        other = name[3:] if name.startswith("km/") else "km/" + name
+        if other not in names:
+            found.append("Animation page without its other edition: " + name + " (no " + other + ")")
+    for path in pages + sorted(folder.rglob("*.css")):
+        name, text = path.relative_to(folder).as_posix(), path.read_text(encoding="utf-8", errors="replace")
+        if path.suffix == ".css":
+            references = css_references(text)
+        else:
+            parser = _Resources()
+            parser.feed(text)
+            references = parser.found
+        for reference in references:
+            reference = reference.strip()
+            if reference.startswith(("#", "data:")):
+                continue
+            if not reference:
+                found.append("Animation file has an empty src/href: " + name)
+            elif re.match(r"(?i)([a-z][a-z0-9+.-]*:|//)", reference):
+                found.append("Animation file loads from the network (or another scheme): " + name + " -> " + reference)
+            else:
+                target = (path.parent / reference.split("#")[0].split("?")[0]).resolve()
+                if folder not in target.parents or not target.is_file():
+                    found.append("Animation file uses a missing file: " + name + " -> " + reference)
+    return found
 
 
 def check_notebook(path, colab):
@@ -220,6 +342,9 @@ def validate(folder, html=None, log=None, run=True):
             require('"iv":' in body and '"data":' in body, "Midterm page is not encrypted: " + exam_page.name)
             require("most_overdue_id" not in body and not INSTRUCTOR.search(body),
                     "Plaintext Midterm content leaked into " + exam_page.name)
+    if (content / "assets" / "anim").is_dir():
+        for problem in anim_page_problems(content / "assets" / "anim"):
+            require(False, problem)
     check_kit_zip(content / "downloads" / "foodbridge_kit.zip")
     if run and not problems:
         python = sys.version.split()[0]
