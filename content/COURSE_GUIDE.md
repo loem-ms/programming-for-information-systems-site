@@ -61,29 +61,46 @@ Read this table as a journey that starts with the paper notebook. In Week 1 you 
 | 2 | [Rules and decisions](notebooks/Week_02.ipynb) | comparisons, `if`/`elif`/`else`, a first function | `pickup_label`, `urgency` | team size, urgency hours |
 | 3 | [Records and data](notebooks/Week_03.ipynb) | lists, dictionaries, `for` loops, totals | `total_portions`, `find_offer` | food categories |
 | 4 | [Functions you can trust · Your first files · **Midterm**](notebooks/Week_04.ipynb) | `def`, `return`, docstrings, `assert` tests, creating `.py` files | `rules.py`, `records.py` (`open_portions`) | rule constants in `rules.py` |
-| 5 | [Checking input](notebooks/Week_05.ipynb) | strings, `int()`, `try`/`except`, error list, CSV, histogram | `data_model.py`: `clean_offer` | limits and required fields |
-| 6 | [Lifecycles](notebooks/Week_06.ipynb) | dict of lists, `in`, `.get()`, `while` loops, bar chart | `lifecycle.py`: `ALLOWED_MOVES`, `can_move` | whether approval is required |
-| 7 | [Saving and history](notebooks/Week_07.ipynb) | files, `with`, JSON, JSON Lines, safe save | `storage.py`: save, load, history | what the history keeps |
-| 8 | [Reports, screens and charts](notebooks/Week_08.ipynb) | `sorted` with a key, formatting, static HTML, horizontal bar chart | `report.py` & `public_board.html` | what the public sees |
-| 9 | [Assemble and analyse](notebooks/Week_09.ipynb) | `import`, `if __name__ == "__main__"`, CSV, line chart & rates | `app.py` (menu + browser screen) & semester analysis | all settings |
-| 10 | [Verify, hand over, present](notebooks/Week_10.ipynb) | `test_…()` in `tests.py`, clean runs, AI code review | `tests.py`, `README.md`, presentation | — |
+| 5 | [Checking input](notebooks/Week_05.ipynb) | string methods, `int()`, exceptions, `try`/`except`, an error list, returning two values | `data_model.py`: `clean_offer` | limits and required fields |
+| 6 | [Lifecycles](notebooks/Week_06.ipynb) | dict of lists, `in`, `.get()`, `while` loops, reading a class | `lifecycle.py`: `ALLOWED_MOVES`, `can_move` | whether approval is required |
+| 7 | [Saving and history](notebooks/Week_07.ipynb) | memory and disk, files, `with`, JSON, JSON Lines, safe save | `storage.py`: save, load, history | what the history keeps |
+| 8 | [Reports, screens and a first chart](notebooks/Week_08.ipynb) | `sorted` with a key, slices, counting into a dictionary, your first bar chart | `report.py` | what the public sees |
+| 9 | [Assemble and analyse](notebooks/Week_09.ipynb) | `import`, functions calling functions, `if __name__ == "__main__"`, a menu loop; data for decisions | `app.py` (menu + browser screen) & your project charter | all settings |
+| 10 | [Verify, hand over, present](notebooks/Week_10.ipynb) | `test_…()` in `tests.py`, clean runs, reading AI code | `tests.py`, your report, Demo day | — |
 
 By Week 9 the parts work together as one system, with your own decisions in it. Week 10 closes the journey: you verify the system before you trust it, and you hand it over so that someone else can run the busy morning. The notebook's last weakness — that only the person who wrote it could use it — is gone.
 
 ## How a week works
 
-Each week has three 90-minute sessions and one notebook.
+Each week has three 90-minute sessions and one notebook. From Week 4 every week has the same shape:
 
 | Part | What happens |
 |---|---|
 | **Class warm-up** | Share your research task in small groups (Weeks 2, 3 and 5–8). |
-| **Session 1 · Learn and try** | One information-systems idea, then the Python for it: explain, run, **predict**, **try it** (short checked exercises). |
-| **Session 2 · Practise and judge** | This week's ticket, model it on paper, a guided ladder (puzzle → code), then **⚖️ Good or risky?** |
-| **Session 3 · Build** | Write this week's file in `my_foodbridge/`, check it (✅/❌), see your system (`bridge.show`), and record **your decision**. |
-| **Finish** | A checklist, the research task (if any) and a look at next week. |
+| **Session 1 · Understand** | One information-systems idea, then four or five Python concepts. Each one is **explained** (what it is, why it exists, how Python runs it, where you meet it in real apps), shown in a short **example** that you **predict** before you run, and practised in a **✍️ Try it**. From the second Try it, you write some of the test cases yourself. You finish with three **🔁 Explain it back** questions. |
+| **Session 2 · Practise, then look under the hood** | First you practise: this week's ticket, model it on paper, a short ladder (puzzle → code). Then, together with the instructor, you look **under the hood**: how this week's file works and what happens if something changes, and **⚖️ Good or risky?** |
+| **Session 3 · Build and decide** | Write this week's file in `my_foodbridge/`, check it (✅/❌), see your system (`bridge.show`), make **your decision** with evidence from data, and write three lines in your **📓 project journal**. |
+| **Finish** | A checklist, **📚 Read more** (a Python Basics section and one chapter of a free book), the research task (if any) and a look at next week. |
 
-**The minimum is always reachable.** If you run every cell and complete the ⭐ tasks, you have a working part. ⭐⭐ tasks are for going further with a little more thinking.
+Weeks 1–3 have a lighter version of this shape, with your code in notebook cells instead of files.
+
+**The minimum is always reachable.** If you run every cell and complete the ⭐ tasks, you have a working part. ⭐⭐ tasks (at most two a week) are for going further with a little more thinking.
+
+## Research tasks
+
+Six short research tasks (5% each) take the course outside the notebook. In R1 and R2 you look at a real system you know. From Week 4, R3–R6 each teach you one programming concept before you need it, in four moves: **read** (a Python Basics section and one chapter of a free book), **ask** an AI about what stayed unclear, **check** one claim by running a tiny example, and **decide**: give your own view on a question that has no single right answer, such as *"Should a program crash, or keep going with a guess?"* See [research tasks](RESEARCH.md).
+
+## Your final project
+
+Your final project is your own `my_foodbridge/` folder, and it grows with you from Week 5:
+
+- **Weeks 5–9:** each week ends with three lines in your 📓 project journal: what your system does now, one decision you made, one idea for your Final.
+- **Week 8:** you choose one **extension** of your own, for example a new rule, a volunteer view or a weekly summary.
+- **Week 9:** you write a half-page **project charter**: who uses your system, your three decisions so far, your extension and how you will test it, and a first drawing of your system.
+- **Week 10:** you hand in your system and a short **report** (about two pages), then present it on **Demo day**: three minutes with your system poster, a live change, and one question.
+
+See the [final project guide](FINAL_PROJECT.md).
 
 ## Using AI tools
 
-You may use AI assistants to **explore and to ask questions**, except in the midterm and where a task says otherwise. Whatever you submit, you must be able to explain it: if you submit it, you are responsible for it, whoever wrote it. When an AI helps you, check at least one of its claims yourself and say how you checked. The course grades **understanding and judgement**, not the amount of code.
+You may use AI assistants to **explore and to ask questions**, except in the midterm and where a task says otherwise. In research tasks R3–R6 you read first, then ask an AI on purpose about what stayed unclear, and then you check what it said. Whatever you submit, you must be able to explain it: if you submit it, you are responsible for it, whoever wrote it. When an AI helps you, check at least one of its claims yourself and say how you checked. The course grades **understanding and judgement**, not the amount of code.

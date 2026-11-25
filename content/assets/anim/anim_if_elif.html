@@ -1,0 +1,1287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>if, elif, else: the first true branch wins</title>
+<style>
+/* Campus FoodBridge animation player · course/assets/anim/player.css
+   Inlined into every page by tools/anim.py. Authoring guide: course/assets/anim/README.md.
+   The page fills its window (the site's 5:3 embed box, or a normal browser window) and never scrolls:
+   header · panels · caption and controls. Modes (set by player.js on <html data-mode>):
+   wide (>= 560 x 300), compact (smaller: one panel at a time, tabs), stacked (narrow and tall). */
+
+:root {
+  --bg: #ffffff;
+  --fg: #1b1f24;
+  --muted: #545d68;
+  --panel: #f5f7f9;
+  --border: #c9d1d9;
+  --accent: #0b57c2;
+  --accent-fg: #ffffff;
+  --focus: #0b57c2;
+  --lit-bg: #fff0b3;
+  --lit-edge: #b88a00;
+  --flash: #ffd34d;
+  --new-bg: #dcf5e3;
+  --broken-bg: #fde8e6;
+  --token-bg: #e1efff;
+  --str: #0a3d8f;
+  --num: #0b57c2;
+  --const: #7a3fc4;
+  --ok: #17703a;
+  --error: #b0261b;
+  --warn: #7a4f00;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color-scheme: light;
+}
+
+:root[lang="km"] {
+  --font: "Noto Sans Khmer", "Khmer Sangam MN", "Khmer MN", "Khmer UI", "Khmer OS Battambang", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121418;
+    --fg: #e8edf2;
+    --muted: #a9b2bd;
+    --panel: #1a1e24;
+    --border: #3a424c;
+    --accent: #7cb4ff;
+    --accent-fg: #0b1220;
+    --focus: #7cb4ff;
+    --lit-bg: #4a3a06;
+    --lit-edge: #f2c55c;
+    --flash: #8a6d10;
+    --new-bg: #163a24;
+    --broken-bg: #4a1d1a;
+    --token-bg: #16304f;
+    --str: #a5d6ff;
+    --num: #7cb4ff;
+    --const: #d2a8ff;
+    --ok: #6fd68f;
+    --error: #ff9a8f;
+    --warn: #f2c55c;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #121418;
+  --fg: #e8edf2;
+  --muted: #a9b2bd;
+  --panel: #1a1e24;
+  --border: #3a424c;
+  --accent: #7cb4ff;
+  --accent-fg: #0b1220;
+  --focus: #7cb4ff;
+  --lit-bg: #4a3a06;
+  --lit-edge: #f2c55c;
+  --flash: #8a6d10;
+  --new-bg: #163a24;
+  --broken-bg: #4a1d1a;
+  --token-bg: #16304f;
+  --str: #a5d6ff;
+  --num: #7cb4ff;
+  --const: #d2a8ff;
+  --ok: #6fd68f;
+  --error: #ff9a8f;
+  --warn: #f2c55c;
+  color-scheme: dark;
+}
+
+/* ---------- page frame: fills the window, never scrolls ---------- */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+html {
+  font-size: clamp(12px, min(1.85vw, 3.1vh), 17px);
+}
+html[data-mode="compact"] { font-size: clamp(10px, min(3vw, 5.1vh), 13px); }
+html[data-mode="stacked"] { font-size: 14px; }
+
+body {
+  font-family: var(--font);
+  line-height: 1.4;
+  -webkit-text-size-adjust: 100%;
+}
+:root[lang="km"] body { line-height: 1.6; }
+
+code, .mono { font-family: var(--mono); font-size: 0.95em; }
+
+.anim {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  padding: 0.35rem 0.6rem 0.4rem;
+  gap: 0.35rem;
+}
+.anim *, .anim *::before, .anim *::after { box-sizing: border-box; }
+
+/* header: title · tabs (compact) · step n/N · open in a new tab */
+.anim-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 1.6rem;
+  flex: none;
+}
+.anim-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.anim-title code { font-size: 0.92em; }
+.counter { flex: none; color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+.pop {
+  flex: none;
+  display: none;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.05rem;
+  line-height: 1;
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+}
+.pop:hover { background: var(--panel); }
+.pop:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+html[data-embed="1"] .pop { display: inline-block; }
+
+.tabs { display: none; flex: 1 1 auto; min-width: 0; gap: 0.2rem; overflow: hidden; }
+.tab {
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--fg);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.tab[aria-selected="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.tab.changed::after { content: " •"; color: var(--warn); }
+.tab[aria-selected="true"].changed::after { color: var(--accent-fg); }
+.tab:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+
+/* ---------- panels ---------- */
+
+.anim-panels {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 0;
+}
+.col.left.code-first { flex: 1.45 1 0; }
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  flex: 0 1 auto;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--panel);
+  overflow: hidden;
+}
+.col .panel.grow { flex: 1 1 auto; }
+.col > .panel:only-child { flex: 1 1 auto; }
+.panel-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0.2rem 0.55rem 0.1rem;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font);
+  flex: none;
+}
+.panel-head .sub { font-family: var(--mono); font-weight: 600; color: var(--fg); letter-spacing: 0; }
+.panel-head .sub.prose { font-family: var(--font); }
+.panel.collapsed .panel-body { display: none; }
+.panel.collapsed .panel-head { cursor: pointer; padding-bottom: 0.2rem; }
+.panel.collapsed .panel-head::before { content: "▸"; }
+.panel.collapsed.changed .panel-head::after { content: "•"; color: var(--warn); }
+.panel-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0.15rem 0.5rem 0.45rem;
+  font-size: calc(1rem * var(--scale, 1));
+}
+.panel-body.scroll { overflow: auto; }
+.empty { color: var(--muted); font-style: italic; font-size: 0.9em; }
+
+/* compact: one panel at a time, tabs in the header */
+html[data-mode="compact"] .anim-title { display: none; }
+html[data-mode="compact"] .tabs { display: flex; }
+html[data-mode="compact"] .anim-panels { display: block; }
+html[data-mode="compact"] .col { display: contents; }
+html[data-mode="compact"] .panel { display: none; height: 100%; }
+html[data-mode="compact"] .panel.shown { display: flex; }
+html[data-mode="compact"] .panel-head { display: none; }
+
+/* stacked: narrow and tall (a phone, full page): all panels, the panel area scrolls */
+html[data-mode="stacked"] .anim-panels { flex-direction: column; overflow-y: auto; }
+html[data-mode="stacked"] .col { display: contents; }
+html[data-mode="stacked"] .col > .panel { flex: none; order: var(--i, 0); }
+html[data-mode="stacked"] .panel-body { overflow-x: auto; }
+
+/* ---------- code ---------- */
+
+.code {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  line-height: 1.42;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.15rem 0;
+}
+.code-lines { display: inline-block; min-width: 100%; }
+.ln { display: flex; }
+.ln .no {
+  flex: none;
+  width: 2.3em;
+  padding-right: 0.7em;
+  text-align: right;
+  color: var(--muted);
+  user-select: none;
+}
+.ln .src { white-space: pre; padding-right: 0.6em; }
+.ln.lit { background: var(--lit-bg); color: var(--lit-fg, var(--fg)); box-shadow: inset 3px 0 0 var(--lit-edge); }
+.ln.lit .no { color: var(--fg); font-weight: 700; }
+
+/* ---------- memory ---------- */
+
+.frame {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg);
+  margin-bottom: 0.35rem;
+}
+.frame:last-child { margin-bottom: 0; }
+.frame-head {
+  font-size: 0.8em;
+  color: var(--muted);
+  padding: 0.1rem 0.45rem;
+  border-bottom: 1px solid var(--border);
+}
+.frame-head code { color: var(--fg); }
+.frame-tag { margin-left: 0.4em; font-style: italic; }
+.frame.fading { border: 2px dashed var(--muted); }
+.frame.fading .row, .frame.fading .frame-head { color: var(--muted); }
+.frame.fading .row .v-str, .frame.fading .row .v-num, .frame.fading .row .v-const { color: var(--muted); }
+.frame-rows { padding: 0.1rem 0; }
+.row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 0.4em;
+  padding: 0.05rem 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.9em;
+}
+.row.lit { background: var(--lit-bg); box-shadow: inset 3px 0 0 var(--lit-edge); }
+.row .nm { font-weight: 650; white-space: nowrap; }
+.row .arr { color: var(--muted); }
+.row .val { min-width: 0; }
+.row .old { text-decoration: line-through; color: var(--muted); margin-right: 0.35em; }
+.row .note { font-family: var(--font); font-size: 0.85em; color: var(--muted); margin-left: auto; }
+.row.ret .nm { font-family: var(--font); font-style: italic; font-weight: 600; }
+
+.v-str { color: var(--str); }
+.v-num { color: var(--num); }
+.v-const { color: var(--const); font-weight: 600; }
+.v-repr { color: var(--muted); font-style: italic; }
+.cells { display: inline-flex; flex-wrap: wrap; gap: 0.15em; vertical-align: top; }
+.cell { display: inline-flex; flex-direction: column; align-items: center; }
+.cell-v { border: 1px solid var(--border); background: var(--panel); padding: 0 0.35em; min-width: 1.6em; text-align: center; border-radius: 3px; }
+.cell-i { font-size: 0.75em; color: var(--muted); line-height: 1.1; }
+.dict { display: inline-flex; flex-direction: column; border-left: 2px solid var(--border); padding-left: 0.35em; vertical-align: top; }
+.drow { display: flex; column-gap: 0.35em; flex-wrap: wrap; }
+.drow .arr { color: var(--muted); }
+.records { display: inline-flex; flex-direction: column; gap: 0.2em; vertical-align: top; }
+.records .dict { border: 1px solid var(--border); border-radius: 4px; padding: 0.05em 0.35em; background: var(--panel); }
+.obj { display: inline-flex; flex-direction: column; border: 1.5px solid var(--accent); border-radius: 5px; padding: 0.05em 0.4em 0.15em; vertical-align: top; }
+.obj-head { font-size: 0.8em; color: var(--accent); font-weight: 650; }
+
+/* ---------- output ---------- */
+
+.out { font-family: var(--mono); font-size: 0.88em; line-height: 1.38; }
+.ol { white-space: pre-wrap; overflow-wrap: anywhere; padding: 0 0.3em; border-radius: 3px; }
+.ol.error { color: var(--error); }
+.ol.ok { color: var(--ok); }
+.ol.input { font-weight: 700; }
+.ol.input::before { content: "› "; color: var(--muted); }
+.ol.lit { background: var(--lit-bg); box-shadow: inset 3px 0 0 var(--lit-edge); }
+
+/* ---------- files ---------- */
+
+.ftree { font-family: var(--mono); font-size: 0.9em; }
+.fr {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 0.4em;
+  padding: 0.05rem 0.35rem 0.05rem calc(0.35rem + var(--d, 0) * 1.2em);
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+.fr .ficon { font-family: var(--font); }
+.fr .fname { font-weight: 600; }
+.fr .badge { font-family: var(--font); font-size: 0.78em; padding: 0 0.45em; border-radius: 999px; border: 1px solid currentColor; }
+.fr .fnote { font-family: var(--font); font-size: 0.85em; color: var(--muted); }
+.fr.st-new { background: var(--new-bg); }
+.fr.st-new .badge { color: var(--ok); }
+.fr.st-changed { background: var(--lit-bg); }
+.fr.st-changed .badge { color: var(--warn); }
+.fr.st-same .badge { color: var(--muted); }
+.fr.st-gone .fname { text-decoration: line-through; color: var(--muted); }
+.fr.st-gone .badge { color: var(--muted); }
+.fr.st-temp { border: 1px dashed var(--muted); font-style: italic; }
+.fr.st-temp .badge { color: var(--muted); }
+.fr.st-broken { background: var(--broken-bg); }
+.fr.st-broken .badge { color: var(--error); }
+.flines {
+  margin: 0.05rem 0 0.2rem calc(0.35rem + (var(--d, 0) + 1) * 1.2em);
+  padding: 0.1rem 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.85em;
+  line-height: 1.35;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: var(--bg);
+  border-left: 3px solid var(--border);
+}
+
+/* ---------- system ---------- */
+
+.parts {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10.5em, 1fr));
+  gap: 0.9em 1.3em;
+  padding: 0.2em 0.1em;
+}
+.part {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  padding: 0.25em 0.45em 0.3em;
+  min-width: 0;
+}
+.part.lit { border: 2px solid var(--accent); background: var(--lit-bg); }
+.part.done { border-color: var(--ok); }
+.part.done::after { content: "✓"; position: absolute; top: 0.1em; right: 0.35em; color: var(--ok); font-weight: 800; }
+.part-label { font-family: var(--mono); font-weight: 650; font-size: 0.88em; overflow-wrap: break-word; padding-right: 0.8em; }
+.part-icon { margin-right: 0.25em; font-family: var(--font); }
+.part-sub { font-size: 0.8em; color: var(--muted); line-height: 1.3; }
+.part.lit .part-sub { color: var(--fg); }
+.token {
+  display: inline-block;
+  margin-top: 0.25em;
+  padding: 0 0.4em;
+  border: 1.5px solid var(--accent);
+  border-radius: 5px;
+  background: var(--token-bg);
+  color: var(--fg);
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.arrow-line {
+  position: absolute;
+  height: 3px;
+  margin-top: -1.5px;
+  background: var(--accent);
+  transform-origin: 0 50%;
+  pointer-events: none;
+  z-index: 3;
+}
+.arrow-line::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 10px solid var(--accent);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- caption and controls ---------- */
+
+.anim-foot {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.35rem;
+}
+.controls { display: flex; align-items: center; gap: 0.25rem; flex: none; }
+.btn {
+  flex: none;
+  font: inherit;
+  font-size: 0.95rem;
+  line-height: 1;
+  min-width: 2.1rem;
+  height: 2.1rem;
+  padding: 0 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--panel);
+  color: var(--fg);
+  cursor: pointer;
+}
+.btn.play { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); padding: 0 0.6rem; font-weight: 650; }
+.btn .lbl { margin-left: 0.3em; font-size: 0.9em; }
+.btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.btn:disabled { opacity: 0.45; cursor: default; }
+.caption {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  font-size: calc(1.02rem * var(--cap-scale, 1));
+  line-height: 1.38;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+:root[lang="km"] .caption { line-height: 1.62; }
+:root[lang="km"] .panel-head, :root[lang="km"] .frame-head, :root[lang="km"] .counter { font-size: 0.86rem; }
+:root[lang="km"] .frame-head { font-size: 0.9em; }
+.caption code { background: var(--panel); border: 1px solid var(--border); border-radius: 3px; padding: 0 0.2em; }
+.progress { position: absolute; left: 0; right: 0; top: -2px; height: 3px; pointer-events: none; }
+.progress .bar { height: 100%; width: 0; background: var(--accent); transition: width 0.3s ease; }
+
+html[data-mode="compact"] .anim { padding: 0.25rem 0.4rem 0.3rem; gap: 0.25rem; }
+html[data-mode="compact"] .anim-head { gap: 0.3rem; min-height: 0; }
+html[data-mode="compact"] .anim-head .btn { height: 1.75rem; min-width: 1.85rem; font-size: 0.85rem; }
+html[data-mode="compact"] .anim-foot { gap: 0.3rem; padding-top: 0.2rem; }
+html[data-mode="compact"] .anim-foot .btn { height: 2.2rem; min-width: 1.9rem; }
+html[data-mode="compact"] .btn .lbl { display: none; }
+html[data-mode="compact"] .counter { font-size: 0.8rem; }
+html[data-mode="compact"] .caption { line-height: 1.3; }
+:root[lang="km"][data-mode="compact"] .caption { line-height: 1.6; }
+html[data-mode="compact"] .panel.shown .panel-head.has-sub { display: flex; }
+html[data-mode="compact"] .panel-head .name { display: none; }
+html[data-mode="stacked"] .anim-foot { flex-direction: column; align-items: stretch; }
+html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
+
+/* ---------- motion ---------- */
+
+@keyframes anim-flash { from { background-color: var(--flash); } }
+.ln.lit, .row.lit, .ol.lit, .fr.st-new, .fr.st-changed, .part.lit { animation: anim-flash 0.7s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<div id="anim" class="anim"></div>
+<noscript><p style="padding:1em">This animation needs JavaScript.</p></noscript>
+<script id="anim-data" type="application/json">{"name":"anim_if_elif","title":{"en":"`if`, `elif`, `else`: the first true branch wins","km":"`if`, `elif`, `else`៖ ជម្រើសដំបូងដែល True ឈ្នះ"},"height":460,"panels":["code","memory","output"],"code":["URGENT_HOURS = 3","SOON_HOURS = 12","def urgency(hours_left):","    if hours_left \u003c= URGENT_HOURS:","        return \"urgent\"","    elif hours_left \u003c= SOON_HOURS:","        return \"soon\"","    else:","        return \"later\"","print(urgency(3), urgency(8), urgency(20))"],"steps":[{"caption":{"en":"Two named constants hold the decisions: `URGENT_HOURS` is 3 and `SOON_HOURS` is 12.","km":"តម្លៃថេរមានឈ្មោះ (named constant) ពីរ រក្សាការសម្រេចចិត្ត៖ `URGENT_HOURS` គឺ 3 ហើយ `SOON_HOURS` គឺ 12។"},"line":[1,2],"memory":[{"frame":"global","names":[{"name":"URGENT_HOURS","value":3,"lit":true},{"name":"SOON_HOURS","value":12,"lit":true}]}]},{"caption":{"en":"`def` remembers the rule `urgency`. Nothing is tested yet.","km":"`def` ចងចាំវិធាន `urgency`។ មិនទាន់មានការពិនិត្យលក្ខខណ្ឌណាមួយនៅឡើយទេ។"},"line":3,"memory":[{"frame":"global","names":[["URGENT_HOURS",3],["SOON_HOURS",12],{"name":"urgency","value":{"$repr":"\u003cfunction urgency\u003e"},"lit":true}]}]},{"caption":{"en":"Line 10 first calls `urgency(3)`: an offer with exactly 3 hours left.","km":"បន្ទាត់ទី 10 ហៅ `urgency(3)` ជាមុនសិន៖ ការផ្ដល់ជូន (offer) មួយដែលនៅសល់ 3 ម៉ោងគត់។"},"line":10,"memory":[{"frame":"global","names":[["URGENT_HOURS",3],["SOON_HOURS",12],["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]},{"frame":"urgency","names":[{"name":"hours_left","value":3,"lit":true}]}]},{"caption":{"en":"Python tests the first condition: `3 \u003c= 3` is `True`. The boundary value 3 counts as urgent.","km":"Python ពិនិត្យលក្ខខណ្ឌទីមួយ៖ `3 \u003c= 3` គឺ `True`។ តម្លៃនៅចំណុចព្រំដែន (boundary) 3 ត្រូវរាប់ថាបន្ទាន់។"},"line":4,"focus":"memory","memory":[{"frame":"global","names":[{"name":"URGENT_HOURS","value":3,"lit":true},["SOON_HOURS",12],["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]},{"frame":"urgency","names":[{"name":"hours_left","value":3,"lit":true,"note":{"en":"3 \u003c= 3 → True","km":"3 \u003c= 3 → True (ពិត)"}}]}]},{"caption":{"en":"The first true branch runs and returns `\"urgent\"`. The `elif` and `else` are skipped.","km":"ជម្រើស (branch) ដំបូងដែល True ដំណើរការ ហើយ return `\"urgent\"`។ `elif` និង `else` ត្រូវបានរំលង។"},"line":5,"memory":[{"frame":"global","names":[["URGENT_HOURS",3],["SOON_HOURS",12],["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]},{"frame":"urgency","names":[{"name":"hours_left","value":3}],"fading":true,"returns":"urgent"}]},{"caption":{"en":"Next, `urgency(8)`. The first test, `8 \u003c= 3`, is `False`, so Python skips its branch.","km":"បន្ទាប់មក `urgency(8)`។ ការពិនិត្យទីមួយ `8 \u003c= 3` គឺ `False` ដូច្នេះ Python រំលងជម្រើសរបស់វា។"},"line":4,"focus":"memory","memory":[{"frame":"global","names":[{"name":"URGENT_HOURS","value":3,"lit":true},["SOON_HOURS",12],["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]},{"frame":"urgency","names":[{"name":"hours_left","value":8,"lit":true,"note":{"en":"8 \u003c= 3 → False","km":"8 \u003c= 3 → False (មិនពិត)"}}]}]},{"caption":{"en":"It goes on to the `elif`: `8 \u003c= 12` is `True`.","km":"វាបន្តទៅ `elif`៖ `8 \u003c= 12` គឺ `True`។"},"line":6,"focus":"memory","memory":[{"frame":"global","names":[["URGENT_HOURS",3],{"name":"SOON_HOURS","value":12,"lit":true},["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]},{"frame":"urgency","names":[{"name":"hours_left","value":8,"lit":true,"note":{"en":"8 \u003c= 12 → True","km":"8 \u003c= 12 → True (ពិត)"}}]}]},{"caption":{"en":"That branch runs and returns `\"soon\"`. The `else` is skipped.","km":"ជម្រើសនោះដំណើរការ ហើយ return `\"soon\"`។ `else` ត្រូវបានរំលង។"},"line":7,"memory":[{"frame":"global","names":[["URGENT_HOURS",3],["SOON_HOURS",12],["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]},{"frame":"urgency","names":[{"name":"hours_left","value":8}],"fading":true,"returns":"soon"}]},{"caption":{"en":"Last, `urgency(20)`. `20 \u003c= 3` is `False`.","km":"ចុងក្រោយ `urgency(20)`។ `20 \u003c= 3` គឺ `False`។"},"line":4,"focus":"memory","memory":[{"frame":"global","names":[{"name":"URGENT_HOURS","value":3,"lit":true},["SOON_HOURS",12],["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]},{"frame":"urgency","names":[{"name":"hours_left","value":20,"lit":true,"note":{"en":"20 \u003c= 3 → False","km":"20 \u003c= 3 → False (មិនពិត)"}}]}]},{"caption":{"en":"`20 \u003c= 12` is `False` too.","km":"`20 \u003c= 12` ក៏ជា `False` ដែរ។"},"line":6,"focus":"memory","memory":[{"frame":"global","names":[["URGENT_HOURS",3],{"name":"SOON_HOURS","value":12,"lit":true},["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]},{"frame":"urgency","names":[{"name":"hours_left","value":20,"lit":true,"note":{"en":"20 \u003c= 12 → False","km":"20 \u003c= 12 → False (មិនពិត)"}}]}]},{"caption":{"en":"No condition was true, so the `else` branch runs and returns `\"later\"`.","km":"គ្មានលក្ខខណ្ឌណាមួយជា True ទេ ដូច្នេះជម្រើស `else` ដំណើរការ ហើយ return `\"later\"`។"},"line":[8,9],"memory":[{"frame":"global","names":[["URGENT_HOURS",3],["SOON_HOURS",12],["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]},{"frame":"urgency","names":[{"name":"hours_left","value":20}],"fading":true,"returns":"later"}]},{"caption":{"en":"`print` shows the three answers. Each value took one path: the first branch whose condition is true.","km":"`print` បង្ហាញចម្លើយទាំងបី។ តម្លៃនីមួយៗដើរតាមផ្លូវតែមួយ៖ ជម្រើសដំបូងដែលលក្ខខណ្ឌរបស់វាជា True។"},"line":10,"focus":"output","memory":[{"frame":"global","names":[["URGENT_HOURS",3],["SOON_HOURS",12],["urgency",{"$repr":"\u003cfunction urgency\u003e"}]]}],"output":[{"text":"urgent soon later","lit":true}]}]}</script>
+<script>
+/* Campus FoodBridge animation player · course/assets/anim/player.js
+   tools/anim.py inlines this file, player.css and one animation's JSON (in
+   <script id="anim-data" type="application/json">) into a self-contained page.
+   No libraries, no network. Authoring guide and source format: course/assets/anim/README.md.
+
+   URL hash (combine with &): step=4 (open at step 4, 1-based) · theme=dark|light ·
+   embed=1 (look as in the site's iframe: show the "open in a new tab" link) ·
+   audit=1 (render every step, record fit problems in <body data-audit>; used by tools/anim.py --shots).
+   Errors are written to <body data-error>; a finished start sets <body data-ready="1">. */
+(function () {
+  "use strict";
+
+  var doc = document;
+  var root = doc.documentElement;
+  var win = window;
+
+  var AUDIT = /[#&]audit=1/.test(String(win.location.hash || ""));
+
+  // With audit=1 inside a frame, tell the parent page (tools/anim.py --shots) how it went.
+  function notifyParent() {
+    if (!AUDIT || win.parent === win || !doc.body) return;
+    var b = doc.body;
+    win.parent.postMessage({
+      type: "anim-audit", ready: b.getAttribute("data-ready") === "1",
+      error: b.getAttribute("data-error") || "", audit: b.getAttribute("data-audit") || ""
+    }, "*");
+  }
+
+  function reportError(message) {
+    if (doc.body) doc.body.setAttribute("data-error", String(message).slice(0, 500));
+    notifyParent();
+  }
+  win.addEventListener("error", function (event) {
+    reportError((event && (event.message || (event.error && event.error.message))) || "script error");
+  });
+
+  // Screen words. Khmer per course/km/STYLE.md and glossary.json (English term in brackets).
+  var UI = {
+    en: {
+      play: "Play", pause: "Pause", prev: "Previous step", next: "Next step", start: "Start again",
+      step: "Step", open: "Open in a new tab", controls: "Animation controls",
+      code: "Code", memory: "Memory", output: "Output", files: "Files", system: "System",
+      tab_code: "Code", tab_memory: "Memory", tab_output: "Output", tab_files: "Files", tab_system: "System",
+      global: "global names", inside: "inside {f}", returns: "return value", vanishing: "about to vanish",
+      empty: "(empty)", nothing: "(nothing printed yet)", no_files: "(no files yet)", empty_file: "(empty file)",
+      state_new: "new", state_changed: "changed", state_same: "unchanged", state_gone: "deleted",
+      state_temp: "temporary", state_broken: "broken", done: "done", arrow: "Arrow: {a} → {b}"
+    },
+    km: {
+      play: "ចាក់", pause: "ផ្អាក", prev: "ជំហានមុន", next: "ជំហានបន្ទាប់", start: "ចាប់ផ្ដើមម្ដងទៀត",
+      step: "ជំហាន", open: "បើកក្នុងផ្ទាំងថ្មី", controls: "ប៊ូតុងបញ្ជា",
+      code: "កូដ (code)", memory: "memory (អង្គចងចាំ)", output: "លទ្ធផល (output)", files: "file និង folder",
+      system: "ប្រព័ន្ធ (system)",
+      tab_code: "កូដ", tab_memory: "memory", tab_output: "លទ្ធផល", tab_files: "file", tab_system: "ប្រព័ន្ធ",
+      global: "ឈ្មោះសកល (global)", inside: "ខាងក្នុង {f}", returns: "តម្លៃដែល return", vanishing: "ជិតបាត់ហើយ",
+      empty: "(ទទេ)", nothing: "(មិនទាន់មានអ្វីបង្ហាញនៅឡើយ)", no_files: "(មិនទាន់មាន file នៅឡើយ)",
+      empty_file: "(file ទទេ)",
+      state_new: "ថ្មី", state_changed: "បានកែ", state_same: "ដដែល", state_gone: "បានលុប",
+      state_temp: "បណ្ដោះអាសន្ន", state_broken: "ខូច", done: "រួចរាល់", arrow: "ព្រួញ: {a} → {b}"
+    }
+  };
+  var LANG = root.getAttribute("lang") === "km" ? "km" : "en";
+  var T = UI[LANG];
+  var PANEL_KEYS = ["code", "memory", "output", "files", "system"];
+
+  // ---------- small helpers ----------
+
+  function tx(value) {
+    if (value && typeof value === "object" && !Array.isArray(value)) return value[LANG] || value.en || "";
+    return value == null ? "" : String(value);
+  }
+
+  function el(tag, className, text) {
+    var node = doc.createElement(tag);
+    if (className) node.className = className;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  function add(parent) {
+    for (var i = 1; i < arguments.length; i++) if (arguments[i]) parent.appendChild(arguments[i]);
+    return parent;
+  }
+
+  // Plain text where `backticks` become <code>.
+  function rich(node, text) {
+    String(text).split("`").forEach(function (part, i) {
+      if (part) node.appendChild(i % 2 ? el("code", null, part) : doc.createTextNode(part));
+    });
+    return node;
+  }
+
+  function plain(text) { return String(text).replace(/`/g, ""); }
+
+  // ---------- values, Python style ----------
+
+  function isDict(v) { return v !== null && typeof v === "object" && !Array.isArray(v); }
+
+  function special(v) {
+    if (!isDict(v)) return null;
+    if ("$repr" in v) return "repr";
+    if ("$tuple" in v) return "tuple";
+    if ("$object" in v) return "object";
+    return null;
+  }
+
+  function pyStr(s) {
+    return "\"" + String(s).replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\n/g, "\\n") + "\"";
+  }
+
+  function reprText(v) {
+    if (v === null) return "None";
+    if (v === true) return "True";
+    if (v === false) return "False";
+    if (typeof v === "number") return String(v);
+    if (typeof v === "string") return pyStr(v);
+    if (Array.isArray(v)) return "[" + v.map(reprText).join(", ") + "]";
+    var kind = special(v);
+    if (kind === "repr") return String(v.$repr);
+    if (kind === "tuple") return "(" + v.$tuple.map(reprText).join(", ") + (v.$tuple.length === 1 ? ",)" : ")");
+    if (kind === "object") {
+      return v.$object + "(" + Object.keys(v.fields || {}).map(function (k) {
+        return k + "=" + reprText(v.fields[k]);
+      }).join(", ") + ")";
+    }
+    return "{" + Object.keys(v).map(function (k) { return pyStr(k) + ": " + reprText(v[k]); }).join(", ") + "}";
+  }
+
+  function scalarNode(v) {
+    var cls = "v-repr";
+    if (typeof v === "string") cls = "v-str";
+    else if (typeof v === "number") cls = "v-num";
+    else if (v === null || v === true || v === false) cls = "v-const";
+    else if (special(v) === "tuple" || Array.isArray(v) || isDict(v)) cls = "";
+    return el("span", cls, reprText(v));
+  }
+
+  function dictNode(v, depth, quoteKeys) {
+    var box = el("span", "dict");
+    Object.keys(v).forEach(function (k) {
+      add(box, add(el("span", "drow"),
+        el("span", quoteKeys ? "v-str" : "nm", quoteKeys ? pyStr(k) : k),
+        el("span", "arr", quoteKeys ? "→" : "="),
+        valueNode(v[k], depth + 1)));
+    });
+    return box;
+  }
+
+  function valueNode(v, depth) {
+    var kind = special(v);
+    if (kind === "object") {
+      var box = add(el("span", "obj"), el("span", "obj-head", v.$object));
+      if (Object.keys(v.fields || {}).length) add(box, dictNode(v.fields, depth, false));
+      return box;
+    }
+    if (Array.isArray(v) && v.length && depth < 2) {
+      var records = v.every(function (x) { return isDict(x) && !special(x) && Object.keys(x).length; });
+      if (records) {
+        var stack = el("span", "records");
+        v.forEach(function (x) { add(stack, dictNode(x, depth + 1, true)); });
+        return stack;
+      }
+      var cells = el("span", "cells");
+      v.forEach(function (x, i) {
+        add(cells, add(el("span", "cell"), add(el("span", "cell-v"), valueNode(x, depth + 1)), el("span", "cell-i", String(i))));
+      });
+      return cells;
+    }
+    if (isDict(v) && !kind && Object.keys(v).length && depth < 2) return dictNode(v, depth, true);
+    return scalarNode(v);
+  }
+
+  // ---------- panel renderers ----------
+
+  function renderCode(P, st) {
+    var code = st.code;
+    P.sub.textContent = "";
+    P.head.classList.remove("has-sub");
+    if (!code) { add(P.body, el("div", "empty", T.empty)); return; }
+    var info = Array.isArray(code) ? { lines: code } : code;
+    var first = info.first || 1;
+    P.sub.textContent = "";
+    P.head.classList.toggle("has-sub", info.label != null);
+    if (info.label != null) {
+      P.sub.className = "sub" + (typeof info.label === "string" ? "" : " prose");
+      rich(P.sub, tx(info.label));
+    }
+    if (!info.lines.length) { add(P.body, el("div", "empty", T.empty_file)); return; }
+    var lines = el("div", "code-lines");
+    info.lines.forEach(function (text, i) {
+      var number = first + i;
+      var row = add(el("div", "ln" + (st.line.indexOf(number) >= 0 ? " lit" : "")),
+        el("span", "no", String(number)), el("span", "src", text === "" ? " " : text));
+      add(lines, row);
+    });
+    add(P.body, add(el("div", "code"), lines));
+  }
+
+  function renderMemory(P, st) {
+    if (!st.memory.length) { add(P.body, el("div", "empty", T.empty)); return; }
+    st.memory.forEach(function (frame) {
+      var box = el("div", "frame" + (frame.fading ? " fading" : "") + (frame.frame === "global" ? " global" : ""));
+      var head = el("div", "frame-head");
+      if (frame.label != null) rich(head, tx(frame.label));
+      else if (frame.frame === "global") head.textContent = T.global;
+      else {
+        var parts = T.inside.split("{f}");
+        add(head, doc.createTextNode(parts[0]), el("code", null, frame.frame), doc.createTextNode(parts[1] || ""));
+      }
+      if (frame.fading) add(head, el("span", "frame-tag", "· " + T.vanishing));
+      var rows = el("div", "frame-rows");
+      (frame.names || []).forEach(function (entry) {
+        var n = Array.isArray(entry) ? { name: entry[0], value: entry[1] } : entry;
+        var val = el("span", "val");
+        if ("old" in n) add(val, el("span", "old", reprText(n.old)));
+        add(val, valueNode(n.value, 0));
+        var row = add(el("div", "row" + (n.lit ? " lit" : "")), el("span", "nm", n.name), el("span", "arr", "→"), val);
+        if (n.note != null) add(row, rich(el("span", "note"), tx(n.note)));
+        add(rows, row);
+      });
+      if ("returns" in frame) {
+        add(rows, add(el("div", "row ret lit"), el("span", "nm", T.returns), el("span", "arr", "→"),
+          add(el("span", "val"), valueNode(frame.returns, 0))));
+      }
+      if (!rows.childNodes.length) add(rows, el("div", "row empty", T.empty));
+      add(P.body, add(box, head, rows));
+    });
+  }
+
+  function renderOutput(P, st) {
+    if (!st.output.length) { add(P.body, el("div", "empty", T.nothing)); return; }
+    var box = el("div", "out");
+    st.output.forEach(function (line) {
+      var o = typeof line === "string" ? { text: line } : line;
+      add(box, el("div", "ol" + (o.kind ? " " + o.kind : "") + (o.lit ? " lit" : ""), tx(o.text) || " "));
+    });
+    add(P.body, box);
+  }
+
+  function renderFiles(P, st) {
+    if (!st.files.length) { add(P.body, el("div", "empty", T.no_files)); return; }
+    var rows = [], byKey = {};
+    st.files.forEach(function (f) {
+      var isDir = /\/$/.test(f.path);
+      var bits = f.path.replace(/\/$/, "").split("/");
+      for (var i = 1; i < bits.length; i++) {
+        var parent = bits.slice(0, i).join("/") + "/";
+        if (!byKey[parent]) { byKey[parent] = { path: parent }; rows.push(byKey[parent]); }
+      }
+      var key = isDir ? bits.join("/") + "/" : f.path;
+      if (byKey[key] && isDir && !byKey[key].given) {
+        var at = rows.indexOf(byKey[key]);
+        rows[at] = byKey[key] = { given: true, f: f, path: key };
+      } else {
+        byKey[key] = { given: true, f: f, path: key };
+        rows.push(byKey[key]);
+      }
+    });
+    var tree = el("div", "ftree");
+    rows.forEach(function (r) {
+      var f = r.f || { path: r.path };
+      var isDir = /\/$/.test(r.path);
+      var bits = r.path.replace(/\/$/, "").split("/");
+      var depth = bits.length - 1;
+      var row = el("div", "fr" + (f.state ? " st-" + f.state : ""));
+      row.style.setProperty("--d", depth);
+      add(row, el("span", "ficon", isDir ? "📁" : (f.state === "broken" ? "⚠️" : "📄")),
+        el("span", "fname", bits[bits.length - 1] + (isDir ? "/" : "")));
+      if (f.state) add(row, el("span", "badge", T["state_" + f.state]));
+      if (f.note != null) add(row, rich(el("span", "fnote"), tx(f.note)));
+      add(tree, row);
+      if (f.lines && f.lines.length) {
+        var pre = el("div", "flines", f.lines.join("\n"));
+        pre.style.setProperty("--d", depth);
+        add(tree, pre);
+      }
+    });
+    add(P.body, tree);
+  }
+
+  function renderSystem(P, st, parts) {
+    var s = st.system || {};
+    var lit = s.lit || [], done = s.done || [];
+    var grid = el("div", "parts");
+    parts.forEach(function (part) {
+      var card = el("div", "part" + (lit.indexOf(part.id) >= 0 ? " lit" : "") + (done.indexOf(part.id) >= 0 ? " done" : ""));
+      card.setAttribute("data-id", part.id);
+      var label = el("div", "part-label");
+      if (part.icon) add(label, el("span", "part-icon", part.icon));
+      add(label, doc.createTextNode(part.label));
+      add(card, label);
+      if (part.sub != null) add(card, rich(el("div", "part-sub"), tx(part.sub)));
+      if (done.indexOf(part.id) >= 0) add(card, el("span", "sr-only", T.done));
+      if (s.token && s.token.on === part.id) add(card, rich(el("div", "token"), tx(s.token.text)));
+      add(grid, card);
+    });
+    if (s.arrow) {
+      var names = {};
+      parts.forEach(function (p) { names[p.id] = p.label; });
+      add(grid, el("span", "sr-only", T.arrow.replace("{a}", names[s.arrow[0]]).replace("{b}", names[s.arrow[1]])));
+      grid.setAttribute("data-arrow", s.arrow[0] + " " + s.arrow[1]);
+    }
+    add(P.body, grid);
+  }
+
+  function drawArrows(scope) {
+    var grids = scope.querySelectorAll(".parts[data-arrow]");
+    Array.prototype.forEach.call(grids, function (grid) {
+      Array.prototype.forEach.call(grid.querySelectorAll(".arrow-line"), function (n) { n.remove(); });
+      var ids = grid.getAttribute("data-arrow").split(" ");
+      var a = grid.querySelector("[data-id=\"" + ids[0] + "\"]");
+      var b = grid.querySelector("[data-id=\"" + ids[1] + "\"]");
+      if (!a || !b || a === b || !grid.offsetWidth) return;
+      var box = grid.getBoundingClientRect();
+      function rect(node) {
+        var r = node.getBoundingClientRect();
+        return { cx: r.left - box.left + r.width / 2, cy: r.top - box.top + r.height / 2, w: r.width, h: r.height };
+      }
+      function edge(r, toward, gap) {
+        var dx = toward.cx - r.cx, dy = toward.cy - r.cy;
+        var sx = dx ? (r.w / 2 + gap) / Math.abs(dx) : Infinity;
+        var sy = dy ? (r.h / 2 + gap) / Math.abs(dy) : Infinity;
+        var s = Math.min(sx, sy);
+        return { x: r.cx + dx * s, y: r.cy + dy * s };
+      }
+      var ra = rect(a), rb = rect(b);
+      var p = edge(ra, rb, 2), q = edge(rb, ra, 4);
+      var len = Math.max(8, Math.sqrt((q.x - p.x) * (q.x - p.x) + (q.y - p.y) * (q.y - p.y)));
+      var line = el("div", "arrow-line");
+      line.style.left = p.x + "px";
+      line.style.top = p.y + "px";
+      line.style.width = len + "px";
+      line.style.transform = "rotate(" + Math.atan2(q.y - p.y, q.x - p.x) + "rad)";
+      grid.appendChild(line);
+    });
+  }
+
+  // ---------- the player ----------
+
+  function readHash() {
+    var out = { step: 1, theme: null, embed: false, audit: false };
+    String(win.location.hash || "").replace(/^#/, "").split("&").forEach(function (pair) {
+      var kv = pair.split("=");
+      var key = decodeURIComponent(kv[0] || ""), value = decodeURIComponent(kv[1] || "");
+      if (key === "step") out.step = parseInt(value, 10) || 1;
+      else if (key === "theme" && (value === "dark" || value === "light")) out.theme = value;
+      else if (key === "embed") out.embed = value !== "0";
+      else if (key === "audit") out.audit = value !== "0";
+    });
+    return out;
+  }
+
+  // What a panel shows, without the "lit" marks, so that only real changes count.
+  function signature(panel, content) {
+    if (panel === "memory") {
+      return JSON.stringify((content || []).map(function (f) {
+        return [f.frame || f.label, !!f.fading, "returns" in f ? f.returns : "-", (f.names || []).map(function (n) {
+          return Array.isArray(n) ? [n[0], n[1], "-", "-"] :
+            [n.name, n.value, "old" in n ? n.old : "-", "note" in n ? n.note : "-"];
+        })];
+      }));
+    }
+    if (panel === "output") {
+      return JSON.stringify((content || []).map(function (l) {
+        return typeof l === "string" ? [l, ""] : [l.text, l.kind || ""];
+      }));
+    }
+    return JSON.stringify(content);
+  }
+
+  function modeFor(width, height) {
+    if (width < 560 && height >= 600) return "stacked";
+    if (width < 560 || height < 300) return "compact";
+    return "wide";
+  }
+
+  function start() {
+    var A = JSON.parse(doc.getElementById("anim-data").textContent);
+    var steps = A.steps, N = steps.length, panels = A.panels;
+    var parts = (A.system && A.system.parts) || [];
+
+    // Effective state of every step: a panel key replaces that panel; a missing key keeps the last one.
+    // A panel "changed" when its content differs from the step before (moving the light alone does not count).
+    var states = [], changed = [], focus = [];
+    var now = { code: A.code || null, memory: [], output: [], files: [], system: {} };
+    steps.forEach(function (s, i) {
+      var ch = {};
+      PANEL_KEYS.forEach(function (k) {
+        if (k in s) {
+          if (signature(k, s[k]) !== signature(k, now[k])) ch[k] = true;
+          now[k] = s[k];
+        }
+      });
+      var line = s.line == null ? [] : [].concat(s.line);
+      states.push({ code: now.code, memory: now.memory, output: now.output, files: now.files, system: now.system, line: line });
+      changed.push(ch);
+      var f = s.focus || panels.filter(function (p) { return ch[p]; })[0] ||
+        (line.length && panels.indexOf("code") >= 0 ? "code" : null) || (i ? focus[i - 1] : panels[0]);
+      focus.push(f);
+    });
+
+    // Skeleton.
+    var app = doc.getElementById("anim");
+    var head = el("header", "anim-head");
+    var title = rich(el("h1", "anim-title"), tx(A.title));
+    title.title = plain(tx(A.title));
+    var tabs = el("div", "tabs");
+    tabs.setAttribute("role", "tablist");
+    var counter = el("span", "counter");
+    var pop = el("a", "pop", "⤢");
+    pop.target = "_blank";
+    pop.rel = "noopener";
+    pop.title = T.open;
+    pop.setAttribute("aria-label", T.open);
+    // Wide box: the first `left` panels (default 1) share the left column, the others the right one.
+    var nLeft = panels.length > 1 ? Math.max(1, Math.min(A.left || 1, panels.length - 1)) : 1;
+    var columns = [panels.slice(0, nLeft), panels.slice(nLeft)];
+    var area = el("div", "anim-panels");
+    var left = el("div", "col left" + (panels[0] === "code" && panels.length > 1 ? " code-first" : ""));
+    var right = el("div", "col right");
+    add(area, left);
+    if (panels.length > 1) add(area, right);
+    if (panels[0] === "code" && panels.length > 1) {
+      // A wider code column when the longest code line is long (the 700×420 box), unless an output line
+      // is long too: then both columns get the same width, because a long code line can shrink a little
+      // while an output line would wrap.
+      var longest = 0, longestOut = 0;
+      [A.code].concat(steps.map(function (s) { return s.code; })).forEach(function (c) {
+        if (!c) return;
+        (Array.isArray(c) ? c : c.lines).forEach(function (line) { longest = Math.max(longest, line.length); });
+      });
+      steps.forEach(function (s) {
+        (s.output || []).forEach(function (line) {
+          longestOut = Math.max(longestOut, tx(typeof line === "string" ? line : line.text).length);
+        });
+      });
+      left.style.flexGrow = longestOut > 30 ? 1 : longest > 50 ? 1.65 : longest > 40 ? 1.45 : 1.2;
+    }
+    var foot = el("footer", "anim-foot");
+    var progress = el("div", "progress");
+    var bar = el("div", "bar");
+    add(progress, bar);
+    progress.setAttribute("aria-hidden", "true");
+    var controls = el("div", "controls");
+    controls.setAttribute("role", "group");
+    controls.setAttribute("aria-label", T.controls);
+    function button(cls, icon, label) {
+      var b = el("button", "btn " + cls);
+      b.type = "button";
+      add(b, el("span", "ico", icon));
+      if (cls === "play") add(b, el("span", "lbl", label));
+      b.setAttribute("aria-label", label);
+      b.title = label;
+      return b;
+    }
+    var bStart = button("start", "⟲", T.start);
+    var bPrev = button("prev", "◀", T.prev);
+    var bPlay = button("play", "▶", T.play);
+    var bNext = button("next", "▶", T.next);
+    var caption = el("p", "caption");
+    caption.setAttribute("aria-live", "polite");
+    add(app, head, area, foot);
+
+    var P = {};
+    panels.forEach(function (name, i) {
+      var section = el("section", "panel panel-" + name);
+      section.style.setProperty("--i", i);
+      section.setAttribute("aria-label", T[name]);
+      var h = el("h2", "panel-head");
+      var sub = el("span", "sub");
+      add(h, el("span", "name", T[name]), sub);
+      var body = el("div", "panel-body");
+      add(section, h, body);
+      add(i < nLeft ? left : right, section);
+      var tab = el("button", "tab", T["tab_" + name]);
+      tab.type = "button";
+      tab.setAttribute("role", "tab");
+      tab.addEventListener("click", function () { userPanel = name; fit(); });
+      h.addEventListener("click", function () {
+        if (section.classList.contains("collapsed")) { userPanel = name; fit(); }
+      });
+      h.addEventListener("keydown", function (event) {
+        if ((event.key === "Enter" || event.key === " ") && section.classList.contains("collapsed")) {
+          event.preventDefault();
+          userPanel = name;
+          fit();
+        }
+      });
+      add(tabs, tab);
+      P[name] = { name: name, el: section, head: h, sub: sub, body: body, tab: tab };
+    });
+
+    var mode = null;
+    function applyMode() {
+      var m = modeFor(win.innerWidth, win.innerHeight);
+      if (m === mode) return;
+      mode = m;
+      root.setAttribute("data-mode", m);
+      if (m === "compact") {
+        add(head, tabs, bStart, bPlay, counter, pop);
+        add(foot, progress, bPrev, caption, bNext);
+      } else {
+        add(head, title, counter, pop);
+        add(controls, bStart, bPrev, bPlay, bNext);
+        add(foot, progress, controls, caption);
+      }
+    }
+
+    var current = 0, playing = false, timer = null, userPanel = null;
+    var growCap = 1.35, lastGrow = 1;
+
+    // One text size for the whole animation in this window: the largest that every step can use,
+    // so the text does not jump from step to step while playing.
+    function measureGrow() {
+      var keep = current, cap = 1.35;
+      growCap = 1.35;
+      for (var i = 0; i < N; i++) {
+        current = i;
+        render(i);
+        cap = Math.min(cap, lastGrow);
+      }
+      growCap = cap;
+      current = keep;
+    }
+
+    function render(i) {
+      var st = states[i];
+      panels.forEach(function (name) {
+        var p = P[name];
+        p.body.textContent = "";
+        if (name === "code") renderCode(p, st);
+        else if (name === "memory") renderMemory(p, st);
+        else if (name === "output") renderOutput(p, st);
+        else if (name === "files") renderFiles(p, st);
+        else if (name === "system") renderSystem(p, st, parts);
+        p.el.classList.toggle("changed", !!changed[i][name]);
+        p.tab.classList.toggle("changed", !!changed[i][name]);
+      });
+      caption.textContent = "";
+      rich(caption, tx(steps[i].caption));
+      caption.title = plain(tx(steps[i].caption));
+      counter.textContent = T.step + " " + (i + 1) + " / " + N;
+      bar.style.width = (N > 1 ? (100 * i / (N - 1)) : 100) + "%";
+      bPrev.disabled = i === 0;
+      bNext.disabled = i === N - 1;
+      var base = String(win.location.href).split("#")[0];
+      pop.href = base + "#step=" + (i + 1);
+      fit();
+    }
+
+    function overflows(node) {
+      return node.scrollHeight > node.clientHeight + 1 || node.scrollWidth > node.clientWidth + 1;
+    }
+
+    function scrollToLit(body) {
+      var lit = body.querySelector(".lit, .st-new, .st-changed");
+      if (!lit) return;
+      var b = body.getBoundingClientRect(), r = lit.getBoundingClientRect();
+      body.scrollTop += (r.top - b.top) - Math.max(0, (b.height - r.height) / 2);
+    }
+
+    // Fit the step into the window: collapse panels that matter least, shrink fonts a little,
+    // and as a last resort let one panel scroll inside itself. The page itself never scrolls.
+    function fit() {
+      var view = userPanel || focus[current];
+      panels.forEach(function (name) {
+        var p = P[name];
+        p.el.classList.remove("collapsed", "grow", "shown");
+        p.body.classList.remove("scroll");
+        p.body.style.removeProperty("--scale");
+        p.body.scrollTop = 0;
+        p.head.removeAttribute("tabindex");
+        p.head.removeAttribute("role");
+        var on = name === view;
+        p.tab.setAttribute("aria-selected", on ? "true" : "false");
+        p.tab.tabIndex = on ? 0 : -1;
+      });
+      caption.style.removeProperty("--cap-scale");
+      var visible = panels.slice();
+      if (mode === "compact") {
+        P[view].el.classList.add("shown");
+        visible = [view];
+      } else if (mode === "wide") {
+        // In a column with several panels, keep the step's focus (or the first changed panel) open and
+        // fold the others to their title bar while the column is too full: unchanged ones first, bottom up.
+        columns.forEach(function (rest) {
+          if (rest.length < 2) return;
+          var keep = rest.indexOf(view) >= 0 ? view : (rest.filter(function (n) { return changed[current][n]; })[0] || rest[0]);
+          P[keep].el.classList.add("grow");
+          var order = rest.filter(function (n) { return n !== keep && !changed[current][n]; }).reverse()
+            .concat(rest.filter(function (n) { return n !== keep && changed[current][n]; }).reverse());
+          var tooTall = function () {
+            return rest.some(function (n) {
+              var body = P[n].body;
+              return !P[n].el.classList.contains("collapsed") && body.scrollHeight > body.clientHeight + 1;
+            });
+          };
+          order.forEach(function (n) {
+            if (tooTall()) {
+              P[n].el.classList.add("collapsed");
+              P[n].head.tabIndex = 0;
+              P[n].head.setAttribute("role", "button");
+              visible.splice(visible.indexOf(n), 1);
+            }
+          });
+        });
+      }
+      var wide = function (node) { return node.scrollWidth > node.clientWidth + 1; };
+      var test = mode === "stacked" ? wide : overflows;
+      // Room to spare (short code, few names)? Make all visible panels larger together, up to 135 %.
+      var anyOver = function () { return visible.some(function (n) { return test(P[n].body); }); };
+      if (mode !== "stacked" && !anyOver()) {
+        var grow = 1;
+        while (grow < growCap) {
+          var next = Math.round((grow + 0.05) * 100) / 100;
+          visible.forEach(function (n) { P[n].body.style.setProperty("--scale", next); });
+          if (anyOver()) {
+            visible.forEach(function (n) {
+              if (grow === 1) P[n].body.style.removeProperty("--scale");
+              else P[n].body.style.setProperty("--scale", grow);
+            });
+            break;
+          }
+          grow = next;
+        }
+        lastGrow = grow;
+      } else {
+        lastGrow = 1;
+      }
+      visible.forEach(function (n) {
+        var body = P[n].body, scale = parseFloat(body.style.getPropertyValue("--scale")) || 1;
+        while (test(body) && scale > 0.8) {
+          scale = Math.round((scale - 0.05) * 100) / 100;
+          body.style.setProperty("--scale", scale);
+        }
+        if (mode !== "stacked" && overflows(body)) { body.classList.add("scroll"); scrollToLit(body); }
+      });
+      var cap = 1;
+      while (caption.scrollHeight > caption.clientHeight + 1 && cap > 0.84) {
+        cap = Math.round((cap - 0.04) * 100) / 100;
+        caption.style.setProperty("--cap-scale", cap);
+      }
+      drawArrows(area);
+    }
+
+    function delay(i) {
+      var s = steps[i];
+      return s.ms || Math.max(2600, 45 * plain(tx(s.caption)).length);
+    }
+    function setPlaying(on) {
+      playing = on;
+      clearTimeout(timer);
+      bPlay.firstChild.textContent = on ? "⏸" : "▶";
+      bPlay.lastChild.textContent = on ? T.pause : T.play;
+      bPlay.setAttribute("aria-label", on ? T.pause : T.play);
+      bPlay.title = on ? T.pause : T.play;
+      if (on) schedule();
+    }
+    function schedule() {
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        if (!playing) return;
+        if (current < N - 1) go(current + 1, true);
+        if (current >= N - 1) setPlaying(false);
+        else schedule();
+      }, delay(current));
+    }
+    function go(i, fromPlay) {
+      current = Math.max(0, Math.min(N - 1, i));
+      userPanel = null;
+      if (!fromPlay && playing) setPlaying(false);
+      render(current);
+    }
+    function toggle() {
+      if (playing) { setPlaying(false); return; }
+      if (current >= N - 1) go(0);
+      setPlaying(true);
+    }
+
+    bStart.addEventListener("click", function () { go(0); });
+    bPrev.addEventListener("click", function () { go(current - 1); });
+    bNext.addEventListener("click", function () { go(current + 1); });
+    bPlay.addEventListener("click", toggle);
+    doc.addEventListener("keydown", function (event) {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      var t = event.target, tag = t && t.tagName;
+      if (event.key === "ArrowRight") { event.preventDefault(); go(current + 1); }
+      else if (event.key === "ArrowLeft") { event.preventDefault(); go(current - 1); }
+      else if (event.key === " " || event.key === "Spacebar") {
+        if (tag === "BUTTON" || tag === "A" || (t && t.getAttribute && t.getAttribute("role") === "button")) return;
+        event.preventDefault();
+        toggle();
+      }
+    });
+
+    var resizeQueued = false;
+    win.addEventListener("resize", function () {
+      if (resizeQueued) return;
+      resizeQueued = true;
+      win.requestAnimationFrame(function () { resizeQueued = false; applyMode(); measureGrow(); render(current); });
+    });
+
+    function applyHash() {
+      var h = readHash();
+      if (h.theme) root.setAttribute("data-theme", h.theme); else root.removeAttribute("data-theme");
+      var framed = false;
+      try { framed = win.self !== win.top; } catch (e) { framed = true; }
+      root.setAttribute("data-embed", framed || h.embed ? "1" : "0");
+      return h;
+    }
+    win.addEventListener("hashchange", function () { go(applyHash().step - 1); });
+
+    var opts = applyHash();
+    applyMode();
+    measureGrow();
+    if (opts.audit) {
+      var report = { mode: mode, width: win.innerWidth, height: win.innerHeight, steps: [] };
+      for (var i = 0; i < N; i++) {
+        current = i;
+        render(i);
+        var item = { n: i + 1 };
+        var pageOver = Math.max(root.scrollHeight - win.innerHeight, root.scrollWidth - win.innerWidth,
+          app.scrollHeight - app.clientHeight);
+        if (pageOver > 1) item.page_overflow = pageOver;
+        var scroll = [], collapsed = [], scale = 1;
+        panels.forEach(function (name) {
+          var p = P[name];
+          if (p.body.classList.contains("scroll")) scroll.push(name);
+          if (p.el.classList.contains("collapsed")) collapsed.push(name);
+          var s = parseFloat(p.body.style.getPropertyValue("--scale"));
+          if (s && s < scale) scale = s;
+        });
+        if (scroll.length) item.scroll = scroll;
+        if (collapsed.length) item.collapsed = collapsed;
+        if (scale < 1) item.scale = scale;
+        if (caption.scrollHeight > caption.clientHeight + 1) item.caption_clipped = true;
+        report.steps.push(item);
+      }
+      doc.body.setAttribute("data-audit", JSON.stringify(report));
+    }
+    go(opts.step - 1);
+    if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(function () { measureGrow(); render(current); });
+    doc.body.setAttribute("data-ready", "1");
+    notifyParent();
+  }
+
+  try {
+    start();
+  } catch (error) {
+    reportError((error && error.message) || error);
+    throw error;
+  }
+})();
+</script>
+</body>
+</html>

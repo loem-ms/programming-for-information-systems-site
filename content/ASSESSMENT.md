@@ -5,7 +5,7 @@ The course assesses what you **understand, build, test and explain**. The weight
 | Component | Weight | What counts |
 |---|---:|---|
 | Participation | 10% | Taking part in class activities and the weekly reflection form |
-| Six research tasks | 30% | 5% each: sources, a concrete example and your own reasoning |
+| Six research tasks | 30% | 5% each: what you read or found, a concrete example, a check, and your own reasoning |
 | Individual midterm (Week 4) | 30% | Reading, writing and testing code; judging AI code; explaining a decision |
 | Final project (Weeks 9–10) | 30% | Your working system, your decisions and their evidence, your tests, verification and Demo day |
 | **Total** | **100%** | |
@@ -20,7 +20,9 @@ Join the Session 1–3 activities: predictions, pair work, Good-or-risky discuss
 
 ## Research tasks (30%)
 
-Six short tasks, 5% each. Each one connects a week's idea to a real system. See [research tasks](RESEARCH.md) for the topics and schedule.
+Six short tasks, 5% each. R1 and R2 connect a week's idea to a real system. R3–R6 each teach you one programming concept in five steps: read and organise, ask an AI about what stayed unclear, compare and check, your view, sources and honesty. See [research tasks](RESEARCH.md) for the topics, the steps and the schedule.
+
+**R1 and R2**
 
 | Criterion | Points |
 |---|---:|
@@ -31,7 +33,18 @@ Six short tasks, 5% each. Each one connects a week's idea to a real system. See 
 | Clear evidence, including how you checked any AI answer | 1 |
 | **Total** | **5** |
 
-AI tools are allowed for research. If you use one, check at least one claim yourself and say how you checked. Students who do not use AI can earn the same full marks.
+**R3–R6**
+
+| Criterion | Points |
+|---|---:|
+| **Read and organise:** a summary in your own words (5–8 sentences: what it is, why it exists, how it works, one common mistake) and a tiny example you ran, with its output | 1 |
+| **Ask an AI:** 6–10 key lines of the conversation, including your two follow-up questions (an everyday example from Cambodia, and "What can go wrong?"). No AI access: the same with a classmate or the instructor, or your questions answered from a second book chapter | 1 |
+| **Compare and check:** one place where the book and the AI agree in different words, differ, or where the AI was vague or wrong; one claim tested by running a tiny example | 1 |
+| **Your view:** a clear side on the debate question in 150–250 words, with a reason from the course's case | 1 |
+| **Sources and honesty:** the sections and chapters you read and the AI tool you used are named; invented examples only, no real personal data | 1 |
+| **Total** | **5** |
+
+For R1 and R2, AI tools are allowed but not needed. If you use one, check at least one claim yourself and say how you checked. Students who do not use AI can earn the same full marks. For R3–R6, you read first; the AI conversation comes after the reading and is part of the task, and comparing and checking it is part of the mark. Your summary and your view must be your own words.
 
 ## Midterm (30%)
 
