@@ -35,7 +35,7 @@ Parts you did not write are replaced by the kit's model version (📦), so your 
 | `LOG_EVENTS` | `storage.py` | 7 | What does the history keep (accountability against noise)? |
 | `PUBLIC_FIELDS` | `report.py` | 8 | What may anyone in the canteen see (the privacy decision)? |
 
-Change a setting in the **Files** panel: open `my_foodbridge/`, double-click the file, change the value, save. Do not run an old week's `%%writefile` cell again: it replaces the whole file and your decision is lost.
+Change a setting in the **Files** panel: open `my_foodbridge/`, double-click the file, change the value, and save (**Ctrl+S** / **Cmd+S**).
 
 ## The decision log
 

@@ -60,12 +60,12 @@ Read this table as a journey that starts with the paper notebook. In Week 1 you 
 | 1 | [What is an information system?](notebooks/Week_01.ipynb) | values, names, types, f-strings | an offer summary | the system's name |
 | 2 | [Rules and decisions](notebooks/Week_02.ipynb) | comparisons, `if`/`elif`/`else`, a first function | `pickup_label`, `urgency` | team size, urgency hours |
 | 3 | [Records and data](notebooks/Week_03.ipynb) | lists, dictionaries, `for` loops, totals | `total_portions`, `find_offer` | food categories |
-| 4 | [Functions you can trust · Your first files · **Midterm**](notebooks/Week_04.ipynb) | `def`, `return`, docstrings, `assert` tests, `%%writefile` | `rules.py`, `records.py` (`open_portions`) | rule constants in `rules.py` |
-| 5 | [Checking input](notebooks/Week_05.ipynb) | strings, `int()`, `try`/`except`, error list | `data_model.py`: `clean_offer` | limits and required fields |
-| 6 | [Lifecycles](notebooks/Week_06.ipynb) | dict of lists, `in`, `.get()`, `while` loops | `lifecycle.py`: `ALLOWED_MOVES`, `can_move` | whether approval is required |
+| 4 | [Functions you can trust · Your first files · **Midterm**](notebooks/Week_04.ipynb) | `def`, `return`, docstrings, `assert` tests, creating `.py` files | `rules.py`, `records.py` (`open_portions`) | rule constants in `rules.py` |
+| 5 | [Checking input](notebooks/Week_05.ipynb) | strings, `int()`, `try`/`except`, error list, CSV, histogram | `data_model.py`: `clean_offer` | limits and required fields |
+| 6 | [Lifecycles](notebooks/Week_06.ipynb) | dict of lists, `in`, `.get()`, `while` loops, bar chart | `lifecycle.py`: `ALLOWED_MOVES`, `can_move` | whether approval is required |
 | 7 | [Saving and history](notebooks/Week_07.ipynb) | files, `with`, JSON, JSON Lines, safe save | `storage.py`: save, load, history | what the history keeps |
-| 8 | [Reports, screens and a first chart](notebooks/Week_08.ipynb) | `sorted` with a key, formatting, matplotlib bar chart | `report.py`: `public_row`, `most_urgent_first`, `portions_by_status` | what the public sees |
-| 9 | [Assemble and analyse](notebooks/Week_09.ipynb) | `import`, `if __name__ == "__main__"`, CSV, line chart & histogram | `app.py` (menu + browser screen) & semester analysis | all settings |
+| 8 | [Reports, screens and charts](notebooks/Week_08.ipynb) | `sorted` with a key, formatting, static HTML, horizontal bar chart | `report.py` & `public_board.html` | what the public sees |
+| 9 | [Assemble and analyse](notebooks/Week_09.ipynb) | `import`, `if __name__ == "__main__"`, CSV, line chart & rates | `app.py` (menu + browser screen) & semester analysis | all settings |
 | 10 | [Verify, hand over, present](notebooks/Week_10.ipynb) | `test_…()` in `tests.py`, clean runs, AI code review | `tests.py`, `README.md`, presentation | — |
 
 By Week 9 the parts work together as one system, with your own decisions in it. Week 10 closes the journey: you verify the system before you trust it, and you hand it over so that someone else can run the busy morning. The notebook's last weakness — that only the person who wrote it could use it — is gone.
@@ -78,8 +78,8 @@ Each week has three 90-minute sessions and one notebook.
 |---|---|
 | **Class warm-up** | Share your research task in small groups (Weeks 2, 3 and 5–8). |
 | **Session 1 · Learn and try** | One information-systems idea, then the Python for it: explain, run, **predict**, **try it** (short checked exercises). |
-| **Session 2 · Practise and judge** | This week's ticket, model it on paper, a 3-step ladder, then **⚖️ Good or risky?** |
-| **Session 3 · Build** | Write this week's file (`%%writefile`), check it (✅/❌), see your system (`bridge.show`), and record **your decision**. |
+| **Session 2 · Practise and judge** | This week's ticket, model it on paper, a guided ladder (puzzle → code), then **⚖️ Good or risky?** |
+| **Session 3 · Build** | Write this week's file in `my_foodbridge/`, check it (✅/❌), see your system (`bridge.show`), and record **your decision**. |
 | **Finish** | A checklist, the research task (if any) and a look at next week. |
 
 **The minimum is always reachable.** If you run every cell and complete the ⭐ tasks, you have a working part. ⭐⭐ tasks are for going further with a little more thinking.

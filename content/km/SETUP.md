@@ -24,7 +24,7 @@
 ប្រសិនបើ Colab មិនមែនជាជម្រើសសម្រាប់អ្នកទេ notebook ដដែលនេះ ក៏ដំណើរការនៅលើកុំព្យូទ័រផ្ទាល់ខ្លួនរបស់អ្នកបានដែរ។ សូមប្រើជម្រើសនេះ ប្រសិនបើអ្នកចូលចិត្តធ្វើការដោយគ្មាន internet (offline)។
 
 1. Install **Python 3** កំណែចុងក្រោយពី [python.org](https://www.python.org/downloads/) (កំណែណាក៏បាន ចាប់ពី 3.9 ឡើងទៅ ក៏ប្រើបានដែរ)។
-2. Install Jupyter និង matplotlib៖ បើក terminal ហើយ Run `python -m pip install notebook matplotlib` (នៅលើកុំព្យូទ័រខ្លះ ត្រូវប្រើ `python3 -m pip install notebook matplotlib`)។ `matplotlib` ត្រូវបានប្រើសម្រាប់គូរក្រាហ្វ (chart) ក្នុងសប្ដាហ៍ទី 8–9។
+2. Install Jupyter និង matplotlib៖ បើក terminal ហើយ Run `python -m pip install notebook matplotlib` (នៅលើកុំព្យូទ័រខ្លះ ត្រូវប្រើ `python3 -m pip install notebook matplotlib`)។ `matplotlib` ត្រូវបានប្រើសម្រាប់គូរក្រាហ្វ (chart) ក្នុងសប្ដាហ៍ទី 5–9។
 3. នៅទំព័រដើមរបស់វគ្គសិក្សា សូមប្រើ **Download** ដើម្បីរក្សាទុក file `.ipynb` របស់សប្ដាហ៍នោះ ក្នុង folder មួយ។
 4. ក្នុង terminal នៅ folder នោះ សូម Run `python -m notebook` ហើយបើក file នោះ។
 5. ចូរ Run setup cell។ វាបង្កើត folder `foodbridge_kit` (ហើយចាប់ពីសប្ដាហ៍ទី 4 តទៅ ក៏បង្កើត folder `my_foodbridge` របស់អ្នកដែរ) នៅជាប់នឹង notebook។
@@ -53,7 +53,8 @@ Web app (`bridge.start_web`) ដំណើរការតែក្នុង noteb
 | ឈ្មោះមួយដែលអ្នកបានបង្កើត លោតសារថា "not defined" | ចូរ Run cell ដែលកំណត់ឈ្មោះនោះ ឬប្រើ **Restart session and run all**។ |
 | ការពិនិត្យមួយបង្ហាញ ❌ | សូមអានការណែនាំ 💡 នៅខាងក្រោមវា។ ការពិនិត្យមិនដែលបញ្ឈប់ notebook របស់អ្នកទេ៖ សូមកែ ហើយ Run ម្ដងទៀត។ |
 | `⚠️ … របស់អ្នកមិនដំណើរការ ប្រព័ន្ធបានប្រើ default` | function របស់អ្នកបាន crash ឬបាន return អ្វីមួយដែលមិនបានរំពឹងទុក។ ដូច្នេះ ប្រព័ន្ធបានប្រើវិធានរបស់ខ្លួនវាជំនួស។ សូមអានសារនោះ។ |
-| `bridge.show()` សម្គាល់ file មួយដោយ `🔧` (កំណែគំរូ) | file នោះមិនទាន់មានក្នុង `my_foodbridge/` ឬវាមានកំហុស Python។ សូមអានកំណត់ចំណាំបញ្ហាក្នុង `bridge.show()` ហើយ Run cell `%%writefile` ម្ដងទៀត ឬកែ file នោះ។ |
-| setup cell បង្ហាញលេខ version ថ្មី | មិនអីទេ៖ notebook បានពន្លា (unpack) ឯកសារវគ្គសិក្សាកំណែថ្មី។ folder `my_foodbridge/` របស់អ្នក (និង `my_settings.py` / `my_rules.py` ពីមុន) នៅដដែល។ |
+| `bridge.show()` សម្គាល់ file មួយដោយ `🔧` (កំណែគំរូ) | file នោះមិនទាន់មានក្នុង `my_foodbridge/` ឬវាមានកំហុស Python។ សូមអានកំណត់ចំណាំបញ្ហាក្នុង `bridge.show()` ពិនិត្យថាអ្នកបាន save file ក្នុង `my_foodbridge/` (**Ctrl+S** / **Cmd+S**) ហើយកែកំហុស syntax ឬកំហុស contract ដែលបានបង្ហាញ។ |
+| `my_foodbridge/` មិនបង្ហាញក្នុងផ្ទាំង **Files** | ចូរ Run setup cell មុនសិន បន្ទាប់មកចុចប៊ូតុង **Refresh** នៅផ្នែកខាងលើនៃផ្ទាំង **Files** របស់ Colab។ |
+| setup cell បង្ហាញលេខ version ថ្មី | មិនអីទេ៖ notebook បានពន្លា (unpack) ឯកសារវគ្គសិក្សាកំណែថ្មី។ folder `my_foodbridge/` របស់អ្នក នៅដដែល។ |
 
 នៅតែមិនទាន់ដោះស្រាយបាន? សូមមើល [សំណួរ និងជំនួយ (English)](../CONTRIBUTING.md)។

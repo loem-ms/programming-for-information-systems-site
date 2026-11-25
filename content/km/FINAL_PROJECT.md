@@ -35,7 +35,7 @@ Notebook [`Final_Project.ipynb`](notebooks/Final_Project.ipynb) គ្រាន�
 | `LOG_EVENTS` | `storage.py` | 7 | តើប្រវត្តិរក្សាទុកអ្វីខ្លះ (ការទទួលខុសត្រូវ ធៀបនឹងព័ត៌មានច្រើនពេកដែលរំខាន)? |
 | `PUBLIC_FIELDS` | `report.py` | 8 | តើអ្នកណាក៏ដោយនៅក្នុងអាហារដ្ឋាន អាចឃើញអ្វីខ្លះ (ការសម្រេចចិត្តអំពីឯកជនភាព)? |
 
-ចូរប្ដូរ setting នៅក្នុងផ្ទាំង **Files**៖ បើក `my_foodbridge/` ចុចពីរដងលើ file ប្ដូរតម្លៃ ហើយ save។ កុំ Run cell `%%writefile` របស់សប្ដាហ៍ចាស់ម្ដងទៀត៖ វាជំនួស file ទាំងមូល ហើយការសម្រេចចិត្តរបស់អ្នកនឹងបាត់។
+ចូរប្ដូរ setting នៅក្នុងផ្ទាំង **Files**៖ បើក `my_foodbridge/` ចុចពីរដងលើ file ប្ដូរតម្លៃ ហើយ save (**Ctrl+S** / **Cmd+S**)។
 
 ## កំណត់ត្រាការសម្រេចចិត្ត (decision log)
 
