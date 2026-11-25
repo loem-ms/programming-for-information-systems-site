@@ -16,7 +16,7 @@
 
 - ប្រសិនបើ Colab ប្រាប់ថា runtime ត្រូវបាន reset ឬដាច់ការតភ្ជាប់ (disconnected) សូម Run setup cell ម្ដងទៀត។ បន្ទាប់មក សូម Run cell ដែលអ្នកត្រូវការ។
 - នៅពេលអ្នកច្រឡំ សូមប្រើ **Runtime → Restart session and run all**។ វា Run អ្វីៗទាំងអស់ឡើងវិញពីដំបូង តាមលំដាប់។
-- **ចាប់ពីសប្ដាហ៍ទី 4 តទៅ** setup cell នឹងសួរដើម្បីភ្ជាប់ Google Drive ដើម្បីឱ្យ folder `my_foodbridge/` របស់អ្នកត្រូវបានរក្សាទុកក្នុង `MyDrive/my_foodbridge` ហើយនៅជាមួយអ្នកពីសប្ដាហ៍មួយទៅសប្ដាហ៍មួយ។ ប្រសិនបើអ្នកមិនអនុញ្ញាតឱ្យភ្ជាប់ Drive ទេ Colab នឹងរក្សា `my_foodbridge/` ក្នុង folder បណ្ដោះអាសន្នសម្រាប់វគ្គនោះប៉ុណ្ណោះ — វា **បាត់ទៅវិញនៅពេល runtime ដាច់ការតភ្ជាប់** (សូមទាញយកច្បាប់ចម្លង ឬភ្ជាប់ Drive វិញ ប្រសិនបើអ្នកចង់រក្សាទុក file របស់អ្នក)។ ចំណែក notebook របស់អ្នកផ្ទាល់ នៅមានសុវត្ថិភាពក្នុង Drive ជានិច្ច នៅពេលអ្នក save ច្បាប់ចម្លង។
+- **ចាប់ពីសប្ដាហ៍ទី 4 តទៅ** setup cell នឹងសួរដើម្បីភ្ជាប់ Google Drive ដើម្បីរក្សាទុក folder `my_foodbridge/` របស់អ្នកនៅក្នុង `MyDrive/my_foodbridge` ហើយនៅជាមួយអ្នកពីសប្ដាហ៍មួយទៅសប្ដាហ៍មួយ។ ប្រសិនបើអ្នកមិនអនុញ្ញាតឱ្យភ្ជាប់ Drive ទេ Colab នឹងរក្សា `my_foodbridge/` ក្នុង folder បណ្ដោះអាសន្នសម្រាប់វគ្គនោះប៉ុណ្ណោះ — វា **បាត់ទៅវិញនៅពេល runtime ដាច់ការតភ្ជាប់** (សូមទាញយកច្បាប់ចម្លង ឬភ្ជាប់ Drive វិញ ប្រសិនបើអ្នកចង់រក្សាទុក file របស់អ្នក)។ ចំណែក notebook របស់អ្នកផ្ទាល់ នៅមានសុវត្ថិភាពក្នុង Drive ជានិច្ច នៅពេលអ្នក save ច្បាប់ចម្លង។
 - បច្ចុប្បន្ន Colab ប្រើ Python 3.13 (បានពិនិត្យនៅខែវិច្ឆិកា ឆ្នាំ 2026)។ វគ្គសិក្សានេះដំណើរការជាមួយ Python ណាក៏បាន ចាប់ពី 3.9 ឡើងទៅ។ ដូច្នេះ Colab កំណែថ្មីជាងនេះ ក៏មិនអីដែរ។
 
 ## ជម្រើស B · កុំព្យូទ័រផ្ទាល់ខ្លួនរបស់អ្នក
@@ -33,14 +33,15 @@ VS Code ជាមួយ extension Python និង Jupyter ក៏ប្រើប
 
 ## Final project នៅផ្ទះ (ស្រេចចិត្ត)
 
-មិនថាអ្នកជ្រើសរើសជម្រើសមួយណា សម្រាប់ការងារប្រចាំថ្ងៃទេ final project បន្ថែមលទ្ធភាពមួយទៀត។ ក្នុង Final project (កម្រិតទី 4) អ្នកអាចទាញយកប្រព័ន្ធ **ផ្ទាល់ខ្លួនរបស់អ្នក** ជា ZIP ហើយដំណើរការវានៅក្រៅ notebook៖
+Final project របស់អ្នក គឺជា folder `my_foodbridge/` ផ្ទាល់ខ្លួនរបស់អ្នក។ ដើម្បី run វានៅក្រៅ notebook៖
 
-1. ពន្លា (unzip) `my_foodbridge.zip`។
-2. បើក terminal នៅក្នុង folder `foodbridge_kit`។
-3. Run `python run_web.py` ហើយបើក http://localhost:8000 ក្នុង browser របស់អ្នក។ បញ្ឈប់វាដោយចុច **Ctrl + C**។
-4. `python run_menu.py` បើក menu ជាអក្សរ (text menu)។ `python run_tests.py` ដំណើរការ test របស់ប្រព័ន្ធ។
+1. ទាញយក (download) folder នោះ (Google Drive → ចុចកណ្ដុរស្ដាំលើ `my_foodbridge` → **Download**) ហើយពន្លា (unzip) វា។
+2. បើក terminal នៅក្នុង folder `my_foodbridge/`។
+3. Run `python app.py` (ប្រើ `python3` នៅលើ Mac ឬ Linux) រួចវាយ `1`, `2`, `3` ឬ `q`។
 
-[FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) គឺជាប្រព័ន្ធដដែល ជាមួយ default settings។ ដើម្បីឃើញអេក្រង់ជាភាសាខ្មែរ សូមដាក់ `LANGUAGE = "km"` ក្នុង `my_settings.py` (ZIP ផ្ទាល់ខ្លួនរបស់អ្នក ដែលអ្នកទាញយកពី notebook មានបន្ទាត់នេះរួចហើយ)។
+Web app (`bridge.start_web`) ដំណើរការតែក្នុង notebook ប៉ុណ្ណោះ។
+
+[FoodBridge kit ZIP](/downloads/foodbridge_kit.zip) គឺជាប្រព័ន្ធដដែល ជាមួយ default settings។
 
 ## ពេលមានបញ្ហា
 
@@ -49,10 +50,10 @@ VS Code ជាមួយ extension Python និង Jupyter ក៏ប្រើប
 | អ្វីដែលអ្នកឃើញ | អ្វីដែលត្រូវធ្វើ |
 |---|---|
 | `NameError: name 'bridge' is not defined` | ចូរ Run setup cell មុនសិន។ |
-| ឈ្មោះមួយដែលអ្នកបានកំណត់ ត្រូវបានប្រាប់ថា "not defined" | ចូរ Run cell ដែលកំណត់ឈ្មោះនោះ ឬប្រើ **Restart session and run all**។ |
+| ឈ្មោះមួយដែលអ្នកបានបង្កើត លោតសារថា "not defined" | ចូរ Run cell ដែលកំណត់ឈ្មោះនោះ ឬប្រើ **Restart session and run all**។ |
 | ការពិនិត្យមួយបង្ហាញ ❌ | សូមអានការណែនាំ 💡 នៅខាងក្រោមវា។ ការពិនិត្យមិនដែលបញ្ឈប់ notebook របស់អ្នកទេ៖ សូមកែ ហើយ Run ម្ដងទៀត។ |
 | `⚠️ … របស់អ្នកមិនដំណើរការ ប្រព័ន្ធបានប្រើ default` | function របស់អ្នកបាន crash ឬបាន return អ្វីមួយដែលមិនបានរំពឹងទុក។ ដូច្នេះ ប្រព័ន្ធបានប្រើវិធានរបស់ខ្លួនវាជំនួស។ សូមអានសារនោះ។ |
 | `bridge.show()` សម្គាល់ file មួយដោយ `🔧` (កំណែគំរូ) | file នោះមិនទាន់មានក្នុង `my_foodbridge/` ឬវាមានកំហុស Python។ សូមអានកំណត់ចំណាំបញ្ហាក្នុង `bridge.show()` ហើយ Run cell `%%writefile` ម្ដងទៀត ឬកែ file នោះ។ |
-| setup cell បង្ហាញលេខ version ថ្មី | មិនអីទេ៖ វគ្គសិក្សាកំណែថ្មីជាងមួយ ត្រូវបានពន្លា (unpack)។ folder `my_foodbridge/` របស់អ្នក (និង `my_settings.py` / `my_rules.py` ពីមុន) នៅដដែល។ |
+| setup cell បង្ហាញលេខ version ថ្មី | មិនអីទេ៖ notebook បានពន្លា (unpack) ឯកសារវគ្គសិក្សាកំណែថ្មី។ folder `my_foodbridge/` របស់អ្នក (និង `my_settings.py` / `my_rules.py` ពីមុន) នៅដដែល។ |
 
 នៅតែមិនទាន់ដោះស្រាយបាន? សូមមើល [សំណួរ និងជំនួយ (English)](../CONTRIBUTING.md)។

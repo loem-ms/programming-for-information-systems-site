@@ -62,11 +62,19 @@
         ]
       },
       {
-        "title": "Midterm",
+        "title": "Midterm and final project",
         "children": [
           {
             "file": "content/MIDTERM.md",
             "title": "Midterm · Campus Library Desk"
+          },
+          {
+            "file": "content/FINAL_PROJECT.md",
+            "title": "Final project guide"
+          },
+          {
+            "file": "content/notebooks/Final_Project.ipynb",
+            "title": "Final project notebook"
           }
         ]
       },
@@ -155,16 +163,24 @@
               },
               {
                 "file": "content/km/notebooks/Week_10.ipynb",
-                "title": "សប្ដាហ៍ទី 10 · ផ្ទៀងផ្ទាត់ ប្រគល់ និងបង្ហាញ"
+                "title": "សប្ដាហ៍ទី 10 · ផ្ទៀងផ្ទាត់ ផ្ទេរការងារ និងបង្ហាញ"
               }
             ]
           },
           {
-            "title": "Midterm",
+            "title": "Midterm និង Final project",
             "children": [
               {
                 "file": "content/km/MIDTERM.md",
-                "title": "Midterm · តុបណ្ណាល័យសាកលវិទ្យាល័យ"
+                "title": "Midterm · បញ្ជរបណ្ណាល័យសាកលវិទ្យាល័យ"
+              },
+              {
+                "file": "content/km/FINAL_PROJECT.md",
+                "title": "មគ្គុទ្ទេសក៍ Final project"
+              },
+              {
+                "file": "content/km/notebooks/Final_Project.ipynb",
+                "title": "Final project notebook"
               }
             ]
           },

@@ -7,7 +7,7 @@ The course assesses what you **understand, build, test and explain**. The weight
 | Participation | 10% | Taking part in class activities and the weekly reflection form |
 | Six research tasks | 30% | 5% each: sources, a concrete example and your own reasoning |
 | Individual midterm (Week 4) | 30% | Reading, writing and testing code; judging AI code; explaining a decision |
-| Final project (Weeks 9–10) | 30% | Your working system, your decisions, verification, handoff and presentation |
+| Final project (Weeks 9–10) | 30% | Your working system, your decisions and their evidence, your tests, verification and Demo day |
 | **Total** | **100%** | |
 
 **Submit** by email to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com), unless the instructor announces another route. Keep your own copy of everything you submit.
@@ -51,21 +51,19 @@ The midterm tests **understanding** of Weeks 1–4 in a new everyday setting (**
 
 After you submit, a short **2–3 minute oral check**: the instructor asks about your **My key line** and one other line or test from your notebook. If you cannot explain your own code, the marks for that part can be reduced.
 
-## Final project (being updated) (30%)
+## Final project (30%)
 
-The last component brings the whole course together in Weeks 9–10, when you assemble the parts you built into your own system.
+The last component brings the whole course together in Weeks 9–10: your own `my_foodbridge/` folder, finished, verified and presented. See the [final project guide](FINAL_PROJECT.md) for the four levels, the two logs and what to submit.
 
-See the final project guide (being updated) for the four levels and what to submit.
-
-| What is assessed | Weight within the project |
+| What is assessed | Points (of 100) |
 |---|---:|
-| **It runs and is verified:** Level 1, clean run, `verify()` healthy | 25% |
-| **Your decisions:** Level 2 settings and the quality of the decision log | 30% |
-| **Tests and extension:** tests for your own decisions (expected) + Level 3 / Level 4 (optional) | 15% |
-| **Handoff:** handoff note and peer test record | 15% |
-| **Presentation and individual explanation** (Week 10) | 15% |
+| **It runs (Level 1):** your parts pass `bridge.check("all")`, your menu works, your zip is complete | 25 |
+| **Your decisions (Level 2):** three settings you changed, with evidence from data or people, in your decision log | 25 |
+| **Your own tests:** `tests.py` with tests that can fail and that pin your decisions | 15 |
+| **Verification log and README:** how you checked it (check, clean run, a review of AI code) and how someone else can run it | 15 |
+| **Demo day (Week 10):** explain one decision and make one live change at the instructor's desk | 20 |
 
-Completing Levels 1 and 2 well, with two tests for your own decisions, a clear handoff and a presentation, is enough for a good grade. Levels 3 and 4 add marks, but a long program with weak decisions scores lower than a short one with strong, well-explained decisions.
+Levels 3 and 4 are optional: they strengthen your tests and your verification log, and full marks are possible without them. A short system with strong, well-explained decisions scores higher than a long one with weak reasons.
 
 ## Fairness and integrity
 
