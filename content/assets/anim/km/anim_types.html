@@ -200,6 +200,7 @@ html[data-embed="1"] .pop { display: inline-block; }
 .col.left.code-first { flex: 1.45 1 0; }
 
 .panel {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 0;
@@ -243,6 +244,30 @@ html[data-embed="1"] .pop { display: inline-block; }
   font-size: calc(1rem * var(--scale, 1));
 }
 .panel-body.scroll { overflow: auto; }
+/* A panel that scrolls can be reached with Tab (player.js sets tabindex); the ring shows only for the keyboard. */
+.panel-body:focus { outline: none; }
+.panel-body:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+/* Content wider than its panel (a long code line) scrolls sideways; never cut off silently: a "→" at the
+   right edge says there is more (until the student scrolls to the end), and the scroll bar stays visible
+   where the browser lets a page style it (Chrome, Edge, Safari on a computer). */
+.more {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 1.9em;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.2em;
+  background: linear-gradient(to right, transparent, var(--panel) 62%);
+  color: var(--accent);
+  font-family: var(--font);
+  font-weight: 800;
+  pointer-events: none;
+}
+.panel.more-right .more { display: flex; }
+.panel.hscroll .panel-body::-webkit-scrollbar { width: 7px; height: 7px; }
+.panel.hscroll .panel-body::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 4px; }
+.panel.hscroll .panel-body::-webkit-scrollbar-track, .panel.hscroll .panel-body::-webkit-scrollbar-corner { background: transparent; }
 .empty { color: var(--muted); font-style: italic; font-size: 0.9em; }
 
 /* compact: one panel at a time, tabs in the header */
@@ -272,6 +297,9 @@ html[data-mode="stacked"] .panel-body { overflow-x: auto; }
   padding: 0.15rem 0;
 }
 .code-lines { display: inline-block; min-width: 100%; }
+/* A code line too long for the panel (it scrolls sideways): the box grows with the line, so the line
+   stays inside the box while the student scrolls. Only then, so code that fits keeps its layout. */
+.panel.hscroll .code { width: max-content; min-width: 100%; }
 .ln { display: flex; }
 .ln .no {
   flex: none;
@@ -323,6 +351,7 @@ html[data-mode="stacked"] .panel-body { overflow-x: auto; }
 .row .note { font-family: var(--font); font-size: 0.85em; color: var(--muted); margin-left: auto; }
 .row.ret .nm { font-family: var(--font); font-style: italic; font-weight: 600; }
 
+.row .val, .v-str { white-space: pre-wrap; }   /* text values keep their spaces: "  Dara " */
 .v-str { color: var(--str); }
 .v-num { color: var(--num); }
 .v-const { color: var(--const); font-weight: 600; }
@@ -537,7 +566,13 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
    URL hash (combine with &): step=4 (open at step 4, 1-based) · theme=dark|light ·
    embed=1 (look as in the site's iframe: show the "open in a new tab" link) ·
    audit=1 (render every step, record fit problems in <body data-audit>; used by tools/anim.py --shots).
-   Errors are written to <body data-error>; a finished start sets <body data-ready="1">. */
+   Fitting: a panel that is too tall or too wide shrinks its font (down to 80 %); in the wide box a column
+   whose content is too wide (a long code line) first takes some width from the other column. What still
+   does not fit scrolls inside its panel, and a panel that scrolls sideways shows a "→" at its right edge:
+   nothing is cut off silently. The page itself never scrolls. A panel that scrolls can be reached with
+   Tab (role="region"); while it has focus, ← and → scroll it sideways instead of changing the step.
+   Errors are written to <body data-error>; a finished start sets <body data-ready="1"> once the fonts
+   are ready (the audit is measured then too). */
 (function () {
   "use strict";
 
@@ -575,7 +610,8 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
       global: "global names", inside: "inside {f}", returns: "return value", vanishing: "about to vanish",
       empty: "(empty)", nothing: "(nothing printed yet)", no_files: "(no files yet)", empty_file: "(empty file)",
       state_new: "new", state_changed: "changed", state_same: "unchanged", state_gone: "deleted",
-      state_temp: "temporary", state_broken: "broken", done: "done", arrow: "Arrow: {a} → {b}"
+      state_temp: "temporary", state_broken: "broken", done: "done", arrow: "Arrow: {a} → {b}",
+      scroll_side: "{p}, scrolls sideways", scroll_down: "{p}, scrolls up and down"
     },
     km: {
       play: "ចាក់", pause: "ផ្អាក", prev: "ជំហានមុន", next: "ជំហានបន្ទាប់", start: "ចាប់ផ្ដើមម្ដងទៀត",
@@ -587,7 +623,8 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
       empty: "(ទទេ)", nothing: "(មិនទាន់មានអ្វីបង្ហាញនៅឡើយ)", no_files: "(មិនទាន់មាន file នៅឡើយ)",
       empty_file: "(file ទទេ)",
       state_new: "ថ្មី", state_changed: "បានកែ", state_same: "ដដែល", state_gone: "បានលុប",
-      state_temp: "បណ្ដោះអាសន្ន", state_broken: "ខូច", done: "រួចរាល់", arrow: "ព្រួញ: {a} → {b}"
+      state_temp: "បណ្ដោះអាសន្ន", state_broken: "ខូច", done: "រួចរាល់", arrow: "ព្រួញ: {a} → {b}",
+      scroll_side: "{p} រំកិលទៅឆ្វេងស្ដាំបាន", scroll_down: "{p} រំកិលឡើងចុះបាន"
     }
   };
   var LANG = root.getAttribute("lang") === "km" ? "km" : "en";
@@ -636,7 +673,8 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
   }
 
   function pyStr(s) {
-    return "\"" + String(s).replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\n/g, "\\n") + "\"";
+    return "\"" + String(s).replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\n/g, "\\n")
+      .replace(/\r/g, "\\r").replace(/\t/g, "\\t") + "\"";
   }
 
   function reprText(v) {
@@ -946,6 +984,7 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
     // Wide box: the first `left` panels (default 1) share the left column, the others the right one.
     var nLeft = panels.length > 1 ? Math.max(1, Math.min(A.left || 1, panels.length - 1)) : 1;
     var columns = [panels.slice(0, nLeft), panels.slice(nLeft)];
+    var baseGrow = 1;   // the left column's share of the width (flex-grow; the right column has 1)
     var area = el("div", "anim-panels");
     var left = el("div", "col left" + (panels[0] === "code" && panels.length > 1 ? " code-first" : ""));
     var right = el("div", "col right");
@@ -965,8 +1004,9 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
           longestOut = Math.max(longestOut, tx(typeof line === "string" ? line : line.text).length);
         });
       });
-      left.style.flexGrow = longestOut > 30 ? 1 : longest > 50 ? 1.65 : longest > 40 ? 1.45 : 1.2;
+      baseGrow = longestOut > 30 ? 1 : longest > 50 ? 1.65 : longest > 40 ? 1.45 : 1.2;
     }
+    left.style.flexGrow = baseGrow;
     var foot = el("footer", "anim-foot");
     var progress = el("div", "progress");
     var bar = el("div", "bar");
@@ -1001,7 +1041,11 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
       var sub = el("span", "sub");
       add(h, el("span", "name", T[name]), sub);
       var body = el("div", "panel-body");
-      add(section, h, body);
+      // Shown at the right edge while the panel's content goes on to the right (it scrolls sideways).
+      var more = el("span", "more", "→");
+      more.setAttribute("aria-hidden", "true");
+      add(section, h, body, more);
+      body.addEventListener("scroll", function () { showMore(P[name]); });
       add(i < nLeft ? left : right, section);
       var tab = el("button", "tab", T["tab_" + name]);
       tab.type = "button";
@@ -1018,7 +1062,7 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
         }
       });
       add(tabs, tab);
-      P[name] = { name: name, el: section, head: h, sub: sub, body: body, tab: tab };
+      P[name] = { name: name, el: section, head: h, sub: sub, body: body, tab: tab, more: more };
     });
 
     var mode = null;
@@ -1040,17 +1084,47 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
     var current = 0, playing = false, timer = null, userPanel = null;
     var growCap = 1.35, lastGrow = 1;
 
-    // One text size for the whole animation in this window: the largest that every step can use,
-    // so the text does not jump from step to step while playing.
-    function measureGrow() {
-      var keep = current, cap = 1.35;
+    // Render every step in this window and sum up how it fitted, per column (0 left, 1 right):
+    // px of content wider than its panel, panels that scroll, panels folded to their title bar.
+    function survey() {
+      var s = { cap: 1.35, over: [0, 0], scroll: [0, 0], folded: [0, 0] };
       growCap = 1.35;
       for (var i = 0; i < N; i++) {
         current = i;
         render(i);
-        cap = Math.min(cap, lastGrow);
+        s.cap = Math.min(s.cap, lastGrow);
+        panels.forEach(function (name, k) {
+          var p = P[name], c = k < nLeft ? 0 : 1;
+          s.over[c] += Math.max(0, p.body.scrollWidth - p.body.clientWidth - 1);
+          if (p.body.classList.contains("scroll")) s.scroll[c]++;
+          if (p.el.classList.contains("collapsed")) s.folded[c]++;
+        });
       }
-      growCap = cap;
+      return s;
+    }
+
+    // One text size for the whole animation in this window: the largest that every step can use,
+    // so the text does not jump from step to step while playing. In the wide box, a column whose
+    // content is too wide even at the smallest font (a long code line) takes width from the other
+    // column, a little at a time, while the other column needs no more scrolling or folding than before.
+    // The column widths are the same for every step.
+    function measureGrow() {
+      var keep = current, grow = baseGrow;
+      left.style.flexGrow = grow;
+      var best = survey();
+      if (mode === "wide" && panels.length > 1 && (best.over[0] > 0) !== (best.over[1] > 0)) {
+        var side = best.over[0] > 0 ? 0 : 1, other = 1 - side;
+        for (var k = 1; k <= 8 && best.over[side] > 0; k++) {
+          var g = side === 0 ? baseGrow * (1 + 0.08 * k) : baseGrow / (1 + 0.08 * k);
+          left.style.flexGrow = g;
+          var s = survey();
+          if (s.over[other] > best.over[other] || s.scroll[other] > best.scroll[other] ||
+              s.folded[other] > best.folded[other]) break;
+          if (s.over[side] < best.over[side]) { best = s; grow = g; }
+        }
+        left.style.flexGrow = grow;
+      }
+      growCap = best.cap;
       current = keep;
     }
 
@@ -1079,8 +1153,40 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
       fit();
     }
 
-    function overflows(node) {
-      return node.scrollHeight > node.clientHeight + 1 || node.scrollWidth > node.clientWidth + 1;
+    function tooWide(node) { return node.scrollWidth > node.clientWidth + 1; }
+    function overflows(node) { return node.scrollHeight > node.clientHeight + 1 || tooWide(node); }
+
+    // The "→" at the right edge, beside the content (not below it): while the content goes on further
+    // to the right than the student has scrolled.
+    function showMore(p) {
+      var b = p.body;
+      var on = p.el.classList.contains("hscroll") && b.scrollLeft + b.clientWidth < b.scrollWidth - 2;
+      p.el.classList.toggle("more-right", on);
+      if (!on) return;
+      var height = b.clientHeight, last = b.lastElementChild;
+      if (last && b.scrollHeight <= b.clientHeight + 1) {
+        height = Math.min(height, last.offsetTop - b.offsetTop + last.offsetHeight + 4);
+      }
+      p.more.style.top = b.offsetTop + "px";
+      p.more.style.height = height + "px";
+    }
+
+    // A panel that scrolls inside itself can be reached with Tab and is named for screen readers;
+    // the attributes go away when it no longer scrolls. Only changed attributes are touched, so a panel
+    // that keeps scrolling keeps its focus when the step is drawn again.
+    function setReachable(p) {
+      var b = p.body, side = p.el.classList.contains("hscroll");
+      var can = side || (b.classList.contains("scroll") && b.scrollHeight > b.clientHeight + 1);
+      var label = can ? (side ? T.scroll_side : T.scroll_down).replace("{p}", T[p.name]) : null;
+      if (can) {
+        if (b.getAttribute("tabindex") !== "0") b.setAttribute("tabindex", "0");
+        if (b.getAttribute("role") !== "region") b.setAttribute("role", "region");
+        if (b.getAttribute("aria-label") !== label) b.setAttribute("aria-label", label);
+      } else if (b.hasAttribute("tabindex")) {
+        b.removeAttribute("tabindex");
+        b.removeAttribute("role");
+        b.removeAttribute("aria-label");
+      }
     }
 
     function scrollToLit(body) {
@@ -1096,10 +1202,11 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
       var view = userPanel || focus[current];
       panels.forEach(function (name) {
         var p = P[name];
-        p.el.classList.remove("collapsed", "grow", "shown");
+        p.el.classList.remove("collapsed", "grow", "shown", "hscroll", "more-right");
         p.body.classList.remove("scroll");
         p.body.style.removeProperty("--scale");
         p.body.scrollTop = 0;
+        p.body.scrollLeft = 0;
         p.head.removeAttribute("tabindex");
         p.head.removeAttribute("role");
         var on = name === view;
@@ -1136,8 +1243,7 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
           });
         });
       }
-      var wide = function (node) { return node.scrollWidth > node.clientWidth + 1; };
-      var test = mode === "stacked" ? wide : overflows;
+      var test = mode === "stacked" ? tooWide : overflows;
       // Room to spare (short code, few names)? Make all visible panels larger together, up to 135 %.
       var anyOver = function () { return visible.some(function (n) { return test(P[n].body); }); };
       if (mode !== "stacked" && !anyOver()) {
@@ -1165,7 +1271,11 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
           body.style.setProperty("--scale", scale);
         }
         if (mode !== "stacked" && overflows(body)) { body.classList.add("scroll"); scrollToLit(body); }
+        // Still too wide (a long code line): it scrolls sideways, and the "→" shows there is more.
+        if (tooWide(body)) P[n].el.classList.add("hscroll");
+        showMore(P[n]);
       });
+      panels.forEach(function (n) { setReachable(P[n]); });
       var cap = 1;
       while (caption.scrollHeight > caption.clientHeight + 1 && cap > 0.84) {
         cap = Math.round((cap - 0.04) * 100) / 100;
@@ -1215,7 +1325,14 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
     doc.addEventListener("keydown", function (event) {
       if (event.altKey || event.ctrlKey || event.metaKey) return;
       var t = event.target, tag = t && t.tagName;
-      if (event.key === "ArrowRight") { event.preventDefault(); go(current + 1); }
+      var sideways = t && t.classList && t.classList.contains("panel-body") && t.scrollWidth > t.clientWidth + 1;
+      if (sideways && (event.key === "ArrowRight" || event.key === "ArrowLeft")) {
+        // A focused panel that scrolls sideways: the arrows scroll it; the step stays.
+        event.preventDefault();
+        var by = Math.max(40, Math.round(t.clientWidth / 4));
+        t.scrollLeft += event.key === "ArrowRight" ? by : -by;
+      }
+      else if (event.key === "ArrowRight") { event.preventDefault(); go(current + 1); }
       else if (event.key === "ArrowLeft") { event.preventDefault(); go(current - 1); }
       else if (event.key === " " || event.key === "Spacebar") {
         if (tag === "BUTTON" || tag === "A" || (t && t.getAttribute && t.getAttribute("role") === "button")) return;
@@ -1244,24 +1361,50 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
     var opts = applyHash();
     applyMode();
     measureGrow();
-    if (opts.audit) {
-      var report = { mode: mode, width: win.innerWidth, height: win.innerHeight, steps: [] };
+    go(opts.step - 1);
+
+    // audit=1: render every step and record how it fits (tools/anim.py --shots reads it).
+    function audit() {
+      var report = { mode: mode, width: win.innerWidth, height: win.innerHeight, steps: [],
+        columns: panels.length > 1 ? [Math.round(parseFloat(left.style.flexGrow) * 100) / 100, 1] : [1] };
       for (var i = 0; i < N; i++) {
         current = i;
+        userPanel = null;
         render(i);
         var item = { n: i + 1 };
         var pageOver = Math.max(root.scrollHeight - win.innerHeight, root.scrollWidth - win.innerWidth,
           app.scrollHeight - app.clientHeight);
         if (pageOver > 1) item.page_overflow = pageOver;
-        var scroll = [], collapsed = [], scale = 1;
+        // scroll: panels that scroll inside themselves; tall: ... because the content is too tall;
+        // wide: panel -> px by which the content is wider than the panel (it scrolls sideways).
+        var scroll = [], tall = [], wide = {}, collapsed = [], hidden = [], scale = 1;
         panels.forEach(function (name) {
-          var p = P[name];
-          if (p.body.classList.contains("scroll")) scroll.push(name);
+          var p = P[name], b = p.body;
+          if (b.classList.contains("scroll")) {
+            scroll.push(name);
+            if (b.scrollHeight > b.clientHeight + 1) tall.push(name);
+          }
+          if (tooWide(b)) wide[name] = b.scrollWidth - b.clientWidth;
           if (p.el.classList.contains("collapsed")) collapsed.push(name);
-          var s = parseFloat(p.body.style.getPropertyValue("--scale"));
+          if (!b.offsetWidth) hidden.push(name);
+          var s = parseFloat(b.style.getPropertyValue("--scale"));
           if (s && s < scale) scale = s;
         });
+        // A folded panel (wide box) or another tab (compact box) measures 0 × 0. Open it the way the
+        // student would (click its title bar or tab), measure its width, then draw the step as before.
+        // wide_open: panel -> px by which it is too wide once opened.
+        var wideOpen = {};
+        hidden.forEach(function (name) {
+          userPanel = name;
+          fit();
+          var b = P[name].body;
+          if (b.offsetWidth && tooWide(b)) wideOpen[name] = b.scrollWidth - b.clientWidth;
+        });
+        if (hidden.length) { userPanel = null; fit(); }
         if (scroll.length) item.scroll = scroll;
+        if (tall.length) item.tall = tall;
+        if (Object.keys(wide).length) item.wide = wide;
+        if (Object.keys(wideOpen).length) item.wide_open = wideOpen;
         if (collapsed.length) item.collapsed = collapsed;
         if (scale < 1) item.scale = scale;
         if (caption.scrollHeight > caption.clientHeight + 1) item.caption_clipped = true;
@@ -1269,10 +1412,25 @@ html[data-mode="stacked"] .caption { -webkit-line-clamp: 6; }
       }
       doc.body.setAttribute("data-audit", JSON.stringify(report));
     }
-    go(opts.step - 1);
-    if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(function () { measureGrow(); render(current); });
-    doc.body.setAttribute("data-ready", "1");
-    notifyParent();
+
+    // Once the fonts are ready (a late font can be wider), measure again, then audit and say "ready".
+    function settle() {
+      var shown = current;
+      measureGrow();
+      if (opts.audit) audit();
+      current = shown;
+      userPanel = null;
+      render(current);
+      doc.body.setAttribute("data-ready", "1");
+      notifyParent();
+    }
+    if (doc.fonts && doc.fonts.ready && typeof doc.fonts.ready.then === "function") {
+      doc.fonts.ready.then(function () {
+        try { settle(); } catch (error) { reportError((error && error.message) || error); }
+      });
+    } else {
+      settle();
+    }
   }
 
   try {
