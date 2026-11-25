@@ -7,7 +7,7 @@ The course assesses what you **understand, build, test and explain**. The weight
 | Participation | 10% | Taking part in class activities and the weekly reflection form |
 | Six research tasks | 30% | 5% each: what you read or found, a concrete example, a check, and your own reasoning |
 | Individual midterm (Week 4) | 30% | Reading, writing and testing code; judging AI code; explaining a decision |
-| Final project (Weeks 9–10) | 30% | Your working system, your decisions and their evidence, your tests, verification and Demo day |
+| Final project (Weeks 5–10) | 30% | Your working system, your decisions with evidence, one extension with its tests, a short report, and Demo day |
 | **Total** | **100%** | |
 
 **Submit** by email to [submit.progmis@gmail.com](mailto:submit.progmis@gmail.com), unless the instructor announces another route. Keep your own copy of everything you submit.
@@ -66,17 +66,17 @@ After you submit, a short **2–3 minute oral check**: the instructor asks about
 
 ## Final project (30%)
 
-The last component brings the whole course together in Weeks 9–10: your own `my_foodbridge/` folder, finished, verified and presented. See the [final project guide](FINAL_PROJECT.md) for the four levels, the two logs and what to submit.
+The last component brings the whole course together: your own `my_foodbridge/` folder, a working system with your own decisions and one extension of your own, explained in a short report and presented at Demo day. It starts in Week 5 with a three-line project journal at the end of each week, continues with choosing your extension (Week 8) and a project charter (Week 9), and ends with the code freeze and Demo day in Week 10. See the [final project guide](FINAL_PROJECT.md) for the five parts, the timeline, the extension menu and what to submit.
 
-| What is assessed | Points (of 100) |
-|---|---:|
-| **It runs (Level 1):** your parts pass `bridge.check("all")`, your menu works, your zip is complete | 25 |
-| **Your decisions (Level 2):** three settings you changed, with evidence from data or people, in your decision log | 25 |
-| **Your own tests:** `tests.py` with tests that can fail and that pin your decisions | 15 |
-| **Verification log and README:** how you checked it (check, clean run, a review of AI code) and how someone else can run it | 15 |
-| **Demo day (Week 10):** explain one decision and make one live change at the instructor's desk | 20 |
+| Part | What is assessed | Points (of 100) |
+|---|---|---:|
+| **1 · It runs** | your parts pass `bridge.check("all")`, your menu works, your zip is complete | 25 |
+| **2 · Make it yours** | three settings you changed (one about privacy or input checks, one backed by data), each with a decision-log row with evidence | 20 |
+| **3 · My extension** | one extension from the menu that works, with at least two tests in `tests.py` that can fail | 20 |
+| **4 · The report** | `README.md`, about two pages: a drawing of your system, what each user sees, your decision log, your extension, your verification log, how you used AI, two known limits and a reflection | 15 |
+| **5 · Demo day (Week 10)** | 3 minutes with your system poster, a live change asked by the instructor, and one question | 20 |
 
-Levels 3 and 4 are optional: they strengthen your tests and your verification log, and full marks are possible without them. A short system with strong, well-explained decisions scores higher than a long one with weak reasons.
+All five parts are required, and these points are proposed (see above). A small system with strong, well-explained decisions and one well-tested extension scores higher than a big one with weak reasons.
 
 ## Fairness and integrity
 

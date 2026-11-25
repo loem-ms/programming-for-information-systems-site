@@ -29,9 +29,10 @@ PUBLIC_REPO = "loem-ms/programming-for-information-systems-site"
 FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdM6P3ZrTaTwMAEcwZNa6-4Wl-ebus3ClRLIZinsTr4kXOBaA/viewform"
 COLAB = "https://colab.research.google.com/github/" + PUBLIC_REPO + "/blob/main/content/"
 SITE_ASSETS = "https://loem-ms.github.io/programming-for-information-systems-site/assets/"
-FENCE = re.compile(r"^[ \t]*(`{3,}|~{3,}|:{3,})(.*)$")
+FENCE = re.compile(r"^ {0,3}(`{3,}|~{3,}|:{3,})(.*)$")      # CommonMark: at most 3 spaces of indentation
 ANIM_SRC = re.compile(re.escape(SITE_ASSETS) + r"anim/(?:km/)?[A-Za-z0-9_]+\.html")
 ANIM_PAGE = re.compile(r"(?:km/)?[A-Za-z0-9_]+\.html")
+INLINE_CODE = re.compile(r"(?<![`\\])(`+)(?!`)((?:(?!\n[ \t]*\n).)+?)(?<!`)\1(?!`)", re.S)  # equal runs, one paragraph
 CSS_REFERENCE = re.compile(r"""url\(\s*['"]?([^'")]*)['"]?\s*\)|@import\s+['"]([^'"]+)['"]""", re.I)
 PRIVATE = re.compile(r"programming-for-information-systems(?!-site)")
 INSTRUCTOR = re.compile(r"INSTRUCTOR MODEL ANSWER|instructor-only|```\{solution\}|Model answer\.")
@@ -59,31 +60,51 @@ def markdown_of(path):
     return "\n".join("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "markdown")
 
 
-def iframe_sources(text):
-    """The src of every {iframe} directive MyST would render: code blocks (``` with no {directive}) are skipped,
-    the bodies of other directives are not (they can hold nested directives)."""
-    sources, directives, code = [], [], None
+def _closes(opening, found):
+    return found.group(1)[0] == opening[0] and len(found.group(1)) >= len(opening) and not found.group(2).strip()
 
-    def closes(opening, found):
-        return found.group(1)[0] == opening[0] and len(found.group(1)) >= len(opening) and not found.group(2).strip()
+
+def _lines(text):
+    """Yield (kind, line) for Markdown as MyST reads it: kind is "code" inside a code block (a fence without a
+    {directive}, fence lines included), "directive" for the opening line of a directive, "fence" for its closing
+    line, else "text". Directive bodies are text: they can hold links and nested directives."""
+    directives, code = [], None
     for line in text.splitlines():
         found = FENCE.match(line)
+        if found and found.group(1)[0] == "`" and "`" in found.group(2):
+            found = None                      # CommonMark: a backtick fence's info string has no backtick
         if code:
-            if found and closes(code, found):
+            if found and _closes(code, found):
                 code = None
+            yield "code", line
             continue
         if not found:
-            continue
-        info = found.group(2).strip()
-        if directives and closes(directives[-1], found):
+            yield "text", line
+        elif directives and _closes(directives[-1], found):
             directives.pop()
-        elif info.startswith("{"):
+            yield "fence", line
+        elif found.group(2).strip().startswith("{"):
             directives.append(found.group(1))
-            if re.match(r"\{iframe\}", info):
-                sources.append(info[len("{iframe}"):].strip())
+            yield "directive", line
         else:
             code = found.group(1)
+            yield "code", line
+
+
+def iframe_sources(text):
+    """The src of every {iframe} directive MyST would render (not the ones shown inside code blocks)."""
+    sources = []
+    for kind, line in _lines(text):
+        info = FENCE.match(line).group(2).strip() if kind == "directive" else ""
+        if re.match(r"\{iframe\}", info):
+            sources.append(info[len("{iframe}"):].strip())
     return sources
+
+
+def prose(text):
+    """The Markdown without code blocks and `inline code`, so an example such as `![x](drawing.jpg)` is not taken
+    for a link."""
+    return INLINE_CODE.sub("", "\n".join(line for kind, line in _lines(text) if kind == "text"))
 
 
 def check_anim_link(content, path, url, kind):
@@ -103,6 +124,7 @@ def check_links(content, path):
     text = markdown_of(path)
     for source in iframe_sources(text):           # animations: only pages of this site, and they must exist
         check_anim_link(content, path, source, "Embedded page")
+    text = prose(text)                              # links shown as examples in code are not links
     for picture in REMOTE_PICTURE.findall(text):   # MyST downloads these on every build; one failure fails the build
         require(False, "Remote picture in " + path.name + " (use a copy under assets/): " + picture)
     for target in LINK.findall(text):

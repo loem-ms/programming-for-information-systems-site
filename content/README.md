@@ -25,7 +25,7 @@ The ten weeks follow the story of that notebook. Each week replaces one weakness
 - **Week 1 — [What is an information system?](notebooks/Week_01.ipynb)** · Clear names and units: you meet the finished system and learn to name things clearly, so nothing is a scribble that only one person understands.
 - **Week 2 — [Rules and decisions](notebooks/Week_02.ipynb)** · Explicit rules: the decisions the coordinator kept in her head are written down as rules that are stated plainly and tested.
 - **Week 3 — [Records and data](notebooks/Week_03.ipynb)** · One record per real thing: every offer gets one record of its own, so no phone number is written twice and no offer is lost in a margin.
-- **Week 4 — [Functions you can trust · Your first files · Midterm](notebooks/Week_04.ipynb)** · One function, one job: the parts are built as small functions you can test and trust, moved into your first system files, and the Midterm checks the system so far.
+- **Week 4 — [Functions you can trust · Your first files · Midterm](notebooks/Week_04.ipynb)** · One function, one job: the parts are built as small functions you can test and trust, moved into your first system files, and the Midterm checks what you have learned so far.
 - **Week 5 — [Checking input](notebooks/Week_05.ipynb)** · Never trust input: a wrong or incomplete offer is refused at the door, instead of being copied into the book and causing trouble later.
 - **Week 6 — [Lifecycles](notebooks/Week_06.ipynb)** · Make wrong states hard to reach: an offer can only move through the steps that make sense, so a promise cannot quietly jump to the wrong state.
 - **Week 7 — [Saving and history](notebooks/Week_07.ipynb)** · Never lose data: the day no longer disappears when the book is closed, and the history shows what was promised to whom.
@@ -74,7 +74,7 @@ New here? Read the [course guide](COURSE_GUIDE.md) first: it explains the idea o
 - [Setup](SETUP.md): Colab or your own computer
 - [Assessment](ASSESSMENT.md): how you are graded, and the rules for AI tools
 - [Research tasks](RESEARCH.md): the six short research tasks and when they are shared
-- [Final project](FINAL_PROJECT.md): the four levels, from "it runs" to "a screen"
+- [Final project](FINAL_PROJECT.md): your own system in five parts, from the Week 5 journal to Demo day
 - [Free Python & programming reading](COURSE_LINKS.md): optional free online books (PY4E, Automate the Boring Stuff, Think Python) and Python Tutor
 - [Instructor](INSTRUCTOR.md) · [Course links & extra reading](COURSE_LINKS.md) · [Questions and help](CONTRIBUTING.md)
 
