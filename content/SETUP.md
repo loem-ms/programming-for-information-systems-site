@@ -24,7 +24,7 @@ Read this page before you open your first notebook, and come back to it whenever
 If Colab is not an option for you, the same notebooks also run on your own computer. Use this if you prefer working offline.
 
 1. Install the latest **Python 3** from [python.org](https://www.python.org/downloads/) (any version from 3.9 on works).
-2. Install Jupyter and matplotlib: open a terminal and run `python -m pip install notebook matplotlib` (on some computers, `python3 -m pip install notebook matplotlib`). `matplotlib` is used for charts in Weeks 8–9.
+2. Install Jupyter and matplotlib: open a terminal and run `python -m pip install notebook matplotlib` (on some computers, `python3 -m pip install notebook matplotlib`). `matplotlib` is used for charts in Weeks 5–9.
 3. On the course home, use **Download** to save the week's `.ipynb` file into a folder.
 4. In a terminal in that folder, run `python -m notebook` and open the file.
 5. Run the setup cell. It creates a `foodbridge_kit` folder (and, from Week 4 onward, your `my_foodbridge` folder) next to the notebook.
@@ -53,7 +53,8 @@ Most problems have a quick fix. Find what you see in the table and do what it sa
 | A name you defined is "not defined" | Run the cell that defines it, or use **Restart session and run all**. |
 | A check shows ❌ | Read the 💡 hint under it. The check never stops your notebook; fix and run again. |
 | `⚠️ your … fell back to the default` | Your function crashed or returned something unexpected; the system used its own rule. Read the message. |
-| `bridge.show()` marks a file with `🔧` (model version) | Either that file is not in `my_foodbridge/` yet, or it has a Python error. Check the problem note in `bridge.show()` and re-run the `%%writefile` cell or fix the file. |
-| The setup cell shows a new version number | Fine: a newer course version was unpacked. Your `my_foodbridge/` folder (and any earlier `my_settings.py` / `my_rules.py`) were kept. |
+| `bridge.show()` marks a file with `🔧` (model version) | Either that file is not in `my_foodbridge/` yet, or it has a Python error. Check the problem note in `bridge.show()`, check that you saved the file in `my_foodbridge/` (**Ctrl+S** / **Cmd+S**), and fix any syntax or contract error shown. |
+| `my_foodbridge/` does not appear in the **Files** panel | Run the setup cell first, then click the **Refresh** button at the top of Colab's **Files** panel. |
+| The setup cell shows a new version number | Fine: a newer course version was unpacked. Your `my_foodbridge/` folder was kept. |
 
 Still stuck? See [questions and help](CONTRIBUTING.md).
